@@ -2,13 +2,18 @@ name: CI
 
 on:
   push:
-    branches: ["main", "region/**"]
+    branches: ["main", "region/**", "step-**"]
   pull_request:
     branches: ["main"]
   workflow_dispatch:
 
 permissions:
   contents: read
+
+# Pages deploys serially; a newer commit on main supersedes an in-flight one.
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: false
 
 jobs:
   check-and-build:
@@ -38,7 +43,7 @@ jobs:
           cache: npm
           cache-dependency-path: scripts/pdf/package-lock.json
 
-      - name: Install PDF renderer dependencies (mermaid-cli, puppeteer)
+      - name: Install render dependencies (mermaid-cli, marked, puppeteer)
         if: always()
         run: npm ci
         working-directory: scripts/pdf
@@ -54,3 +59,33 @@ jobs:
           name: drakenhold-playbook-pdf
           path: build/Drakenhold_Playbook.pdf
           if-no-files-found: ignore
+
+      # Runs after the PDF so the site can bundle it. The site is built on
+      # every run, including pull requests, so a broken diagram or a missing
+      # source file fails review rather than the deploy.
+      - name: Build the browsable web version (build_web.sh)
+        if: always()
+        run: scripts/build_web.sh
+
+      - name: Upload the web version as a Pages artifact
+        if: always()
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: build/web
+
+  # Publishes to GitHub Pages, from main only. Pull requests build the site
+  # above and stop there.
+  deploy-pages:
+    needs: check-and-build
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

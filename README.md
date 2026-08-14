@@ -12,7 +12,9 @@ A complete tabletop RPG adventure module, delivered as a Setting Playbook. A rui
 
 Because assembly is scripted, **every file must be structurally predictable**. Headings, field names and entry formats follow the template exactly. Formatting drift is a build failure, not a style opinion.
 
-Planned outputs from the same source: a paginated PDF for the table, and a browsable web version for reference during play. Both built in CI from `main`.
+Two further outputs are built from the same source: a paginated **PDF** for the table, and a browsable **web version** for reference during play. Both are built in CI on every push and pull request; the web version is published to GitHub Pages from `main`.
+
+**Read it here: <https://rstevenson1237.github.io/drakenhold/>** — every location code in the text (`FA.17`, `A.20`) is a link to the stub it names, and the PDF is linked from the contents page. The site publishes play content only: the setting outline, the regions, the block documents and the setting diagram. `HANDOFF.md` and the process documents are authoring instruments and stay out of it.
 
 ---
 
@@ -46,7 +48,12 @@ Planned outputs from the same source: a paginated PDF for the table, and a brows
 │   └── Drakenhold_Gazetteer.md   frozen. Superseded by regions/. Never edited, never cited.
 └── scripts/
     ├── check.sh                  runs every mechanical check; must pass before commit
-    └── build.sh                  assembles the Playbook, PDF and web output
+    ├── build.sh                  assembles the Playbook markdown from the sources
+    ├── render_pdf.sh             assembled markdown -> paginated PDF
+    ├── build_web.sh              sources -> browsable site in build/web/
+    └── pdf/                      the shared Node render toolchain (mermaid-cli,
+                                  marked, puppeteer) and both renderers.
+                                  Named for the PDF, used by both targets.
 ```
 
 ---
