@@ -33,7 +33,7 @@
 - **C Goblin Camps** — open, off the trail west. Leaving the road is the whole cost.
 - **D River Crossing** — open. Several days north-west, end of the trail.
 - **The collapsed waystation** — hidden, just off the trail. Within-region.
-*Held for the location pass: the culverted dwarven drain under one stretch of buried roadway. Its far end is likeliest on the near bank at D — the Outer City is too far off and the river lies between.*
+*Held for the location pass: the culverted dwarven drain under one stretch of buried roadway. Its far end is likeliest on the near bank at D — the Outer City is too far off and the river lies between.* **Settled at step 8:** the far end is `D.6`, the drain outfall below the near bank, and the edge is drawn `B.4a`–`D.6` in the region diagram below. D reciprocates at its own step 8 pass.
 
 ## LOCATION STUBS
 
@@ -44,46 +44,74 @@
 ### `B.1 The Road Out` — Last Sight of the Palisade, Where the Ruts Begin, Nobody Waves
 *Working note: the trailhead, a half day from Thornhaven. The dwarven roadway starts showing through here and the party's first Navigate roll is made in the safest place it will ever be made.*
 
+**Connections:** `A.1` the landing gate, half a day south-east — the road, and the last sight of the palisade · `B.2` the first waystone, north-west up the trail.
+
 ### `B.2 The First Waystone` — Bilingual, Standing, Distances to Nowhere
 *Working note: the teaching stone. Trade tongue and runic saying the same thing side by side, which is the entire method — a party that stops at all three waystones can read the script before anything depends on it.*
+
+**Connections:** `B.1` the trailhead, south-east · `B.3` the wheel-rut reach, north-west · `B.13` Fenn's boundary, where her line runs alongside the trail for a stretch west of the stone.
 
 ### `B.3 The Wheel-Rut Reach` — Cut Blocks Underfoot, A Gutter Still Draining, Thousand-Year Work
 *Working note: soil eroded off a stretch of true dwarven roadway. Wheel-ruts worn into stone by traffic that stopped a generation ago, and a drainage gutter still doing its job. The first argument for taking dwarven engineering seriously.*
 
+**Connections:** `B.2` the first waystone, south-east · `B.4` the silted culvert, north-west where the roadway crosses the stream.
+
 ### `B.4 The Silted Culvert` — A Dry Crossing If Cleared, A Chokepoint If Not, Standing Water
 *Working note: clearing it is an afternoon and gives the party a dry crossing for the rest of the module. Leaving it silted hands the goblins a chokepoint. The choice is small, cheap, and permanent.*
+
+**Connections:** `B.3` the wheel-rut reach, south-east · `B.5` the second waystone, north-west · `B.4a` the drain mouth beneath the crossing — **hidden**, under the silt, and it shows only to a party that clears the culvert or goes into the water.
 
 ### `B.4a The Drain Mouth` — Cut Stone Under Silt, Air Moving Wrong, Goes Somewhere
 *Working note: beneath the culvert, a culverted dwarven drain that is not a drain for long. Hidden. Its far end is unplaced — the working assumption is the near bank at D, and the decision is made at D's location pass.*
 
+**Connections:** `B.4` the culvert above, **hidden** · `D.6` the drain outfall below the near bank at the river crossing — **hidden**, a crawl in the dark under the whole northern stretch of the trail.
+
 ### `B.5 The Second Waystone` — Two Names Nobody Knows, Struck Lettering, A Road Network That Ended
 *Working note: this one names two destinations nobody in Thornhaven has heard of. The waystation ledger at B.11 confirms that traffic once went to both and gives distances and cargo — and nothing else. Leaning flavour: they are evidence of a road network that outlived its own memory, and the module owes no further answer.*
+
+**Connections:** `B.4` the culvert, south-east · `B.6` the deadfall, north-west up the trail · `B.10` the webbed thickets, off the road west · `B.11` the collapsed waystation, a few hundred yards off the road on the old spur.
 
 ### `B.6 The Deadfall` — Goblin Toll, Quick to Break Off, Cheap to Pay
 *Working note: the trail's one reliable chokepoint. An ambush that runs from anything organised and talks to anyone bringing meat, and the party's introduction to the goblins as a faction rather than as a fight.*
 
+**Connections:** `B.5` the second waystone, south-east · `B.7` the turning, north-west. The trail is narrow here and there is no way past on the road.
+
 ### `B.7 The Turning` — A Path Off the Road, Smoke to the West, The Choice to Leave
 *Working note: where C begins. Marked plainly enough that going is a decision. The road is the safe thing and this is the module saying so out loud.*
+
+**Connections:** `B.6` the deadfall, south-east · `B.8` the third waystone, north-west · `B.10` the webbed thickets, off the road south — the way back onto the trail for anyone who went around the deadfall · `C.1` Ashfoot Camp, `C.2` Wetreed Camp and `C.3` Longmire Camp, west. Three traces part company here and each ends at a different camp.
 
 ### `B.8 The Third Waystone` — The Last One Standing, Drakenhold Named in Full, Kelmordun
 *Working note: the payoff stone. It names the hold in the dwarven tongue, which is the first time anyone tells the party that *Drakenhold* is not what the place was called.*
 
+**Connections:** `B.7` the turning, south-east · `B.9` the last rise, north-west · `B.12` the sprite hollow, off the road east.
+
 ### `B.9 The Last Rise` — Canopy Thinning, Open Sky Ahead, Days Behind
 *Working note: the run-out to D. The wood breaks and the party has been under cover long enough to feel it.*
+
+**Connections:** `B.8` the third waystone, south-east · `B.12` the sprite hollow, off the road south — the hollow rejoins the trail here · `D.1` the overlook, north-west where the canopy breaks.
 
 **Off the road**
 
 ### `B.10 The Webbed Thickets` — Husks Wrapped and Stored, Announce Themselves, Something Above
 *Working note: visible before they are dangerous. Spiders drop on anything that lingers, and what the husks are still carrying is worth the risk to anyone who takes the thickets deliberately rather than by accident.*
 
+**Connections:** `B.5` the second waystone, back onto the trail south-east · `B.7` the turning, back onto the trail north-west · `B.11` the collapsed waystation, along the old spur.
+
 ### `B.11 The Collapsed Waystation` — Roof Gone, A Ledger Half Ruined, Gear Not Wealth
 *Working note: worth searching and worth nothing to a looter. The ledger survives in part — dates, cargo, tonnage and destinations, and no names anywhere. It gives the outside world's account of the last year of traffic up the road, confirms that carts once went to both of B.5's unknown places, and cannot tell anyone who was driving them.*
+
+**Connections:** `B.5` the second waystone, by the old spur out to the trail · `B.10` the webbed thickets, further along the spur — the thickets have grown over the far end of it.
 
 ### `B.12 The Sprite Hollow` — Moved Markers, Borrowed Voices, Riddles and Petty Bargains
 *Working note: costs time and can lose a party its way entirely. Bound to the wood and unable to follow past its edge, which a party can learn and use.*
 
+**Connections:** `B.8` the third waystone, out to the trail south-east · `B.9` the last rise, out to the trail north-west.
+
 ### `B.13 Fenn's Boundary` — Marked Plainly, A Negotiation Not a Barrier, Fresh Stumps Beyond
 *Working note: her line runs along one stretch of trail, and the town's cutting crews cross it. Crossing is a choice and she treats it as one.*
+
+**Connections:** `B.2` the first waystone, where her line runs alongside the trail · `A.12` the cutting ground, the same boundary approached from the town side · `A.13` Wyla Fenn's grove, within her line. The grove has two approaches and she watches both.
 
 ### THE WAYSTONE INSCRIPTIONS
 
@@ -144,4 +172,74 @@
 
 ## REGION RELATIONAL DIAGRAM
 
-*Deferred to procedure step 9.*
+*Procedure step 8. Drawn from the stubs, before the location outlines. Reconciled against the finished outlines before the region closes. The diagram is authoritative: the **Connections:** field under each stub is checked against it, never the reverse.*
+
+```mermaid
+graph TD
+  A1["A.1 · The Landing Gate"]
+  A12["A.12 · The Cutting Ground"]
+  A13["A.13 · Wyla Fenn's Grove"]
+  C1["C.1 · Ashfoot Camp"]
+  C2["C.2 · Wetreed Camp"]
+  C3["C.3 · Longmire Camp"]
+  D1["D.1 · The Overlook"]
+  D6["D.6 · The Drain Outfall"]
+
+  subgraph ROAD["On the road"]
+    B1["B.1 · The Road Out"]
+    B2["B.2 · The First Waystone"]
+    B3["B.3 · The Wheel-Rut Reach"]
+    B4["B.4 · The Silted Culvert"]
+    B4a["B.4a · The Drain Mouth"]
+    B5["B.5 · The Second Waystone"]
+    B6["B.6 · The Deadfall"]
+    B7["B.7 · The Turning"]
+    B8["B.8 · The Third Waystone"]
+    B9["B.9 · The Last Rise"]
+  end
+
+  subgraph OFF["Off the road"]
+    B10["B.10 · The Webbed Thickets"]
+    B11["B.11 · The Collapsed Waystation"]
+    B12["B.12 · The Sprite Hollow"]
+    B13["B.13 · Fenn's Boundary"]
+  end
+
+  B1 --- A1
+  B1 --- B2
+  B2 --- B3
+  B2 --- B13
+  B13 --- A12
+  B13 --- A13
+  B3 --- B4
+  B4 -.- B4a
+  B4a -.- D6
+  B4 --- B5
+  B5 --- B6
+  B5 --- B10
+  B5 --- B11
+  B10 --- B11
+  B10 --- B7
+  B6 --- B7
+  B7 --- B8
+  B7 --- C1
+  B7 --- C2
+  B7 --- C3
+  B8 --- B9
+  B8 --- B12
+  B12 --- B9
+  B9 --- D1
+```
+
+**Reading the diagram.** Solid edges are open passage on foot. The two dotted edges are hidden: the drain mouth under the culvert (`B.4`–`B.4a`) shows only to a party that clears the silt or goes into the water, and the culverted run north (`B.4a`–`D.6`) is a crawl in the dark under the whole last stretch of the trail. Everything else is walked, in daylight, without a roll — that is the region's job.
+
+**What the drawing found.**
+
+- **The road is a corridor and that is correct.** `B.1` through `B.9` is one chain with no shortcuts, and unlike the farmstead cellar at A this needs no second throat. A road is a corridor by construction. The safety is the point: a party that keeps to the chain walks the region end to end and is coached through Wild procedure at no cost.
+- **The deadfall has an answer that is not the deadfall.** `B.6` is the trail's one reliable gate — a goblin toll at a chokepoint — and the drawing gave it a bypass without one being invented: `B.5`→`B.10`→`B.7` runs off-road around it through the webbed thickets. It is priced exactly as the rule requires. The toll is cheap, quick to break off, and buys a fact the party wants at `D.8`; the bypass is free of goblins and costs the thickets, which are the one thing in the region that can kill outright. The module never says which is the mistake.
+- **The off-road locations are a string, not four leaves.** `B.10` and `B.11` share the old spur that once served the waystation, which is why the waystation is findable at all — a party pushing into the thickets from `B.5` arrives at the ledger from behind. `B.12` sits between `B.8` and `B.9` and gives the same shape at the north end without a second bypass: the hollow is a loop off the trail that rejoins it.
+- **The sprites are placed where losing the way costs most.** `B.12` sits on the run-out to `D`, one stop past the turning to `C` and the payoff waystone. Time and direction lost there are lost with the whole wood behind the party and no landmark left to recover from.
+- **`B.13` is one node on two diagrams.** Fenn's boundary carries `A.12` and `A.13` on the town side and `B.2` on the trail side. This is the thread the handoff held open at A's pass and it is now written from both ends: the edges here are the same edges A drew, unchanged. A party that crossed her line on the trail arrives at the cutting ground with a history, and the reverse is equally true.
+- **`B.7` braids three ways west, not one.** C's `## CONNECTIONS` states three separate ways in for three camps; the turning is where they part company, not a single path. Which camp a party reaches first is a matter of which trace it follows out of `B.7`, and that is C's to detail.
+
+**Route ends recorded.** Five edges leave region B: `B.1`–`A.1` and the `B.13`–`A.12`/`A.13` pair, all three already drawn at A and reciprocated here; `B.7`–`C.1`/`C.2`/`C.3`; `B.9`–`D.1`; and `B.4a`–`D.6`, the drain, whose far end the handoff records as settled at `D.6`. C and D have not been worked at step 8. All are recorded in the handoff for reconciliation at their passes rather than written into those files here.
