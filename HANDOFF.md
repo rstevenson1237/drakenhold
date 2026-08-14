@@ -1,6 +1,6 @@
 # DRAKENHOLD — HANDOFF
 
-*State of the project as of the close of step 8 for region C. Written for a fresh conversation picking up step 8 at region D.*
+*State of the project as of the close of step 8 for region D. Written for a fresh conversation picking up step 8 at region E.*
 
 ---
 
@@ -26,7 +26,7 @@ Architect (steps 1–6) complete. **Engineer (steps 7–9) in progress.**
 
 Step 7 — location stubs and region tables — is **complete for A, B, C, D, E, FA, GA, HA, FB, FC, FD, FE, GB, GC, GD, GE, HB, HC, HD, HE, I, J**. **Twenty-two of twenty-two — step 7 is complete.**
 
-**Step 8 — region relational diagrams — is complete for `A`, `B` and `C`, and has not begun elsewhere.** Step 9 has not begun anywhere.
+**Step 8 — region relational diagrams — is complete for `A`, `B`, `C` and `D`, and has not begun elsewhere.** Step 9 has not begun anywhere.
 
 A diagram is written into the region file's `## REGION RELATIONAL DIAGRAM` section as a mermaid `graph TD`, with a `**Connections:**` field added under every location stub. Check M3 holds the two against each other and the diagram is authoritative. Node ids are the code without the dot (`A18`); the display label is `"A.18 · Name"` and the checker reads the code from the label. Working notes stay until step 9 absorbs them.
 
@@ -74,7 +74,7 @@ A diagram is written into the region file's `## REGION RELATIONAL DIAGRAM` secti
 
 Each new step is preceded by a reconciliation pass over every step before it. Before step 10 begins anywhere, steps 1–9 are read back through as a body of work.
 
-**Next: step 8 at region `D`, then E, then FA/GA/HA, then peak by peak, then I and J.** `A`, `B` and `C` are closed at step 8.
+**Next: step 8 at region `E`, then FA/GA/HA, then peak by peak, then I and J.** `A`, `B`, `C` and `D` are closed at step 8.
 
 **Step 8 at region A decided one thing and it is recorded rather than asked:** the farmstead cellar was a single-throat corridor in the stubs, and the diagram found it. The yard hatch at `A.14`–`A.17` is the second way in — the cold store's old loading way, barred from within. Additive, within the region, consistent with rule 6.
 
@@ -107,6 +107,14 @@ The rest the drawing only made explicit. `C.4` is the hub and also the open way 
 Batched at C's step 8 pass and **answered: option 1, write the edge.** `C.5` ↔ `E.1`, the guard wall, at one of its four breaches — which is how a goblin salvage file gets in and out of a walled city unseen and how the tile came out. Open, not conditional, not goblin-only. Written into four places: `C`'s `## CONNECTIONS`, `E`'s `## CONNECTIONS`, `C`'s region diagram, and both the overview and approach graphs in `diagrams/Drakenhold_Relational_Diagram.md`.
 
 **The consequence is accepted, not mitigated.** `D` is now skippable. A party that leaves the road at `B.7`, deals with the camps and walks west reaches the Outer City having paid no toll, met no hobgoblins and never seen the Charter camp — and arrives at the great doors without the watch log, the outpost cache or any outside account of what is inside. The module does not warn anyone and never performs that subtraction. Referee-facing text in `D` and `E` may note the bypass exists; player-facing text may not.
+
+## WHAT STEP 8 AT D DECIDED
+
+One thing, and it was owed rather than invented:
+
+- **The old course under the far booth.** `C`'s Secrets and `B`'s Encounter table both already promise that *the goblins know the safe passage past the far booth and will trade it*. Nothing behind that promise had been drawn. It is now a hidden edge `D.7`–`D.11`: the original approach the three spans were built to serve, running below the modern road on broken rock above fast water. Single file, hands needed, worse in the wet. Priced as the rule requires — it lands a party on the far bank with the hobgoblins between them and the bridge, so getting in free means getting out by paying anyway, by fighting, or by going back down it in the dark. The goblins know it because they use it; the hobgoblins cannot watch it from a lit booth at night. `D`'s `## CONNECTIONS` bullet for `E` is amended to say the toll is the price of the bridge, not of the region.
+
+The rest the drawing only made explicit. The five-minute reading of the region is a five-node chain, `D.1`→`D.5`→`D.7`→`D.8`→`D.11`, and every rewarding location hangs off it by a single edge and is on the way to nothing. `D.10` touches both `D.1` and `D.5`, which makes the Charter unavoidable — necessary, since they will not raise the missing surveyor first. `D.11` has three ways onto it and all three pass within sight of hobgoblins, which is why scouting `D.9` before negotiating changes the negotiation.
 
 ## MECHANICAL RECONCILIATION, CLEARED
 
@@ -142,7 +150,8 @@ All pass-4 decisions (room budgets, difficulty dice, mode rationale, three tiers
 - ~~**`A.12`/`A.13` ↔ `B.13`.**~~ *Closed at B's step 8 pass. Both edges are now drawn from both ends, unchanged, and `A.1` ↔ `B.1` with them.*
 - ~~**`B.7` ↔ `C.1`/`C.2`/`C.3`.**~~ *Closed at C's step 8 pass. Each camp takes one trace; the drawing offers no reason to rank them, so the party's first camp is whichever trace it follows.*
 - ~~**`C.5` the scavenger track west to the Outer City.**~~ *Ratified as an open edge `C.5`–`E.1`. Written at all four levels. E's step 8 pass reciprocates from its own side and should give `E.1` the goblin traffic in its outline.*
-- **`B.9` ↔ `D.1`** (the last rise runs out to the overlook) and **`B.4a` ↔ `D.6`** (the drain, hidden at both ends). Drawn in B's diagram. **D has not been worked at step 8 and neither edge is written into D.** Reconcile at D's pass.
+- ~~**`B.9` ↔ `D.1`** and **`B.4a` ↔ `D.6`**.~~ *Both closed at D's step 8 pass, reciprocated unchanged.*
+- **`D.11` ↔ `E.1`.** The climbing road onto the Outer City's guard wall, drawn in D's diagram. **E has not been worked at step 8 and the edge is not written into E.** Reconcile at E's pass. **`E.1` now carries two roads** — this one and the ratified goblin scavenger track out of `C.5` — and reconciling the two is E's job, not D's.
 - `C.1` tile → `FA.17` seal. Copy at `GA.19`.
 - `A.20` Brannek Kelmor → obelisk at `HA.5`, niche at `FA.22`.
 - `C.9` surveyor's satchel — half right, half confidently wrong, same hand. The Charter wants it back.
