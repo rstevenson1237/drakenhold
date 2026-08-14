@@ -162,7 +162,7 @@
 ### `HA.19 The Scholars' Stair` — Service Access Upward, Steep, Narrow
 *Working note: a servants' route toward HC that does not use the great ramp. It is not hidden. It is simply nobody's idea of a road.*
 
-**Connections:** `HA.18` the Runemasters' service warren, and upward into HC by a stair that is nobody's idea of a road. **The landing above is fixed at HC's own pass.**
+**Connections:** `HA.18` the Runemasters' service warren · `HC.15` the instruction rooms above, by a stair that is nobody's idea of a road. *The landing was fixed at `HC`'s step 8 pass, as this stub asked; `HA` is amended here to carry the edge.*
 
 ### `HA.20 The Tenders' Quarters` — Two Trades One Corridor, The Dead and the Living, Poor Rooms
 *Working note: the people who prepared bodies and carried the Runemasters' meals lived in the same run and did not mix.*
@@ -287,6 +287,7 @@ graph TD
     HA32["HA.32 · The Vent Gallery"]
     HA18["HA.18 · The Runemasters' Service Warren"]
     HA19["HA.19 · The Scholars' Stair"]
+  HC15["HC.15 · The Instruction Rooms"]
     HA31["HA.31 · The Listening Place"]
     HA20["HA.20 · The Tenders' Quarters"]
     HA33["HA.33 · The Wrong Mouth"]
@@ -334,6 +335,7 @@ graph TD
   HA17 --- HA20
   HA17 --- HA27
   HA18 --- HA19
+  HA19 --- HC15
   HA18 --- HA20
   HA18 --- HA31
   HA18 -.- HA30
@@ -352,7 +354,7 @@ graph TD
   HA30 -.- HC7
 ```
 
-**Reading the diagram.** Solid edges are open passage. The heavy edge is the Processional of the Dead running west to the monument. Dotted edges are hidden, secret or tile-gated. `HA.19` runs upward into `HC` and is drawn as a stub end rather than an edge, because its landing above is `HC`'s to fix.
+**Reading the diagram.** Solid edges are open passage. The heavy edge is the Processional of the Dead running west to the monument. Dotted edges are hidden, secret or tile-gated. `HA.19` runs upward into `HC.15`, the instruction rooms. *Drawn as a stub end at this region's own pass; the landing was fixed at `HC`'s step 8 pass and the edge is amended in here — a reconciliation rather than new content.*
 
 **What the drawing found.**
 
@@ -364,4 +366,4 @@ graph TD
 - **`HA.31` sits on the Runemasters' service run and nothing else does.** Two edges from `HA.18`, one to the stair going up, one to the listening place the pocket will not enter. The module's first evidence that `HE` is unfinished is on the only stretch of warren anywhere with locks on the inside of it, and the people who know most about this level cannot explain it past the obvious.
 - **`HA.27` is a leaf, deliberately.** One edge, from the vestries, and it does not open from the party's side. What is behind it wants the door opened by somebody else and has wanted that for thirty years. A leaf is the right shape for a room whose whole content is that it will not be entered until it is chosen.
 
-**Route ends recorded.** Eight edges leave region `HA`. `GA.5`–`HA.8` is the Processional. `HA.10`–`HB.1` and `HA.10`–`HC.1` are the stair and the ramp. `HA.13`–`GA.13` is the Cold Run and `HA.14`–`GA.11` is the second seal, both drawn from both ends at this pass. `HA.29`–`HB.3` and `HA.21`–`HB.17` are the two ways down into the crypts that are not the stair. `HA.30`–`HC.7` is the bypass. `HA.19` runs up into `HC` and its landing is left to `HC`.
+**Route ends recorded.** Nine edges leave region `HA`. `GA.5`–`HA.8` is the Processional. `HA.10`–`HB.1` and `HA.10`–`HC.1` are the stair and the ramp. `HA.13`–`GA.13` is the Cold Run and `HA.14`–`GA.11` is the second seal, both drawn from both ends at this pass. `HA.29`–`HB.3` and `HA.21`–`HB.17` are the two ways down into the crypts that are not the stair. `HA.30`–`HC.7` is the bypass. `HA.19`–`HC.15` is the scholars' stair, fixed at `HC`'s pass and amended in here.

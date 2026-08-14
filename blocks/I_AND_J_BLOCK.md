@@ -101,3 +101,52 @@ graph TD
 - `I.9` the watchtower logs are the outside account of the Descent — the only one not written by a survivor or inferred from a ruin.
 - `I.13` and `I.14` are the two orphaned runs. Restoring either is a mechanism problem worth more than most treasure in the module.
 - `HB.6` remains open: Baldrun Azkelith's interment was prepared and never filled, and neither `GC`, `HB`, `I` nor `J` answers it. **It is now the last unanswered question in the module and that is deliberate.**
+
+---
+
+## PASS 2 — THE REGION DIAGRAMS
+
+*Engineer step 8, worked as one pass across `I` and `J`, and the last pass of step 8 anywhere. **Nothing was invented and one thing is still batched.** Eleven inherited route ends reciprocated, one route drawn outward that no peak could have drawn, one placement decided inside `I`, and one open item left open on purpose. Per-region findings sit under each region's own diagram; what belongs to no single region is here.*
+
+### The two regions have the same shape and it is not the shape either of them looks like
+
+`I.7`, the assessment, carries six edges and is not a place. `J.1`, the great tunnel, carries nine and is a corridor. In any other region either finding would be a failure — a region that has quietly become a corridor is precisely what step 8 exists to catch. **Here both are the design stated out loud.** `I` is a judgement wearing a map; `J` is a distance wearing a map. Neither is a dungeon level, both are ways of getting to one, and the drawing says so in the only vocabulary a graph has: one hub that is a condition, one hub that is a length.
+
+The counterweight holds in the detail as well. `I.7` has the same structural signature as `HE.5` three levels up inside Peak 3 — the mechanism is the corridor a party walks rather than an obstacle it meets — and neither region knew about the other.
+
+### The span is not a bypass
+
+`I.1`–`I.2`–`I.3`–`I.5`–`I.4` is a chain with Valdgir in the middle. **There is no traverse of the only horizontal route in the hold that misses the checkpoint**, in either direction, ever. The block document has always called the counting house in the middle of the span the design; the drawing makes it a fact that can be checked. What bypasses gates in `I` is never the span — it is the runs, and every one of them worth having is conditional on a mechanism.
+
+So the two regions charge in opposite orders. **`I` has to be earned before it pays**: until `I.13` or `I.14` is restored, the region offers a view, some weather and a toll. **`J` pays immediately and charges afterwards**: everything is open, nothing is locked, and the bill arrives in watches and in light.
+
+### Every descent lands on the spine, which is why the light rule can be taught once
+
+`J.2` and `J.3` both hang off `J.1` and off nothing else. Six ways down from three peaks, marked and hidden, and every one of them delivers a party into the same enormous quiet facing the same nine choices. **The region is entered identically no matter which gate a party gave up on**, which is what makes `J.6` — the burnt-out torch, one edge off the tunnel — unmissable rather than lucky. The teaching site works because the topology guarantees the classroom.
+
+### `J.16` is drawn exactly where the light rule needs it
+
+Warm from one side, cold from the other, and the two things it touches are `J.14`, the vents, and `J.20`, the deep dark — **the only two places in the region where light does not matter at all.** The navigation method that lets a party move in total darkness is literally the edge between the heat that is indifferent to flame and the blind old things that are indifferent to it. The answer to the light rule is drawn as the line between the two exceptions to it.
+
+### The vents and the hidden descents are one system
+
+`J.3`–`J.14`. Khorven, the slag channel and the vent territory are not three facts but one, and a party that came down the chimney to escape something in Peak 1 is already standing in the territory that restores Peak 1. **The whole chain from Peak 1's prize to Peak 2's crater is walkable and it begins at a descent somebody took while running away.**
+
+### The last artifact piece is off the spine, behind the least interesting ground in the region
+
+`J.1`→`J.10`→`J.17`→`J.18`. `HE.10`'s register gives a party a name and no place. The place is two territories deep, through the workings the region itself describes as *dug out, abandoned in order, nothing left worth digging.* **The seventh piece is hidden behind the module's own stated boredom**, which is the hardest work negative space does anywhere in Drakenhold.
+
+### Aggregate
+
+`I` 16 + `J` 24 = 40 stubbed against 80 budgeted, exactly as stated at the head of this document. No correction.
+
+### What this pass decided, drew and did not answer
+
+- **Decided, inside `I`:** the ice stretch sits east of the checkpoint, between `I.3` and `I.4`. It gives the unused eastern terminus a reason that is not neglect — Valdgir's patrols stop at the wet, so the quiet half of the span is the half beyond the ice, and `HD.3` is unwatched from both ends because reaching it is seasonal work nobody is paid for. Additive, within the region, consistent with the standing rules.
+- **Drawn outward:** `J.9`–`D.6`, **one-way, hidden, water the whole way.** `J.9` already promised that the outfall is an exit for a party thinking sideways; nothing had ever been drawn behind that promise, and no peak could have drawn it. It comes up below the near bank at the river crossing and nothing goes back up it. **`D` is closed and is not amended** — the edge is one-way and asks nothing of `D`'s connections. Whether `D.6` should carry a referee-facing line about what else comes out of that culvert is proposed and batched.
+- **Not answered:** `I.16`, the undefended approach. The stub defers *which level and from which direction* to the location pass, and naming it would settle by side effect which of three closed regions has a hole in it. Drawn with its far end absent, hanging off `I.7` and `I.12`. **Batched.**
+- **Carried, not filled:** Peak 2's marked descent still has no named stub in `GB`. `J.2` is drawn to accommodate it and the diagram does not pretend it exists.
+
+### `HB.6` remains open, and step 8 is now closed everywhere
+
+Baldrun Azkelith's interment was prepared and never filled. `GC`, `HB`, `I` and `J` have all now been drawn and none of them answers it. **It is the last unanswered question in the module and that is deliberate.**
