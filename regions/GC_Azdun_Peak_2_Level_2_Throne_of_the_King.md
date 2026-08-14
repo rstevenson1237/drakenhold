@@ -31,6 +31,7 @@
 
 - **GA Grathdun** — vertical, the great ramp down.
 - **GD Valdmor** — vertical, the great ramp up.
+- **GB Karmor** — secret, vertical. A stairwell down from GC.13, the Steward's rooms, arriving at GB.12 inside the cell corridors and past the rod-locked gate at GB.11. Two levels, no landing on GA, and it appears on no plan of either level. It is how leadership reached a high-profile captive without the arena, the barracks or the register knowing anyone had gone down.
 - **The overlook balcony** — open, outward. A nobles' balcony. **No access to the Skybridge from it**, deliberately.
 
 ## TABLES

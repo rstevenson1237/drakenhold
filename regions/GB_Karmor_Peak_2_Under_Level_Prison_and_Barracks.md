@@ -30,6 +30,8 @@
 *Authored against the Setting Relational Diagram. Edge types: open, gated by tile, gated by rod, hidden, secret, vertical, one-way, conditional on restored mechanism, conditional on faction relation.*
 
 - **GA Grathdun** — vertical, the stairwell up.
+- **GA Grathdun** — vertical. The armoury support ways up, arriving at GB.5 behind the formation's line. Drawn from GA's side at its step 8 pass; confirmed here at GB's own.
+- **GC Azdun** — secret, vertical. A stairwell from the Crown's own rooms two levels up, arriving at GB.12 **inside the cell corridors, past the rod-locked gate at GB.11**. Undeclared on any plan, cut so that a high-profile captive could be brought down and questioned without crossing the arena, the barracks or the register.
 - **The deep cells** — secret, gated by rod, hidden and separately gated below the prison corridors. Within-region, and the region's whole weight.
 - **J Mordrak** — vertical, marked. Peak 2's declared descent.
 - **J Mordrak** — secret, vertical, from the deep cells. How the Elder Wyrm came up, and how it could go back down.

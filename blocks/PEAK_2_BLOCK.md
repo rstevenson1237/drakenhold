@@ -31,6 +31,8 @@ The consequence for movement: **on this peak the party is the traffic.** There i
 
 **The back ways.** `GA.26` comes up into GC's administration. A separate servants' route arrives at the Queen's end of the lair corridor at `GE.9` without passing the crater. And below everything, the secret descent out of the deep cells into J at `GB.20`, which is how the Elder Wyrm came up and how it could go back down.
 
+**The Crown's own stair.** A secret stairwell runs two levels from `GC.13`, the Steward's rooms, straight down to `GB.12`, the cell corridors — past `GA` entirely and past the rod-locked prison gate at `GB.11`. It is on no plan of either level. It was cut so that a captive whose name could not appear in the register could be brought down and questioned by people who were never recorded as having gone. **Ratified this pass**, and it does three things at once: it gives `GB.11` an answer that is not the gate, priced — the stair starts inside the empty throne level, which the party must reach and read first, and it lands them inside a locked prison with the gate now between them and the stair-foot; it puts the Steward's rooms and the prison register on the same short line; and it makes `GB.14`'s one entry without a charge a question with somewhere to go. **Which entry, and whether the stair explains it, is not decided here** — it belongs to `GB` and `GC` at their own passes, and neither may resolve it by assumption.
+
 ---
 
 ### The skeleton
@@ -53,6 +55,7 @@ graph TD
     GD ==>|"the great ramp · checkpointed"| GE
     WAR -.-|"secret · the bypass"| GC
     WAR -.-|"secret · past the crater"| GE
+    GC -.-|"secret · vert · the Crown's own stair, GC.13 to GB.12"| GB
 
     GD ---|"tile · faction · Valdgir"| I
     I -.-|"orphaned run · mechanism"| GD
