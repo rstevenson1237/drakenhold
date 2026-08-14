@@ -42,42 +42,66 @@
 ### `A.1 The Landing Gate` — Stolen Stone, Runes Upside Down, First Impression
 *Working note: the module's thesis in one wall. Dwarven blocks with the inscription still on them, set by people who could not read them. A party that stops here reads its first runic script before anyone tells them it matters.*
 
+**Connections:** `A.2` the well square, north through the gate lane · `A.3` the toll-house, immediately inside the gate · `A.12` the cutting ground, an hour along the wood's edge · `A.14` Ketter's farmstead, half an hour inland by the field track · `B.1` the road out, north-west.
+
 ### `A.2 The Well Square` — Swept and Too Large, Public Ground, Where Talk Starts
 *Working note: the upper town gathers here and there are not enough people to fill it. Gather Information's natural home.*
+
+**Connections:** `A.1` the gate lane, south · `A.3` the toll-house on the square's north side · `A.4` the reeve's hall, east · `A.5` the temple, west · `A.6` the Kingfisher, east · `A.7` the shuttered trade houses, the row running downslope.
 
 ### `A.3 The Old Toll-House` — The Notice Board, Ledgers Nobody Reads, Closed Road
 *Working note: the reeve's problems become jobs here. The toll ledgers record thirty years of traffic thinning to nothing, and the last dwarven entries are in two scripts.*
 
+**Connections:** `A.1` the gate, immediately outside · `A.2` the square · `A.4` the reeve's hall, adjoining — one wall, one door, two offices that used to be one.
+
 ### `A.4 The Reeve's Hall` — Aldis Marrow, Outlying Families, A Problem He Cannot Solve
 *Working note: the farmstead job comes from here. Marrow wants it settled before the outlying families abandon their fields, and he will pay in coin, standing and a name or two.*
+
+**Connections:** `A.2` the square · `A.3` the toll-house, through the connecting door.
 
 ### `A.5 The Riverside Temple` — Underattended, Rites for the Drowned, Quiet Charity
 *Working note: the only place in town that will take a body without asking questions. Its practice around the dead is a working model of what the hold's dead expect and nobody makes that connection out loud.*
 
+**Connections:** `A.2` the square · `A.8` the boat landing, by the drowned's stair — sixty steps cut into the slope, the shortest way down and the one nobody uses for cargo.
+
 ### `A.6 The Kingfisher` — Upper-Town Inn, Respectable, Where the Charter Drinks
 *Working note: the Grellick Charter reprovisions and lodges here openly, in good order, paying well. Rest, and the only Rest in the module that recovers everything.*
+
+**Connections:** `A.2` the square. One door, on the square, and the Charter likes it that way.
 
 ### `A.7 The Shuttered Trade Houses` — Saplings Through the Boards, Locked Attics, Dwarven Partners
 *Working note: several of the older families are descended from the hold's trade partners and hold rods, tiles or ledger fragments in attics nobody has opened in thirty years. Obtainable by asking, by buying, or by being the sort of people who are told.*
 
 **Wharf quarter**
 
+**Connections:** `A.2` the square, at the head of the row · `A.10` the idle warehouses, by the back lanes behind the trade houses.
+
 ### `A.8 The Boat Landing` — The Way Downriver, Specialist Goods, A Clock
 *Working note: anything skilled, specialist or dwarven must be sent downriver for. The party will feel this as a delay later and should meet it as a fact now.*
+
+**Connections:** `A.5` the drowned's stair, up to the temple · `A.9` Skeed's office, at the landing head · `A.10` the warehouse row, north along the water · `A.11` the Sunken Oar, south along the water.
 
 ### `A.9 Skeed's Wharf Office` — Twenty Years of Manifests, Ganner Skeed, Who Came and Who Did Not
 *Working note: Skeed knows every boat that has come up the river in twenty years and every crew that walked up the road. He is the register of who has gone into Drakenhold and not come out.*
 
+**Connections:** `A.8` the landing · `A.10` the warehouse row, through the manifest yard.
+
 ### `A.10 The Idle Warehouses` — Doors Unopened Since the Road Closed, Rot and Rope, Squatters
 *Working note: transients, one or two things worth finding, and the physical fact of a trade economy that stopped mid-sentence.*
+
+**Connections:** `A.7` the trade houses, up the back lanes · `A.8` the landing · `A.9` the manifest yard · `A.11` the Sunken Oar, along the boards.
 
 ### `A.11 The Sunken Oar` — Drinking Hall, Rough Custom, Ashen's Crew Are Known Here
 *Working note: Carousing. Ashen's Crew are known and unwelcome, which does not stop them. Rumours run rougher and less true down here than in the square.*
 
 **Outskirts**
 
+**Connections:** `A.8` the landing · `A.10` the warehouse row.
+
 ### `A.12 The Cutting Ground` — Fresh Stumps, The Live Feud, Timber for the Palisade
 *Working note: the town takes its palisade timber from the wood's edge and has been warned. The feud is winnable by anyone willing to negotiate over trees.*
+
+**Connections:** `A.1` the gate, an hour east · `A.13` Wyla Fenn's grove, a quarter hour further along the wood's edge — the stumps stop where her boundary starts · `A.14` the farmstead, by the field track south · `B.13` Fenn's boundary as the Ironwood Trail meets it, the same line approached from the other side.
 
 ### `A.13 Wyla Fenn's Grove` — Runemaster-Trained, A Boundary Marked Plainly, The Only Living Witness
 *Working note: she was inside Peak 3 and left before the Breaking finished. She is the only living voice on what happened up there, and she gives nothing to anyone who arrives as a customer.*
@@ -86,28 +110,44 @@
 
 **Ketter's Farmstead**
 
+**Connections:** `A.12` the cutting ground · `B.13` her boundary on the trail side. The grove has two approaches and she watches both.
+
 ### `A.14 The Farmyard` — Abandoned Mid-Season, Neighbours Watching From Afar, Nightly Visitors
 *Working note: the approach, the evidence, and the decision to go in. The dead rise nightly and strike at the neighbours only once the relics are disturbed — a party that arrives before the disturbance sees a different problem than one that arrives after.*
+
+**Connections:** `A.1` the gate, half an hour by the field track · `A.12` the cutting ground, by the same track north · `A.15` the farmhouse door, standing open · `A.17` the cold store, by the outside hatch in the yard — the loading way, still barred from within.
 
 ### `A.15 The Farmhouse` — Interrupted Household, The Family That Dug, What Is Gone For Good
 *Working note: the Ketters found the graves, took the grave-goods and sold the best of them downriver. The record of what left is here, and what left is not coming back — the buyer is three months gone and the goods are in a city nobody in this module visits. The dead can still be laid to rest without them, and the party learns that some losses are simply permanent.*
 
+**Connections:** `A.14` the farmyard · `A.16` the cellar stair, under the kitchen boards.
+
 ### `A.16 The Cellar Stair` — Cut Too Wide, Older Than the House, First Dwarven Cutting
 *Working note: the house was built on top of something. The stair is the tell and it is visible to anyone who looks at the stonework.*
+
+**Connections:** `A.15` the kitchen above · `A.17` the cold store at the stair's foot.
 
 ### `A.17 The Cold Store` — Provisions Gone Over, The Breach in the Wall, Cold Air From Below
 *Working note: the Ketters broke through a wall that was not theirs, and the breach is how everything since has happened.*
 
+**Connections:** `A.16` the cellar stair · `A.14` the yard hatch above · `A.18` the first gallery, through the breach the Ketters made in the west wall.
+
 ### `A.18 The First Gallery` — Refugee Interment, Names in Two Scripts, Grave-Goods Disturbed
 *Working note: these are Drakenhold refugees who died the year after the descent, buried by their own. The older script on the stones is the same script as the waystones. This is where a party learns that names on stones are worth reading.*
 
+**Connections:** `A.17` the breach · `A.19` the lower niches, down four cut steps north · `A.20` Brannek Kelmor's grave — **hidden**. The processional way runs straight to it and was walled and dressed to match; the gallery stones name the direction for anyone who reads them.
+
 ### `A.19 The Lower Niches` — Deeper Cutting, Undisturbed, What the Ketters Did Not Reach
 *Working note: the negative-space room. Intact, respectful, and worth nothing to a looter — which is the lesson, delivered by withholding.*
+
+**Connections:** `A.18` the first gallery · `A.20` Brannek Kelmor's grave, at the end of the niche run.
 
 ### `A.20 The Grave of Brannek Kelmor` — The Name That Settles It, Laid With Care, The First Key
 *Working note: **Brannek Kelmor** — bran and mek, store and work, a name that was a job before it was a person. He led the refugees out and they buried him properly with what they still had. The dead are laid to rest by returning what remains of what was taken and speaking his name at the stone. Force works badly and is meant to.*
 
 *His name has two further lives. It is cut on the black obelisk in HA, minor and easily missed, and a party that reads it there thirty sessions later recognises the man they buried. And it opens one thing in FA — a stores tally-niche in the dry-goods warren of the servants' passages, his own, holding nothing of value and proving the rule: names are keys. Cross-referenced into HA and FA at their location passes.*
+
+**Connections:** `A.19` the niche run · `A.18` the walled processional way, **hidden** from the gallery side.
 
 ## TABLES
 
@@ -124,4 +164,85 @@
 
 ## REGION RELATIONAL DIAGRAM
 
-*Deferred to procedure step 9.*
+*Procedure step 8. Drawn from the stubs, before the location outlines. Reconciled against the finished outlines before the region closes. The diagram is authoritative: the **Connections:** field under each stub is checked against it, never the reverse.*
+
+```mermaid
+graph TD
+  B1["B.1 · The Road Out"]
+  B13["B.13 · Fenn's Boundary"]
+
+  subgraph UPPER["Upper town"]
+    A1["A.1 · The Landing Gate"]
+    A2["A.2 · The Well Square"]
+    A3["A.3 · The Old Toll-House"]
+    A4["A.4 · The Reeve's Hall"]
+    A5["A.5 · The Riverside Temple"]
+    A6["A.6 · The Kingfisher"]
+    A7["A.7 · The Shuttered Trade Houses"]
+  end
+
+  subgraph WHARF["Wharf quarter"]
+    A8["A.8 · The Boat Landing"]
+    A9["A.9 · Skeed's Wharf Office"]
+    A10["A.10 · The Idle Warehouses"]
+    A11["A.11 · The Sunken Oar"]
+  end
+
+  subgraph OUT["Outskirts"]
+    A12["A.12 · The Cutting Ground"]
+    A13["A.13 · Wyla Fenn's Grove"]
+  end
+
+  subgraph FARM["Ketter's Farmstead"]
+    A14["A.14 · The Farmyard"]
+    A15["A.15 · The Farmhouse"]
+    A16["A.16 · The Cellar Stair"]
+    A17["A.17 · The Cold Store"]
+    A18["A.18 · The First Gallery"]
+    A19["A.19 · The Lower Niches"]
+    A20["A.20 · The Grave of Brannek Kelmor"]
+  end
+
+  A1 --- B1
+  A1 --- A2
+  A1 --- A3
+  A1 --- A12
+  A1 --- A14
+  A2 --- A3
+  A2 --- A4
+  A2 --- A5
+  A2 --- A6
+  A2 --- A7
+  A3 --- A4
+  A5 --- A8
+  A7 --- A10
+  A8 --- A9
+  A8 --- A10
+  A8 --- A11
+  A9 --- A10
+  A10 --- A11
+  A12 --- A13
+  A12 --- A14
+  A12 --- B13
+  A13 --- B13
+  A14 --- A15
+  A14 --- A17
+  A15 --- A16
+  A16 --- A17
+  A17 --- A18
+  A18 --- A19
+  A18 -.- A20
+  A19 --- A20
+```
+
+**Reading the diagram.** Solid edges are open passage. The dotted edge `A.18`–`A.20` is hidden: the processional way from the gallery to the grave was walled and dressed to match, and the gallery stones name the direction for anyone who reads them. Every other edge in the region is open, on foot, in daylight, without a roll.
+
+**What the drawing found.**
+
+- **Two ways into the cellar.** The stubs implied one — house, stair, cold store — which would have made the farmstead a corridor with a single throat. The yard hatch (`A.14`–`A.17`) is the answer that is not the gate: it is the cold store's old loading way, barred from within, and it is opened by force, by the breach from the gallery side, or by whatever comes up it at night once the relics are disturbed. The house route is still the obvious one and still the one that shows the party the Ketters' record at `A.15` first.
+- **Two ways to the grave.** The niche run (`A.19`–`A.20`) is walked; the walled processional way (`A.18`–`A.20`) is read. A party that loots the gallery and turns back never learns the second one exists.
+- **Two approaches to the grove.** `A.12` from the town side and `B.13` from the trail side are the same boundary met from opposite directions, and Wyla Fenn watches both. A party that has already crossed her line on the trail arrives at the cutting ground with a history.
+- **`A.6` is a single-edge leaf and stays one.** It is an inn with one door on the square. That is not an unreachable location; it is a building.
+- **The square is the region's only hub.** Six edges. Everything upper-town routes through `A.2`, which is why Gather Information lives there and why the region reads as small.
+
+**Route ends recorded, not assumed.** Two edges leave region A for locations in B: `A.1`–`B.1` (the road, already named in `## CONNECTIONS`) and the `A.12`/`A.13`–`B.13` pair at Fenn's boundary. B has not been worked at step 8. Both are recorded in the handoff for reconciliation at B's pass rather than written into B here.
