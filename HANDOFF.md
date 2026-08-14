@@ -1,6 +1,6 @@
 # DRAKENHOLD — HANDOFF
 
-*State of the project as of the close of step 8 for the Peak 2 block, GB/GC/GD/GE. **The approach, the whole first level, all of Peak 1 and all of Peak 2 are drawn.** Written for a fresh conversation picking up step 8 at Peak 3 — HB/HC/HD/HE against `blocks/PEAK_3_BLOCK.md` — then I and J.*
+*State of the project as of the close of step 8 for the Peak 3 block, HB/HC/HD/HE. **The approach, the whole first level and all three peaks are drawn.** Written for a fresh conversation picking up step 8 at I and J against `blocks/I_AND_J_BLOCK.md` — the last two regions at this step.*
 
 ---
 
@@ -26,7 +26,7 @@ Architect (steps 1–6) complete. **Engineer (steps 7–9) in progress.**
 
 Step 7 — location stubs and region tables — is **complete for A, B, C, D, E, FA, GA, HA, FB, FC, FD, FE, GB, GC, GD, GE, HB, HC, HD, HE, I, J**. **Twenty-two of twenty-two — step 7 is complete.**
 
-**Step 8 — region relational diagrams — is complete for the approach (`A`–`E`), the first-level block (`FA`, `GA`, `HA`), the Peak 1 block (`FB`, `FC`, `FD`, `FE`) and the Peak 2 block (`GB`, `GC`, `GD`, `GE`).** Sixteen of twenty-two. It has not begun on Peak 3's upper levels, on `I` or on `J`. Step 9 has not begun anywhere.
+**Step 8 — region relational diagrams — is complete for the approach (`A`–`E`), the first-level block (`FA`, `GA`, `HA`), the Peak 1 block (`FB`, `FC`, `FD`, `FE`), the Peak 2 block (`GB`, `GC`, `GD`, `GE`) and the Peak 3 block (`HB`, `HC`, `HD`, `HE`).** Twenty of twenty-two. It has not begun on `I` or on `J`. Step 9 has not begun anywhere.
 
 A diagram is written into the region file's `## REGION RELATIONAL DIAGRAM` section as a mermaid `graph TD`, with a `**Connections:**` field added under every location stub. Check M3 holds the two against each other and the diagram is authoritative. Node ids are the code without the dot (`A18`); the display label is `"A.18 · Name"` and the checker reads the code from the label. Working notes stay until step 9 absorbs them.
 
@@ -74,9 +74,9 @@ A diagram is written into the region file's `## REGION RELATIONAL DIAGRAM` secti
 
 Each new step is preceded by a reconciliation pass over every step before it. Before step 10 begins anywhere, steps 1–9 are read back through as a body of work.
 
-**Next: step 8 at Peak 3 — `HB`/`HC`/`HD`/`HE` against `blocks/PEAK_3_BLOCK.md` — then `I` and `J` together against `blocks/I_AND_J_BLOCK.md`.** `A`–`E`, the first-level block, the Peak 1 block and the Peak 2 block are closed at step 8.
+**Next: step 8 at `I` and `J`, worked together against `blocks/I_AND_J_BLOCK.md`.** `A`–`E`, the first-level block and all three peak blocks are closed at step 8. `I` and `J` are the last two regions at this step, and after them step 9 begins.
 
-**`I` and `J` inherit thirteen route ends** drawn from the peak side and not yet reciprocated: `FD.15`–`I.1`, `FE.7`–`I.13`, `GD.2`–`I.3`, `GD.12`–`I.14`, `I.15`–`GE.3`, `HD`'s eastern terminus, and the descents `FB.14`/`FB.4`/`FD.16`/`GB.20` into `J.2` and `J.3`. None of them needs a decision; all of them need drawing from the other end.
+**`I` and `J` inherit fourteen route ends** drawn from the peak side and not yet reciprocated: `FD.15`–`I.1`, `FE.7`–`I.13`, `GD.2`–`I.3`, `GD.12`–`I.14`, `I.15`–`GE.3`, **`HD.3`–`I.4`** (the eastern terminus, now fixed at both codes), and the descents `FB.14`/`FB.4`/`FD.16`/`GB.20`/**`HB.19`** into `J.2` and `J.3`. None of them needs a decision; all of them need drawing from the other end.
 
 **Answered at the Peak 2 pass:** `GA.17`'s landing at `GB.5` is confirmed from `GB`'s side, drawn exactly as `GA` drew it. **Still open and still not to be assumed:** which entry in `GB.14`'s register the Crown's own stair explains. It is now a question with a route attached and it is `GB`'s and `GC`'s to answer at step 9.
 
@@ -171,6 +171,26 @@ Worked as one pass across `GB`, `GC`, `GD` and `GE` against `blocks/PEAK_2_BLOCK
 
 **One gap recorded and not filled.** `GB`'s Connections claim *Peak 2's declared descent* into `J`, and no `GB` stub carries it, where `FB.14` and `HB.19` carry the other two. Naming it would mean inventing a stub against a ratified count of twenty, so it is left in unnamed fill. **Whether to name it at step 9 is `GB`'s to decide and is not decided here.**
 
+## WHAT STEP 8 AT THE PEAK 3 BLOCK DECIDED
+
+Worked as one pass across `HB`, `HC`, `HD` and `HE` against `blocks/PEAK_3_BLOCK.md`. **One thing needed asking and it is batched.** One landing fixed that a closed region asked for in writing, one open item answered from the existing bestiary, no aggregate corrections. Block-level findings are in `PEAK_3_BLOCK.md` under a new *PASS 3*; per-region findings sit under each diagram.
+
+- **The peak has an express route and it is four rooms long.** `HA.10`→`HC.1`→`HD.1`→`HE.1`. Every ramp head is one node carrying both directions of the great ramp, so a party that stops for nothing crosses all four levels without meeting the squat, the circuit, the crypts or one rung of the clue chain — and arrives at the Sanctuary holding none of the three things that make it survivable. The module performs no subtraction, exactly as at `D` and `E`.
+- **Not one gate on this peak is answered on its own floor, and all of them are answered one floor *up*.** `HC.18` by `HD.10` or `HD.15`; `HD.11` by the circuit rather than by any door; `HE` by `HD.16`, three levels of preparation earlier. Peak 1 answers downward, Peak 2 answers from anywhere but the floor itself, Peak 3 answers in the direction the party is already climbing. The block's claim that the chain runs upward and the price runs upward with it is now topology.
+- **`HD`'s circuit is a closed ring with the grant on it, and the ring is the lock.** No chord, no room hanging off it, and the route imposes an attempt at every segment in either direction. Walking it backwards to collect the rod means running the same trials in reverse order. **The shortcut costs more than the road because the shortcut is priced in the road** — the rod that opens `HD.11` is the rod at the far end of the circuit.
+- **The two live edges do not touch each other.** `HC.12` lands on `HD.4`, the plain circuit ground, and nowhere near `HD.11`. The clock cannot deliver the observation rooms to anybody. It shortcuts the explanation, not the ordeal.
+- **`HB` is a funnel and its two answers are priced in the region's own currency.** The tiering is a chain, richest and worst first, with the niche, the lance, piece five and the descent into `J` all at the far end of it. `HA.29`→`HB.3`→`HB.12` and `HA.21`→`HB.17` are the ways past, and the second lands in the survivors' own graves. **The shortest route to the niche runs over the dead of the faction whose good opinion is Peak 3's largest asset**, and nothing about it is stealthy.
+- **The niche is two steps and only one of them is the name.** `HB.14`–`HB.20`–`HB.15`. It is cut into the older course where it surfaces in the blank wall, not into the blank wall directly, so a party must first notice that unworked stone is not unworked.
+- **`HB.13` is the only edge on the level that crosses a station.** The watch that stayed were interred with their post rather than their station, which makes `HB.4`–`HB.13`–`HB.11` a route stepping three tiers in one cutting, and gives `HB.18`'s *never past their own tier* rule its one architectural exception.
+- **`HE.5` is the hub and the hub is not a room.** Six of sixteen edges. The broken geometry is the corridor a party walks rather than a hazard it meets, and `HE.3` is the only fixed point on the floor — which retroactively prices `HD`'s circuit correctly: **the rod does not buy treasure, it buys a way back out.**
+- **`HE` has no lock of any kind**, the same finding `GE` produced from the opposite direction. The lock is the map.
+
+**`HA.19`'s landing, fixed.** `HC.15`, the instruction rooms. Directed by `HA.19`'s own stub, which stated the landing was `HC`'s to fix. **`HA` is amended to carry the edge** — the one change to an already-closed region at this pass, and a reconciliation the closed region asked for.
+
+**One question batched, not decided.** `HC.11` says the survey line is a Runemaster route that *bypassed the trials*. The excavation as actually cut breaks into `HD.4`, the circuit itself, which bypasses nothing. Both are true and the discrepancy is in character — Vekkut cannot read the survey he is following. **Where the line was meant to arrive is open.** Three genuine alternatives: it reaches `HD.10`, the grant, making the order's own back door a way to the rod without the ordeal; it reaches `HD.11`, the observation rooms, making it leadership's private stair and explaining why it was surveyed and never cut; or it reaches the circuit as drawn and *the bypass was of the receiving room and the terms, not of the trials* — the least dramatic and the one that changes nothing already written.
+
+**One phrasing flagged rather than changed.** `HC`'s region-level Connections bullet calls the excavation *one-way*. Both diagrams draw it undirected, because once it is through it is a hole in a floor. The bullet is left as it stands.
+
 ## THE CROWN'S OWN STAIR, RATIFIED
 
 **Directed, and written at four levels.** A secret stairwell runs two levels from `GC.13`, the Steward's rooms, straight down to `GB.12`, the cell corridors — no landing on `GA`, on no plan of either level, and arriving **past the rod-locked gate at `GB.11`**. Undeclared access from leadership to the prisons, cut for captives whose names were not going to appear in the register.
@@ -226,8 +246,8 @@ All pass-4 decisions (room budgets, difficulty dice, mode rationale, three tiers
 - ~~**`B.9` ↔ `D.1`** and **`B.4a` ↔ `D.6`**.~~ *Both closed at D's step 8 pass, reciprocated unchanged.*
 - ~~**`D.11` ↔ `E.1`.**~~ *Closed at E's step 8 pass. `E.1` carries both roads; what differs is what the party arrives holding, and the registry at `E.6` is where the gap first shows.*
 - ~~**`E.12` ⇒ `FA.1`.**~~ *Closed at the first-level block's step 8 pass. Written into `FA.1`'s Connections field and `FA`'s diagram, undirected. The hold's only outside opening is now drawn from both ends.*
-- ~~**`FA.30` → `FC.15`, `FA.8` → `FB.9`, `GA.26` → `GC.7`, `HA.30` → `HC.7`, `HA.29` → `HB.3`, `HA.21` → `HB.17`.**~~ *All drawn from the main-level side at this pass. The peak-level regions reciprocate at their own step 8 passes; none of them needs a decision to do it.*
-- **`HA.19` the scholars' stair.** Drawn as a stub end running up into `HC` by a servants' route that is not the great ramp. **Its landing above is `HC`'s to fix** and is not chosen here.
+- ~~**`FA.30` → `FC.15`, `FA.8` → `FB.9`, `GA.26` → `GC.7`, `HA.30` → `HC.7`, `HA.29` → `HB.3`, `HA.21` → `HB.17`.**~~ *All drawn from the main-level side. `HA.30`–`HC.7`, `HA.29`–`HB.3` and `HA.21`–`HB.17` are reciprocated unchanged at the Peak 3 block's step 8 pass. All six are closed.*
+- ~~**`HA.19` the scholars' stair.**~~ *Closed at the Peak 3 block's step 8 pass. The landing is `HC.15`, the instruction rooms — the servants' route comes up where the initiates were prepared rather than where they were received. `HA` is amended to carry the edge, as its own stub asked.*
 - **`GA.17` → `GB.5`.** The armoury support ways down, landing behind the formation. Written from `GA`'s side; `GB` confirms at its own pass.
 - **`GC.13` → `GB.12`.** The Crown's own stair, ratified this pass. See above.
 - `C.1` tile → `FA.17` seal. Copy at `GA.19`.
@@ -266,7 +286,7 @@ All pass-4 decisions (room budgets, difficulty dice, mode rationale, three tiers
 - `GD.10` third sub-vault — **proposed** as artifact piece four. Awaiting ratification.
 - `GB.17` the jailer's oath — two releases exist, one of which is a lie. Which lie, unwritten.
 - `GC.11` who ordered the defacing — named as a revelation, not yet named as a person.
-- Undead variety in `HB` rests on Skeletal Warrior and Shadow alone. **Due at step 8.**
+- ~~Undead variety in `HB` rests on Skeletal Warrior and Shadow alone.~~ *Answered at the Peak 3 block's step 8 pass, from the existing bestiary and with no new template: **Dwarven Wraiths** on the royal and Runemaster tiers, **Skeletal Warriors** in the guild and guard galleries, **Shadows** below the tiers. The variety is tiered like everything else on the level, and the wraiths are why collecting royal names upstairs is collecting a weapon. Written into `HB`'s Creatures field and flagged there.*
 - ~~The light mechanic in the deep.~~ *Resolved as a Referee procedure in `I_AND_J_BLOCK.md` and wired into `J`'s Encounter table. Teaching site at `J.6`, navigation answer at `J.16`.*
 - `I.16` the undefended approach — which level, and from which direction, resolves at step 8.
 - `J.24` is deliberately unanswered and stays that way.
@@ -276,4 +296,5 @@ All pass-4 decisions (room budgets, difficulty dice, mode rationale, three tiers
 - ~~`B.4a` drain outfall.~~ *Closed at `J.9`.* `B.4a` outfall confirmed at `D.6` and drawn as an edge at B's step 8 pass; `B.5`'s two named destinations (Thurgan, Azost) are permanent flavour and owe no answer.
 - ~~The Knight's fate.~~ *Resolved at `HB.15` — laid in the niche by the last dwarves who could reach him, the lance with him, his name carved nowhere on the level. `HA.5` does not carry him and that absence is the lock.*
 - `HB.6` Baldrun Azkelith's interment was prepared and never filled. What happened to the last king is open in both `GC` and `HB`.
-- `HC.9` the whispers are one side of a conversation with somebody who is not Vekkut. Who, unwritten.
+- `HC.9` the whispers are one side of a conversation with somebody who is not Vekkut. Who, unwritten, and deliberately not answered at step 8. `HC.19`, the shaft they come down, is drawn as a leaf in `HC` and as no edge at all in `HE`: nothing can travel it.
+- **`HC.11` the survey line's intended terminus.** The line is a Runemaster route that *bypassed the trials*; Vekkut's dig, which follows it badly, breaks into `HD.4`, the circuit, which bypasses nothing. Where the line was meant to arrive is open and is **batched at the Peak 3 pass** rather than assumed.

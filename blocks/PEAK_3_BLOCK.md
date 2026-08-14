@@ -130,3 +130,47 @@ The whole ramp, top to bottom, and the whole of `HB`'s four galleries. Peak 3 wi
 - `HD.16` the earned rod is the only Runemaster-tier key in the module a party can hold legitimately, and `GD.9`'s ward is Runemaster work.
 - `HE.10`'s register names two carriers who reached `E.5` and `D.3`, and one who did not get out of the mountain. `J` inherits the third.
 - The seventh piece, in `J`, is named on the register and its location is not.
+
+---
+
+## PASS 3 — THE REGION DIAGRAMS
+
+*Engineer step 8, worked as one pass across `HB`, `HC`, `HD` and `HE`. **Nothing was invented and one thing needed asking.** One landing fixed that a closed region asked for, one open item answered from the existing bestiary, one discrepancy found in the survey line and batched rather than resolved. Per-region findings sit under each region's own diagram; what belongs to no single region is here.*
+
+### The peak has an express route and it is four rooms long
+
+`HA.10`→`HC.1`→`HD.1`→`HE.1`. Every ramp head is a single node carrying both directions of the great ramp, so a party that stops for nothing crosses all four levels of Peak 3 without meeting the squat, the circuit, the crypts or one rung of the clue chain, and arrives at the Sanctuary holding none of the three things that make it survivable — the script lesson confirmed at `HC.15`, a fixed point at `HE.3`, and any idea of what it is looking for. **This is the same shape `D` and `E` have on the approach, and the module performs no subtraction here either.** The block document has always said the peak has no checkpoint and no toll; the drawing says what it has instead, which is four rooms of nothing followed by a level that does not forgive arriving unprepared.
+
+### Not one gate on this peak is answered on its own floor
+
+The same structural signature Peak 2 produced, arrived at independently and from the opposite direction:
+
+- `HC.18`, the sealed chamber, is answered by `HD.10` or `HD.15`, one level up.
+- `HD.11`, the observation rooms, is answered by the circuit that ends at `HD.10` — which is to say by the road, not by a door — and by no rod that exists below it.
+- `HB`'s royal gallery, which is a funnel rather than a lock, is answered by `HA.29` and `HA.21`, one level *down* from the main level rather than up.
+- `HE` has no gate at all, and its answer is `HD.16` three levels of preparation earlier.
+
+**Peak 1 answers its gates on the floor beneath. Peak 2 answers them from anywhere but the floor itself. Peak 3 answers them one floor above, always, in the direction the party is already climbing** — which is the block's own claim that the chain runs upward and the price runs upward with it, made structural.
+
+### The two live edges do not touch each other
+
+`HC.12`–`HD.4` puts the excavation into the plain circuit ground and nowhere near `HD.11`. **The clock cannot deliver the observation rooms to anybody** — not to Vekkut, not to a party that accelerates the dig, not to whatever the trials were containing. It shortcuts the explanation rather than the ordeal. The level's whole argument survives the one route in the module that changes state without the party, and that is worth knowing before step 9 writes the clock.
+
+### The niche is two steps and only one of them is the name
+
+`HB.14`–`HB.20`–`HB.15`. The wall the underclass were given instead of a crypt is where the founding lineage's older, plainer course surfaces, and Torvin Ganthur's niche is cut into *that*, not into the blank wall directly. A party must first notice that unworked stone is not unworked, and then know a man who is on no wall on this floor. **`HA.28`'s downward run and `HB.20` are the same thing and the niche is the reason it matters** — the survivors cut in the founders' manner without ever having been taught it.
+
+### `HB` is a funnel and its two answers are priced in this region's own currency
+
+The tiering is a chain: royal, Runemaster, guild, guard, blank wall, in that order, richest and worst first. Everything the peak's bottom holds — the niche, the lance, piece five, the descent into `J` — is at the far end of it. The two ways past are `HA.29`→`HB.3`→`HB.12` and `HA.21`→`HB.17`, and the second lands in the survivors' own graves one edge from the blank wall. **The shortest route to the niche runs over the dead of the faction whose good opinion is Peak 3's largest asset, and nothing about it is stealthy.** The price is not a monster. It is the pocket knowing.
+
+### Aggregate corrections
+
+None. `HB` 20 + `HC` 20 + `HD` 16 + `HE` 10 = 66 stubbed against 126 budgeted, exactly as stated at the head of this document.
+
+### What this pass fixed, answered and did not answer
+
+- **Fixed:** `HA.19`'s landing, which `HA` explicitly left to `HC`. It is `HC.15`, the instruction rooms — the servants' route comes up where the initiates were prepared rather than where they were received. **`HA` is amended to carry the edge**, the one change to an already-closed region at this pass, and it is a reconciliation the closed region asked for in writing.
+- **Answered:** undead variety in `HB`, open since step 7 and marked *due at step 8*. Wraiths on the royal and Runemaster tiers, Skeletal Warriors in the guild and guard galleries, Shadows below the tiers. **No new bestiary template**, and the variety is tiered like everything else on the level. Flagged in `HB`'s Creatures field rather than written silently.
+- **Not answered:** where `HC.11`'s survey line was meant to arrive. The line is a Runemaster route that *bypassed the trials*; the dig as actually cut breaks into the circuit, which bypasses nothing. Both are true, the discrepancy is in character, and **it is a question with alternatives rather than an assumption to make.** Batched.
+- **Not answered:** who the whispers are addressed to. `HC.19` is drawn as a leaf in `HC` and as no edge at all in `HE`, because nothing can travel it. It carries information and nothing else, and the question at the top of it is left exactly where step 7 left it.
