@@ -174,3 +174,13 @@ None. `HB` 20 + `HC` 20 + `HD` 16 + `HE` 10 = 66 stubbed against 126 budgeted, e
 - **Answered:** undead variety in `HB`, open since step 7 and marked *due at step 8*. Wraiths on the royal and Runemaster tiers, Skeletal Warriors in the guild and guard galleries, Shadows below the tiers. **No new bestiary template**, and the variety is tiered like everything else on the level. Flagged in `HB`'s Creatures field rather than written silently.
 - **Not answered:** where `HC.11`'s survey line was meant to arrive. The line is a Runemaster route that *bypassed the trials*; the dig as actually cut breaks into the circuit, which bypasses nothing. Both are true, the discrepancy is in character, and **it is a question with alternatives rather than an assumption to make.** Batched.
 - **Not answered:** who the whispers are addressed to. `HC.19` is drawn as a leaf in `HC` and as no edge at all in `HE`, because nothing can travel it. It carries information and nothing else, and the question at the top of it is left exactly where step 7 left it.
+
+### The survey line's terminus, ratified
+
+**Batched at pass 3 and answered: `HC.11`'s line was surveyed to arrive at `HD.11`, the observation rooms.** Leadership's own stair from the chapel to their own floor, bypassing the receiving room, the stated terms and the circuit entire. Planned, surveyed, never cut.
+
+It does three things at once. It explains the survey — a route that bypasses the trials has to arrive somewhere the trials do not, and the only such room on `HD` is the one at the centre. It gives `HD.11` a third door that does not exist, which is a better fact about the observation rooms than another door that does. And it turns *redirect* — already one of the three things a party can do to `HC.12` — into the highest-stakes action available anywhere on Peak 3: **the only way in the module to hand the most heavily gated room on the peak to somebody who did not pay for it.**
+
+The level's whole argument survives on one contingency, and it is a contingency the module has already established: **Vekkut cannot read the line he is following.** Left alone he breaks into `HD.4` and shortcuts the explanation rather than the ordeal. Put onto the true line by somebody who *can* read it, he opens `HD.11`.
+
+The order that scored `HD.9` when it told its initiates nothing was being scored had also drawn itself a private door into the room it scored them from, and then declined to open it. **That is not drawn as an edge, because it does not exist.** It is written into `HC.11`, into `HC`'s and `HD`'s diagram findings, and here.
