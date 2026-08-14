@@ -42,7 +42,15 @@
 
 *Raised against `Rules_Light_TTRPG_Design_Notes.md`. Answered in the rules project, never in a region file. Answers received are written into `DECISIONS.md`.*
 
-- None currently open. The four gaps raised after step 8 — the light rule, Rest inside a DANGEROUS region, Weather on the span, and the Danger Die's reset — are all answered. See `DECISIONS.md`.
+*The four gaps raised after step 8 — the light rule, Rest inside a DANGEROUS region, Weather on the span, and the Danger Die's reset — are all answered. See `DECISIONS.md`. Three proposals are open.*
+
+**The test these are held to, and the test anything else must pass:** a one-off procedure earns its place where **the players are already keeping score in their heads and the procedure only makes the scoring visible.** Bloat is a procedure that tracks something the table was not already tracking. All three below are proposals for the rules project. **None of them is written, and none may be written into a region file.**
+
+- **Buying the warrens.** `DECISIONS.md` records the standing call for the three arteries: *no landmark system, no service marks, no mechanic — a sheer numbers game of twisting paths and trying to keep track.* That call stands and this does not overturn it. But the survivors' stated advantage is **thirty years of memory a party cannot buy** — which is precisely the thing a party will try to buy, and there is no procedure for what a bought or coerced guide is worth, what a wrong guide costs, or what happens when the guide leaves. The table will want that negotiation scored. **Proposed as a rules-project question, not a mapping system.**
+- **The `HD` circuit.** A closed ring, no chord, an attempt imposed at every segment in either direction, with the rod that opens `HD.11` at the far end of it. It is already a mini-game in everything but name and the fiction is fully built. What it lacks is a stated order and a stated cost for a failed segment. **The smallest of the three, and the one players will most visibly engage with as a system.**
+- **Weight against the way out.** The module's spine is extraction, and the Notes carry Encumbrance as slots. Every treasure decision here is a slot decision made hours from the door, and `HE.5`'s earned rod already **buys a way back out rather than treasure.** A light procedure for hauling under load back through a region already crossed — not a new subsystem, only what the existing slots cost on the return leg — would make the module's central tension mechanical instead of implied. **The largest in scope and the one most worth getting right.**
+
+**Deliberately not proposed:** any further scoring of the light rule. It works because it is three states and a Referee call, and `J.6` teaches it without a table.
 
 ---
 
