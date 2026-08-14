@@ -25,7 +25,6 @@
 - **`GB.14`'s one entry without a charge.** The Crown's own stair, `GC.13`→`GB.12`, gives it somewhere to go. **Which entry, and whether the stair explains it, is not decided and is not to be assumed.** `GB`'s and `GC`'s, at their own passes.
 - **`GB.17`, the jailer's oath.** Two releases exist and one of them is a lie. Which lie, unwritten.
 - **`GC.11`, who ordered the defacing.** Named as a revelation and answered as one — Vessa Rudgir, the Steward. Not yet written as a person: what she was, what it cost her, and what `GB.4` does to the account.
-- **`GD.10`, the third sub-vault.** Proposed as artifact piece four. Awaiting ratification.
 - **`HC.9`, the whispers.** One side of a conversation with somebody who is not Vekkut. Who, unwritten, and deliberately not answered at step 8. `HC.19`, the shaft they come down, is a leaf in `HC` and no edge at all in `HE`: nothing can travel it.
 - **`D.6`, the drain outfall.** `J.9`–`D.6` is drawn one-way outward from `J`'s side. Whether `D.6` should carry a referee-facing line about what else comes out of that culvert is **proposed and batched**; `D` is closed and was not amended.
 - **`HC`'s one-way phrasing.** `HC`'s region-level Connections bullet calls the excavation *one-way*; both diagrams draw it undirected. Flagged rather than changed.
@@ -60,6 +59,7 @@
 
 - ~~**The seventh chair at `GA.2`.**~~ *Answered at `GC.14` — the Steward removed her own seat and kept it whole in her rooms. Why is open and is `GB.4`'s to complicate.*
 - ~~**Artifact piece count and placement.**~~ *Seven, ratified. All placed: `E.5`, `D.3`, `FD.14`, `GD.10`, `HB.14`, `HD.14`, `J.18`. Two ever left the mountain and the evacuation register at `E.6` proves it. **The count is itself a clue** and the module never performs the subtraction.*
+- ~~**`GD.10`, the third sub-vault.**~~ *Ratified as **artifact piece four**, placed under Royal authority in the season of the Breaking. The proposal stood from the Peak 2 block's pass; ratified in full at the post-step-8 cleanup. The count of seven is now settled at every one of its seven placements.*
 - ~~**A second horror for `HE`.**~~ *No second template. One singular collared Drakmorith at `HE.6`, addressable rather than negotiable. The existing Horror-type entry already supports arriving-as-geometry; no new entry drafted and none needed.*
 - ~~**Undead variety in `HB`.**~~ *Answered at the Peak 3 block's step 8 pass from the existing bestiary, with no new template: **Dwarven Wraiths** on the royal and Runemaster tiers, **Skeletal Warriors** in the guild and guard galleries, **Shadows** below the tiers. Written into `HB`'s Creatures field.*
 - ~~**The thing in `GB`'s deep cells.**~~ *An Elder Wyrm taken alive during the expansion and kept for study — which is how the Runemasters learned to build the yoke at all. Uses the existing Bestiary entry; what it knows, wants and has become in thirty-two years is written into `GB`.*

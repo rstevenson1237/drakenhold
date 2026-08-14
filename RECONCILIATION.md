@@ -32,6 +32,8 @@ Two kinds of check. **Mechanical** checks are scripted, run every pass, and take
 
 **J2 · Demotion.** The region's step-5 fields read against its locations. Anything true of one named location is pushed down into that location; what remains is what applies to the region entire. Fields narrow as the region develops — a field still carrying location-specific detail is a defect, not a redundancy.
 
+**Demotion runs *after* the destination exists, never before.** A field's detail is pushed down once the location that will carry it has been written, as part of closing that region — not audited out of the fields in advance of the pass that gives it somewhere to go. Moving material between midpoints before the endpoint exists loses it. **Until a location is written, a field carrying its detail is correct**, and the check does not apply.
+
 **J3 · Clue chain.** Rule 10: clues to hidden and secret detail always exist. For every secret in the region, at least one clue exists, and at least one of those clues lives **outside the location holding the secret**. A secret discoverable only by standing in the room it is in is not a secret; it is a search roll.
 
 **J4 · Connections.** Beyond the mechanical check: does every gate still have an answer that is not the gate, and is the answer priced — longer, darker, or watched by something worse? Does the region still have more than one route to most places? Can a party lose the way?
@@ -55,7 +57,9 @@ Two kinds of check. **Mechanical** checks are scripted, run every pass, and take
 
 ## THE FULL SWEEP
 
-Before the builder phase begins anywhere, steps 1–9 are read back through as one body of work rather than region by region. The additional checks at that scale:
+Before the builder phase begins anywhere, steps 1–9 are read back through as one body of work rather than region by region.
+
+**A sweep that precedes a step checks that the ground still says what it said. It does not do the next step's work early.** J2 in particular is a closing check and belongs to a region's own pass; the sweep may note that a field is carrying location-specific detail, and must leave it where it is. The additional checks at that scale:
 
 - **Truths hold.** Every Truth in the setting outline is honoured everywhere it applies, and no region has quietly contradicted one.
 - **Rumours point somewhere.** Every rumour resolves to something that now exists, or is deliberately false and marked as such in the author's record.

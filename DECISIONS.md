@@ -32,7 +32,7 @@
 
 **The waystones are the module's entire teaching method for runic script.** Full bilingual text at `B.2`, `B.5` and `B.8`, roots hyphenated, numbers as tally strokes. Nothing is translated for players. Five roots added at that pass and recorded in the outline's TRUTHS: *rok* road, *lath* league, *ven* toward, *ost* water, *vir* wood. Thornhaven's unused dwarven name is **Ostgir**.
 
-**Artifact pieces — seven, and the count is itself a clue.** Two ever left the mountain, `E.5` and `D.3`, and the evacuation register at `E.6` proves it. Five remain inside: `FD.14`, `GD.10`, `HB.14`, `HD.14`, `J.18`. Seven were broken at `HE`; two were carried out at `E.6`; **the module never performs the subtraction.**
+**Artifact pieces — seven, and the count is itself a clue.** Two ever left the mountain, `E.5` and `D.3`, and the evacuation register at `E.6` proves it. Five remain inside: `FD.14`, `GD.10`, `HB.14`, `HD.14`, `J.18`. **All seven placements are ratified**, `GD.10` last — the third sub-vault, placed under Royal authority in the season of the Breaking. Seven were broken at `HE`; two were carried out at `E.6`; **the module never performs the subtraction.**
 
 **The stub ratio.** Roughly half a region's room budget is stubbed as named locations; the balance is unnamed fill inside the stated groupings. This is what makes the negative-space rule real rather than stated.
 
