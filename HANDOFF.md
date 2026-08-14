@@ -1,6 +1,6 @@
 # DRAKENHOLD — HANDOFF
 
-*State of the project as of the close of step 8 for the Peak 1 block, FB/FC/FD/FE. **The approach, the whole first level and all of Peak 1 are drawn.** Written for a fresh conversation picking up step 8 at Peak 2 — GB/GC/GD/GE against `blocks/PEAK_2_BLOCK.md` — then Peak 3, then I and J.*
+*State of the project as of the close of step 8 for the Peak 2 block, GB/GC/GD/GE. **The approach, the whole first level, all of Peak 1 and all of Peak 2 are drawn.** Written for a fresh conversation picking up step 8 at Peak 3 — HB/HC/HD/HE against `blocks/PEAK_3_BLOCK.md` — then I and J.*
 
 ---
 
@@ -26,7 +26,7 @@ Architect (steps 1–6) complete. **Engineer (steps 7–9) in progress.**
 
 Step 7 — location stubs and region tables — is **complete for A, B, C, D, E, FA, GA, HA, FB, FC, FD, FE, GB, GC, GD, GE, HB, HC, HD, HE, I, J**. **Twenty-two of twenty-two — step 7 is complete.**
 
-**Step 8 — region relational diagrams — is complete for the approach (`A`–`E`), the first-level block (`FA`, `GA`, `HA`) and the Peak 1 block (`FB`, `FC`, `FD`, `FE`).** Twelve of twenty-two. It has not begun on Peak 2's or Peak 3's upper levels, on `I` or on `J`. Step 9 has not begun anywhere.
+**Step 8 — region relational diagrams — is complete for the approach (`A`–`E`), the first-level block (`FA`, `GA`, `HA`), the Peak 1 block (`FB`, `FC`, `FD`, `FE`) and the Peak 2 block (`GB`, `GC`, `GD`, `GE`).** Sixteen of twenty-two. It has not begun on Peak 3's upper levels, on `I` or on `J`. Step 9 has not begun anywhere.
 
 A diagram is written into the region file's `## REGION RELATIONAL DIAGRAM` section as a mermaid `graph TD`, with a `**Connections:**` field added under every location stub. Check M3 holds the two against each other and the diagram is authoritative. Node ids are the code without the dot (`A18`); the display label is `"A.18 · Name"` and the checker reads the code from the label. Working notes stay until step 9 absorbs them.
 
@@ -74,9 +74,13 @@ A diagram is written into the region file's `## REGION RELATIONAL DIAGRAM` secti
 
 Each new step is preceded by a reconciliation pass over every step before it. Before step 10 begins anywhere, steps 1–9 are read back through as a body of work.
 
-**Next: step 8 at Peak 2 — `GB`/`GC`/`GD`/`GE` against `blocks/PEAK_2_BLOCK.md` — then Peak 3, then `I` and `J`.** `A`–`E`, the first-level block and the Peak 1 block are closed at step 8.
+**Next: step 8 at Peak 3 — `HB`/`HC`/`HD`/`HE` against `blocks/PEAK_3_BLOCK.md` — then `I` and `J` together against `blocks/I_AND_J_BLOCK.md`.** `A`–`E`, the first-level block, the Peak 1 block and the Peak 2 block are closed at step 8.
 
-**Two things the next Peak 2 pass inherits and must not resolve by assumption.** `GA.17`'s armoury support ways are drawn down onto `GB.5`, behind the formation — `GB` confirms the landing at its own pass. And the Crown's own stair `GC.13`→`GB.12` makes `GB.14`'s one entry without a charge a question with somewhere to go; **which entry, and whether the stair explains it, is not decided and is not to be assumed.**
+**`I` and `J` inherit thirteen route ends** drawn from the peak side and not yet reciprocated: `FD.15`–`I.1`, `FE.7`–`I.13`, `GD.2`–`I.3`, `GD.12`–`I.14`, `I.15`–`GE.3`, `HD`'s eastern terminus, and the descents `FB.14`/`FB.4`/`FD.16`/`GB.20` into `J.2` and `J.3`. None of them needs a decision; all of them need drawing from the other end.
+
+**Answered at the Peak 2 pass:** `GA.17`'s landing at `GB.5` is confirmed from `GB`'s side, drawn exactly as `GA` drew it. **Still open and still not to be assumed:** which entry in `GB.14`'s register the Crown's own stair explains. It is now a question with a route attached and it is `GB`'s and `GC`'s to answer at step 9.
+
+*Superseded, kept for the record:* **Two things the next Peak 2 pass inherits and must not resolve by assumption.** `GA.17`'s armoury support ways are drawn down onto `GB.5`, behind the formation — `GB` confirms the landing at its own pass. And the Crown's own stair `GC.13`→`GB.12` makes `GB.14`'s one entry without a charge a question with somewhere to go; **which entry, and whether the stair explains it, is not decided and is not to be assumed.**
 
 **Step 8 at region A decided one thing and it is recorded rather than asked:** the farmstead cellar was a single-throat corridor in the stubs, and the diagram found it. The yard hatch at `A.14`–`A.17` is the second way in — the cold store's old loading way, barred from within. Additive, within the region, consistent with rule 6.
 
@@ -151,6 +155,21 @@ Worked as one pass across `FB`, `FC`, `FD` and `FE` against `blocks/PEAK_1_BLOCK
 - **`FB`'s two prizes are hidden behind the two places the tribe will not go.** The undeclared reserve past the Ooze at `FB.12`; the skimmed count under a script nobody on the level can read at `FB.13`. Neither hiding place is a trap and both are characterisation.
 - **`FB.11` does not touch the granary floor.** The sealed bins are reached only through the tally gallery, so the room that says what is *in* them is on the only way to them.
 - **`FE` is a legitimate single throat.** One ramp, one orphaned Skybridge run at `FE.7`–`I.13` that must be solved from outside. Stated in the region's own Connections, priced, and the reason the level pays what it pays. The star shape is the design: no route on `FE` is a decision because every decision on `FE` is a sentence.
+
+## WHAT STEP 8 AT THE PEAK 2 BLOCK DECIDED
+
+Worked as one pass across `GB`, `GC`, `GD` and `GE` against `blocks/PEAK_2_BLOCK.md`. **Nothing needed asking.** One edge reconciled, one aggregate corrected, one gap recorded and deliberately not filled. Block-level findings are in `PEAK_2_BLOCK.md` under a new *PASS 3*.
+
+- **The deep cells were a closed loop and the drawing found the way out.** `GB.16` is rod-gated and `GB.15` states the rod is held by the wraith *below* it — a door that cannot be opened from the side a party is on. The answer is `GB.20`–`J.3`, the hole the Elder Wyrm was using before anyone built a cell over it, and it is priced about as steeply as anything in the module: **it arrives inside `GB.19`.** The honest route is a conversation through a locked floor, which the region's own Danger 6 already establishes carries sound. **The honest release of the jailer's oath is still unwritten and was not written here.**
+- **`GA.22`–`GE.9` reconciled.** The servants' way into the lair corridor has been in the block document and the setting diagram since step 6 and had no end in any region file. It leaves the Peak 2 warren from the capillary maze and climbs three levels to the Queen's end. **`GA` is amended to carry it** — the one change to an already-closed region at this pass.
+- **Not one gate on this peak is answered on its own floor.** `GB.11` by the Crown's stair from two levels up; `GB.16` by `J` from below; `GC.1` by the bypass from the warren beneath; `GD`'s count by the orphaned run at `I.14`; `GE`'s crater by `GA.22`, three levels down. That is the structural difference between Peak 2 and Peak 1 and it is worth carrying into the location passes.
+- **`GC.3` touches three rooms and pointedly not `GC.10`.** The defacing is on the throne room, the chancery and the petition rooms; the line of kings stands untouched one edge away. The region's whole lesson — royal names are collected, not found — is now drawn rather than asserted.
+- **`GC.13` is the level's real junction.** The order, the seventh chair and the secret stair down to a prison all open off the Steward's rooms, and the revelation about Vessa Rudgir is a closed triangle with one leaf that cannot be entered except through her handwriting.
+- **On `GD` the hub is the scales, not the vault.** `GD.7` carries six edges. The busiest node in the busiest region is where a party is measured.
+- **On `GE` nothing is gated at all.** Not one lock in the region; the d4 is the lock. Every route from the ramp to the Queen's end passes the mouth of the crater — unless the party came up `GE.9`.
+- **`GC.12`, not `GC.13`, holds the rod schedule.** Corrected in the block document.
+
+**One gap recorded and not filled.** `GB`'s Connections claim *Peak 2's declared descent* into `J`, and no `GB` stub carries it, where `FB.14` and `HB.19` carry the other two. Naming it would mean inventing a stub against a ratified count of twenty, so it is left in unnamed fill. **Whether to name it at step 9 is `GB`'s to decide and is not decided here.**
 
 ## THE CROWN'S OWN STAIR, RATIFIED
 

@@ -39,6 +39,7 @@
 - **HA Thaldun** — open. The Cold Run, east to the dead, and the one artery still in use.
 - **GB Karmor** — vertical. The armoury support ways down, arriving inside the arms and behind the formation. Drawn from this side at step 8; the landing is confirmed at GB's own pass.
 - **GC Azdun** — secret. The bypass, coming up inside the administrative chambers past the ramp.
+- **GE Azith** — secret, vertical. The servants' way, arriving at the Queen's end of the lair corridor without passing the crater. Reconciled at the Peak 2 block's step 8 pass; the block document and the setting diagram always carried it and it had no end in any region file.
 
 ## TABLES
 
@@ -175,7 +176,7 @@
 ### `GA.22 The Capillary Maze` — Dense, Featureless, Built to Be Memorised
 *Working note: the largest grouping and the emptiest. Depth and disorientation.*
 
-**Connections:** `GA.9` the clerks' warrens · `GA.12` the Ash Run terminus · `GA.13` the Cold Run head · `GA.17` the armoury support · `GA.23` the blocked run · `GA.27` the wrong mouth · `GA.18` the watchers' nest — **hidden** · `GA.25` the older course — **hidden** · `GA.26` the bypass — **hidden**.
+**Connections:** `GA.9` the clerks' warrens · `GA.12` the Ash Run terminus · `GA.13` the Cold Run head · `GA.17` the armoury support · `GA.23` the blocked run · `GA.27` the wrong mouth · `GA.18` the watchers' nest — **hidden** · `GA.25` the older course — **hidden** · `GA.26` the bypass — **hidden** · `GE.9` the servants' way into the lair corridor, three levels up — **secret, vertical**.
 
 ### `GA.23 The Blocked Run` — Deliberate, From the Far Side, Somebody Wanted This Shut
 *Working note: not a collapse. Filled and faced from the inside by the pocket itself, years ago, in a hurry — one more capillary they decided they could not watch. There is nothing behind it but more warren. The information is that they did it: nine frightened people have spent thirty years making their ground smaller on purpose, and a party can read the whole shape of their retreat off the blockings if it thinks to look for more of them.*
@@ -215,6 +216,7 @@ graph TD
   GB5["GB.5 · The Armoury"]
   GC1["GC.1 · The Ramp Head"]
   GC7["GC.7 · The Bypass Mouth"]
+  GE9["GE.9 · The Servants' Way"]
   HA8["HA.8 · The Processional of the Dead"]
   HA13["HA.13 · The Cold Run, Peak 3 Terminus"]
   HA14["HA.14 · The Long Run, Peak 3 Stretch"]
@@ -302,6 +304,7 @@ graph TD
   GA22 -.- GA25
   GA22 -.- GA26
   GA26 -.- GC7
+  GA22 -.- GE9
   GA27 --> GA5
 ```
 

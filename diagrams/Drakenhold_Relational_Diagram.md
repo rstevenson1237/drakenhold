@@ -186,7 +186,7 @@ graph TD
     GD -.-|"tile · faction · central terminus"| I
     GD -.-|"mech · vert · an intact run, past the checkpoint"| I
     I -.->|"one-way · vert · down through the crater"| GE
-    S -.-|"secret · into the corridor, past the crater"| GE
+    S -.-|"secret · vert · GA.22 to GE.9, into the corridor past the crater"| GE
     GB -.-|"vert · marked descent"| J
     DC -.-|"secret · vert"| J
 ```
@@ -260,7 +260,7 @@ graph TD
         SG ---|"open · the Cold Run"| SH
         SG -.-|"hidden · watched · the one run they kept"| SEG
         SF -.-|"secret · bypasses a gate above"| FC2["FC"]
-        SG -.-|secret| GE3["GE"]
+        SG -.-|"secret · vert · to GE.9"| GE3["GE"]
         SH -.-|hidden| HB2["HB"]
     end
 
