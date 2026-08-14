@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  push:
+    branches: ["main", "region/**"]
+  pull_request:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check-and-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run mechanical checks (check.sh)
+        run: scripts/check.sh
+
+      - name: Assemble the Playbook (build.sh)
+        if: always()
+        run: scripts/build.sh
+
+      - name: Upload assembled Playbook
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: drakenhold-playbook
+          path: build/Drakenhold_Playbook.md
+          if-no-files-found: ignore
