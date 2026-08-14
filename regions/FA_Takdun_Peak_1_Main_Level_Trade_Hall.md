@@ -35,6 +35,7 @@
 - **FC Mekdun** — vertical, the great ramp up from the antechamber.
 - **FB Brankel** — hidden, vertical, one-way. A kitchen service chute.
 - **FC Mekdun** — secret, from within the passages. A route that bypasses a gate above.
+- **FB Brankel** — hidden, vertical, conditional on size. The vent gallery at FA.33 touches Khorven between the two levels. Reconciled at the Peak 1 block's step 8 pass; the block document always stated it and it was never an edge.
 - **GA Grathdun** — gated by tile. The Long Run, at the seal. A whole carved tile, and it is four regions back on a goblin chief's neck.
 - **GA Grathdun** — open. The Ash Run, lower and hotter, which is the way around the seal and arrives in the Peak 2 warren rather than at Peak 3.
 
@@ -228,7 +229,7 @@
 ### `FA.33 The Vent Gallery` — Air Moving, Warm From One Side, Down and Down
 *Working note: the warren's contact with the vent system, and Peak 1's hidden descent toward J for anyone who follows it far enough.*
 
-**Connections:** `FA.20` the deep cold store. Air moving, warm from one side, and it goes down further than this level.
+**Connections:** `FA.20` the deep cold store · `FB.4` Khorven, the vent chimney below — **hidden, conditional on size**. This is the warren's own way onto the shaft, and it goes down further than Peak 1.
 
 ### `FA.34 The Old Digging` — Plainer Cutting, No Clan Mark, Older Than the Warren
 *Working note: the same hand as FA.11. The warren was cut through something already here, and nobody who worked down here ever mentioned it. It is not a location so much as a condition — small bits of wall and floor throughout the warren, a course of older stone under a doorway, a stretch of floor cut by someone else, surfacing in perhaps a dozen places for anyone who looks down. The layering is the reward and there is nothing at the end of it on this level.*
@@ -246,6 +247,7 @@ graph TD
   FB9["FB.9 · The Kitchen Chute Bottom"]
   FC1["FC.1 · The Ramp Landing"]
   FC15["FC.15 · The Bypass Mouth"]
+  FB4["FB.4 · Khorven, the Vent Chimney"]
   GA5["GA.5 · The Monument of the Driving Down"]
   GA10["GA.10 · The Long Run, Peak 2 Stretch"]
   GA12["GA.12 · The Ash Run, Peak 2 Terminus"]
@@ -348,6 +350,7 @@ graph TD
   FA27 --- FA28
   FA27 --- FA29
   FA30 -.- FC15
+  FA33 -.- FB4
 ```
 
 **Reading the diagram.** Solid edges are open passage. The heavy edges are the two ceremonial roads — `E.12`═`FA.1`, the broken doors, drawn undirected here because they are broken open and pass in both directions (`E`'s own diagram draws them with an arrowhead for emphasis, not as a one-way edge), and `FA.2`═`FA.10`═`GA.5`, the Processional of the Living running east to the monument. Dotted edges are hidden or secret. The one tile-gated edge is `FA.17`–`GA.10`, and it is the block's central lock.

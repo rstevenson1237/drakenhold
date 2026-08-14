@@ -138,6 +138,8 @@ graph TD
     FA ---|"vert · stairwell down"| FB
     FA ---|"vert · the great ramp"| FC
     FA -.->|"hidden · vert · kitchen service chute"| FB
+    FB ---|"vert · the great ramp · the toll road"| FC
+    S -.-|"vert · size · the vent gallery onto Khorven"| FB
     FC ---|"vert · the great ramp"| FD
     FD ---|"vert · the great ramp"| FE
     FB -.-|"vert · size · the vent chimney"| FD
@@ -149,6 +151,8 @@ graph TD
     FD -.-|"secret · vert · a magma channel"| J
     S -.-|"secret · bypasses a gate above"| FC
 ```
+
+*Two edges added at the Peak 1 block's step 8 pass, both reconciling facts the block document already stated and the graph did not carry. **The great ramp reaches FB** at `FB.16`, the collectors' landing — the toll road runs down it from `FD.15` and `FB.16`'s own stub is named for it. **The FA warren touches Khorven** by the vent gallery at `FA.33`, size-conditional, which is the warren's own way onto the shaft.*
 
 **Notes.** The dispatch floor on FC is the level's puzzle and also its map: correct sequencing opens a hidden access that appears on no plan, and wrong sequencing strands a party between FB and FD. The chimney is the peak's spine — it is the only thing touching the Under Level, Level 3 and the caverns at once, and it is the flow that relighting the forge depends on.
 
