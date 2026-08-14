@@ -1,6 +1,6 @@
 # DRAKENHOLD — HANDOFF
 
-*State of the project as of the close of step 8 for region E. **The approach is drawn end to end.** Written for a fresh conversation picking up step 8 at the first-level block, FA/GA/HA.*
+*State of the project as of the close of step 8 for the Peak 2 block, GB/GC/GD/GE. **The approach, the whole first level, all of Peak 1 and all of Peak 2 are drawn.** Written for a fresh conversation picking up step 8 at Peak 3 — HB/HC/HD/HE against `blocks/PEAK_3_BLOCK.md` — then I and J.*
 
 ---
 
@@ -26,7 +26,7 @@ Architect (steps 1–6) complete. **Engineer (steps 7–9) in progress.**
 
 Step 7 — location stubs and region tables — is **complete for A, B, C, D, E, FA, GA, HA, FB, FC, FD, FE, GB, GC, GD, GE, HB, HC, HD, HE, I, J**. **Twenty-two of twenty-two — step 7 is complete.**
 
-**Step 8 — region relational diagrams — is complete for the whole approach, `A` through `E`, and has not begun inside the mountain.** Step 9 has not begun anywhere.
+**Step 8 — region relational diagrams — is complete for the approach (`A`–`E`), the first-level block (`FA`, `GA`, `HA`), the Peak 1 block (`FB`, `FC`, `FD`, `FE`) and the Peak 2 block (`GB`, `GC`, `GD`, `GE`).** Sixteen of twenty-two. It has not begun on Peak 3's upper levels, on `I` or on `J`. Step 9 has not begun anywhere.
 
 A diagram is written into the region file's `## REGION RELATIONAL DIAGRAM` section as a mermaid `graph TD`, with a `**Connections:**` field added under every location stub. Check M3 holds the two against each other and the diagram is authoritative. Node ids are the code without the dot (`A18`); the display label is `"A.18 · Name"` and the checker reads the code from the label. Working notes stay until step 9 absorbs them.
 
@@ -74,7 +74,13 @@ A diagram is written into the region file's `## REGION RELATIONAL DIAGRAM` secti
 
 Each new step is preceded by a reconciliation pass over every step before it. Before step 10 begins anywhere, steps 1–9 are read back through as a body of work.
 
-**Next: step 8 at the first-level block — `FA`, `GA` and `HA`, which share a warren and are worked against `blocks/FIRST_LEVEL_BLOCK.md` — then peak by peak F, G, H, then I and J.** `A` through `E` are closed at step 8.
+**Next: step 8 at Peak 3 — `HB`/`HC`/`HD`/`HE` against `blocks/PEAK_3_BLOCK.md` — then `I` and `J` together against `blocks/I_AND_J_BLOCK.md`.** `A`–`E`, the first-level block, the Peak 1 block and the Peak 2 block are closed at step 8.
+
+**`I` and `J` inherit thirteen route ends** drawn from the peak side and not yet reciprocated: `FD.15`–`I.1`, `FE.7`–`I.13`, `GD.2`–`I.3`, `GD.12`–`I.14`, `I.15`–`GE.3`, `HD`'s eastern terminus, and the descents `FB.14`/`FB.4`/`FD.16`/`GB.20` into `J.2` and `J.3`. None of them needs a decision; all of them need drawing from the other end.
+
+**Answered at the Peak 2 pass:** `GA.17`'s landing at `GB.5` is confirmed from `GB`'s side, drawn exactly as `GA` drew it. **Still open and still not to be assumed:** which entry in `GB.14`'s register the Crown's own stair explains. It is now a question with a route attached and it is `GB`'s and `GC`'s to answer at step 9.
+
+*Superseded, kept for the record:* **Two things the next Peak 2 pass inherits and must not resolve by assumption.** `GA.17`'s armoury support ways are drawn down onto `GB.5`, behind the formation — `GB` confirms the landing at its own pass. And the Crown's own stair `GC.13`→`GB.12` makes `GB.14`'s one entry without a charge a question with somewhere to go; **which entry, and whether the stair explains it, is not decided and is not to be assumed.**
 
 **Step 8 at region A decided one thing and it is recorded rather than asked:** the farmstead cellar was a single-throat corridor in the stubs, and the diagram found it. The yard hatch at `A.14`–`A.17` is the second way in — the cold store's old loading way, barred from within. Additive, within the region, consistent with rule 6.
 
@@ -125,6 +131,60 @@ Nothing that needed asking. The drawing resolved one ambiguity in the stubs and 
 - **The third hill is a loop with nothing on it.** `E.9`–`E.10`–`E.11` close on each other, no faction, no monster, no lock — and it holds the quietest evidence in the region. The least defended ground is around the thing nobody thought was worth taking, and that is never said where a player can read it.
 - **`E.5` hangs hidden off `E.3`, not `E.4`.** The quiet treasure and the loud one are on the same hill, so the party chooses what to carry.
 
+## WHAT STEP 8 AT THE FIRST-LEVEL BLOCK DECIDED
+
+Worked as one pass across `FA`, `GA` and `HA` against `blocks/FIRST_LEVEL_BLOCK.md`, because the three share a warren and cannot be drawn independently. **Nothing was invented and nothing needed asking.** The block-level findings are written into `FIRST_LEVEL_BLOCK.md` under a new *PASS 4 — THE REGION DIAGRAMS*; the per-region findings are under each region's own diagram. In summary:
+
+- **The three arteries are now edges rather than prose.** `FA.17`–`GA.10` and `GA.11`–`HA.14` are the two tile-gated faces of the seal; `FA.18`–`GA.12` is the Ash Run; `GA.13`–`HA.13` is the Cold Run. The block document's central claim — that the seal's answer is the Ash Run and the Cold Run in series at three times the distance — is now topology and can be checked.
+- **The sealed segment touches no warren, so the Long Run is transit and nothing else.** With the tile a party crosses the hold underneath it without entering a single warren. Without it, the crossing is paid for in `GA.22`, the featureless capillary maze that both arteries hang off.
+- **The Peak 2 pocket is reachable without a tile, by one hidden run they watch.** `GA.22`–`GA.18`. This is what makes taking the second tile by force a real line of play rather than a paradox, and the watchers' nest sitting on the only approach is why they always see the party first.
+- **Every hall opens into its warren twice.** The single-throat correction made at region `A` was not needed anywhere in this block; the second doors were already in the stubs.
+- **`E.12` ⇒ `FA.1` is reciprocated.** The thread the handoff carried open since the approach closed is written at both ends. `FA` draws the doors undirected — they are broken open and pass both ways; `E`'s arrowhead is emphasis, not a one-way type. *Flagged rather than changed: `E`'s diagram is left as it stands.*
+- **`GA.17` is drawn down onto `GB.5`, the armoury, behind the formation's line.** The stub said *ways down to GB* plainly, so drawing it is owed rather than invented. Written from `GA`'s side and flagged for `GB` to confirm.
+- **`HA.21` and `HB.17` are one cutting through two regions.** `HB` already promised that the survivors' burials connect through; the edge is now hidden and drawn. The Peak 3 pocket therefore has two independent ways into the crypts — the burials, and the warded access at `HA.29`.
+
+## WHAT STEP 8 AT THE PEAK 1 BLOCK DECIDED
+
+Worked as one pass across `FB`, `FC`, `FD` and `FE` against `blocks/PEAK_1_BLOCK.md`. **Nothing needed asking.** Two edges were reconciled and one aggregate corrected; everything else the drawing only made explicit. Block-level findings are in `PEAK_1_BLOCK.md` under a new *PASS 3*; per-region findings sit under each diagram.
+
+- **The great ramp reaches `FB`.** `FB.16`–`FC.1`, open and vertical. It was owed from three directions — `FB.16`'s stub is named *where the ramp meets the floor*, `FB`'s Encounter table has the collectors coming *down the ramp*, and the toll road runs from `FD.15` down through FD and FC without stopping — and it was in neither region's connections nor in the setting diagram. Written at both ends and at block and setting level.
+- **The FA warren touches Khorven.** `FA.33`–`FB.4`, hidden and size-conditional. *Inherited threads* has always said the vent gallery is the warren's own way onto the chimney; it was never an edge. **`FA` is amended to carry it** — the one change made to an already-closed region at this pass, and it is a reconciliation rather than new content.
+- **`FC.14` corrected to `FC.15`.** The block document said the bypass arrives at the craftsmen's gate; it arrives at the bypass mouth *inside* the gate. Regions right, aggregate loose.
+- **`FD.8` is the peak's freight hub, and that is what makes the Automatons answerable.** Three ways in — the timed crossing at `FD.7`, the chutes at `FC.5`, the hidden access at `FC.21`. Without the two bought a level below, the stock rooms would sit behind the only thing in Peak 1 that will actually kill a party.
+- **The flow gate is off every route.** `FD.9`–`FD.10`–`FD.3` and nothing passes through it. The kobolds' winter cannot be taken by accident, which is what keeps `FD.10` a faction decision rather than a trap.
+- **`FB`'s two prizes are hidden behind the two places the tribe will not go.** The undeclared reserve past the Ooze at `FB.12`; the skimmed count under a script nobody on the level can read at `FB.13`. Neither hiding place is a trap and both are characterisation.
+- **`FB.11` does not touch the granary floor.** The sealed bins are reached only through the tally gallery, so the room that says what is *in* them is on the only way to them.
+- **`FE` is a legitimate single throat.** One ramp, one orphaned Skybridge run at `FE.7`–`I.13` that must be solved from outside. Stated in the region's own Connections, priced, and the reason the level pays what it pays. The star shape is the design: no route on `FE` is a decision because every decision on `FE` is a sentence.
+
+## WHAT STEP 8 AT THE PEAK 2 BLOCK DECIDED
+
+Worked as one pass across `GB`, `GC`, `GD` and `GE` against `blocks/PEAK_2_BLOCK.md`. **Nothing needed asking.** One edge reconciled, one aggregate corrected, one gap recorded and deliberately not filled. Block-level findings are in `PEAK_2_BLOCK.md` under a new *PASS 3*.
+
+- **The deep cells were a closed loop and the drawing found the way out.** `GB.16` is rod-gated and `GB.15` states the rod is held by the wraith *below* it — a door that cannot be opened from the side a party is on. The answer is `GB.20`–`J.3`, the hole the Elder Wyrm was using before anyone built a cell over it, and it is priced about as steeply as anything in the module: **it arrives inside `GB.19`.** The honest route is a conversation through a locked floor, which the region's own Danger 6 already establishes carries sound. **The honest release of the jailer's oath is still unwritten and was not written here.**
+- **`GA.22`–`GE.9` reconciled.** The servants' way into the lair corridor has been in the block document and the setting diagram since step 6 and had no end in any region file. It leaves the Peak 2 warren from the capillary maze and climbs three levels to the Queen's end. **`GA` is amended to carry it** — the one change to an already-closed region at this pass.
+- **Not one gate on this peak is answered on its own floor.** `GB.11` by the Crown's stair from two levels up; `GB.16` by `J` from below; `GC.1` by the bypass from the warren beneath; `GD`'s count by the orphaned run at `I.14`; `GE`'s crater by `GA.22`, three levels down. That is the structural difference between Peak 2 and Peak 1 and it is worth carrying into the location passes.
+- **`GC.3` touches three rooms and pointedly not `GC.10`.** The defacing is on the throne room, the chancery and the petition rooms; the line of kings stands untouched one edge away. The region's whole lesson — royal names are collected, not found — is now drawn rather than asserted.
+- **`GC.13` is the level's real junction.** The order, the seventh chair and the secret stair down to a prison all open off the Steward's rooms, and the revelation about Vessa Rudgir is a closed triangle with one leaf that cannot be entered except through her handwriting.
+- **On `GD` the hub is the scales, not the vault.** `GD.7` carries six edges. The busiest node in the busiest region is where a party is measured.
+- **On `GE` nothing is gated at all.** Not one lock in the region; the d4 is the lock. Every route from the ramp to the Queen's end passes the mouth of the crater — unless the party came up `GE.9`.
+- **`GC.12`, not `GC.13`, holds the rod schedule.** Corrected in the block document.
+
+**One gap recorded and not filled.** `GB`'s Connections claim *Peak 2's declared descent* into `J`, and no `GB` stub carries it, where `FB.14` and `HB.19` carry the other two. Naming it would mean inventing a stub against a ratified count of twenty, so it is left in unnamed fill. **Whether to name it at step 9 is `GB`'s to decide and is not decided here.**
+
+## THE CROWN'S OWN STAIR, RATIFIED
+
+**Directed, and written at four levels.** A secret stairwell runs two levels from `GC.13`, the Steward's rooms, straight down to `GB.12`, the cell corridors — no landing on `GA`, on no plan of either level, and arriving **past the rod-locked gate at `GB.11`**. Undeclared access from leadership to the prisons, cut for captives whose names were not going to appear in the register.
+
+Written into `GB`'s `## CONNECTIONS`, `GC`'s `## CONNECTIONS`, `blocks/PEAK_2_BLOCK.md` (prose and skeleton) and section 4 of `diagrams/Drakenhold_Relational_Diagram.md`. It does three things at once: it gives `GB.11` an answer that is not the gate, priced — the stair begins on the level a party reaches last and lands them inside a locked prison with the gate between them and the stair-foot; it puts the Steward's rooms and the prison register on one short line, which the `GB.4`/`GC.13`/`GC.14` thread will want; and it gives `GB.14`'s one entry without a charge somewhere to go. **The last of those is not resolved and is not to be assumed.**
+
+## THE ROOT SINK AT `C.7`–`C.9`, RATIFIED
+
+Batched at `C`'s step 8 pass and **answered: keep it.** The nest is not a single-throat fight; the edge stands as drawn, priced worse than the fight — narrow enough that armour comes off, no way back up in a hurry, and it drops a party into the chamber with the haul and the trunk on the far side. No change to `C`.
+
+## THE `GC` RAMP BULLET, CONFIRMED AND EXTENDED
+
+The correction from "**GB Karmor** — by way of GA" to "**GA Grathdun** — the great ramp down" is **confirmed correct**. The through-route from the throne to the prisons that the old phrasing gestured at is real, but it is not the ramp: it is the Crown's own stair above, secret and direct, and it does not touch `GA` at all.
+
 ## THE APPROACH, CLOSED AT STEP 8
 
 `A` through `E` are one connected graph. The spine is `A.1`→`B.1`…`B.9`→`D.1`…`D.11`→`E.1`→`E.2`→`E.12`⇒`FA.1`. Two branches leave it and both rejoin: the camps at `C`, entered from `B.7` and rejoining at `E.1` by the scavenger track, and the drain from `B.4a`, rejoining at `D.6`. Four hidden edges carry the approach's priced answers — the yard hatch at `A.14`–`A.17`, the walled processional at `A.18`–`A.20`, the root sink at `C.7`–`C.9`, and the old course at `D.7`–`D.11` — plus the two-region drain `B.4a`–`D.6` and the sealed cellar `E.3`–`E.5`.
@@ -165,7 +225,11 @@ All pass-4 decisions (room budgets, difficulty dice, mode rationale, three tiers
 - ~~**`C.5` the scavenger track west to the Outer City.**~~ *Ratified as an open edge `C.5`–`E.1`. Written at all four levels. E's step 8 pass reciprocates from its own side and should give `E.1` the goblin traffic in its outline.*
 - ~~**`B.9` ↔ `D.1`** and **`B.4a` ↔ `D.6`**.~~ *Both closed at D's step 8 pass, reciprocated unchanged.*
 - ~~**`D.11` ↔ `E.1`.**~~ *Closed at E's step 8 pass. `E.1` carries both roads; what differs is what the party arrives holding, and the registry at `E.6` is where the gap first shows.*
-- **`E.12` ⇒ `FA.1`.** The great doors, drawn in E's diagram as the hold's only outside opening. **`FA` has not been worked at step 8 and the edge is not written into `FA`.** Reconcile at the first-level block's pass.
+- ~~**`E.12` ⇒ `FA.1`.**~~ *Closed at the first-level block's step 8 pass. Written into `FA.1`'s Connections field and `FA`'s diagram, undirected. The hold's only outside opening is now drawn from both ends.*
+- ~~**`FA.30` → `FC.15`, `FA.8` → `FB.9`, `GA.26` → `GC.7`, `HA.30` → `HC.7`, `HA.29` → `HB.3`, `HA.21` → `HB.17`.**~~ *All drawn from the main-level side at this pass. The peak-level regions reciprocate at their own step 8 passes; none of them needs a decision to do it.*
+- **`HA.19` the scholars' stair.** Drawn as a stub end running up into `HC` by a servants' route that is not the great ramp. **Its landing above is `HC`'s to fix** and is not chosen here.
+- **`GA.17` → `GB.5`.** The armoury support ways down, landing behind the formation. Written from `GA`'s side; `GB` confirms at its own pass.
+- **`GC.13` → `GB.12`.** The Crown's own stair, ratified this pass. See above.
 - `C.1` tile → `FA.17` seal. Copy at `GA.19`.
 - `A.20` Brannek Kelmor → obelisk at `HA.5`, niche at `FA.22`.
 - `C.9` surveyor's satchel — half right, half confidently wrong, same hand. The Charter wants it back.
@@ -176,7 +240,8 @@ All pass-4 decisions (room budgets, difficulty dice, mode rationale, three tiers
 - `HA.29` is a loaded trigger into `HB`, fired by action or inaction.
 - `HA.31` is the first evidence `HE` is unfinished.
 - `FA.34` / `GA.25` / `HA.28` / `FC.18` — older, unmarked cutting surfacing throughout all three warrens and behind the craftsmen's gate.
-- `FA.30` bypass lands at `FC.15`; `FA.8` chute lands at `FB.9`; `FA.12`'s second panel hangs at `FE.8`.
+- ~~`FA.30` bypass lands at `FC.15`; `FA.8` chute lands at `FB.9`.~~ *Both closed at the Peak 1 block's step 8 pass, reciprocated unchanged. `FA.12`'s second panel at `FE.8` is placed and drawn off `FE.5`, and remains a reading thread rather than a route.*
+- ~~`FC.21` → `FD.8`, `FB.15` → `FD.9`, `FB.8` → `FC.4`, `FC.5` → `FD.8`, `FD.15` → `I.1`, `FE.7` → `I.13`, `FB.14` → `J.2`, `FB.4`/`FD.16` → `J.3`.~~ *All drawn at the Peak 1 block's pass. `I` and `J` reciprocate at their own passes; none of them needs a decision to do it.*
 - `FB.5` chieftain vacancy → `HC`. `FB.17` skimmed count → the Lizardmen and `GD`.
 - `FD.10` flow gate: relighting the forge takes Khorven's draught off `FB`. Faction consequence, never stated in text.
 - `FC.19` → `FE.9` — the Guild contact who fled with stolen rods, and who sent him.

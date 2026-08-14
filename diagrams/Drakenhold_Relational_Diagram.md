@@ -138,6 +138,8 @@ graph TD
     FA ---|"vert · stairwell down"| FB
     FA ---|"vert · the great ramp"| FC
     FA -.->|"hidden · vert · kitchen service chute"| FB
+    FB ---|"vert · the great ramp · the toll road"| FC
+    S -.-|"vert · size · the vent gallery onto Khorven"| FB
     FC ---|"vert · the great ramp"| FD
     FD ---|"vert · the great ramp"| FE
     FB -.-|"vert · size · the vent chimney"| FD
@@ -149,6 +151,8 @@ graph TD
     FD -.-|"secret · vert · a magma channel"| J
     S -.-|"secret · bypasses a gate above"| FC
 ```
+
+*Two edges added at the Peak 1 block's step 8 pass, both reconciling facts the block document already stated and the graph did not carry. **The great ramp reaches FB** at `FB.16`, the collectors' landing — the toll road runs down it from `FD.15` and `FB.16`'s own stub is named for it. **The FA warren touches Khorven** by the vent gallery at `FA.33`, size-conditional, which is the warren's own way onto the shaft.*
 
 **Notes.** The dispatch floor on FC is the level's puzzle and also its map: correct sequencing opens a hidden access that appears on no plan, and wrong sequencing strands a party between FB and FD. The chimney is the peak's spine — it is the only thing touching the Under Level, Level 3 and the caverns at once, and it is the flow that relighting the forge depends on.
 
@@ -178,15 +182,18 @@ graph TD
     GC ---|"vert · the great ramp"| GD
     GD ---|"vert · the great ramp"| GE
     GB -.-|"rod · secret · hidden and separately gated"| DC
+    GC -.-|"secret · vert · the Crown's own stair, past GA"| GB
     GD -.-|"tile · faction · central terminus"| I
     GD -.-|"mech · vert · an intact run, past the checkpoint"| I
     I -.->|"one-way · vert · down through the crater"| GE
-    S -.-|"secret · into the corridor, past the crater"| GE
+    S -.-|"secret · vert · GA.22 to GE.9, into the corridor past the crater"| GE
     GB -.-|"vert · marked descent"| J
     DC -.-|"secret · vert"| J
 ```
 
 **Notes.** The direct horizontal route between peaks runs through the dragon's counting house, and the counting house is held by people who assess before they reach. That is the design. GC's balcony has no Skybridge access and is drawn with none. The crater is the one place the outside gets in, and it gets in on top of the dragon — the edge is one-way for a reason.
+
+*Added at the first-level block's step 8 pass, directed: **the Crown's own stair**, `GC.13`→`GB.12`, secret and vertical, running two levels from the Steward's rooms to the cell corridors without a landing on `GA` and arriving past the rod-locked gate at `GB.11`. Undeclared access from leadership to the prisons, for captives who were not going to appear in the register. It is `GB.11`'s answer that is not the gate and it is priced: it begins on the level a party reaches last and ends on the wrong side of a lock.*
 
 *Ratified this pass: the deep cells descend into J. It is how the Elder Wyrm came up, it is how the Runemasters learned the yoke without hauling their subject the length of the marked descent, and it is why the mad Runemaster has had something to listen to for thirty-two years.*
 
@@ -247,10 +254,13 @@ graph TD
         SF["Peak 1 zone<br/>kitchens, stores, porters"]
         SG["Peak 2 zone<br/>clerks, court staff, holding"]
         SH["Peak 3 zone<br/>funerary, vestries, Runemaster service"]
-        SF ---|"open · a main run"| SG
-        SG ---|"open · a main run"| SH
+        SF ---|"tile · the seal, on the Long Run"| SEG["The sealed segment<br/>a locked door at each end,<br/>and nine people living inside it"]
+        SEG ---|"tile · the second seal"| SH
+        SF ---|"open · the Ash Run"| SG
+        SG ---|"open · the Cold Run"| SH
+        SG -.-|"hidden · watched · the one run they kept"| SEG
         SF -.-|"secret · bypasses a gate above"| FC2["FC"]
-        SG -.-|secret| GE3["GE"]
+        SG -.-|"secret · vert · to GE.9"| GE3["GE"]
         SH -.-|hidden| HB2["HB"]
     end
 
@@ -288,4 +298,5 @@ Checked against the Gazetteer this pass:
 - **The two orphaned Skybridge runs are placed:** one into FE, which is otherwise reachable only by the FD ramp, and one into GD, which arrives inside the vaults without passing the Lizardman checkpoint. Both are intact and both have lost their approach; restoring either is a mechanism problem and each is a major prize.
 - **Ratified this pass:** the deep cells descend into J; the yoke was learned in GB from the Elder Wyrm still in the building; the wyrms below and the Drakmorith above are the same story told from two ends.
 - **Graph legibility.** The overview will not stay readable as routes accumulate, and sub-region nodes (S, the deep cells, the observation rooms, the niche) are carried deliberately rather than pruned. Held as-is to preserve detail; the overview collapses to a simpler shape once the per-region diagrams exist to hold the specifics.
+- **The lateral graph is amended at the first-level block's step 8 pass.** Section 6 previously drew the passages as one open chain, `SF`—`SG`—`SH`, which under-stated the seal it also documents elsewhere. Redrawn: the Long Run passes through a **sealed segment** with a tile lock at each face, and the open chain between the three warrens is the **Ash Run** and the **Cold Run** in series — the answer that is not the gate, at three times the distance. One hidden, watched edge connects the Peak 2 warren to the sealed segment, which is how the second tile can be reached without holding the first. **Flagged rather than assumed:** this is a correction to an under-specified step-6 diagram, not new content, and every fact in it was already stated in `FIRST_LEVEL_BLOCK.md`.
 - **HE has no edge except from HD.** The dragon never came, nothing has been carried out in thirty-two years, and the only ways in are the ramp and the observation-room route. This is deliberate and is why HE pays what it pays.

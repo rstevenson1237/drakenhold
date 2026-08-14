@@ -31,6 +31,8 @@ The consequence for movement: **on this peak the party is the traffic.** There i
 
 **The back ways.** `GA.26` comes up into GC's administration. A separate servants' route arrives at the Queen's end of the lair corridor at `GE.9` without passing the crater. And below everything, the secret descent out of the deep cells into J at `GB.20`, which is how the Elder Wyrm came up and how it could go back down.
 
+**The Crown's own stair.** A secret stairwell runs two levels from `GC.13`, the Steward's rooms, straight down to `GB.12`, the cell corridors — past `GA` entirely and past the rod-locked prison gate at `GB.11`. It is on no plan of either level. It was cut so that a captive whose name could not appear in the register could be brought down and questioned by people who were never recorded as having gone. **Ratified this pass**, and it does three things at once: it gives `GB.11` an answer that is not the gate, priced — the stair starts inside the empty throne level, which the party must reach and read first, and it lands them inside a locked prison with the gate now between them and the stair-foot; it puts the Steward's rooms and the prison register on the same short line; and it makes `GB.14`'s one entry without a charge a question with somewhere to go. **Which entry, and whether the stair explains it, is not decided here** — it belongs to `GB` and `GC` at their own passes, and neither may resolve it by assumption.
+
 ---
 
 ### The skeleton
@@ -53,6 +55,8 @@ graph TD
     GD ==>|"the great ramp · checkpointed"| GE
     WAR -.-|"secret · the bypass"| GC
     WAR -.-|"secret · past the crater"| GE
+    GC -.-|"secret · vert · the Crown's own stair, GC.13 to GB.12"| GB
+    WAR -.-|"secret · vert · the servants' way, GA.22 to GE.9"| GE
 
     GD ---|"tile · faction · Valdgir"| I
     I -.-|"orphaned run · mechanism"| GD
@@ -115,7 +119,27 @@ Everything above that is a negotiation, a mechanism or a bad idea. The deep cell
 - `GB.7` the planning rooms hold a true interior map **of Peak 2 only**, thirty-two years out of date in exactly the ways that matter.
 - `GB.18` Morgrin Thurvak, the mad Runemaster, is `HE`'s prologue and knows what the artifact was. `HC` and `HE` inherit him.
 - `GB.19` the Elder Wyrm is where the yoke was learned, and `GB.20` is how it came up. `J` inherits both.
-- `GC.13` the rod schedule names which rods each Royal lock at `GD` wants. `FE.6` holds two of them.
+- `GC.12` the rod schedule names which rods each Royal lock at `GD` wants. `FE.6` holds two of them. *Corrected at step 8: this line said `GC.13`, the Steward's rooms; `GC.12` is the schedule. The regions were right.*
 - `GD.10` the third sub-vault — **artifact piece four, ratified.** Placed under Royal authority in the season of the Breaking.
 - `GE.8` the Queen knew what her husband did not, and her account is the only one written by somebody with nothing to defend.
 - `FD.10` → `GE.3`. Fire in the vents. Stated above, never stated in play.
+
+---
+
+## PASS 3 — THE REGION DIAGRAMS (STEP 8)
+
+*The four region relational diagrams live in the region files. What is recorded here is what the drawing settled across the block.*
+
+**One edge reconciled.** `GA.22` — `GE.9`, secret and vertical. *The back ways* has always said a servants' route arrives at the Queen's end of the lair corridor without passing the crater, and the setting diagram has always drawn it; it had no end in any region file. It leaves the Peak 2 warren from the capillary maze — the same node that already carries the bypass, the older course and the way to the pocket — and climbs three levels to `GE.9`. Written into `GA`, `GE`, the skeleton above and the setting diagram. **This is the warren's third standing reward on Peak 2 and much the longest of the three.**
+
+**One correction.** *Cross-region threads* said `GC.13` holds the rod schedule. `GC.12` does; `GC.13` is the Steward's rooms. Corrected in place.
+
+**The deep cells were a closed loop and the drawing found the way out.** `GB.16` is rod-gated and `GB.15` says the rod is held by the wraith **below** it. Taken literally that is a door that cannot be opened from the side a party is on. The answer is `GB.20`–`J.3`: the deep cells have a second entrance underneath, the hole the Elder Wyrm was using before anyone built a cell over it. It is priced about as steeply as anything in the module — **it arrives inside `GB.19`.** The honest route is a conversation through a locked floor, which the region's own Danger 6 already establishes carries sound; the honest release of the jailer's oath remains unwritten and is not written here.
+
+**The peak's four levels each hold a lock whose answer sits on a different level.** `GB.11` is answered by `GC.13`'s stair from two levels up. `GB.16` is answered by `J` from below. `GC.1` is answered by `GA.26` from the warren beneath. `GD`'s count is answered by `I.14`, the orphaned run. `GE`'s crater is answered by `GA.22`, three levels down. **Not one gate on this peak is answered on its own floor**, which is the structural difference between Peak 2 and Peak 1 and is worth stating plainly for the location passes.
+
+**On `GD`, the hub is the scales.** `GD.7` carries six edges — more than the vault, more than the checkpoint. The busiest node in the busiest region is the place where a party is measured, and everything else on the level hangs off it.
+
+**On `GE`, nothing is gated at all.** Not one lock in the region. The d4 is the lock, and the corridor is drawn so that every route from the ramp to the Queen's end passes the mouth of the crater — unless the party did not come up the ramp.
+
+**One gap recorded and not filled.** `GB`'s Connections claim *Peak 2's declared descent* into `J`, and **no `GB` stub carries it**, where `FB.14` and `HB.19` carry the other two peaks'. It is left in unnamed fill rather than invented, and whether to name it at step 9 belongs to `GB`'s location pass.

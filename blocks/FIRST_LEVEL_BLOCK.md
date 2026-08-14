@@ -233,6 +233,33 @@ Everything it cannot walk to is behind the passages.
 
 **What stays here:** the four kinds of movement, the skeleton diagram, the seal, the three arteries, the grouping tables and room budget, and the survivor pockets across all three peaks. These are block facts and belong to no single region.
 
+---
+
+## PASS 4 — THE REGION DIAGRAMS (STEP 8)
+
+*The three region relational diagrams live in the region files. What is recorded here is what the drawing settled across all three, because it belongs to no single region.*
+
+**The arteries are now topology rather than prose.** Drawn as edges from both ends:
+
+| Artery | Edge | Type |
+|---|---|---|
+| Long Run, western face | `FA.17` — `GA.10` | gated by tile |
+| Long Run, eastern face | `GA.11` — `HA.14` | gated by tile |
+| Ash Run | `FA.18` — `GA.12` | open |
+| Cold Run | `GA.13` — `HA.13` | open |
+
+**The sealed segment touches no warren.** `GA.10`–`GA.11` is a corridor with a tile lock at each end. The Long Run is therefore transit and nothing else: a party holding a tile crosses from Peak 1 to Peak 3 without entering a single warren, meeting nothing but the nine, and being seen by no one else. It is not a shortcut through Peak 2 — it is a road that never enters Peak 2.
+
+**The pocket is reachable without a tile, by one hidden run they watch.** `GA.22`–`GA.18`. This is what makes `GA.19`'s standing decision playable: taking the second tile by force does not require already holding a tile. It is priced exactly as the region file says, and the drawing adds one thing — **the watchers' nest sits on the only approach, so the nine see the party coming every time.** That is graph shape, not a Referee ruling.
+
+**Without the tile, F→H is the Ash Run and the Cold Run in series, and the price is paid in the middle.** `GA.12` and `GA.13` both hang off `GA.22`, the capillary maze — the largest and emptiest grouping in the Peak 2 warren, with no landmarks in it. A party crossing the hold the hard way comes out of one artery and must find the other across featureless ground. Three times the distance, exactly as stated above, and now it is where the cost lands rather than an assertion that there is one.
+
+**Every hall opens into its warren twice.** `FA` by the antechamber `FA.9` and the porters' gate `FA.13`; `GA` by the antechamber `GA.6`, the holding approach `GA.8`, and the wrong mouth `GA.27`; `HA` by the antechamber `HA.10` and the wrong mouth `HA.33`. The single-throat correction made at region `A` was not needed anywhere in this block — the halls were built by people who did not want servants crossing the public floor, and the stubs already carried the second doors.
+
+**The two mouths onto the Processionals are not the same object.** `GA.27` is unmarked from the road, so it is a way off the exposed ground and never a way onto it unseen. `HA.33` is findable from both sides. Peak 3's warren is the only one of the three that something walking a Processional can enter without being shown the way.
+
+**The block's second seal is recorded on the skeleton.** The skeleton diagram in pass 1 draws the main run as `S1`—SEAL—`S2`—`S3`. The regions carry a second tile-gated face at `GA.11`, between the sealed segment and the Peak 3 warren, which the skeleton does not show. The regions are right and the skeleton is the older abstraction; it is left standing as a block-level sketch and this note is the reconciliation. *The `GAG` spacer node is still in it and is still due for deletion.*
+
 **Cross-region threads opened in this block**, to be checked at every later pass:
 
 - The tile at `C.1` opens the seal at `FA.17`. A second, copied tile is held by the Peak 2 pocket at `GA.19`, which opens both faces.

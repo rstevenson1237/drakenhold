@@ -43,6 +43,8 @@ graph TD
 
     FA -->|"stair down"| FB
     FA ==>|"the great ramp"| FC
+    FB ==>|"the great ramp · the toll road"| FC
+    WAR -.-|"size · the vent gallery onto Khorven"| FB
     FC ==>|"the great ramp"| FD
     FD ==>|"the great ramp"| FE
     FA -.->|"kitchen chute · one-way"| FB
@@ -85,7 +87,7 @@ That is the peak's shape and it is deliberate: the climb is free, and the wealth
 
 ### Inherited threads
 
-- `FA.30` **the bypass** arrives at `FC.14`, inside the craftsmen's gate, behind the level's locks.
+- `FA.30` **the bypass** arrives at `FC.15`, the bypass mouth, inside the craftsmen's gate at `FC.14` and behind the level's locks. *Corrected at step 8: this line named `FC.14`, the gate itself, where `FC.15` is the stub the bypass actually surfaces in. The regions are right and the aggregate was loose.*
 - `FA.8` / `FA.32` **the kitchen chute** lands at `FB.9`, one-way, and is a listening post in both directions.
 - `FA.33` **the vent gallery** touches Khorven between FA and FB and is the warren's own way onto the chimney.
 - `FA.12` **the second cut-down panel** hangs at `FE.8`.
@@ -125,3 +127,28 @@ That is the peak's shape and it is deliberate: the climb is free, and the wealth
 **The count is itself a clue.** The register at `E.6` establishes two out; the Sanctuary at `HE` establishes seven broken. A party that can hold both numbers at once knows exactly how many are still in the mountain and knows it long before it knows where any of them are. Nothing in the module ever states the subtraction.
 
 *The distribution above is the working allocation and the peak-by-peak placements are decided at each block's stub pass, not now. The total of seven is fixed.*
+
+---
+
+## PASS 3 — THE REGION DIAGRAMS (STEP 8)
+
+*The four region relational diagrams live in the region files. What is recorded here is what the drawing settled across the block.*
+
+**Two edges the block always claimed and the graph never carried.** Both are reconciliations rather than new content:
+
+| Edge | Type | Why it was owed |
+|---|---|---|
+| `FB.16` — `FC.1` | vertical, open | The great ramp reaches the under level. `FB.16`'s stub is named *the collectors' landing — where the ramp meets the floor*, `FB`'s Encounter table has the Lizardmen coming *down the ramp*, and the toll road above runs from `FD.15` down through FD and FC without stopping. Written into both regions and into the setting diagram. |
+| `FA.33` — `FB.4` | hidden, vertical, conditional on size | *Inherited threads* has always said the FA vent gallery touches Khorven and is the warren's own way onto the chimney. It was never an edge. Written into `FA`, `FB` and the setting diagram. |
+
+**One correction.** *Inherited threads* said the bypass arrives at `FC.14`, the craftsmen's gate. It arrives at `FC.15`, the bypass mouth, which is inside the gate. The regions were right and the aggregate was loose. Corrected in place.
+
+**The peak is a ladder with three rungs that are not the ramp.** `FA`→`FB` by the stair, `FB`→`FC`→`FD`→`FE` by the ramp: that is the honest climb and it is open the whole way. Off it: the chutes (`FB.8`–`FC.4`, `FC.5`–`FD.8`), the chimney (`FB.15`–`FD.9`), and the hidden access (`FC.21`–`FD.8`). **Every one of the three skips something, and every one of them is bought on `FC.2`, the dispatch floor, or on the climb.** The peak's claim that the climb is free and the wealth is one turn off it in every direction is now checkable.
+
+**`FD.8` is the peak's freight hub and that is why the order can be answered.** Three ways in: `FD.7`, the timed crossing of the line of work; `FC.5`, the chutes; `FC.21`, the hidden access. Without the two from below, the stock rooms would be a cul-de-sac behind the only thing in Peak 1 that will kill a party. With them, the gate has two answers and both are earned a level down.
+
+**The flow gate is off every route.** `FD.9`–`FD.10`–`FD.3`. Nothing passes through it; a party reaches it only by climbing Khorven or by walking the channels on purpose. **The kobolds' winter is never taken by accident**, which is what makes the faction consequence a decision rather than a trap.
+
+**`FE` is a legitimate single throat and the module already says so.** One ramp in, one orphaned Skybridge run at `FE.7`–`I.13` that must be solved from outside. The star shape of the level is the point: no route on `FE` is a decision, because every decision on `FE` is a sentence spoken to one of two wraiths who will not agree.
+
+**The two wraiths' secrets are behind the wraiths.** `FE.9` off Dovrek's chamber, `FE.8` off Ismelda's. Neither is findable by a party that only talked to one of them, and `FE.10`, the scion's room, belongs to neither and opens off the antechamber. The thread that leaves the mountain is the one thing on the level in nobody's custody.
