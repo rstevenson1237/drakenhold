@@ -1,6 +1,6 @@
 # DRAKENHOLD — HANDOFF
 
-*State of the project as of the close of step 8 for region A. Written for a fresh conversation picking up step 8 at region B.*
+*State of the project as of the close of step 8 for region B. Written for a fresh conversation picking up step 8 at region C.*
 
 ---
 
@@ -26,7 +26,7 @@ Architect (steps 1–6) complete. **Engineer (steps 7–9) in progress.**
 
 Step 7 — location stubs and region tables — is **complete for A, B, C, D, E, FA, GA, HA, FB, FC, FD, FE, GB, GC, GD, GE, HB, HC, HD, HE, I, J**. **Twenty-two of twenty-two — step 7 is complete.**
 
-**Step 8 — region relational diagrams — is complete for `A` and has not begun elsewhere.** Step 9 has not begun anywhere.
+**Step 8 — region relational diagrams — is complete for `A` and `B`, and has not begun elsewhere.** Step 9 has not begun anywhere.
 
 A diagram is written into the region file's `## REGION RELATIONAL DIAGRAM` section as a mermaid `graph TD`, with a `**Connections:**` field added under every location stub. Check M3 holds the two against each other and the diagram is authoritative. Node ids are the code without the dot (`A18`); the display label is `"A.18 · Name"` and the checker reads the code from the label. Working notes stay until step 9 absorbs them.
 
@@ -74,7 +74,7 @@ A diagram is written into the region file's `## REGION RELATIONAL DIAGRAM` secti
 
 Each new step is preceded by a reconciliation pass over every step before it. Before step 10 begins anywhere, steps 1–9 are read back through as a body of work.
 
-**Next: step 8 at region `B`, then C, D, E, then FA/GA/HA, then peak by peak, then I and J.** `A` is closed at step 8.
+**Next: step 8 at region `C`, then D, E, then FA/GA/HA, then peak by peak, then I and J.** `A` and `B` are closed at step 8.
 
 **Step 8 at region A decided one thing and it is recorded rather than asked:** the farmstead cellar was a single-throat corridor in the stubs, and the diagram found it. The yard hatch at `A.14`–`A.17` is the second way in — the cold store's old loading way, barred from within. Additive, within the region, consistent with rule 6.
 
@@ -83,6 +83,16 @@ Each new step is preceded by a reconciliation pass over every step before it. Be
 **All twenty-two regions closed at step 7.** Connective documents: `FIRST_LEVEL_BLOCK.md`, `PEAK_1_BLOCK.md`, `PEAK_2_BLOCK.md`, `PEAK_3_BLOCK.md`, `I_AND_J_BLOCK.md`. All survive the split. `PEAK_1_BLOCK.md` is the connective document and survives the split: it holds the five kinds of movement, the skeleton diagram, Khorven, the dispatch floor, the order, the toll road and the room budget.
 
 ---
+
+## WHAT STEP 8 AT B DECIDED
+
+Nothing that needed asking. Three things the drawing settled inside the region, all additive and all consistent with the standing rules:
+
+- **The deadfall's answer that is not the deadfall.** `B.6` is the region's one gate — the goblin toll at the chokepoint. The bypass was already in the stubs and only needed drawing: `B.5`→`B.10`→`B.7`, off-road around it through the webbed thickets. Priced as the rule requires — the toll is cheap and sells a fact the party wants at `D.8`; the bypass is free of goblins and costs the one thing in the region that can kill outright. The module never says which is the mistake.
+- **`B.10` and `B.11` share the old spur** that once served the waystation. That is how the waystation is findable from the thickets side, and it makes the off-road locations a string rather than four leaves.
+- **`B.12` is a loop, not a leaf.** The sprite hollow attaches to both `B.8` and `B.9`, so a party losing its way there loses it on the run-out to D with the whole wood behind them.
+
+The road itself is a single chain with no shortcuts, `B.1` through `B.9`, and that was left alone — a road is a corridor by construction and the safety is the region's job. The single-throat correction made at A does not apply here.
 
 ## MECHANICAL RECONCILIATION, CLEARED
 
@@ -115,7 +125,9 @@ All pass-4 decisions (room budgets, difficulty dice, mode rationale, three tiers
 
 ## CROSS-REGION THREADS OPEN
 
-- **`A.12`/`A.13` ↔ `B.13`.** Fenn's boundary is one line met from two sides — the cutting ground from the town side, the trail from the north-west. Drawn as an edge in A's diagram at step 8; **B has not been worked and the edge is not written into B.** Reconcile at B's step 8 pass. `A.1` ↔ `B.1` is the road and was already in `## CONNECTIONS`.
+- ~~**`A.12`/`A.13` ↔ `B.13`.**~~ *Closed at B's step 8 pass. Both edges are now drawn from both ends, unchanged, and `A.1` ↔ `B.1` with them.*
+- **`B.7` ↔ `C.1`/`C.2`/`C.3`.** B's diagram draws three edges west out of the turning, honouring C's `## CONNECTIONS` line "three separate ways in for three camps". **C has not been worked at step 8 and the edges are not written into C.** Reconcile at C's pass; which trace leads to which camp is C's to detail.
+- **`B.9` ↔ `D.1`** (the last rise runs out to the overlook) and **`B.4a` ↔ `D.6`** (the drain, hidden at both ends). Drawn in B's diagram. **D has not been worked at step 8 and neither edge is written into D.** Reconcile at D's pass.
 - `C.1` tile → `FA.17` seal. Copy at `GA.19`.
 - `A.20` Brannek Kelmor → obelisk at `HA.5`, niche at `FA.22`.
 - `C.9` surveyor's satchel — half right, half confidently wrong, same hand. The Charter wants it back.
@@ -158,7 +170,7 @@ All pass-4 decisions (room budgets, difficulty dice, mode rationale, three tiers
 - `HB.6` Baldrun Azkelith's empty interment is **the last unanswered question in the module**, and that is deliberate.
 - The properties of the lance, unfixed. `HB.16` holds the line that nothing about how it was laid suggests it was meant to be used again.
 - Hireling statlines, postponed to Referee ruling.
-- ~~`B.4a` drain outfall.~~ *Closed at `J.9`.* `B.4a` outfall confirmed at `D.6`; `B.5`'s two named destinations (Thurgan, Azost) are permanent flavour and owe no answer.
+- ~~`B.4a` drain outfall.~~ *Closed at `J.9`.* `B.4a` outfall confirmed at `D.6` and drawn as an edge at B's step 8 pass; `B.5`'s two named destinations (Thurgan, Azost) are permanent flavour and owe no answer.
 - ~~The Knight's fate.~~ *Resolved at `HB.15` — laid in the niche by the last dwarves who could reach him, the lance with him, his name carved nowhere on the level. `HA.5` does not carry him and that absence is the lock.*
 - `HB.6` Baldrun Azkelith's interment was prepared and never filled. What happened to the last king is open in both `GC` and `HB`.
 - `HC.9` the whispers are one side of a conversation with somebody who is not Vekkut. Who, unwritten.
