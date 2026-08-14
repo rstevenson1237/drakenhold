@@ -33,5 +33,6 @@ Drakenhold — a tabletop RPG setting delivered as a Setting Playbook. Read `REA
 ## Repo hygiene
 
 - Region files in `regions/` are authoritative for region content.
+- `Rules_Light_TTRPG_Design_Notes.md` is the source of truth for game mechanics. Read-only here — never edited, never extended, replaced wholesale on upload. No mechanic is invented in setting content; gaps are raised as questions for the rules project.
 - `Drakenhold_Gazetteer.md` is a frozen archive. Never edit it, never cite it as current.
 - Run `scripts/check.sh` before committing. It must pass.

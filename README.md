@@ -27,6 +27,10 @@ Two further outputs are built from the same source: a paginated **PDF** for the 
 ├── RECONCILIATION.md             the checklist every closing pass runs
 ├── HANDOFF.md                    current phase, position, open items, live threads
 │
+├── Rules_Light_TTRPG_Design_Notes.md  **the source of truth for game mechanics.**
+│                                 Authored in a separate project and mirrored here.
+│                                 Read-only in this repo: never edited, never extended.
+│                                 Replaced wholesale when a new revision is uploaded.
 ├── Setting_Playbook_Template.md  the deliverable's shape. Illustrative content never enters the setting.
 ├── Drakenhold_Setting_Outline.md steps 1–2. Truths, Rumours, History, Factions, Bestiary, Unanswered Questions.
 │

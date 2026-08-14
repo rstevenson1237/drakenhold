@@ -43,7 +43,7 @@
 
 ## RULES
 
-1. Follow the TTRPG Design Notes. Rules usage may be proposed; explicit test calls should be rare, and sufficient detail lets the Referee rule without instruction.
+1. Follow the TTRPG Design Notes. **`Rules_Light_TTRPG_Design_Notes.md` is the single source of truth for game mechanics** — dice resolution, Difficulty and Action Dice, regional modes, time and distance, Status, Encumbrance, the Weather and Encounter procedures, Rest. It is authored in a separate project and mirrored into this repo read-only: it is never edited here, never extended here, and is replaced wholesale when a new revision is uploaded. **No mechanic is invented in setting content.** Where a pass needs a procedure the Notes do not cover, or covers ambiguously, the gap is written into the setting outline's Unanswered Questions and raised in the pass's question batch for resolution *in the rules project* — not settled in a region file. Where a region must operate before the gap closes, it states the effect in Referee terms the Notes' existing procedures can carry, and names the dependency. Rules usage may be proposed; explicit test calls should be rare, and sufficient detail lets the Referee rule without instruction.
 2. Follow the Setting Playbook Template's formatting. Content inside the template is illustrative and never enters the setting.
 3. **Sandbox.** Situations to explore, not a story to follow.
 4. **Lived-in world.** Constructed language and proper names throughout; avoid tropey shorthand.
