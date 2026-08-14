@@ -151,13 +151,13 @@
 ### `FA.29 The Watching Place` — Sightlines Down Three Runs, Recently Used, Empty When You Arrive
 *Working note: they have been watching the party since FA.9. This is where from.*
 
-### `FA.30 The Bypass` — A Capillary That Should Not Reach, Comes Up Past a Gate on FC
+### `FA.30 The Bypass` — A Capillary That Should Not Reach, Comes Up Past a Gate on FC, The Warren's Standing Reward
 *Working note: the warren's standing reward, and a real one. It arrives inside the gated craftsmen's areas on FC — the housing, the meeting rooms, the shrine and the private grievances, where the level's actual wealth sits behind the craftsmen's own locks rather than the guild's. A party that works the warren properly walks into the richest ground on Level 2 from behind, without touching the dispatch floor.*
 
 ### `FA.31 The Fallen Run` — Collapse, No Way Through, A Long Walk Back
 *Working note: the level teaching its own lesson about depth. Nothing here. That is the content.*
 
-### `FA.32 The Chute Bottom Access` — Where the Kitchen Chute Passes Through, Sound From Below
+### `FA.32 The Chute Bottom Access` — Where the Kitchen Chute Passes Through, Sound From Below, Heard as Well as Hearing
 *Working note: a listening post onto FB and a way to be heard by kobolds.*
 
 ### `FA.33 The Vent Gallery` — Air Moving, Warm From One Side, Down and Down

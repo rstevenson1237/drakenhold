@@ -24,6 +24,7 @@ The campaign's spine is extraction and survival. Drakenhold is a place to rob an
 
 - Roots: *az* high or royal, *kel* stone, *mor* deep, *rud* iron, *bal* light or flame, *vak* fire, *thur* oath, *gan* hammer, *gir* gate, *dun* hall, *ith* blood or lineage, *drak* wyrm.
 - Further roots, recovered from place-names within the hold: *tak* trade, *mek* work or machine, *khor* hearth or forge, *bran* grain or store, *grath* judgement, *kar* arms or guard, *vald* hoard or keeping, *thal* feast or gathering, *nur* the dead, *sig* rune or mark, *zar* trial or ordeal, *bryn* span or crossing.
+- Further roots, recovered from the road and the waystones: *rok* road or way, *lath* league, *ven* toward, *ost* water or river, *vir* wood or standing timber.
 - The Leader of the Guard was **Karn Rudgir** — *kar* and *rud*, arms and iron, a name that was a job before it was a person.
 - Clan names take the *-ith* suffix. The founding lineage was **Clan Azkelith**, now largely unwritten in the upper halls. Surviving clan names in the hold: **Rudgir**, **Balvak**, **Kelmor**.
 - The last King: **Baldrun Azkelith**, struck from most surfaces and recoverable from a few. The Knight of Drakenhold: **Torvin Ganthur**, found only in graffiti, ledgers and personal writing, never in official carving. Steward: **Vessa Rudgir**. Leader of the Guard: **Karn Rudgir**, her brother. Guild seats: **Dovrek Balvak** of the Smithing houses, **Ismelda Kelmor** of the Trade houses. Runemaster primarch: **Ulgrin Thurvak**.

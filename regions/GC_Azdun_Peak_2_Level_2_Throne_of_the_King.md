@@ -29,7 +29,7 @@
 
 *Authored against the Setting Relational Diagram. Edge types: open, gated by tile, gated by rod, hidden, secret, vertical, one-way, conditional on restored mechanism, conditional on faction relation.*
 
-- **GB Karmor** — vertical, the great ramp down by way of GA.
+- **GA Grathdun** — vertical, the great ramp down.
 - **GD Valdmor** — vertical, the great ramp up.
 - **The overlook balcony** — open, outward. A nobles' balcony. **No access to the Skybridge from it**, deliberately.
 

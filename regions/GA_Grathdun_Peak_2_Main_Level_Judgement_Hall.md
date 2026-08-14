@@ -137,7 +137,7 @@
 ### `GA.25 The Older Course` — Plainer Stone Under a Doorway, No Clan Mark, Again
 *Working note: as FA.34. The condition surfaces here too, in perhaps eight places, and one of them is under the second seal.*
 
-### `GA.26 The Bypass` — A Capillary That Reaches, Comes Up Inside GC's Administration
+### `GA.26 The Bypass` — A Capillary That Reaches, Comes Up Inside GC's Administration, The Warren's Standing Reward
 *Working note: the warren's standing reward on this peak. It arrives in the administrative chambers around the throne room, past the ramp and past whatever is on it.*
 
 ### `GA.27 The Wrong Mouth` — Opens Onto the Processional, Unmarked From That Side, One-Way in Practice

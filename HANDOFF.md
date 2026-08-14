@@ -84,6 +84,17 @@ Each new step is preceded by a reconciliation pass over every step before it. Be
 
 ---
 
+## MECHANICAL RECONCILIATION, CLEARED
+
+`scripts/check.sh` passes all eight checks as of this commit. Four pre-existing failures were cleared alongside step 8 at A. One of them changed content and is **flagged rather than assumed**:
+
+- **`GC` named the wrong region at the foot of its ramp.** Its CONNECTIONS bullet read "**GB Karmor** — vertical, the great ramp down by way of GA", which made `GA`→`GC` unreciprocated and asserted an edge `GB` does not carry. Corrected to "**GA Grathdun** — vertical, the great ramp down", matching `FC`→`FA` and `HC`→`HA` on the other two peaks and matching `GA`'s own bullet. **If the "by way of GA" phrasing was deliberate — a through-route from the throne to the prison — say so and it goes back with `GB` reciprocating.**
+- `PEAK_1_BLOCK.md` stated 66 stubbed for the block; FB+FC+FD+FE sum to 67. The regions are right and the aggregate was stale.
+- The five roots `B` proposed — *rok*, *lath*, *ven*, *ost*, *vir* — were never written into the outline's TRUTHS catalogue. Added there as a third roots bullet. No new roots coined.
+- Nine stub headings carried two, one or four tags instead of three. Third tags authored from each stub's own working note; `HA.24`'s four merged to three. `I.16`'s two new tags decide nothing — which level is open still resolves at its own pass.
+
+---
+
 ## STANDING DESIGN DECISIONS FROM THIS PHASE
 
 **The seal.** One tile-gated door on the lateral run between the Peak 1 and Peak 2 warrens, closed since the civil war. Hard lock, and the tile is at `C.1` on a goblin chief's neck. The network's answer is not a second door but the Ash Run and Cold Run in series, at three times the distance through the worst-mapped ground in the block. A second, copied tile is held by the Peak 2 survivor pocket at `GA.19`, who live inside the sealed segment. Taking it by force is legitimate, priced, and the module never says which line is correct.

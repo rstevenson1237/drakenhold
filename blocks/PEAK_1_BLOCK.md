@@ -7,7 +7,7 @@
 
 *FA Takdun is not in this block. It is a first-level region and lives in `FIRST_LEVEL_BLOCK.md`; its warren, its seal and its survivor pocket are block facts of that block, not this one. What FA hands upward is listed under **Inherited threads** below.*
 
-**Room budget for the block: 126 rooms.** FB 40, FC 40, FD 30, FE 16. **66 are stubbed as named locations**; the balance is unnamed fill inside the stated groupings — empty bins, collapsed benches, stock rooms with nothing in them, rooms that are only a corner turned.
+**Room budget for the block: 126 rooms.** FB 40, FC 40, FD 30, FE 16. **67 are stubbed as named locations**; the balance is unnamed fill inside the stated groupings — empty bins, collapsed benches, stock rooms with nothing in them, rooms that are only a corner turned.
 
 ---
 

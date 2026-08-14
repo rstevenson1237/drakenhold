@@ -108,7 +108,7 @@
 ### `I.15 The Crater Descent` — Down the Outer Face, One-Way, Onto Him
 *Working note: it works, it is not difficult, and it arrives at `GE.3` on top of a sleeping dragon. The module offers it plainly and does not warn anyone twice.*
 
-### `I.16 The Undefended Approach` — A Run That Reaches a Level From a Direction It Has No Answer To
+### `I.16 The Undefended Approach` — A Run That Reaches a Level From a Direction It Has No Answer To, Nobody Imagined the Approach, Defences Facing the Wrong Way
 *Working note: at least one run arrives somewhere nobody ever fortified, because nobody imagined the approach. Which level, and from where, resolves at the location pass — and whichever it is, the level's own defences face the wrong way.*
 
 ## REGION RELATIONAL DIAGRAM

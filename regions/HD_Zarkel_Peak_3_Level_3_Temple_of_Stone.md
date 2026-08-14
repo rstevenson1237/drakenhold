@@ -99,7 +99,7 @@
 ### `HD.13 Wyla Fenn's Assessment` — Failed for the Wrong Reasons, Filed, Worthless to Anyone Else
 *Working note: **the price at `A.13`.** She was failed by the observers rather than by the circuit, on `HD.9`, for an answer that was correct. It is a single sheet, it means nothing to anybody who does not know what it is, and it buys the only living account of Peak 3.*
 
-### `HD.14 The Hidden Piece` — Put Here by Somebody Who Did Not Get Back Out, Behind the Leadership's Own Gate
+### `HD.14 The Hidden Piece` — Put Here by Somebody Who Did Not Get Back Out, Behind the Leadership's Own Gate, Carried Down Never Carried Out
 *Working note: **artifact piece six.** Carried down from the Sanctuary in the season of the Breaking and hidden in the most heavily gated room on the peak by a Runemaster who then went back up and is named on the register at `HE.10` as one of the three entries that trails off.*
 
 ### `HD.15 The Leadership's Equipment` — Their Own Rods, Their Own Work, Left Where It Was Used

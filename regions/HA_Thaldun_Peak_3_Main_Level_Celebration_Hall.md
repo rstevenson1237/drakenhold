@@ -133,7 +133,7 @@
 ### `HA.23 The Long Watch` — Sightlines Onto Three Runs, Always Manned, They Saw You Arrive
 *Working note: better sited than either other pocket's post, because they have more people to spend on it.*
 
-### `HA.24 What They Took Down` — Records, Vessels, Things Saved From Above, Kept Not Sold
+### `HA.24 What They Took Down` — Records and Vessels, Saved From Above, Kept Not Sold
 *Working note: they have been quietly removing things from the hall and the vestries for thirty years and keeping them intact. A party that wants Peak 3's funerary wealth will find the best of it already gathered, in the hands of people who will not sell it and might give it.*
 
 ### `HA.25 The Collapsed Quarter` — The Plan Says It Continues, It Does Not, A Long Way Back
@@ -155,7 +155,7 @@
 
 ***A loaded trigger, fired by the party's action or inaction.** It is currently shut and warded in a poor, homemade, entirely adequate way. Disturbing the galleries below, leaving the access open behind them, or simply taking long enough that the pocket's own trips draw notice, brings something up it. So does doing nothing, on a longer clock, because the ward is degrading and the people maintaining it are old. The module does not decide which. The Referee has a Faction Turn's worth of warning either way and the party has the whole region to notice.*
 
-### `HA.30 The Bypass` — A Capillary That Reaches, Comes Up Inside HC
+### `HA.30 The Bypass` — A Capillary That Reaches, Comes Up Inside HC, The Warren's Standing Reward
 *Working note: the warren's standing reward on this peak. It arrives in the chapel's side cells, past the ramp and past the excavation noise.*
 
 ### `HA.31 The Listening Place` — Where the Whispers Carry, Nobody Sleeps Here, They Avoid It
@@ -164,7 +164,7 @@
 ### `HA.32 The Vent Gallery` — Air From Below, Cold Not Warm, Down Toward HB and Further
 *Working note: Peak 3's contact with the shafts, and the marked descent's neighbour.*
 
-### `HA.33 The Wrong Mouth` — Opens Onto the Processional, Unmarked From That Side
+### `HA.33 The Wrong Mouth` — Opens Onto the Processional, Unmarked From That Side, Useful in Both Directions
 *Working note: as GA.27. Useful, and useful to know about before something uses it in the other direction.*
 
 ## REGION RELATIONAL DIAGRAM

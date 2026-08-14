@@ -68,7 +68,7 @@
 ### `GE.4 Vermakith` — Fat, Slow, Three Things Wake Him
 *Working note: fire in the vents, theft at scale, and the sound of his own name. He is not a puzzle and not a boss. He is terrain with an appetite, and the module's spine is extraction, not this.*
 
-### `GE.5 The Hoard Beneath Him` — Unmovable in Any Quantity That Matters, Lethal in Any That Does
+### `GE.5 The Hoard Beneath Him` — Unmovable in Any Quantity That Matters, Lethal in Any That Does, Thirty Years of Tribute
 *Working note: thirty years of tribute under a sleeping weight. The joke of the region is that the most famous treasure in the setting is the least worth taking, and the module never explains the joke.*
 
 ### `GE.6 The King's Chambers` — Open to the Sky, Stripped by Weather, Nothing Kept
