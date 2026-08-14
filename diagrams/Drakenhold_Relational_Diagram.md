@@ -50,6 +50,7 @@ graph TD
     A ---|open| B
     B ---|open| C
     B ---|open| D
+    C ---|"open · the scavenger track, two days west"| E
     D ---|"open · toll · faction"| E
     E ==>|"open · the broken doors"| F
 
@@ -71,7 +72,9 @@ graph TD
     I -.->|"one-way · the crater"| G
 ```
 
-**Reading it.** Everything above the peaks is the road in, and it is a single chain with one branch. Everything below and around them is the answer to a locked door: the Skybridge is the horizontal cheat, the servants' passages are the lateral one, and the Lost Caverns are the vertical one. **FA is the only opening to the outside world.** Every other way in — the Skybridge termini, the crater, the hidden descents — is a way *out* first, discovered from inside, and only becomes an entrance on a second visit.
+**Reading it.** Everything above the peaks is the road in, and it is a single chain with one branch **and one bypass**. The scavenger track runs `C`→`E` direct, two days west, and does not pass the crossing at `D` — the goblins have been using it for thirty years and it is how the tile came out of the Outer City. A party that leaves the road to deal with the camps can come back onto the road past `D` entirely, paying no toll, meeting no hobgoblins and never seeing the Charter camp. That is the price of the branch and it is deliberate: `D` is skippable, and skipping it is a choice made in ignorance of what is being skipped.
+
+Everything below and around them is the answer to a locked door: the Skybridge is the horizontal cheat, the servants' passages are the lateral one, and the Lost Caverns are the vertical one. **FA is the only opening to the outside world.** Every other way in — the Skybridge termini, the crater, the hidden descents — is a way *out* first, discovered from inside, and only becomes an entrance on a second visit.
 
 ---
 
@@ -102,6 +105,7 @@ graph LR
     B -.-|hidden| WY
     B ---|"open · off the trail"| C
     C ---|"open · west of all three"| OB
+    C ---|"open · the scavenger track, two days west"| E
     B ---|open| D
     D --- OV
     D --- BR

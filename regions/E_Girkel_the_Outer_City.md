@@ -29,6 +29,7 @@
 
 *Authored against the Setting Relational Diagram. Edge types: open, gated by tile, gated by rod, hidden, secret, vertical, one-way, conditional on restored mechanism, conditional on faction relation.*
 
+- **C Goblin Camps** — open. The scavenger track, two days east through the wood, entering by one of the four breaches in the guard wall. It does not pass the crossing at D.
 - **D River Crossing** — open, back down the road south.
 - **FA Takdun** — open. The great stone doors of the hold, broken and lying around their own threshold, at the far end. **This is the only opening to the outside world in the entire hold.**
 

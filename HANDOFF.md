@@ -102,17 +102,11 @@ One thing, additive, within the region, and flagged rather than assumed:
 
 The rest the drawing only made explicit. `C.4` is the hub and also the open way west into owlbear country, which is the drawn reason the ground is contested. `C.3` is the only camp with an edge onto `C.7`, which is the whole of Hessa's problem in one line. `C.5` serves `C.1` and `C.2` and not `C.3`, which is why two chiefs are proud and one is frightened. No camp connects directly to another — every chief-to-chief move routes through `C.4`.
 
-## QUESTION BATCH — C
+## THE C→E SCAVENGER TRACK, RATIFIED
 
-**Does the scavenger track connect region C to region E?**
+Batched at C's step 8 pass and **answered: option 1, write the edge.** `C.5` ↔ `E.1`, the guard wall, at one of its four breaches — which is how a goblin salvage file gets in and out of a walled city unseen and how the tile came out. Open, not conditional, not goblin-only. Written into four places: `C`'s `## CONNECTIONS`, `E`'s `## CONNECTIONS`, `C`'s region diagram, and both the overview and approach graphs in `diagrams/Drakenhold_Relational_Diagram.md`.
 
-`C.5`'s stub states plainly that the track runs two days west to the Outer City, that the goblins use it, that the tile came up it, and that *the party can take it and it does not pass the crossing at `D`*. That is a region-level edge. The Setting Relational Diagram does not carry one, and `E`'s `## CONNECTIONS` lists only `D` and `FA`. The two cannot both stand. Genuine alternatives:
-
-1. **Write the edge.** `C.5` ↔ a node in `E` — most likely `E.1` The Guard Wall, breached in four places, which is exactly how a goblin salvage file would get in and out unseen. Add `C` to `E`'s `## CONNECTIONS` and `E` to `C`'s, and amend the Setting Relational Diagram. **Cost:** it is a back door around `D` entirely. A party that befriends a camp can skip the River Crossing, the hobgoblin toll, the Charter camp and the whole D negotiation, and reach the great doors without paying any of it. That is a large hole in the approach sequence and `D` is where a lot of the module's teaching lives.
-2. **Keep the track one-way for goblins only.** The route exists, the goblins use it, and it is not passable to a party — too long without water, too exposed, and the goblins will not guide anyone down it at any price. Draw nothing. **Cost:** the stub's own line "also a route the party can take" is struck, which is a real subtraction from an authored stub rather than an addition.
-3. **Write it as priced and conditional.** The edge exists but only as a faction reward — a guide from whichever camp the party has bought, and only after the owlbear is dealt with, since the track's first day runs the fringe's northern margin. Edge type: *conditional on faction relation*, one guide, one trip. **Cost:** the least disruptive and the most machinery; it makes a fourth thing the alliance buys, on top of safe passage at `D.8` and the tile.
-
-My reading is **3** — it keeps the stub's promise, keeps `D` load-bearing, and pays the faction play in a currency the region already deals in. But this changes the setting-level diagram either way and is not mine to decide.
+**The consequence is accepted, not mitigated.** `D` is now skippable. A party that leaves the road at `B.7`, deals with the camps and walks west reaches the Outer City having paid no toll, met no hobgoblins and never seen the Charter camp — and arrives at the great doors without the watch log, the outpost cache or any outside account of what is inside. The module does not warn anyone and never performs that subtraction. Referee-facing text in `D` and `E` may note the bypass exists; player-facing text may not.
 
 ## MECHANICAL RECONCILIATION, CLEARED
 
@@ -147,7 +141,7 @@ All pass-4 decisions (room budgets, difficulty dice, mode rationale, three tiers
 
 - ~~**`A.12`/`A.13` ↔ `B.13`.**~~ *Closed at B's step 8 pass. Both edges are now drawn from both ends, unchanged, and `A.1` ↔ `B.1` with them.*
 - ~~**`B.7` ↔ `C.1`/`C.2`/`C.3`.**~~ *Closed at C's step 8 pass. Each camp takes one trace; the drawing offers no reason to rank them, so the party's first camp is whichever trace it follows.*
-- **`C.5` the scavenger track west to the Outer City.** Drawn as a terminus inside C and **not** connected to any node in E, because the Setting Relational Diagram carries no `C`–`E` edge and E's `## CONNECTIONS` lists only `D` and `FA`. **In the question batch below.** Resolve before E's step 8 pass.
+- ~~**`C.5` the scavenger track west to the Outer City.**~~ *Ratified as an open edge `C.5`–`E.1`. Written at all four levels. E's step 8 pass reciprocates from its own side and should give `E.1` the goblin traffic in its outline.*
 - **`B.9` ↔ `D.1`** (the last rise runs out to the overlook) and **`B.4a` ↔ `D.6`** (the drain, hidden at both ends). Drawn in B's diagram. **D has not been worked at step 8 and neither edge is written into D.** Reconcile at D's pass.
 - `C.1` tile → `FA.17` seal. Copy at `GA.19`.
 - `A.20` Brannek Kelmor → obelisk at `HA.5`, niche at `FA.22`.

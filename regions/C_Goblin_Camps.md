@@ -30,6 +30,7 @@
 *Authored against the Setting Relational Diagram. Edge types: open, gated by tile, gated by rod, hidden, secret, vertical, one-way, conditional on restored mechanism, conditional on faction relation.*
 
 - **B Ironwood Trail** — open. Off-trail approach, three separate ways in for three camps.
+- **E Girkel, the Outer City** — open. The scavenger track, two days west, entering by the breached guard wall. It does not pass the crossing at D.
 - **The owlbear's den** — open, west of all three camps. Within-region.
 
 ## LOCATION STUBS
@@ -65,7 +66,7 @@
 ### `C.5 The Scavenger Track` — Worn Path to the Outer City, Two Days West, Where the Tile Came From
 *Working note: how the goblins reach E and come back with dwarven ironwork put to uses it was never cut for. Also a route the party can take, and it does not pass the crossing at D.*
 
-**Connections:** `C.1` Ashfoot Camp · `C.2` Wetreed Camp · `C.6` the bone midden, where the track passes the camp's edge. West, the track runs two days to the Outer City and does not pass the crossing at `D`. **That far end is not drawn.** The Setting Relational Diagram carries no `C`–`E` edge; the question is batched, not answered here.
+**Connections:** `C.1` Ashfoot Camp · `C.2` Wetreed Camp · `C.6` the bone midden, where the track passes the camp's edge · `E.1` the guard wall at Girkel, two days west — the track ends at one of the four breaches, which is how a salvage file gets in and out of a walled city unseen. It does not pass the crossing at `D`.
 
 ### `C.6 The Bone Midden` — Everything They Have Eaten, Scouts Not Buried, What Else Is In It
 *Working note: foul and worth searching. Among the goblin dead are bodies the owlbear did not make — killed cleanly, at range or in rank, and stripped of anything worth carrying. Hobgoblins have been quietly culling goblins who use their road, and the goblins have not worked it out. A second reading is left open and neither confirms the other: some of the dead came home down the scavenger track and something followed them.*
@@ -109,6 +110,7 @@
 ```mermaid
 graph TD
   B7["B.7 · The Turning"]
+  E1["E.1 · The Guard Wall"]
 
   subgraph CAMPS["The three camps"]
     C1["C.1 · Ashfoot Camp"]
@@ -138,6 +140,7 @@ graph TD
   C2 --- C5
   C2 --- C6
   C5 --- C6
+  C5 --- E1
   C3 --- C7
   C4 --- C7
   C7 --- C8
@@ -158,4 +161,4 @@ graph TD
 
 **Route ends recorded.** Three edges leave region C, all to `B.7`: the three traces that part company at the turning, drawn at B's step 8 pass and reciprocated here unchanged. Which trace leads to which camp is now written — `C.1`, `C.2` and `C.3` each take one, and the drawing offers no reason to rank them, so the party's first camp is whichever trace it follows.
 
-**`C.5` stops at the region edge, deliberately.** The scavenger track runs two days west to the Outer City and the stub states the party can take it and that it does not pass the crossing at `D`. **The Setting Relational Diagram carries no `C`–`E` edge, and `E`'s `## CONNECTIONS` lists only `D` and `FA`.** The route is therefore drawn as a terminus inside `C` and no node in `E` is written. This needs direction and is in the question batch; it is not decided here.
+**`C.5` runs off the map west and the far end is now written.** The scavenger track ends at `E.1`, the guard wall, at one of the four breaches — which is how a goblin salvage file gets in and out of a walled city without being seen, and how the tile came out. The edge was batched at this pass and **ratified: the track is open, and the party can take it.** It is a genuine bypass of `D`. A party that leaves the road at `B.7`, deals with the camps and walks west arrives at the Outer City having paid no toll, met no hobgoblins and never seen the Charter camp. `D` is skippable. The module does not warn anyone that skipping it means arriving at the great doors without the watch log, the outpost cache or any account of what is inside — and it never performs that subtraction either.
