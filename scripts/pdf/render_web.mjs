@@ -20,7 +20,8 @@
 //
 // Scope: play content only — the setting outline, the 22 regions, the block
 // documents and the setting relational diagram. Process documents (HANDOFF,
-// PROCEDURES_AND_RULES, RECONCILIATION) are authoring instruments and are not
+// PROCEDURES_AND_RULES, RECONCILIATION, DECISIONS, OPEN_QUESTIONS) are
+// authoring instruments and are not
 // published.
 //
 // This script never writes to or modifies any content file — only OUT_DIR.

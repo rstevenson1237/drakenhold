@@ -28,7 +28,7 @@ Two kinds of check. **Mechanical** checks are scripted, run every pass, and take
 
 ## JUDGEMENT
 
-**J1 · Open items.** Every item this pass touched, checked against the Unanswered Questions in the setting outline and the open items in the handoff. Items resolved are struck with a note saying where they were resolved. Items newly opened are recorded. **Nothing is resolved silently and nothing is resolved by assumption.**
+**J1 · Open items.** Every item this pass touched, checked against **`OPEN_QUESTIONS.md`, which is the single register.** Items resolved are struck there with a note saying where the answer now lives; struck items are never deleted. Items newly opened are recorded there. **Nothing is resolved silently and nothing is resolved by assumption.** The setting outline's Unanswered Questions is *not* a second register — it is referee-facing, it holds only what the module leaves open at the table on purpose, and adding to it is a deliberate act rather than a place to park work. A mechanical gap resolves in the rules project, never in a region file: record it in `OPEN_QUESTIONS.md`, raise it in the batch, and write the answer received into `DECISIONS.md`.
 
 **J2 · Demotion.** The region's step-5 fields read against its locations. Anything true of one named location is pushed down into that location; what remains is what applies to the region entire. Fields narrow as the region develops — a field still carrying location-specific detail is a defect, not a redundancy.
 

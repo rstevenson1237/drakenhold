@@ -10,8 +10,7 @@
 // PDF is flippable at the table the same way the source files are read.
 //
 // This step is not part of check.sh/build.sh's zero-dependency guarantee —
-// it needs mermaid-cli and a headless browser, same as TRANSITION_TO_CLAUDE_CODE.md
-// says it will.
+// it needs mermaid-cli and a headless browser.
 
 import { execFileSync } from "node:child_process";
 import { mkdtempSync, readFileSync, writeFileSync, rmSync, mkdirSync } from "node:fs";
