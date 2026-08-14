@@ -30,3 +30,27 @@ jobs:
           name: drakenhold-playbook
           path: build/Drakenhold_Playbook.md
           if-no-files-found: ignore
+
+      - uses: actions/setup-node@v4
+        if: always()
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: scripts/pdf/package-lock.json
+
+      - name: Install PDF renderer dependencies (mermaid-cli, puppeteer)
+        if: always()
+        run: npm ci
+        working-directory: scripts/pdf
+
+      - name: Render the Playbook PDF (render_pdf.sh)
+        if: always()
+        run: scripts/render_pdf.sh
+
+      - name: Upload assembled Playbook PDF
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: drakenhold-playbook-pdf
+          path: build/Drakenhold_Playbook.pdf
+          if-no-files-found: ignore
