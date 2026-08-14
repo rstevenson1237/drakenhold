@@ -1,6 +1,6 @@
 # DRAKENHOLD — HANDOFF
 
-*State of the project as of the close of step 8 for region D. Written for a fresh conversation picking up step 8 at region E.*
+*State of the project as of the close of step 8 for region E. **The approach is drawn end to end.** Written for a fresh conversation picking up step 8 at the first-level block, FA/GA/HA.*
 
 ---
 
@@ -26,7 +26,7 @@ Architect (steps 1–6) complete. **Engineer (steps 7–9) in progress.**
 
 Step 7 — location stubs and region tables — is **complete for A, B, C, D, E, FA, GA, HA, FB, FC, FD, FE, GB, GC, GD, GE, HB, HC, HD, HE, I, J**. **Twenty-two of twenty-two — step 7 is complete.**
 
-**Step 8 — region relational diagrams — is complete for `A`, `B`, `C` and `D`, and has not begun elsewhere.** Step 9 has not begun anywhere.
+**Step 8 — region relational diagrams — is complete for the whole approach, `A` through `E`, and has not begun inside the mountain.** Step 9 has not begun anywhere.
 
 A diagram is written into the region file's `## REGION RELATIONAL DIAGRAM` section as a mermaid `graph TD`, with a `**Connections:**` field added under every location stub. Check M3 holds the two against each other and the diagram is authoritative. Node ids are the code without the dot (`A18`); the display label is `"A.18 · Name"` and the checker reads the code from the label. Working notes stay until step 9 absorbs them.
 
@@ -74,7 +74,7 @@ A diagram is written into the region file's `## REGION RELATIONAL DIAGRAM` secti
 
 Each new step is preceded by a reconciliation pass over every step before it. Before step 10 begins anywhere, steps 1–9 are read back through as a body of work.
 
-**Next: step 8 at region `E`, then FA/GA/HA, then peak by peak, then I and J.** `A`, `B`, `C` and `D` are closed at step 8.
+**Next: step 8 at the first-level block — `FA`, `GA` and `HA`, which share a warren and are worked against `blocks/FIRST_LEVEL_BLOCK.md` — then peak by peak F, G, H, then I and J.** `A` through `E` are closed at step 8.
 
 **Step 8 at region A decided one thing and it is recorded rather than asked:** the farmstead cellar was a single-throat corridor in the stubs, and the diagram found it. The yard hatch at `A.14`–`A.17` is the second way in — the cold store's old loading way, barred from within. Additive, within the region, consistent with rule 6.
 
@@ -116,6 +116,19 @@ One thing, and it was owed rather than invented:
 
 The rest the drawing only made explicit. The five-minute reading of the region is a five-node chain, `D.1`→`D.5`→`D.7`→`D.8`→`D.11`, and every rewarding location hangs off it by a single edge and is on the way to nothing. `D.10` touches both `D.1` and `D.5`, which makes the Charter unavoidable — necessary, since they will not raise the missing surveyor first. `D.11` has three ways onto it and all three pass within sight of hobgoblins, which is why scouting `D.9` before negotiating changes the negotiation.
 
+## WHAT STEP 8 AT E DECIDED
+
+Nothing that needed asking. The drawing resolved one ambiguity in the stubs and made three things structural:
+
+- **`E.2`'s "Three Roads Meet" resolved as the three hill roads.** The gate road and the processional to the doors are one straight axis, `E.1`–`E.2`–`E.12`, and the three hill roads meet it at the square. This keeps the tag literal and gives the region an express route, the same shape `D` has: a party that stops for nothing crosses Girkel in three nodes and learns nothing, and the module lets them.
+- **The registry's hill is the hostile one.** `E.6` carries both `E.7` and `E.8`. There is no route to the module's first big-picture account that does not pass Ashen's squat or the barracks, and the obvious answer — go at night — hands the party the wolves. Two priced options, no third door.
+- **The third hill is a loop with nothing on it.** `E.9`–`E.10`–`E.11` close on each other, no faction, no monster, no lock — and it holds the quietest evidence in the region. The least defended ground is around the thing nobody thought was worth taking, and that is never said where a player can read it.
+- **`E.5` hangs hidden off `E.3`, not `E.4`.** The quiet treasure and the loud one are on the same hill, so the party chooses what to carry.
+
+## THE APPROACH, CLOSED AT STEP 8
+
+`A` through `E` are one connected graph. The spine is `A.1`→`B.1`…`B.9`→`D.1`…`D.11`→`E.1`→`E.2`→`E.12`⇒`FA.1`. Two branches leave it and both rejoin: the camps at `C`, entered from `B.7` and rejoining at `E.1` by the scavenger track, and the drain from `B.4a`, rejoining at `D.6`. Four hidden edges carry the approach's priced answers — the yard hatch at `A.14`–`A.17`, the walled processional at `A.18`–`A.20`, the root sink at `C.7`–`C.9`, and the old course at `D.7`–`D.11` — plus the two-region drain `B.4a`–`D.6` and the sealed cellar `E.3`–`E.5`.
+
 ## MECHANICAL RECONCILIATION, CLEARED
 
 `scripts/check.sh` passes all eight checks as of this commit. Four pre-existing failures were cleared alongside step 8 at A. One of them changed content and is **flagged rather than assumed**:
@@ -151,7 +164,8 @@ All pass-4 decisions (room budgets, difficulty dice, mode rationale, three tiers
 - ~~**`B.7` ↔ `C.1`/`C.2`/`C.3`.**~~ *Closed at C's step 8 pass. Each camp takes one trace; the drawing offers no reason to rank them, so the party's first camp is whichever trace it follows.*
 - ~~**`C.5` the scavenger track west to the Outer City.**~~ *Ratified as an open edge `C.5`–`E.1`. Written at all four levels. E's step 8 pass reciprocates from its own side and should give `E.1` the goblin traffic in its outline.*
 - ~~**`B.9` ↔ `D.1`** and **`B.4a` ↔ `D.6`**.~~ *Both closed at D's step 8 pass, reciprocated unchanged.*
-- **`D.11` ↔ `E.1`.** The climbing road onto the Outer City's guard wall, drawn in D's diagram. **E has not been worked at step 8 and the edge is not written into E.** Reconcile at E's pass. **`E.1` now carries two roads** — this one and the ratified goblin scavenger track out of `C.5` — and reconciling the two is E's job, not D's.
+- ~~**`D.11` ↔ `E.1`.**~~ *Closed at E's step 8 pass. `E.1` carries both roads; what differs is what the party arrives holding, and the registry at `E.6` is where the gap first shows.*
+- **`E.12` ⇒ `FA.1`.** The great doors, drawn in E's diagram as the hold's only outside opening. **`FA` has not been worked at step 8 and the edge is not written into `FA`.** Reconcile at the first-level block's pass.
 - `C.1` tile → `FA.17` seal. Copy at `GA.19`.
 - `A.20` Brannek Kelmor → obelisk at `HA.5`, niche at `FA.22`.
 - `C.9` surveyor's satchel — half right, half confidently wrong, same hand. The Charter wants it back.
