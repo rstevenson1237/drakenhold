@@ -75,7 +75,30 @@ if (renderFailures > 0) {
   fail(`${renderFailures} of ${diagramCount} mermaid diagram(s) failed to render`);
 }
 
-const bodyHtml = marked.parse(withDiagramsInlined);
+// ---------------------------------------------------------------------------
+// Connection pointers
+// ---------------------------------------------------------------------------
+// Location text writes connection pointers as plain ASCII "->" so that the
+// source stays human-writable in any editor. The reader gets a single
+// typographic arrow. Substitution happens on marked's output rather than on
+// the markdown, so that pre/code blocks — mermaid source, sample markup —
+// keep the ASCII they were authored with.
+const _PRE_OR_CODE_RE = /<pre[\s\S]*?<\/pre>|<code[\s\S]*?<\/code>/g;
+const _ARROW_RE = /(^|\s)-&gt;(\s|$)/g;
+
+function arrowify(html) {
+  const out = [];
+  let last = 0;
+  for (const m of html.matchAll(_PRE_OR_CODE_RE)) {
+    out.push(html.slice(last, m.index).replace(_ARROW_RE, "$1\u2192$2"));
+    out.push(m[0]);
+    last = m.index + m[0].length;
+  }
+  out.push(html.slice(last).replace(_ARROW_RE, "$1\u2192$2"));
+  return out.join("");
+}
+
+const bodyHtml = arrowify(marked.parse(withDiagramsInlined));
 
 const page = `<!doctype html>
 <html>

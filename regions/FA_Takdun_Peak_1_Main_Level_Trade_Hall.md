@@ -353,7 +353,7 @@ graph TD
   FA33 -.- FB4
 ```
 
-**Reading the diagram.** Solid edges are open passage. The heavy edges are the two ceremonial roads — `E.12`═`FA.1`, the broken doors, drawn undirected here because they are broken open and pass in both directions (`E`'s own diagram draws them with an arrowhead for emphasis, not as a one-way edge), and `FA.2`═`FA.10`═`GA.5`, the Processional of the Living running east to the monument. Dotted edges are hidden or secret. The one tile-gated edge is `FA.17`–`GA.10`, and it is the block's central lock.
+**Reading the diagram.** Solid edges are open passage. The heavy edges are the two ceremonial roads — `E.12`═`FA.1`, the broken doors, drawn undirected because they are broken open and pass in both directions, and `FA.2`═`FA.10`═`GA.5`, the Processional of the Living running east to the monument. Dotted edges are hidden or secret. The one tile-gated edge is `FA.17`–`GA.10`, and it is the block's central lock.
 
 **What the drawing found.**
 
@@ -365,4 +365,4 @@ graph TD
 - **`FA.30` and `FA.34` are the reward for the emptiest room in the region.** Both hang off `FA.26`, the bunk warrens — the largest grouping, the darkest, and the one with nothing in it. The bypass into `FC` and the older, unmarked cutting are both found by a party that worked ground the module gave it no reason to work. That is the negative-space rule paying out, and it pays out nowhere else on this level.
 - **`FA.31` is drawn as a leaf and stays one.** A collapse with nothing behind it, one edge, a long walk back. The level teaching its own lesson about depth costs the party time and costs the module a node.
 
-**Route ends recorded.** Eight edges leave region `FA`. `E.12`⇒`FA.1` was drawn at `E`'s pass and is **reciprocated here for the first time** — the thread the handoff carried open since the approach closed is now written at both ends. `FA.9`–`FB.1` and `FA.9`–`FC.1` are the stair and the ramp. `FA.8`⇢`FB.9` is the kitchen chute, one-way and a fall. `FA.30`–`FC.15` is the bypass. `FA.10`–`GA.5` is the Processional. `FA.17`–`GA.10` and `FA.18`–`GA.12` are the Long Run and the Ash Run, drawn from both ends at this pass.
+**Route ends recorded.** Eight edges leave region `FA`. `E.12`═`FA.1` was drawn at `E`'s pass and is **reciprocated here for the first time** — the thread the handoff carried open since the approach closed is now written at both ends. `FA.9`–`FB.1` and `FA.9`–`FC.1` are the stair and the ramp. `FA.8`⇢`FB.9` is the kitchen chute, one-way and a fall. `FA.30`–`FC.15` is the bypass. `FA.10`–`GA.5` is the Processional. `FA.17`–`GA.10` and `FA.18`–`GA.12` are the Long Run and the Ash Run, drawn from both ends at this pass.

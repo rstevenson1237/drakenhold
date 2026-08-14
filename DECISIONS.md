@@ -40,6 +40,18 @@
 
 ---
 
+## NOTATION AND EDGE TYPES
+
+**`one-way` is load-bearing and is never used loosely.** It is a declared edge type in every region's Connections preamble, and it is also what exempts an edge from M2's symmetry check. A route that is merely *hard* in one direction, or *not yet open*, is not one-way — it is `conditional on mechanism`, or it is priced in prose. **Three edges carry the declared type:** `FA.8`⇢`FB.9`, the kitchen chute, which is a fall; `J.9`⇢`D.6`, the outfall, which is water the whole way and comes up below the near bank; and `I.15`⇢`GE.3`, the crater descent, which arrives on top of a sleeping dragon. **Two more are called one-way *in practice* in prose** — the root sink at `C.7`–`C.9`, and `GA.27`, the wrong mouth onto the Processional, which nothing marks from the far side. Those are descriptions of what a route costs, not types: they are drawn undirected, they reciprocate, and M2 checks them like any other edge. **Do not promote a prose "one-way in practice" to the declared type**, and do not demote the declared type to prose.
+
+**The great doors are undirected.** `E.12`═`FA.1`, drawn `===` at both ends. `E`'s diagram formerly drew an arrowhead for emphasis, which made it the one place in the corpus where the same glyph meant two things — on the module's only opening to the outside world, in a module whose spine is extraction. **Corrected: emphasis is carried by the heavy edge alone, never by an arrowhead.**
+
+**The `HC.12`–`HD.4` excavation is bidirectional.** Ratified. Its gate is **time and player intervention** — the dig completing on its own clock — and never direction. Until it is through it carries nobody; once it is through it is a hole in a floor. `HC`'s bullet said one-way and neither diagram nor `HD.4`'s own Connections agreed; the bullet was corrected, because the diagrams are authoritative. **Consequence to be written, not argued away:** the ring at `HD` now has a second way off it that nobody paid the circuit for, and `HD`'s step-9 pass owns pricing that against `HE.5`'s rule that the earned rod buys a way back out.
+
+**Connection pointers in location text use `->`.** Written as plain ASCII in the markdown, because the source must stay human-writable in any editor. The renderers substitute a single typographic glyph for the web and PDF targets. See `Setting_Playbook_Template.md`.
+
+---
+
 ## STRUCTURAL FINDINGS THAT NOW GOVERN
 
 *Drawn at step 8 and true of the module rather than of one region. Carried forward into the location passes.*

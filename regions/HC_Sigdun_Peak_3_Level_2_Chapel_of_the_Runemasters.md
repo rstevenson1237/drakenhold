@@ -33,7 +33,7 @@
 - **HA Thaldun** — hidden. The warren's bypass at `HA.30`, arriving at `HC.7` in the side cells, behind the squat.
 - **HA Thaldun** — vertical. The scholars' stair at `HA.19`, landing at `HC.15`, the instruction rooms. *Its landing was left to `HC` at `HA`'s pass and is fixed here.*
 - **HD Zarkel** — vertical, the great ramp up.
-- **HD Zarkel** — conditional on mechanism, vertical, one-way. The chieftain's excavation, unfinished, running toward the trial circuit. It completes on a clock whether or not the party touches it.
+- **HD Zarkel** — conditional on mechanism, vertical. The chieftain's excavation, unfinished, running toward the trial circuit. It completes on a clock whether or not the party touches it. **The gate is time and intervention, not direction: until it is through it carries nobody, and once it is through it is a hole in a floor and passes both ways.** *Ratified: the word "one-way" stood in this bullet and in neither diagram nor `HD.4`'s own Connections. Corrected here rather than in the diagrams, which were right.*
 
 ## TABLES
 
@@ -233,7 +233,7 @@ graph TD
   HC16 --- HC20
 ```
 
-**Reading the diagram.** Solid edges are open floor; this level locks almost nothing. The three dotted edges are the bypass down to `HA`, the rod-gated chamber the squat could not open, and the excavation, which is drawn dotted because it is not through yet. **It is drawn undirected rather than one-way**, because once it is through it is a hole in a floor and a hole in a floor is a hole in a floor. `HC`'s region-level `## CONNECTIONS` bullet still calls it one-way; *that phrasing is left as it stands and flagged rather than changed.*
+**Reading the diagram.** Solid edges are open floor; this level locks almost nothing. The three dotted edges are the bypass down to `HA`, the rod-gated chamber the squat could not open, and the excavation, which is drawn dotted because it is not through yet. **It is drawn undirected rather than one-way**, because once it is through it is a hole in a floor and a hole in a floor is a hole in a floor. *`HC`'s region-level `## CONNECTIONS` bullet called it one-way; **ratified as bidirectional and the bullet is corrected.** The gate on this edge is time and intervention — the dig completing — and never direction.*
 
 **What the drawing found.**
 

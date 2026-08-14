@@ -172,10 +172,10 @@ graph TD
   E9 --- E10
   E9 --- E11
   E10 --- E11
-  E12 ==> FA1
+  E12 === FA1
 ```
 
-**Reading the diagram.** Solid edges are open street — the destruction is total and nothing in Girkel is locked, which is why the region's difficulty is search and not passage. The one dotted edge is `E.3`–`E.5`, the sealed cellar, which is hidden because nobody has found it in thirty years and not because anyone hid the entrance well. The heavy edge `E.12`⇒`FA.1` is the great doors, broken open, and it is the only opening to the outside world in the entire hold.
+**Reading the diagram.** Solid edges are open street — the destruction is total and nothing in Girkel is locked, which is why the region's difficulty is search and not passage. The one dotted edge is `E.3`–`E.5`, the sealed cellar, which is hidden because nobody has found it in thirty years and not because anyone hid the entrance well. The heavy edge `E.12`═`FA.1` is the great doors, broken open, and it is the only opening to the outside world in the entire hold. **It is drawn undirected**, because the doors are broken open and pass both ways, and this is the one edge in the module where a reader mistaking emphasis for direction would conclude that a party can get in and not out.
 
 **What the drawing found.**
 
@@ -186,6 +186,6 @@ graph TD
 - **`E.5` is hidden off `E.3`, not off `E.4`.** The sealed cellar is under a merchant's own house behind the trade floors, not among the bonded stock — household wealth put away by somebody who counted coin for a living and expected to come back for it. The warehouses are the loud treasure that argues with encumbrance; the cellar is the quiet one, and they are on the same hill so the party must choose what to carry.
 - **`E.1` carries two roads.** `D.11` up from the crossing, and `C.5` in from the east by the scavenger track. Both land at the same breached wall and both give the same first impression of scale. What differs is what the party is carrying when they arrive: the road from `D` comes with the watch log, the outpost cache and an outside account of the descent, and the goblin track comes with none of it. The registry at `E.6` is the first place that gap becomes visible, and the module never points at it.
 
-**Route ends recorded.** Three edges leave region E. `D.11`–`E.1` was drawn at D's step 8 pass and is reciprocated here unchanged. `C.5`–`E.1` is the scavenger track, ratified after C's pass and written here at both ends. `E.12`⇒`FA.1` is the great doors; **`FA` has not been worked at step 8 and the edge is not written into `FA`.** Recorded in the handoff for the first-level block's pass. `FA.1` is named here because the setting diagram fixes the doors as the hold's only outside opening and `FA` is where they land.
+**Route ends recorded.** Three edges leave region E. `D.11`–`E.1` was drawn at D's step 8 pass and is reciprocated here unchanged. `C.5`–`E.1` is the scavenger track, ratified after C's pass and written here at both ends. `E.12`═`FA.1` is the great doors; **`FA` has not been worked at step 8 and the edge is not written into `FA`.** Recorded in the handoff for the first-level block's pass. `FA.1` is named here because the setting diagram fixes the doors as the hold's only outside opening and `FA` is where they land.
 
 **The approach closes here.** `A` through `E` are now drawn end to end, and the whole road in is one connected graph with two branches off it — the camps at `C`, which rejoin at `E.1`, and the drain from `B.4a`, which rejoins at `D.6`. Every region beyond this point is inside the mountain.
