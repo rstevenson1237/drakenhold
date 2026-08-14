@@ -1,6 +1,6 @@
 # DRAKENHOLD — HANDOFF
 
-*State of the project as of the close of engineer pass 1. Written for a fresh conversation picking up at Peak 1 (FB, FC, FD, FE).*
+*State of the project as of the close of step 8 for region A. Written for a fresh conversation picking up step 8 at region B.*
 
 ---
 
@@ -26,7 +26,9 @@ Architect (steps 1–6) complete. **Engineer (steps 7–9) in progress.**
 
 Step 7 — location stubs and region tables — is **complete for A, B, C, D, E, FA, GA, HA, FB, FC, FD, FE, GB, GC, GD, GE, HB, HC, HD, HE, I, J**. **Twenty-two of twenty-two — step 7 is complete.**
 
-Steps 8 and 9 have not begun anywhere.
+**Step 8 — region relational diagrams — is complete for `A` and has not begun elsewhere.** Step 9 has not begun anywhere.
+
+A diagram is written into the region file's `## REGION RELATIONAL DIAGRAM` section as a mermaid `graph TD`, with a `**Connections:**` field added under every location stub. Check M3 holds the two against each other and the diagram is authoritative. Node ids are the code without the dot (`A18`); the display label is `"A.18 · Name"` and the checker reads the code from the label. Working notes stay until step 9 absorbs them.
 
 **Region order, settled:** approach (A–E) → first level (FA/GA/HA as one block) → **peak by peak: F, then G, then H** → I and J last.
 
@@ -72,6 +74,10 @@ Steps 8 and 9 have not begun anywhere.
 
 Each new step is preceded by a reconciliation pass over every step before it. Before step 10 begins anywhere, steps 1–9 are read back through as a body of work.
 
+**Next: step 8 at region `B`, then C, D, E, then FA/GA/HA, then peak by peak, then I and J.** `A` is closed at step 8.
+
+**Step 8 at region A decided one thing and it is recorded rather than asked:** the farmstead cellar was a single-throat corridor in the stubs, and the diagram found it. The yard hatch at `A.14`–`A.17` is the second way in — the cold store's old loading way, barred from within. Additive, within the region, consistent with rule 6.
+
 **Next: step 8 (region diagrams) and step 9 (location outlines), region by region.** Suggested order, matching how the stubs were built: approach regions A–E, then FA/GA/HA as the first-level block, then peak by peak F, G, H, then I and J. Robert is handling the breakdown into per-region conversations.
 
 **All twenty-two regions closed at step 7.** Connective documents: `FIRST_LEVEL_BLOCK.md`, `PEAK_1_BLOCK.md`, `PEAK_2_BLOCK.md`, `PEAK_3_BLOCK.md`, `I_AND_J_BLOCK.md`. All survive the split. `PEAK_1_BLOCK.md` is the connective document and survives the split: it holds the five kinds of movement, the skeleton diagram, Khorven, the dispatch floor, the order, the toll road and the room budget.
@@ -98,6 +104,7 @@ All pass-4 decisions (room budgets, difficulty dice, mode rationale, three tiers
 
 ## CROSS-REGION THREADS OPEN
 
+- **`A.12`/`A.13` ↔ `B.13`.** Fenn's boundary is one line met from two sides — the cutting ground from the town side, the trail from the north-west. Drawn as an edge in A's diagram at step 8; **B has not been worked and the edge is not written into B.** Reconcile at B's step 8 pass. `A.1` ↔ `B.1` is the road and was already in `## CONNECTIONS`.
 - `C.1` tile → `FA.17` seal. Copy at `GA.19`.
 - `A.20` Brannek Kelmor → obelisk at `HA.5`, niche at `FA.22`.
 - `C.9` surveyor's satchel — half right, half confidently wrong, same hand. The Charter wants it back.
