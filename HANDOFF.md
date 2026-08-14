@@ -1,6 +1,6 @@
 # DRAKENHOLD — HANDOFF
 
-*State of the project as of the close of step 8 for region B. Written for a fresh conversation picking up step 8 at region C.*
+*State of the project as of the close of step 8 for region C. Written for a fresh conversation picking up step 8 at region D.*
 
 ---
 
@@ -26,7 +26,7 @@ Architect (steps 1–6) complete. **Engineer (steps 7–9) in progress.**
 
 Step 7 — location stubs and region tables — is **complete for A, B, C, D, E, FA, GA, HA, FB, FC, FD, FE, GB, GC, GD, GE, HB, HC, HD, HE, I, J**. **Twenty-two of twenty-two — step 7 is complete.**
 
-**Step 8 — region relational diagrams — is complete for `A` and `B`, and has not begun elsewhere.** Step 9 has not begun anywhere.
+**Step 8 — region relational diagrams — is complete for `A`, `B` and `C`, and has not begun elsewhere.** Step 9 has not begun anywhere.
 
 A diagram is written into the region file's `## REGION RELATIONAL DIAGRAM` section as a mermaid `graph TD`, with a `**Connections:**` field added under every location stub. Check M3 holds the two against each other and the diagram is authoritative. Node ids are the code without the dot (`A18`); the display label is `"A.18 · Name"` and the checker reads the code from the label. Working notes stay until step 9 absorbs them.
 
@@ -74,7 +74,7 @@ A diagram is written into the region file's `## REGION RELATIONAL DIAGRAM` secti
 
 Each new step is preceded by a reconciliation pass over every step before it. Before step 10 begins anywhere, steps 1–9 are read back through as a body of work.
 
-**Next: step 8 at region `C`, then D, E, then FA/GA/HA, then peak by peak, then I and J.** `A` and `B` are closed at step 8.
+**Next: step 8 at region `D`, then E, then FA/GA/HA, then peak by peak, then I and J.** `A`, `B` and `C` are closed at step 8.
 
 **Step 8 at region A decided one thing and it is recorded rather than asked:** the farmstead cellar was a single-throat corridor in the stubs, and the diagram found it. The yard hatch at `A.14`–`A.17` is the second way in — the cold store's old loading way, barred from within. Additive, within the region, consistent with rule 6.
 
@@ -93,6 +93,26 @@ Nothing that needed asking. Three things the drawing settled inside the region, 
 - **`B.12` is a loop, not a leaf.** The sprite hollow attaches to both `B.8` and `B.9`, so a party losing its way there loses it on the run-out to D with the whole wood behind them.
 
 The road itself is a single chain with no shortcuts, `B.1` through `B.9`, and that was left alone — a road is a corridor by construction and the safety is the region's job. The single-throat correction made at A does not apply here.
+
+## WHAT STEP 8 AT C DECIDED
+
+One thing, additive, within the region, and flagged rather than assumed:
+
+- **The nest has a second way in.** `C.8` is a fallen trunk over a hole and the stub tag reads *One Way In*, which would put the region's real haul behind one fight in one throat. The answer that is not the gate came out of ground the stubs already describe: at the back of `C.7`, where the raked trees have died and gone over, roots have pulled the roof off the nest chamber and left a **root sink** into `C.9`. Priced worse than the fight — narrow enough that armour comes off, no way back up in a hurry, and it drops a party into the chamber with the haul and the trunk on the far side. Drawn as a hidden edge `C.7`–`C.9`. **If the den was meant to stay a single-throat fight, say so and the edge comes out.**
+
+The rest the drawing only made explicit. `C.4` is the hub and also the open way west into owlbear country, which is the drawn reason the ground is contested. `C.3` is the only camp with an edge onto `C.7`, which is the whole of Hessa's problem in one line. `C.5` serves `C.1` and `C.2` and not `C.3`, which is why two chiefs are proud and one is frightened. No camp connects directly to another — every chief-to-chief move routes through `C.4`.
+
+## QUESTION BATCH — C
+
+**Does the scavenger track connect region C to region E?**
+
+`C.5`'s stub states plainly that the track runs two days west to the Outer City, that the goblins use it, that the tile came up it, and that *the party can take it and it does not pass the crossing at `D`*. That is a region-level edge. The Setting Relational Diagram does not carry one, and `E`'s `## CONNECTIONS` lists only `D` and `FA`. The two cannot both stand. Genuine alternatives:
+
+1. **Write the edge.** `C.5` ↔ a node in `E` — most likely `E.1` The Guard Wall, breached in four places, which is exactly how a goblin salvage file would get in and out unseen. Add `C` to `E`'s `## CONNECTIONS` and `E` to `C`'s, and amend the Setting Relational Diagram. **Cost:** it is a back door around `D` entirely. A party that befriends a camp can skip the River Crossing, the hobgoblin toll, the Charter camp and the whole D negotiation, and reach the great doors without paying any of it. That is a large hole in the approach sequence and `D` is where a lot of the module's teaching lives.
+2. **Keep the track one-way for goblins only.** The route exists, the goblins use it, and it is not passable to a party — too long without water, too exposed, and the goblins will not guide anyone down it at any price. Draw nothing. **Cost:** the stub's own line "also a route the party can take" is struck, which is a real subtraction from an authored stub rather than an addition.
+3. **Write it as priced and conditional.** The edge exists but only as a faction reward — a guide from whichever camp the party has bought, and only after the owlbear is dealt with, since the track's first day runs the fringe's northern margin. Edge type: *conditional on faction relation*, one guide, one trip. **Cost:** the least disruptive and the most machinery; it makes a fourth thing the alliance buys, on top of safe passage at `D.8` and the tile.
+
+My reading is **3** — it keeps the stub's promise, keeps `D` load-bearing, and pays the faction play in a currency the region already deals in. But this changes the setting-level diagram either way and is not mine to decide.
 
 ## MECHANICAL RECONCILIATION, CLEARED
 
@@ -126,7 +146,8 @@ All pass-4 decisions (room budgets, difficulty dice, mode rationale, three tiers
 ## CROSS-REGION THREADS OPEN
 
 - ~~**`A.12`/`A.13` ↔ `B.13`.**~~ *Closed at B's step 8 pass. Both edges are now drawn from both ends, unchanged, and `A.1` ↔ `B.1` with them.*
-- **`B.7` ↔ `C.1`/`C.2`/`C.3`.** B's diagram draws three edges west out of the turning, honouring C's `## CONNECTIONS` line "three separate ways in for three camps". **C has not been worked at step 8 and the edges are not written into C.** Reconcile at C's pass; which trace leads to which camp is C's to detail.
+- ~~**`B.7` ↔ `C.1`/`C.2`/`C.3`.**~~ *Closed at C's step 8 pass. Each camp takes one trace; the drawing offers no reason to rank them, so the party's first camp is whichever trace it follows.*
+- **`C.5` the scavenger track west to the Outer City.** Drawn as a terminus inside C and **not** connected to any node in E, because the Setting Relational Diagram carries no `C`–`E` edge and E's `## CONNECTIONS` lists only `D` and `FA`. **In the question batch below.** Resolve before E's step 8 pass.
 - **`B.9` ↔ `D.1`** (the last rise runs out to the overlook) and **`B.4a` ↔ `D.6`** (the drain, hidden at both ends). Drawn in B's diagram. **D has not been worked at step 8 and neither edge is written into D.** Reconcile at D's pass.
 - `C.1` tile → `FA.17` seal. Copy at `GA.19`.
 - `A.20` Brannek Kelmor → obelisk at `HA.5`, niche at `FA.22`.
