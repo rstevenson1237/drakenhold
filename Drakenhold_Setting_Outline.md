@@ -254,13 +254,13 @@ The campaign's spine is extraction and survival. Drakenhold is a place to rob an
 
 ## UNANSWERED QUESTIONS
 
-- The thing in GB's deep cells is an Elder Wyrm taken alive during the expansion and kept for study — which is how the Runemasters learned to build the yoke at all. It uses the existing Bestiary entry; what it knows, what it wants and what it has become in thirty-two years is written into GB.
-- The Drakmorith are drafted as a single template; whether HE needs a second, distinct horror is open.
-- Undead variety in HB rests on Skeletal Warrior and Shadow alone.
+*What the module leaves open **at the table, on purpose**. These are not tasks. They are the places where the Referee rules and the setting declines to.*
+
 - Hireling statlines are deliberately postponed to Referee ruling.
-- The mechanic attached to light in the deep is stated as a Truth and needs its resolution written into J.
-- Artifact piece count and placement are deferred to the region and location passes.
-- The properties of the lance are unfixed.
+- The properties of the lance are unfixed. `HB.16` holds the line that nothing about how it was laid suggests it was meant to be used again.
 - The Knight's fate is preserved as unknown in History and resolved in HB; this is intentional and should be checked at each pass to confirm no other section contradicts the public record.
+- Baldrun Azkelith's interment at `HB.6` was prepared and never filled. Nothing in the module answers it, and nothing will.
+
+*Questions the **authors** have not yet settled are not kept here. They live in `OPEN_QUESTIONS.md`, which is architect material and is not part of the deliverable. This section is referee-facing, and adding to it is a deliberate act: it means the setting has decided **not** to answer something.*
 
 ---

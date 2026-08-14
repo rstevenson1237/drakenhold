@@ -152,3 +152,22 @@ Locations are numbered within their parent region code (`FA.1`, `FA.2`). A compl
 **Features:** One entry per element the players can engage. The feature name and its opening line are the hidden tier, surfaced when a player asks a general question. Secret detail — what is behind, beneath or inside it — is written into the same entry and surfaces only on specific investigation or a granted Difficulty roll.
 
 **Connections:** Where this location leads, by code, with the nature of each route stated. Checked against the region's relational diagram.
+
+**Connection pointers are written `->`.** Plain ASCII, two characters, typeable in any editor without a character palette — the source stays human-writable and that is the point. The renderers substitute a single typographic arrow for the web and PDF targets, so `->` is what is authored and never what is read at the table. A feature that is also an exit carries the pointer at the end of its own entry, so that the way out is found where the thing itself is described rather than in a list underneath:
+
+```
+### `[Code] [Location Name]` — `[Three, Thematic, Tags]`
+
+*A pillared gallery runs the crypt's length, each bay painted with a passage
+of the saint's life, the colours dimmed but the figures stern.*
+
+* **The Murals:** read in sequence, they recount his deeds and disclose the
+  Rite of Passage — the observance by which the honour guard once admitted
+  the worthy. Spoken correctly it stills the trial below and quiets the ward.
+* **The Ossuary Arch:** a low opening north among the bones -> `[Code]`
+* **The Flooded Stair:** a descent slick with seepage -> `[Code]`
+* **The Iron Door:** the gallery ends at a black valve, its lock answering no
+  common key -> `[Code]`
+```
+
+Never use `->` for anything but a connection. Prose relationships between things — a name leading to a place, a clue leading to an answer — are written in words.

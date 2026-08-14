@@ -31,19 +31,19 @@
 
 15. **Cross-region threads are reconciled at both ends.** A region does not close while it holds an edge, a name or a promise whose far end has not been checked. Where the far end is in a region not yet worked, the thread is recorded in the handoff rather than assumed.
 
-16. **Each pass adds detail and audits for inconsistency.** Unresolved items and open questions accumulate in the setting outline rather than being decided silently.
+16. **Each pass adds detail and audits for inconsistency.** Unresolved items and open questions accumulate in **`OPEN_QUESTIONS.md`** rather than being decided silently. That file is the single register and it is architect material. The setting outline stays referee-facing: its Unanswered Questions section holds only what the module leaves open at the table on purpose, and moving something into it is a decision that the setting will not answer that question — not a place to park unfinished work. Ratified calls go to **`DECISIONS.md`**.
 
 17. **Later passes may revise earlier material,** but changes to established content are proposed and flagged, never applied without direction.
 
 18. **Each pass ends in a question batch,** delivered whole, with suggested answers attached. Suggestions are expected to include genuine alternatives, not only the conservative option. **Where a pass decides nothing requiring direction, the batch is omitted rather than manufactured.**
 
-19. **The handoff is updated at the close of every region.** Phase position, the region table, standing decisions, open cross-region threads and open items. A fresh conversation should be able to pick up the next region from the handoff alone.
+19. **The record is updated at the close of every region**, each part of it in its own place: `OPEN_QUESTIONS.md` for what was opened and answered, `DECISIONS.md` for what was ratified, the block document for cross-region threads, `regions/00_INDEX.md` for counts and phase, and `HANDOFF.md` for what the next conversation does first. **`HANDOFF.md` is kept to a page.** It was previously comprehensive, became a fourth place the truth lived, and drifted; it is now a pointer document and is not allowed to grow back. A fresh conversation should be able to pick up the next region from the handoff and the files it points at.
 
 ---
 
 ## RULES
 
-1. Follow the TTRPG Design Notes. Rules usage may be proposed; explicit test calls should be rare, and sufficient detail lets the Referee rule without instruction.
+1. Follow the TTRPG Design Notes. **`Rules_Light_TTRPG_Design_Notes.md` is the single source of truth for game mechanics** — dice resolution, Difficulty and Action Dice, regional modes, time and distance, Status, Encumbrance, the Weather and Encounter procedures, Rest. It is authored in a separate project and mirrored into this repo read-only: it is never edited here, never extended here, and is replaced wholesale when a new revision is uploaded. **No mechanic is invented in setting content.** Where a pass needs a procedure the Notes do not cover, or covers ambiguously, the gap is written into the setting outline's Unanswered Questions and raised in the pass's question batch for resolution *in the rules project* — not settled in a region file. Where a region must operate before the gap closes, it states the effect in Referee terms the Notes' existing procedures can carry, and names the dependency. Rules usage may be proposed; explicit test calls should be rare, and sufficient detail lets the Referee rule without instruction.
 2. Follow the Setting Playbook Template's formatting. Content inside the template is illustrative and never enters the setting.
 3. **Sandbox.** Situations to explore, not a story to follow.
 4. **Lived-in world.** Constructed language and proper names throughout; avoid tropey shorthand.

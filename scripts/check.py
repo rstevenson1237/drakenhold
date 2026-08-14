@@ -34,7 +34,12 @@ REPO = Path(__file__).resolve().parent.parent
 #   Setting_Playbook_Template.md — illustrative content, contains fake codes
 #   PROCEDURES_AND_RULES.md, RECONCILIATION.md, README.md, CLAUDE.md — process docs
 _CORPUS_DIRS = ["regions", "blocks", "diagrams"]
-_CORPUS_FILES = ["Drakenhold_Setting_Outline.md", "HANDOFF.md"]
+_CORPUS_FILES = [
+    "Drakenhold_Setting_Outline.md",
+    "HANDOFF.md",
+    "DECISIONS.md",
+    "OPEN_QUESTIONS.md",
+]
 
 STALE_TREE = REPO / "mnt"
 
@@ -495,33 +500,39 @@ def _parse_region_budget_line(lines: list[str]) -> tuple[int, int, int] | None:
     return None
 
 
-# HANDOFF.md "WHAT EXISTS AT STEP 7" table header
-_HANDOFF_TABLE_HEADER_RE = re.compile(r'^\|\s*Region\s*\|\s*Stubs\s*\|')
+def _parse_index_stub_table(lines: list[str]) -> dict[str, tuple[int, int]]:
+    """Parse the Stubs column of regions/00_INDEX.md's region table.
 
+    The table moved here from HANDOFF.md when the handoff was cut back to a
+    pointer document. Columns are located by header name rather than by
+    position, so adding a column does not silently break the check.
 
-def _parse_handoff_stub_table(lines: list[str]) -> dict[str, tuple[int, int]]:
-    """Parse the Stubs column of HANDOFF.md's step-7 table.
-    Returns region_code → (stub_count, lineno). Handles "13 + 1 sub" as 14."""
+    Returns region_code → (stub_count, lineno). Handles "13 + 1 sub" as 14.
+    """
     result: dict[str, tuple[int, int]] = {}
-    in_table = False
+    code_col: int | None = None
+    stub_col: int | None = None
     for lineno, line in enumerate(lines, 1):
         s = line.rstrip()
-        if _HANDOFF_TABLE_HEADER_RE.match(s):
-            in_table = True
+        if not s.startswith('|'):
+            if code_col is not None:
+                break          # table ended
             continue
-        if not in_table:
+        cols = [c.strip() for c in s.strip('|').split('|')]
+        if code_col is None:
+            lowered = [c.lower() for c in cols]
+            if 'code' in lowered and 'stubs' in lowered:
+                code_col = lowered.index('code')
+                stub_col = lowered.index('stubs')
             continue
         if s.startswith('|---') or s.startswith('|-'):
             continue
-        if not s.startswith('|'):
-            break
-        cols = [c.strip() for c in s.strip('|').split('|')]
-        if len(cols) < 2:
+        if max(code_col, stub_col) >= len(cols):
             continue
-        code_m = re.match(r'^([A-Z]{1,2})\b', cols[0])
+        code_m = re.match(r'^([A-Z]{1,2})\b', cols[code_col])
         if not code_m:
             continue
-        nums = re.findall(r'\d+', cols[1])
+        nums = re.findall(r'\d+', cols[stub_col])
         if not nums:
             continue
         result[code_m.group(1)] = (sum(int(n) for n in nums), lineno)
@@ -585,13 +596,13 @@ def m4(ctx: dict) -> list[Finding]:
                     f"{ratio:.2f} drifts far from the ratified ~half"
                 ))
 
-    # 2. HANDOFF.md's Stubs column vs actual on-disk counts.
-    handoff = REPO / "HANDOFF.md"
-    for code, (stubs, lineno) in sorted(_parse_handoff_stub_table(read_lines(handoff)).items()):
+    # 2. regions/00_INDEX.md's Stubs column vs actual on-disk counts.
+    index = REPO / "regions" / "00_INDEX.md"
+    for code, (stubs, lineno) in sorted(_parse_index_stub_table(read_lines(index)).items()):
         if code in actual and actual[code] != stubs:
             findings.append(Finding(
-                handoff, lineno,
-                f"HANDOFF.md states {stubs} stubs for {code}, but "
+                index, lineno,
+                f"00_INDEX.md states {stubs} stubs for {code}, but "
                 f"{actual[code]} stub headings found on disk"
             ))
 

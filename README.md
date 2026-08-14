@@ -25,16 +25,28 @@ Two further outputs are built from the same source: a paginated **PDF** for the 
 ├── README.md                     this file
 ├── PROCEDURES_AND_RULES.md       the build sequence and the authorial rules
 ├── RECONCILIATION.md             the checklist every closing pass runs
-├── HANDOFF.md                    current phase, position, open items, live threads
+├── HANDOFF.md                    what the next conversation does first. Nothing else. Kept to a page.
+├── DECISIONS.md                  what has been ratified and is not re-litigated, including
+│                                 mechanical rulings received from the rules project.
+├── OPEN_QUESTIONS.md             the single register of what is not yet decided, and who
+│                                 decides it. Answered items are struck, never deleted.
+│                                 DECISIONS and OPEN_QUESTIONS are architect material:
+│                                 not assembled into the Playbook, not published to the web.
 │
+├── Rules_Light_TTRPG_Design_Notes.md  **the source of truth for game mechanics.**
+│                                 Authored in a separate project and mirrored here.
+│                                 Read-only in this repo: never edited, never extended.
+│                                 Replaced wholesale when a new revision is uploaded.
 ├── Setting_Playbook_Template.md  the deliverable's shape. Illustrative content never enters the setting.
-├── Drakenhold_Setting_Outline.md steps 1–2. Truths, Rumours, History, Factions, Bestiary, Unanswered Questions.
+├── Drakenhold_Setting_Outline.md steps 1–2. Truths, Rumours, History, Factions, Bestiary.
+│                                 Referee-facing only. Its Unanswered Questions section holds
+│                                 what the module leaves open at the table on purpose —
+│                                 authors' open items go in OPEN_QUESTIONS.md instead.
 │
-├── diagrams/                     mermaid + prose, one pair per level of zoom
-│   ├── 00_setting.md             the whole map, region to region
-│   ├── blocks/                   one per block: A–E, first level, peak 1, peak 2, peak 3, I/J
-│   ├── regions/                  one per region, resolving to individual locations
-│   └── locations/                where a single location's internal shape needs one
+├── diagrams/
+│   └── Drakenhold_Relational_Diagram.md   step 6 and every level of zoom below it:
+│                                 the setting graph, then a graph per block. Region-level
+│                                 graphs live in the region files' own diagram sections.
 │
 ├── blocks/                       connective documents — systems, budgets, shared routes
 │   ├── FIRST_LEVEL_BLOCK.md
@@ -44,8 +56,9 @@ Two further outputs are built from the same source: a paginated **PDF** for the 
 │   └── I_AND_J_BLOCK.md
 │
 ├── regions/                      22 region files + 00_INDEX.md — authoritative
-├── archive/
-│   └── Drakenhold_Gazetteer.md   frozen. Superseded by regions/. Never edited, never cited.
+├── archive/                      frozen. Never edited, never cited as current.
+│   ├── Drakenhold_Gazetteer.md   superseded by regions/.
+│   └── HANDOFF_at_step_8_close.md  the handoff as it stood before it was cut back.
 └── scripts/
     ├── check.sh                  runs every mechanical check; must pass before commit
     ├── build.sh                  assembles the Playbook markdown from the sources
@@ -60,11 +73,11 @@ Two further outputs are built from the same source: a paginated **PDF** for the 
 
 ## PHASE POSITION
 
-Architect (steps 1–6) complete. Engineer step 7 — location stubs and region tables — **complete for all 22 regions**.
+Architect (steps 1–6) complete. Engineer step 7 — location stubs and region tables — **complete for all 22 regions**. Engineer step 8 — region relational diagrams, drawn from the stubs before the outlines — **complete for all 22 regions**.
 
-Current: **step 8, region relational diagrams**, drawn from the stubs before the outlines are written. Then step 9, location outlines, with the diagrams reconciled against them. Then the full 1–9 reconciliation, then the builder phase.
+Current: **step 9, location outlines**, one region per conversation, with each region's diagram reconciled against its finished outlines before the region closes. The reconciled diagram is the deliverable. Procedure 12 requires a reconciliation pass over steps 1–8 before step 9 begins anywhere. Then the full 1–9 sweep, then the builder phase.
 
-`HANDOFF.md` carries the live detail and is updated at the close of every region.
+`HANDOFF.md` says what the next conversation does. `OPEN_QUESTIONS.md` and `DECISIONS.md` carry the live detail and are updated at the close of every region.
 
 ---
 

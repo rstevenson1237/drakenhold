@@ -20,8 +20,8 @@
 //
 // Scope: play content only — the setting outline, the 22 regions, the block
 // documents and the setting relational diagram. Process documents (HANDOFF,
-// PROCEDURES_AND_RULES, RECONCILIATION) are authoring instruments and are not
-// published.
+// PROCEDURES_AND_RULES, RECONCILIATION, DECISIONS, OPEN_QUESTIONS) are
+// authoring instruments and are not published.
 //
 // This script never writes to or modifies any content file — only OUT_DIR.
 
@@ -438,6 +438,29 @@ function escapeHtml(s) {
           .replace(/"/g, "&quot;");
 }
 
+// ---------------------------------------------------------------------------
+// Connection pointers
+// ---------------------------------------------------------------------------
+// Location text writes connection pointers as plain ASCII "->" so that the
+// source stays human-writable in any editor. The reader gets a single
+// typographic arrow. Substitution happens on marked's output rather than on
+// the markdown, so that pre/code blocks — mermaid source, sample markup —
+// keep the ASCII they were authored with.
+const _PRE_OR_CODE_RE = /<pre[\s\S]*?<\/pre>|<code[\s\S]*?<\/code>/g;
+const _ARROW_RE = /(^|\s)-&gt;(\s|$)/g;
+
+function arrowify(html) {
+  const out = [];
+  let last = 0;
+  for (const m of html.matchAll(_PRE_OR_CODE_RE)) {
+    out.push(html.slice(last, m.index).replace(_ARROW_RE, "$1\u2192$2"));
+    out.push(m[0]);
+    last = m.index + m[0].length;
+  }
+  out.push(html.slice(last).replace(_ARROW_RE, "$1\u2192$2"));
+  return out.join("");
+}
+
 const CODE_SPAN_RE = /<code>([A-Z]{1,2}\.[0-9]+[a-z]?)<\/code>/g;
 
 // Post-process marked's output, line by line:
@@ -533,7 +556,7 @@ console.log(`Rendering ${pages.length} page(s) to ${path.relative(REPO, OUT)}/ .
 
 pages.forEach((page, i) => {
   const withDiagrams = page.md.replace(MERMAID_BLOCK_RE, (_m, code) => renderMermaidToSvg(code));
-  const body = linkifyAndAnchor(marked.parse(withDiagrams), page.slug);
+  const body = arrowify(linkifyAndAnchor(marked.parse(withDiagrams), page.slug));
 
   const prev = pages[i - 1];
   const next = pages[i + 1];

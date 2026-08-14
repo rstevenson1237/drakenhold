@@ -2,7 +2,7 @@
   "name": "drakenhold-pdf",
   "private": true,
   "type": "module",
-  "description": "Renders build/Drakenhold_Playbook.md to a paginated PDF. Not part of check.sh/build.sh's zero-dependency guarantee — this is a CI rendering step, per TRANSITION_TO_CLAUDE_CODE.md's own note that the PDF target needs mermaid-cli and a headless browser.",
+  "description": "Renders build/Drakenhold_Playbook.md to a paginated PDF. Not part of check.sh/build.sh's zero-dependency guarantee — this is a CI rendering step, and the PDF target needs mermaid-cli and a headless browser.",
   "scripts": {
     "render": "node render.mjs"
   },
