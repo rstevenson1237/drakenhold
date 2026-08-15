@@ -26,6 +26,7 @@
 - **`GB.17`, the jailer's oath.** Two releases exist and one of them is a lie. Which lie, unwritten.
 - **`GC.11`, who ordered the defacing.** Named as a revelation and answered as one — Vessa Rudgir, the Steward. Not yet written as a person: what she was, what it cost her, and what `GB.4` does to the account.
 - **`HC.9`, the whispers.** One side of a conversation with somebody who is not Vekkut. Who, unwritten, and deliberately not answered at step 8. `HC.19`, the shaft they come down, is a leaf in `HC` and no edge at all in `HE`: nothing can travel it.
+- **`PEAK_3_BLOCK`'s Kelmor citation.** *Raised at `A`'s step-9 pass.* The thread list reads "`A.20` **Brannek Kelmor** — a party that buried him recognises him on the obelisk and can find his people's interment at `HB.7`." `HB.7` is the Runemaster gallery; the Guild gallery holding Kelmor is `HB.8`, as `HB`'s own stub says. `M1` cannot see this because both codes exist. **A one-code correction in a block document, proposed and not applied — `HB`'s ground.**
 - **`D.6`, the drain outfall.** `J.9`–`D.6` is drawn one-way outward from `J`'s side. Whether `D.6` should carry a referee-facing line about what else comes out of that culvert is **proposed and batched**; `D` is closed and was not amended.
 
 ---
@@ -48,7 +49,7 @@
 
 **Factions**
 
-- **The Hobgoblins' lean-season raid on Thornhaven has no site in `A`** — no stub, no Events result. Possibly deliberate, `A` being the only SAFE region. Flagged rather than assumed.
+- **The Hobgoblins' lean-season raid on Thornhaven has no site in `A`** — no stub, no Events result. Possibly deliberate, `A` being the only SAFE region. Flagged rather than assumed. **Met at `A`'s step-9 pass and deliberately not invented**: the raid would be the only standing threat in the module's only SAFE region and the only thing in `A` that force answers better than talk, so the pass wrote neither a site nor an Events result and batched it instead. `A`'s Creatures field names no Hobgoblins. **Answering it means either an Events result in `A` or a line in `D`'s broken-ground camp, and it is a direction, not a defect.**
 
 **Bestiary**
 
