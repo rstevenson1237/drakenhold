@@ -80,6 +80,8 @@
 ### `E.7 Ashen's Squat` — Seven of Them, Two Who Read Runic, One Rod
 *Working note: fortified, watched, and hostile the moment they believe the party is ahead. The House rod they carry is unidentified and they will not part with it.*
 
+*Ratified: **they are here when the party arrives, and they are on a clock.** Rumour 14 says they found a way into the third peak a month ago and have not come down. The rumour is running ahead of the fact — they are still in this squat, still trying doors with a rod they cannot identify. **But they go in on a schedule, and where they are depends on how long the party takes.** The Referee runs them forward whether or not the party engages: a party that dawdles in the Outer City meets them later on the ramp in Peak 3, and a party that beats them there decides what they find. They can be raced, beaten, followed, or caused. **The clock is the point and it does not stop.***
+
 **Connections:** `E.6` the government quarter, which they hold.
 
 ### `E.8 The Guard Barracks` — Armoury Stripped, Muster Rolls, Where the Wolves Den

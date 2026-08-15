@@ -38,7 +38,7 @@ The campaign's spine is extraction and survival. Drakenhold is a place to rob an
 - Read Magic is required only for runes that unlock a magic-like effect, and only for the effect — never for the meaning.
 - The Runemasters used the same script for wards and incantations, which is why a party that can read a warning can usually also read a threat.
 
-**Carved stone tiles gate movement.** Complex tiles fitted to matching receptacles grant passage — the Processional gates, the Skybridge termini, the mouths of the servants' passages, the great ramps between levels. A tile is a place you may go. A broken tile opens nothing, and tiles are scavenged, traded and buried across the whole setting by people who do not know what they hold.
+**Carved stone tiles gate movement, and they gate it sideways.** Complex tiles fitted to matching receptacles grant passage — the Skybridge termini at all three peaks, and the seal set across the servants' main run between them. **A tile buys lateral movement**: across the hold, between the peaks, past the ground that everything watches. It does not buy vertical movement. The great ramps between levels and the two Processionals are open to anyone who walks up to them, and their price is being seen on them rather than being stopped at them. A tile is a place you may go. A broken tile opens nothing, and tiles are scavenged, traded and buried across the whole setting by people who do not know what they hold.
 
 **Metallic rods gate action.** Precious-metal rods carved with runes stand in place of keys. Where a tile lets a party move, a rod makes something happen — waking machines, throwing vault bolts, opening valves, setting the old workings running.
 

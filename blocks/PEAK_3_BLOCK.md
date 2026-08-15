@@ -118,16 +118,17 @@ The whole ramp, top to bottom, and the whole of `HB`'s four galleries. Peak 3 wi
 - `GB.18` **Morgrin Thurvak** is `HE`'s prologue. He was imprisoned before the schism for knowing what `HE.9` states.
 - `FB.5` **Vekkut** walked up here from Peak 1 and his tribe still has an empty chair.
 - `GB.9` **the benches** carry Torvin Ganthur's name scratched under a seat, twice, as a young man.
+- `E.7` **Ashen's Crew** are this peak's rival and this peak's clock. **Ratified:** they are still in the Outer City squat when the party arrives — rumour 14 runs ahead of the fact — and they come up on a schedule the Referee runs forward whether or not the party engages. They are the ones who will open the wrong vault. **Which level they have reached when the party meets them is a function of how long the party took**, and the passes on this peak inherit a rival that can be raced, beaten, followed or caused.
 
 ---
 
 ### Cross-region threads opened in this block
 
-- `HB.14` — **artifact piece five**, proposed, in an empty royal interment.
-- `HD.14` — **artifact piece six**, proposed, in the observation rooms.
+- `HB.14` — **artifact piece five, ratified**, in an empty royal interment.
+- `HD.14` — **artifact piece six, ratified**, in the observation rooms.
 - `HB.11` the guard gallery holds dwarves who died *after* the descent, which means somebody was burying properly for years longer than anyone thinks. `HB.20` is who.
 - `HC.11` the excavation follows a surveyed line. The survey is Runemaster and predates the schism, which means the Sanctuary planned a back way down and never cut it.
-- `HD.16` the earned rod is the only Runemaster-tier key in the module a party can hold legitimately, and `GD.9`'s ward is Runemaster work.
+- `HD.10` the earned rod is the only Runemaster-tier key in the module a party can hold legitimately, and `GD.9`'s ward is Runemaster work.
 - `HE.10`'s register names two carriers who reached `E.5` and `D.3`, and one who did not get out of the mountain. `J` inherits the third.
 - The seventh piece, in `J`, is named on the register and its location is not.
 

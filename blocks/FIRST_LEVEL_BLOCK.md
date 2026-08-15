@@ -59,7 +59,6 @@ graph LR
     FAH ---|"rearward"| FAA
     FAH ===|"Processional of the Living"| GAH
     GAH ---|rearward| GAA
-    GAG[" "]
     GAH ===|"Processional of the Dead"| HAG
     HAG --- HAH
     HAG --- HAA
@@ -83,8 +82,6 @@ graph LR
     S2 -.-|"past the crater"| GE["GE"]
     S3 -.-|"the survivors' burials"| HB
 ```
-
-*The `GAG` node is a spacer and is deleted at the diagram's next revision.*
 
 ---
 
@@ -258,7 +255,7 @@ Everything it cannot walk to is behind the passages.
 
 **The two mouths onto the Processionals are not the same object.** `GA.27` is unmarked from the road, so it is a way off the exposed ground and never a way onto it unseen. `HA.33` is findable from both sides. Peak 3's warren is the only one of the three that something walking a Processional can enter without being shown the way.
 
-**The block's second seal is recorded on the skeleton.** The skeleton diagram in pass 1 draws the main run as `S1`—SEAL—`S2`—`S3`. The regions carry a second tile-gated face at `GA.11`, between the sealed segment and the Peak 3 warren, which the skeleton does not show. The regions are right and the skeleton is the older abstraction; it is left standing as a block-level sketch and this note is the reconciliation. *The `GAG` spacer node is still in it and is still due for deletion.*
+**The block's second seal is recorded on the skeleton.** The skeleton diagram in pass 1 draws the main run as `S1`—SEAL—`S2`—`S3`. The regions carry a second tile-gated face at `GA.11`, between the sealed segment and the Peak 3 warren, which the skeleton does not show. The regions are right and the skeleton is the older abstraction; it is left standing as a block-level sketch and this note is the reconciliation.
 
 **Cross-region threads opened in this block**, to be checked at every later pass:
 
