@@ -41,7 +41,7 @@ Neither region is a dungeon level. Both are ways of getting to one.
 
 **The seven territories.** Off the tunnel: the flooded galleries, the exhausted workings, the natural cavern, the vent system, the vein, the deep dark, and the middens. Each has its own character and its own rules.
 
-**The descents.** Every peak has a marked descent and at least one hidden one. `FB.14`, `GB.19` — no, `HB.19` — and `GB`'s marked way; hidden by Khorven from `FB`, by the slag channel from `FD.16`, and by the broken floor under the deep cells at `GB.20`. **That last one was not cut by dwarves.**
+**The descents.** Every peak has a marked descent and at least one hidden one. Marked: `FB.14`, `HB.19`, and `GB`'s marked way, which is declared and carries no stub. Hidden: Khorven from `FB`, the slag channel from `FD.16`, and the broken floor under the deep cells at `GB.20`. **That last one was not cut by dwarves.**
 
 ---
 

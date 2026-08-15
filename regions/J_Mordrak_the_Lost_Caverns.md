@@ -76,6 +76,8 @@
 ### `J.4 The Sealed Shafts` — Warning Inscription Rather Than Stone, Nine Hundred Years Old, Still Holding
 *Working note: from the Waking of the Deep. They sealed with words instead of rock, which is either confidence or a different kind of engineering, and reading them is the region's script reward.*
 
+*Ratified: **one of these inscriptions seals the northern road** — rumour 19's road under the mountain, out the far side of the Broken Teeth, that the dwarves traded down with things that do not have a country. It existed. It was cut off at the Driving Down and it was closed with words rather than with rock like everything else here. **The rumour is half true and the half that is true is readable, not walkable.** The inscription names the road, names what it went to, and states plainly why it was shut — which makes it the region's best script reward and the module's only account of what lies north. **No edge, no stub, nothing passes.** A party that can read it learns that the road is real and that the dwarves were more frightened of what used it than of what they had driven down.*
+
 **Connections:** `J.1` the great tunnel. Sealed with words instead of rock nine hundred years ago, and still holding.
 
 ### `J.5 The Middens` — Wyrm Bone Where They Fell, Left Deliberately, A Statement

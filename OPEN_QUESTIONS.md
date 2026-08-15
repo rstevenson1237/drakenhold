@@ -32,39 +32,27 @@
 
 ## OPEN — RAISED BY THE STEPS 1–8 SWEEP
 
-*Procedure 12's reconciliation pass, run before step 9 begins anywhere. `scripts/check.sh` M1–M8 all pass; every item below is a judgement finding. **None is resolved here** — each is raised for direction, and each names the pass that owns it. J2 was not run: it is a closing check and belongs to each region's own step-9 pass.*
+*Procedure 12's reconciliation pass, run before step 9 begins anywhere. `scripts/check.sh` M1–M8 all pass; every item here is a judgement finding. The five contradictions the sweep raised were batched and **answered by direction** — they are struck below and the calls are in `DECISIONS.md`. What remains are the watch items, each naming the pass that owns it. J2 was not run: it is a closing check and belongs to each region's own step-9 pass.*
 
 **Truths**
 
-- **The tile Truth over-promises.** *Carved stone tiles gate movement* names four applications — "the Processional gates, the Skybridge termini, the mouths of the servants' passages, the great ramps between levels." The corpus draws exactly five tile-gated edges: the seal at `FA.17`–`GA.10` and `GA.11`–`HA.14`, and the three Skybridge termini. The Processionals are drawn open and called "unlocked, undefended, and utterly exposed"; every great ramp is open; every passage mouth is open, with the one tile lock sitting mid-run rather than at a mouth. **This is the setting-level statement of what a scavenged tile is worth and it is the payoff of the `C.1` thread**, so the gap is load-bearing. Whether the Truth narrows to what is drawn, or the regions gain gates to match it, is a direction call.
 - **"Royal names open what nothing else will" has a teaching site and no lock.** `GC.9` and `GC.10` teach that royal names are collectable and that the King's is not a master key. No location anywhere is opened by a royal name; the two name-opened locks in the module, `FA.22` and `HB.15`, are both non-royal. **`GD`'s Royal sub-vaults and `HB`'s royal gallery at their step-9 passes.**
 
 **Rumours**
 
-- **Rumour 19 points nowhere.** *A road under the mountain that comes out the far side of the Broken Teeth.* "Broken Teeth" occurs twice in the whole corpus, both in the setting outline — the Overview and the rumour itself. No region or block picks it up and `J` carries no northern road. It is neither true nor recorded as deliberately false.
 - **Rumour 8's sleep cycle is neither confirmed nor falsified.** *He sleeps a year at a stretch and wakes for a year.* `GE` and `PEAK_2_BLOCK` give three wake triggers and no cycle. Rumours 1 and 12 are marked wrong in Vermakith's faction Knowledge; 8 is not, and the Lizardmen's "roughly how long the Dragon has been asleep" does not settle it.
 
 **History**
 
-- **The Silver Veins trace is written nowhere.** *Trace: the seam is visible — everything above the Main Level is finer, later work in a different stone, and the join runs clean around all three peaks.* Absent from every region and block. `FC`, `GC` and `HC` are where a party first crosses that join and none of them mentions it, and `I` was thrown at the same expansion and does not either. **The only History trace in the module with no home.**
 - **The Driving Down's obelisk trace is half-placed.** *The first King's is the first name cut on the black obelisk.* `HA.5` exists and is the name-index; nothing states the first cut, and the first King is unnamed anywhere. Against Truth 1 — Clan Azkelith "now largely unwritten in the upper halls" — this is a hook rather than a hole. **`HA`'s step-9 pass.**
 
 **Factions**
 
-- **Ashen's Crew have no landing site inside the hold.** Their Immediate goal is Peak 3 ahead of anyone else, they "are the ones who will open the wrong vault", and rumour 14 puts them a month inside it. They appear at `A.11`, `E.7`, and once in `PEAK_1_BLOCK` as the owners of the rod that opens `FD.14`. No `H` region and no `GD` stub carries them. **The faction with the strongest clock has nowhere for it to run down.**
 - **The Hobgoblins' lean-season raid on Thornhaven has no site in `A`** — no stub, no Events result. Possibly deliberate, `A` being the only SAFE region. Flagged rather than assumed.
 
 **Bestiary**
 
-- **Three entries are never used: `Sellsword`, `Delver`, `Camp Hand`.** All three are Man-type and all three have obvious owners already written — `D.10`'s "two mercenary swords and a surveyor", `E.7`'s seven, `A`'s hiring of "mules, salt and hands". Every other entry appears somewhere, and no creature named anywhere lacks an entry.
 - **`HD` names its creatures as "Constructs"**, which is a category rather than an entry. `Automaton` and `Living Statue` both exist; `HD.8`'s trial post is neither yet. **`HD`'s step-9 pass.**
-
-**Citations and residue** — *typo-class, but M1 cannot see them: every code resolves to a real stub, just the wrong one.*
-
-- **The earned rod is mis-cited in three places.** The rod is `HD.10`, *The Grant*, and the rule lives in `HE`'s diagram findings — "the rod does not buy treasure, it buys a way back out." `PEAK_3_BLOCK` calls it "`HD.16` the earned rod" (`HD.16` is *The Way Up*, a route); `DECISIONS.md` and this file both call it "`HE.5`'s" (`HE.5` is *The Broken Geometry*). **`HD`'s step-9 pass is directed to price the excavation against that rule, so the wrong pointer is in the way of live work.**
-- **`I_AND_J_BLOCK.md` carries a self-correction in architect voice, around a wrong code.** "`FB.14`, `GB.19` — no, `HB.19` — and `GB`'s marked way". `GB.19` is *The Kept Thing*. The correction is right; the wrong code and the correction are both still standing in a published document.
-- **`PEAK_3_BLOCK` still calls artifact pieces five and six "proposed"** at `HB.14` and `HD.14`, where `DECISIONS.md` records all seven placements as ratified and both other peak blocks were updated to say so.
-- **The `GAG` spacer node is still in the `FIRST_LEVEL_BLOCK` skeleton diagram**, recorded as owed at lines 87 and 261 and published to the web.
 
 ---
 
@@ -85,7 +73,7 @@
 
 - **Buying the warrens.** `DECISIONS.md` records the standing call for the three arteries: *no landmark system, no service marks, no mechanic — a sheer numbers game of twisting paths and trying to keep track.* That call stands and this does not overturn it. But the survivors' stated advantage is **thirty years of memory a party cannot buy** — which is precisely the thing a party will try to buy, and there is no procedure for what a bought or coerced guide is worth, what a wrong guide costs, or what happens when the guide leaves. The table will want that negotiation scored. **Proposed as a rules-project question, not a mapping system.**
 - **The `HD` circuit.** A closed ring, no chord, an attempt imposed at every segment in either direction, with the rod that opens `HD.11` at the far end of it. It is already a mini-game in everything but name and the fiction is fully built. What it lacks is a stated order and a stated cost for a failed segment. **The smallest of the three, and the one players will most visibly engage with as a system.**
-- **Weight against the way out.** The module's spine is extraction, and the Notes carry Encumbrance as slots. Every treasure decision here is a slot decision made hours from the door, and `HE.5`'s earned rod already **buys a way back out rather than treasure.** A light procedure for hauling under load back through a region already crossed — not a new subsystem, only what the existing slots cost on the return leg — would make the module's central tension mechanical instead of implied. **The largest in scope and the one most worth getting right.**
+- **Weight against the way out.** The module's spine is extraction, and the Notes carry Encumbrance as slots. Every treasure decision here is a slot decision made hours from the door, and the earned rod at `HD.10` already **buys a way back out rather than treasure.** A light procedure for hauling under load back through a region already crossed — not a new subsystem, only what the existing slots cost on the return leg — would make the module's central tension mechanical instead of implied. **The largest in scope and the one most worth getting right.**
 
 **Deliberately not proposed:** any further scoring of the light rule. It works because it is three states and a Referee call, and `J.6` teaches it without a table.
 
@@ -94,6 +82,15 @@
 ## ANSWERED
 
 *Struck, with where the answer lives. Never deleted.*
+
+*The five contradictions the steps 1–8 sweep raised, all answered in the batch that closed it. The calls are in `DECISIONS.md`.*
+
+- ~~**The tile Truth over-promises.**~~ *Answered: **tiles gate sideways, never up.** The Truth named four applications where the corpus drew two. Narrowed to the Skybridge termini and the seal, with the ramps and both Processionals staying open and priced in exposure — the reading all three peaks reached independently. Rewritten in the setting outline; ratified in `DECISIONS.md`.*
+- ~~**Rumour 19 points nowhere.**~~ *Answered: **half true, and the true half is readable rather than walkable.** The northern road existed, was cut off at the Driving Down, and is sealed with words at `J.4` like everything else there. Written into `J.4`'s note. No edge, no stub, nothing passes.*
+- ~~**Ashen's Crew have no landing site inside the hold.**~~ *Answered: **they are a clock, not a location.** Still at `E.7` when the party arrives — rumour 14 runs ahead of the fact — and they go up on a schedule the Referee advances regardless. Written at `E.7`; inherited by `PEAK_3_BLOCK`.*
+- ~~**The Silver Veins trace is written nowhere.**~~ *Answered: **ambient in the three level-2 regions.** `FC`, `GC` and `HC` each carry the join at their own step-9 passes. Written three times rather than once, because the repetition is how a party learns it is hold-wide. No stub.*
+- ~~**Three Bestiary entries are never used.**~~ *Answered: `Sellsword` at `D.10`, `Delver` at `E.7`, `Camp Hand` at `A`'s hiring. The prose already describes all three; only the names are missing, and they are added when those locations are written. Nothing cut.*
+- ~~**Four citation defects `M1` cannot see.**~~ *Answered: all five corrections applied. The earned rod is `HD.10` in `PEAK_3_BLOCK`, `DECISIONS.md` and this file; `I_AND_J_BLOCK`'s descent sentence is rewritten without the self-correction and without the wrong code; `HB.14` and `HD.14` read "ratified"; the `GAG` spacer node and both notes recording it as owed are gone.*
 
 - ~~**`HC`'s one-way phrasing.**~~ *Answered. `DECISIONS.md` ratifies the `HC.12`–`HD.4` excavation as bidirectional, gated by time and intervention rather than by direction, and `HC`'s region-level Connections bullet now reads that way and carries the ratification note. Struck at the steps 1–8 sweep, which found it still listed as open after the correction had landed.*
 - ~~**`E`'s arrowhead on `E.12` ⇒ `FA.1`.**~~ *Answered. `DECISIONS.md`: emphasis is carried by the heavy edge alone, never by an arrowhead. `E`'s diagram draws `E12 === FA1` undirected, matching `FA`. Struck at the steps 1–8 sweep, same reason.*
