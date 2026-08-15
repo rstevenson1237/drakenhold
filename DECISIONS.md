@@ -58,6 +58,10 @@
 
 **The `HC.12`–`HD.4` excavation is bidirectional.** Ratified. Its gate is **time and player intervention** — the dig completing on its own clock — and never direction. Until it is through it carries nobody; once it is through it is a hole in a floor. `HC`'s bullet said one-way and neither diagram nor `HD.4`'s own Connections agreed; the bullet was corrected, because the diagrams are authoritative. **Consequence to be written, not argued away:** the ring at `HD` now has a second way off it that nobody paid the circuit for, and `HD`'s step-9 pass owns pricing that against `HE`'s rule that the earned rod at `HD.10` buys a way back out.
 
+**The location-entry field labels come off at the final pass.** *Ratified during `A`'s step-9 pass, which is where they were first written.* A finished location entry carries no labels at all: the **Player's Overview is indicated by being italic**, the **Referee Overview by being plain text**, and the **Features by being a bullet list**. `*Player's Overview:*`, `**Referee Overview:**` and `**Features:**` are scaffolding for the authoring phase, exactly as the working notes were, and they are struck the same way.
+
+**The `Connections:` field disappears entirely.** Not relabelled — removed. Every edge it carries is already a feature a player can meet, and the `->` pointer at the end of that feature's own entry is where the way out is stated. The way out is found where the thing itself is described, which is the template's rule and the whole point of the pointer. **Step 9 keeps the field for now**, because `scripts/check.sh` M3 reads it and the diagram is checked against it; the field is dropped and M3 is repointed at the feature pointers together, in one pass, never separately. Until then, every edge in the field is also written as a feature pointer, so that removing the field later loses nothing.
+
 **Connection pointers in location text use `->`.** Written as plain ASCII in the markdown, because the source must stay human-writable in any editor. The renderers substitute a single typographic glyph for the web and PDF targets. See `Setting_Playbook_Template.md`.
 
 ---
