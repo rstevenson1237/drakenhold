@@ -32,6 +32,18 @@ Two kinds of check. **Mechanical** checks are scripted, run every pass, and take
 
 **J2 · Demotion.** The region's step-5 fields read against its locations. Anything true of one named location is pushed down into that location; what remains is what applies to the region entire. Fields narrow as the region develops — a field still carrying location-specific detail is a defect, not a redundancy.
 
+**Demotion is automatic at a region's close and is not batched for direction.** *Ratified after `A`'s step-9 pass.* It is part of closing a region, not a proposal about one. What follows is the procedure that makes it safe, because the risk in demotion is not that it is done — it is that a clause is deleted from a field having never actually arrived anywhere.
+
+**How demotion is run, clause by clause.**
+
+1. **Split the field into clauses before editing anything.** Each sentence or bound phrase is one clause. Work the list, not the paragraph — a paragraph rewritten whole is where detail goes missing, because nothing was ever counted.
+2. **Name a destination for every clause: a location code, or `region`.** A clause is location-specific if it is true of one named location and not of the region entire. A clause with no destination **stays in the field** — that is a correct outcome, not an unfinished one, and it is the reason a field may still carry detail after demotion.
+3. **Write the destination first, then cut the clause.** Never the reverse. The clause is not removed from the field until its content is readable in the location text, in that location's register — which usually means it is rephrased rather than moved, and rephrasing is where a nuance is quietly dropped.
+4. **Re-read the original field against the finished locations, from the pre-pass version in git.** Every clause is found, or it is restored. `A`'s pass ran this and it caught one loss: Wyla Fenn "living as a hedge-witch because she has nowhere else to be" had thinned to a date in `A.13`'s Referee Overview, and was put back.
+5. **The ledger goes in the pass's commit message** — clause, destination, one line each. It is not a new file and it does not become a fifth place the truth lives. The commit is the record that step 4 was actually run, and `git show` is how the next pass reads it.
+
+**Not mechanised, and deliberately.** No scripted check can verify this. Demotion rephrases prose between registers, so there is no text to match and a diff proves only that a field got shorter. The procedure above is the safeguard, and step 4 is the part that must not be skipped.
+
 **Demotion runs *after* the destination exists, never before.** A field's detail is pushed down once the location that will carry it has been written, as part of closing that region — not audited out of the fields in advance of the pass that gives it somewhere to go. Moving material between midpoints before the endpoint exists loses it. **Until a location is written, a field carrying its detail is correct**, and the check does not apply.
 
 **J3 · Clue chain.** Rule 10: clues to hidden and secret detail always exist. For every secret in the region, at least one clue exists, and at least one of those clues lives **outside the location holding the secret**. A secret discoverable only by standing in the room it is in is not a secret; it is a search roll.

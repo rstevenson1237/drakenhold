@@ -163,7 +163,7 @@ The campaign's spine is extraction and survival. Drakenhold is a place to rob an
 - **Resources:** The far guard post at the River Crossing (rumour 7); a camp in the broken ground between the crossing and the Outer City; the only real discipline outside the hold.
 - **Knowledge:** Who has come up the road and who has come back down it.
 - **Reactions:** Antipathy - 2, d6; they respect force and price, in that order, and will take payment over a fight when the arithmetic favours it.
-- **Tactics:** Toll first, banditry second, and a raid on Thornhaven when the season is lean.
+- **Tactics:** Toll first, banditry second, and a raid on Thornhaven when the season is lean. **The raid has no site in `A` on purpose** — Thornhaven is the module's only SAFE region and nothing attacks a party inside it. What decides whether the raid comes is arithmetic, and the Referee runs it: traffic on the road drying up so the toll stops paying, a hard winter, a loss at the crossing that has to be made good, or word that the town's fighting strength has walked up the road. The palisade is not the target — the outlying holdings and the field tracks are, and the town hears about it rather than fights it.
 - **Goals:** Standing — hold the crossing as a revenue point. Immediate — work out what is worth taking inside the hold, without going in far enough to find out the hard way.
 - **Relations:** Goblins - Hatred 1, d4 — vermin who use their road. Thornhaven - Antipathy 2, d6. The Grellick Charter - Neutral 3, d8 — a paying customer so far.
 
@@ -260,6 +260,8 @@ The campaign's spine is extraction and survival. Drakenhold is a place to rob an
 - The properties of the lance are unfixed. `HB.16` holds the line that nothing about how it was laid suggests it was meant to be used again.
 - The Knight's fate is preserved as unknown in History and resolved in HB; this is intentional and should be checked at each pass to confirm no other section contradicts the public record.
 - Baldrun Azkelith's interment at `HB.6` was prepared and never filled. Nothing in the module answers it, and nothing will.
+- The cutter who did not come back off the wood's edge at `A.12` is left unresolved. The evidence is written and the outcome is not: the Referee develops him as the campaign needs — a body, a witness, a debt owed to Wyla Fenn, or nothing at all.
+- Whether the Hobgoblins' lean-season raid on Thornhaven falls during play. The triggers are stated in their faction entry and the timing is a Referee call; the module gives the raid no site in `A`.
 
 *Questions the **authors** have not yet settled are not kept here. They live in `OPEN_QUESTIONS.md`, which is architect material and is not part of the deliverable. This section is referee-facing, and adding to it is a deliberate act: it means the setting has decided **not** to answer something.*
 

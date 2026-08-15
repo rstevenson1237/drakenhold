@@ -220,7 +220,7 @@
 **Features:**
 
 * **The Line:** her boundary, marked at intervals with cut and bound saplings, at head height, unmistakable and entirely unfenced. It is a statement rather than a barrier. Everything the town has done wrong here is on the town's side of it and visible from the town's side of it.
-* **The Dropped Tools:** a saw, a wedge, a jacket. The last crew came out over the line and one of them did not come back with the others. He is not dead; he came out of the wood four days later at the far end of the district and will not go near trees. Marrow has not told anyone.
+* **The Dropped Tools:** a saw, a wedge, a jacket over a stump with the sleeves still turned back. The last crew cut past the line and came out one short, and the town's account stops there. **The module does not say what became of him and does not intend to** — the evidence is a saw left mid-cut, a jacket nobody came back for, and a crew who will talk about the first of those and not the second. Whether he is dead, walked out somewhere else, or is still in there is the Referee's to develop, and Fenn will not be drawn on it either way.
 * **The Feud, and Its Price:** the town needs palisade timber and takes it from her wood. She has warned them twice. This is winnable — by cutting elsewhere, by paying, by hauling stone from the landing instead — and every one of those answers costs the town something Marrow will have to be argued into.
 * **Exits:** the gate, an hour west -> `A.1` · the grove, a quarter hour further along the line -> `A.13` · the field track south to the farmstead -> `A.14` · the same boundary where it meets the trail -> `B.13`
 
@@ -230,7 +230,7 @@
 
 *Player's Overview: Old trees, spaced as though someone had planned them, and a low house among them with a stone step. The step is dwarven — square-cut, letter-cut, and the letters have been worn shallow by one person's feet over a very long time. She is at the door before you reach it. She is not old. She looks at what you are carrying, and at what you are wearing, and she says: you have come from the town, and I have nothing to sell you.*
 
-**Referee Overview:** A quarter hour along the boundary from the cutting ground, an hour and a quarter from the gate. Perhaps forty old trees standing in worked ground, a turf-roofed house, drying racks, a spring. She is human by every appearance and was trained by the Runemasters of the Third Peak, which is a thing that happened and which she will not discuss with anyone who arrives as a customer. She left Drakenhold before the Breaking finished and has been here since.
+**Referee Overview:** A quarter hour along the boundary from the cutting ground, an hour and a quarter from the gate. Perhaps forty old trees standing in worked ground, a turf-roofed house, drying racks, a spring. She is human by every appearance and was trained by the Runemasters of the Third Peak, which is a thing that happened and which she will not discuss with anyone who arrives as a customer. She left Drakenhold before the Breaking finished and has been here since, living as a hedge-witch because there is nowhere else for her to be — not hiding, and not waiting for anything either.
 
 **Features:**
 
