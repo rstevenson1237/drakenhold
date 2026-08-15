@@ -34,7 +34,7 @@ Engineer step 9, location outlines: **not begun anywhere.**
 
 **Step 9 — location outlines — one region per conversation.**
 
-1. **Run the reconciliation pass over steps 1–8 first.** Procedure 12 requires it and it has not been run since step 8 closed. It is a check that the material step 9 rests on still says what it said, not a reread of the whole project.
+1. **The steps 1–8 reconciliation pass is run.** Procedure 12 is satisfied and step 9 may begin. `scripts/check.sh` M1–M8 all pass. The judgement sweep raised fourteen items, all recorded in `OPEN_QUESTIONS.md` under *OPEN — RAISED BY THE STEPS 1–8 SWEEP* and **none of them resolved** — each names the pass that owns it, and several land on regions early in the suggested order. **Read that section before choosing a region.** J2 was deliberately not run: it is a closing check and belongs to each region's own pass.
 2. **Read the inputs:** the region file, its block document in `blocks/`, the setting outline, `DECISIONS.md`, `OPEN_QUESTIONS.md`, and this file.
 3. **Write the outlines.** A Player's Overview, a Referee Overview, and the features the location contains. **Working notes are absorbed and struck** — M8 fails if one survives in a location that has been written.
 4. **Reconcile the region's diagram against the finished outlines before the region closes.** Outlines generate edges the stubs did not anticipate — doors, shafts, sightlines, drops. **The reconciled diagram is the deliverable, not the one drawn at step 8.**

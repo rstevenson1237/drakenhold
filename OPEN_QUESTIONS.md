@@ -27,8 +27,46 @@
 - **`GC.11`, who ordered the defacing.** Named as a revelation and answered as one — Vessa Rudgir, the Steward. Not yet written as a person: what she was, what it cost her, and what `GB.4` does to the account.
 - **`HC.9`, the whispers.** One side of a conversation with somebody who is not Vekkut. Who, unwritten, and deliberately not answered at step 8. `HC.19`, the shaft they come down, is a leaf in `HC` and no edge at all in `HE`: nothing can travel it.
 - **`D.6`, the drain outfall.** `J.9`–`D.6` is drawn one-way outward from `J`'s side. Whether `D.6` should carry a referee-facing line about what else comes out of that culvert is **proposed and batched**; `D` is closed and was not amended.
-- **`HC`'s one-way phrasing.** `HC`'s region-level Connections bullet calls the excavation *one-way*; both diagrams draw it undirected. Flagged rather than changed.
-- **`E`'s arrowhead on `E.12` ⇒ `FA.1`.** `FA` draws the doors undirected — they are broken open and pass both ways. `E`'s arrowhead is emphasis, not a one-way type. Flagged rather than changed.
+
+---
+
+## OPEN — RAISED BY THE STEPS 1–8 SWEEP
+
+*Procedure 12's reconciliation pass, run before step 9 begins anywhere. `scripts/check.sh` M1–M8 all pass; every item below is a judgement finding. **None is resolved here** — each is raised for direction, and each names the pass that owns it. J2 was not run: it is a closing check and belongs to each region's own step-9 pass.*
+
+**Truths**
+
+- **The tile Truth over-promises.** *Carved stone tiles gate movement* names four applications — "the Processional gates, the Skybridge termini, the mouths of the servants' passages, the great ramps between levels." The corpus draws exactly five tile-gated edges: the seal at `FA.17`–`GA.10` and `GA.11`–`HA.14`, and the three Skybridge termini. The Processionals are drawn open and called "unlocked, undefended, and utterly exposed"; every great ramp is open; every passage mouth is open, with the one tile lock sitting mid-run rather than at a mouth. **This is the setting-level statement of what a scavenged tile is worth and it is the payoff of the `C.1` thread**, so the gap is load-bearing. Whether the Truth narrows to what is drawn, or the regions gain gates to match it, is a direction call.
+- **"Royal names open what nothing else will" has a teaching site and no lock.** `GC.9` and `GC.10` teach that royal names are collectable and that the King's is not a master key. No location anywhere is opened by a royal name; the two name-opened locks in the module, `FA.22` and `HB.15`, are both non-royal. **`GD`'s Royal sub-vaults and `HB`'s royal gallery at their step-9 passes.**
+
+**Rumours**
+
+- **Rumour 19 points nowhere.** *A road under the mountain that comes out the far side of the Broken Teeth.* "Broken Teeth" occurs twice in the whole corpus, both in the setting outline — the Overview and the rumour itself. No region or block picks it up and `J` carries no northern road. It is neither true nor recorded as deliberately false.
+- **Rumour 8's sleep cycle is neither confirmed nor falsified.** *He sleeps a year at a stretch and wakes for a year.* `GE` and `PEAK_2_BLOCK` give three wake triggers and no cycle. Rumours 1 and 12 are marked wrong in Vermakith's faction Knowledge; 8 is not, and the Lizardmen's "roughly how long the Dragon has been asleep" does not settle it.
+
+**History**
+
+- **The Silver Veins trace is written nowhere.** *Trace: the seam is visible — everything above the Main Level is finer, later work in a different stone, and the join runs clean around all three peaks.* Absent from every region and block. `FC`, `GC` and `HC` are where a party first crosses that join and none of them mentions it, and `I` was thrown at the same expansion and does not either. **The only History trace in the module with no home.**
+- **The Driving Down's obelisk trace is half-placed.** *The first King's is the first name cut on the black obelisk.* `HA.5` exists and is the name-index; nothing states the first cut, and the first King is unnamed anywhere. Against Truth 1 — Clan Azkelith "now largely unwritten in the upper halls" — this is a hook rather than a hole. **`HA`'s step-9 pass.**
+
+**Factions**
+
+- **Ashen's Crew have no landing site inside the hold.** Their Immediate goal is Peak 3 ahead of anyone else, they "are the ones who will open the wrong vault", and rumour 14 puts them a month inside it. They appear at `A.11`, `E.7`, and once in `PEAK_1_BLOCK` as the owners of the rod that opens `FD.14`. No `H` region and no `GD` stub carries them. **The faction with the strongest clock has nowhere for it to run down.**
+- **The Hobgoblins' lean-season raid on Thornhaven has no site in `A`** — no stub, no Events result. Possibly deliberate, `A` being the only SAFE region. Flagged rather than assumed.
+
+**Bestiary**
+
+- **Three entries are never used: `Sellsword`, `Delver`, `Camp Hand`.** All three are Man-type and all three have obvious owners already written — `D.10`'s "two mercenary swords and a surveyor", `E.7`'s seven, `A`'s hiring of "mules, salt and hands". Every other entry appears somewhere, and no creature named anywhere lacks an entry.
+- **`HD` names its creatures as "Constructs"**, which is a category rather than an entry. `Automaton` and `Living Statue` both exist; `HD.8`'s trial post is neither yet. **`HD`'s step-9 pass.**
+
+**Citations and residue** — *typo-class, but M1 cannot see them: every code resolves to a real stub, just the wrong one.*
+
+- **The earned rod is mis-cited in three places.** The rod is `HD.10`, *The Grant*, and the rule lives in `HE`'s diagram findings — "the rod does not buy treasure, it buys a way back out." `PEAK_3_BLOCK` calls it "`HD.16` the earned rod" (`HD.16` is *The Way Up*, a route); `DECISIONS.md` and this file both call it "`HE.5`'s" (`HE.5` is *The Broken Geometry*). **`HD`'s step-9 pass is directed to price the excavation against that rule, so the wrong pointer is in the way of live work.**
+- **`I_AND_J_BLOCK.md` carries a self-correction in architect voice, around a wrong code.** "`FB.14`, `GB.19` — no, `HB.19` — and `GB`'s marked way". `GB.19` is *The Kept Thing*. The correction is right; the wrong code and the correction are both still standing in a published document.
+- **`PEAK_3_BLOCK` still calls artifact pieces five and six "proposed"** at `HB.14` and `HD.14`, where `DECISIONS.md` records all seven placements as ratified and both other peak blocks were updated to say so.
+- **The `GAG` spacer node is still in the `FIRST_LEVEL_BLOCK` skeleton diagram**, recorded as owed at lines 87 and 261 and published to the web.
+
+---
 
 ## OPEN — DELIBERATELY, AND STAYING THAT WAY
 
@@ -57,6 +95,8 @@
 
 *Struck, with where the answer lives. Never deleted.*
 
+- ~~**`HC`'s one-way phrasing.**~~ *Answered. `DECISIONS.md` ratifies the `HC.12`–`HD.4` excavation as bidirectional, gated by time and intervention rather than by direction, and `HC`'s region-level Connections bullet now reads that way and carries the ratification note. Struck at the steps 1–8 sweep, which found it still listed as open after the correction had landed.*
+- ~~**`E`'s arrowhead on `E.12` ⇒ `FA.1`.**~~ *Answered. `DECISIONS.md`: emphasis is carried by the heavy edge alone, never by an arrowhead. `E`'s diagram draws `E12 === FA1` undirected, matching `FA`. Struck at the steps 1–8 sweep, same reason.*
 - ~~**The seventh chair at `GA.2`.**~~ *Answered at `GC.14` — the Steward removed her own seat and kept it whole in her rooms. Why is open and is `GB.4`'s to complicate.*
 - ~~**Artifact piece count and placement.**~~ *Seven, ratified. All placed: `E.5`, `D.3`, `FD.14`, `GD.10`, `HB.14`, `HD.14`, `J.18`. Two ever left the mountain and the evacuation register at `E.6` proves it. **The count is itself a clue** and the module never performs the subtraction.*
 - ~~**`GD.10`, the third sub-vault.**~~ *Ratified as **artifact piece four**, placed under Royal authority in the season of the Breaking. The proposal stood from the Peak 2 block's pass; ratified in full at the post-step-8 cleanup. The count of seven is now settled at every one of its seven placements.*
