@@ -50,6 +50,7 @@ Engineer step 9, location outlines: **the approach is closed — `A` Thornhaven,
 
 *The full list is in `OPEN_QUESTIONS.md`. These four are the ones that will be met early and are easy to close by accident.*
 
+- **What broke the great doors.** The very next pass meets it: `FA.1` is the same doorway `E.12` describes, seen from the inside. The leaves lie outward, the sockets are torn out of the jamb, and the wall at `E.1` fell outward too. **The evidence is written and the agent is not, by direction.** Naming it at `FA.1` would answer, in one sentence, a question the whole approach was built to leave standing.
 - **`I.16`, the undefended approach.** Its far end is deliberately absent. Naming it settles by side effect which of three closed regions has a hole in it.
 - **Peak 2's declared descent into `J`.** No `GB` stub carries it. Naming it means inventing a stub against a ratified count of twenty.
 - **`GB.14`'s one entry without a charge.** The Crown's own stair gives it somewhere to go. Which entry, and whether the stair explains it, is `GB`'s and `GC`'s and is not to be assumed.
