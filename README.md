@@ -85,11 +85,11 @@ Current: **step 9, location outlines**, one region per conversation, with each r
 
 | Code | Name | Class | Die |
 |---|---|---|---|
-| A | Thornhaven | SAFE | — |
-| B | Ironwood Trail | WILD | d6 |
+| A | Thornhaven | SAFE | d6 |
+| B | Ironwood Trail | WILD | d10 |
 | C | Goblin Camps | WILD | d6 |
-| D | River Crossing | WILD | d6 |
-| E | Girkel, the Outer City | WILD | d6 |
+| D | River Crossing | WILD | d8 |
+| E | Girkel, the Outer City | WILD | d8 |
 | FA–FE | Peak 1 — Takdun, Brankel, Mekdun, Khorvak, Aztak | | |
 | GA–GE | Peak 2 — Grathdun, Karmor, Azdun, Valdmor, Azith | | |
 | HA–HE | Peak 3 — Thaldun, Nurmor, Sigdun, Zarkel, Sigaz | | |
