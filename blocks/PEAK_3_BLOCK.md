@@ -114,7 +114,7 @@ The whole ramp, top to bottom, and the whole of `HB`'s four galleries. Peak 3 wi
 - `HA.5` **the obelisk** does not carry Torvin Ganthur. That absence is the peak's central lock.
 - `HA.28` **the older course** runs downward here more than anywhere. It surfaces again at `HB.20`.
 - `A.13` **Wyla Fenn's price** is her trial assessment, at `HD.13`.
-- `A.20` **Brannek Kelmor** — a party that buried him recognises him on the obelisk and can find his people's interment at `HB.7`.
+- `A.20` **Brannek Kelmor** — a party that buried him recognises him on the obelisk and can find his people's interment at `HB.7`. **⚠ Citation disputed, raised at `A`'s step-9 pass and deliberately not corrected here.** `HB.7` is the Runemaster gallery; the Kelmor house stands in the Guild gallery at `HB.8`, which is what `HB`'s own stub says and what `A.18`'s name-stones now support — two of the refugee interments are Kelmor. `M1` cannot see this, because both codes exist and both resolve. **`HB`'s step-9 pass owns the correction**, and owns the choice: point this thread at `HB.8`, or decide the refugees' own people are interred somewhere the Guild gallery is not. Registered in `OPEN_QUESTIONS.md`.
 - `GB.18` **Morgrin Thurvak** is `HE`'s prologue. He was imprisoned before the schism for knowing what `HE.9` states.
 - `FB.5` **Vekkut** walked up here from Peak 1 and his tribe still has an empty chair.
 - `GB.9` **the benches** carry Torvin Ganthur's name scratched under a seat, twice, as a young man.
