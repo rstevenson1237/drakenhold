@@ -90,7 +90,7 @@ The powers a party may treat with, oppose or ignore. Each carries an Action Dice
 
 *A creature that is also a power in its own right carries both a Faction entry and a Bestiary entry. The Faction pool measures what it can accomplish in the world; the Bestiary pool measures what it is to fight.*
 
-*Factions need not know one another exist. Ignorance is its own relation, and discovery should be worth something. Where a Playbook carries more than two factions, state the relation for every ordered pair — including the pairs where the relation is "does not know they exist," which is the one a party can change.*
+*Factions need not know one another exist. Ignorance is its own relation, and discovery should be worth something.*
 
 ---
 
@@ -102,7 +102,7 @@ A quick-reference index of every creature type named across the Gazetteer, Facti
 
 - A single Action Dice type per creature, rather than separate Combat/Skill/Magic pools.
 - No Wounds or Madness.
-- When their last AD is spent, **Morale breaks where Morale applies** — the Referee rules whether they flee, surrender, or land one dying blow. `Undead`, `Construct` and `Ooze` have no Morale; when their last AD is spent they are destroyed.
+- When their last AD is spent, **Morale breaks where Morale applies** — the Referee rules whether they flee, surrender, or land one dying blow. `Undead` and `Construct` have no Morale; when their last AD is spent they are destroyed.
 - They don't roll for Forced Danger automatically; the Referee triggers it only when it serves the moment.
 
 **Creature Types** *(every entry's `(Type)` is one of the following, stated singular)*
@@ -113,7 +113,6 @@ A quick-reference index of every creature type named across the Gazetteer, Facti
 - **Fantasy Creature** — catch-all for setting-flavor creatures that aren't natural animals and don't fit a sharper category below.
 - **Undead** — anything animated by death-tainted or necrotic energy.
 - **Construct** — artificial, non-living bodies, usually magically animated.
-- **Ooze** — slimes, moulds, puddings, jellies and fungal growths. Mindless, usually sessile or slow, frequently unfightable by ordinary means, and as often a hazard of place as an encounter. No Morale, no reason, and they damage equipment as readily as flesh.
 - **Horror** — alien or sanity-bending things that sit outside normal nature and magic entirely.
 - **Wyrm** — dragons and their draconic kin specifically.
 - **Fey** — otherworldly, fae-touched beings bound by strange rules or bargains.

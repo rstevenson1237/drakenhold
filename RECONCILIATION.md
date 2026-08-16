@@ -130,8 +130,8 @@ Predicates that duplicate an existing check are **not** listed: pointer-set-agai
 
 | Check | Severity |
 |---|---|
-| Every rumour carries `(T)` / `(P)` / `(F)`, and the count of `(T)` does not exceed the count of existing clue destinations | error |
-| Every ordered faction pair declares a relation; *unaware of* is a legal value | warning |
+| A rumour carries no `(T)` / `(P)` / `(F)` marker — **named, never failed.** An unmarked rumour rests on a question the module has not answered, and marking it would settle that question by side effect. The register says which pass owns each one. | **warning** |
+| The count of `(T)` exceeds the count of existing clue destinations | error |
 | Every Standing Mystery carries `[local]` or `[setting]` | error |
 | Region declares its scale, and check cadence is consistent with it | warning |
 | Ambient-to-actionable ratio on event and encounter tables, 15–35% | report only |
