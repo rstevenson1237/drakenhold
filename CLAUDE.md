@@ -7,8 +7,8 @@ Drakenhold — a tabletop RPG setting delivered as a Setting Playbook. Read `REA
 1. **Additive revision only.** Existing material is preserved unless a change is explicitly directed. Propose and flag changes; never rewrite silently. One commit per pass, message stating what changed and why.
 2. **Never invent an answer to an open item.** Open items live in `OPEN_QUESTIONS.md`, the single register. Ratified calls live in `DECISIONS.md`. If a task requires an open item, stop and ask.
 3. **Phase discipline.** No blending steps. The current step is stated in `HANDOFF.md`, which is a one-page pointer and stays that way.
-4. **One region per conversation.** Inputs: the region file, its block document, the setting outline, `DECISIONS.md`, `OPEN_QUESTIONS.md`, the handoff. Output: a closed region file, an updated register, a commit.
-5. **Names compound from the recorded root vocabulary** in the setting outline. New roots are proposed, never coined in passing.
+4. **One region per conversation.** Inputs: the region file, its block document, the setting outline (`Drakenhold_Setting_Outline.md` and the field files in `outlines/`), `DECISIONS.md`, `OPEN_QUESTIONS.md`, the handoff. Output: a closed region file, an updated register, a commit.
+5. **Names compound from the recorded root vocabulary** in `outlines/01_TRUTHS.md`. New roots are proposed, never coined in passing.
 6. **Question batches** end any pass that decided something requiring direction. Batched, whole, with genuine alternatives — not only the conservative option. Omit the batch if nothing needs a decision.
 
 ## The three registers
@@ -31,6 +31,7 @@ Drakenhold — a tabletop RPG setting delivered as a Setting Playbook. Read `REA
 - **`HIGH` is one location per ten, two at most in a region.** That is a cap on the form, not the negative-space thirds, which are a different measure. A `LOW` location may not contain a find.
 - **Region fields narrow as locations develop.** Anything true of one named location belongs in that location, not the field.
 - **A field may be empty.** State "None" with a brief reason. Never pad.
+- **Two inline marks, and only two.** `(SECTION, key)` references a setting-outline field — `(BESTIARY, Goblin)`, `(TREASURE, II)` — survives to the finished playbook, becomes a link, and is checked by M9. `[[ ... ]]` is an editorial note, is designer register, and must not survive; M10 reports them and `check.sh --final` fails on them. Location codes stay backticked and belong to M1. Single brackets are already spoken for.
 
 ## Repo hygiene
 

@@ -14,7 +14,7 @@
 | How a location is built — the classification scheme and the rules binding across it | `DESIGN_PATTERNS.md` |
 | **The one file to open before writing a location** — `mode × weight`, nine of them | `patterns/` |
 | Game mechanics — **source of truth, read-only here** | `Rules_Light_TTRPG_Design_Notes.md` |
-| Setting-level content: Truths, Rumours, History, Factions, Bestiary, Treasure, Traps, Graffiti, Procedural Tables | `Drakenhold_Setting_Outline.md` |
+| Setting-level content: Truths, Rumours, History, Factions, Bestiary, Treasure, Traps, Graffiti, Procedural Tables, Standing Mysteries | `outlines/`, one file per field. `Drakenhold_Setting_Outline.md` is the index and carries the Overview |
 | Documentary items with a far end — an index, never a source | `LORE_INDEX.md` |
 | Which regions exist, their Mode, Die, stub count and room budget | `regions/00_INDEX.md` |
 | Region content — **authoritative** | `regions/` |
@@ -42,7 +42,7 @@ Engineer step 9, location outlines: **the approach is closed — `A` Thornhaven,
 2. **Read the inputs:** the region file, its block document in `blocks/`, the setting outline, `DECISIONS.md`, `OPEN_QUESTIONS.md`, and this file. **Plus `DESIGN_PATTERNS.md` and exactly one file from `patterns/`** — `<MODE>_<WEIGHT>.md`, the region's Classification and the weight being written. Not the other eight.
 3. **Write the outlines.** A Player's Overview, a Referee Overview, and the features the location contains. **Working notes are absorbed and struck** — M8 fails if one survives in a location that has been written.
 4. **Reconcile the region's diagram against the finished outlines before the region closes.** Outlines generate edges the stubs did not anticipate — doors, shafts, sightlines, drops. **The reconciled diagram is the deliverable, not the one drawn at step 8.**
-5. **Run `scripts/check.sh`.** All eight must pass.
+5. **Run `scripts/check.sh`.** All ten must pass. `M9` holds every `(SECTION, key)` reference to something that exists; `M10` lists the `[[ ... ]]` editorial notes still outstanding and passes, and fails on them only under `check.sh --final`.
 6. **Close:** update `OPEN_QUESTIONS.md` for anything opened or answered, `regions/00_INDEX.md` if a count moved, and end with the question batch if the pass decided anything needing direction. Omit the batch rather than manufacture one.
 
 **Suggested region order**, matching how the stubs and diagrams were built: approach `A`–`E`, then `FA`/`GA`/`HA` as the first-level block, then peak by peak `F`, `G`, `H`, then `I` and `J` last. **The approach `A`–`E` is done. `FA`/`GA`/`HA`, the first-level block, is next**, and it is the first step-9 unit that is a block rather than a region: read `blocks/FIRST_LEVEL_BLOCK.md` first, because the three halls share a warren, a seal and a room budget, and procedure 14 works them together in staged passes. What each closed region hands forward is written at the foot of its own diagram section, not here.

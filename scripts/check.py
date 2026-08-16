@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 """
-Drakenhold mechanical reconciliation checks M1–M8.
+Drakenhold mechanical reconciliation checks M1–M10.
 
 Usage:
     check.py [M1 [M2 ...]]   run the named checks (no args = all)
     check.py M1              run M1 alone
+    check.py --final         run all checks in final-pass mode, where
+                             surviving editorial notes are a failure (M10)
 
 Output per check:
     M1 · Reference integrity … PASS
@@ -33,7 +35,7 @@ REPO = Path(__file__).resolve().parent.parent
 #   archive/                  — frozen gazetteer, never edited or cited
 #   Setting_Playbook_Template.md — illustrative content, contains fake codes
 #   PROCEDURES_AND_RULES.md, RECONCILIATION.md, README.md, CLAUDE.md — process docs
-_CORPUS_DIRS = ["regions", "blocks", "diagrams"]
+_CORPUS_DIRS = ["regions", "blocks", "diagrams", "outlines"]
 _CORPUS_FILES = [
     "Drakenhold_Setting_Outline.md",
     "HANDOFF.md",
@@ -811,14 +813,18 @@ _ROOT_ENTRY_RE = re.compile(r'\*(\w+)\*\s+([^,.*]+)')
 
 
 def _catalogued_roots() -> dict[str, str]:
-    """root → gloss, as recorded in the outline's TRUTHS root bullets."""
+    """root → gloss, as recorded in the outline's TRUTHS root bullets.
+
+    Found by scanning the corpus for the bullet prefixes rather than by reading
+    a fixed path, so moving the TRUTHS field between files cannot silently
+    empty the catalogue and turn M6 into a check that always passes."""
     roots: dict[str, str] = {}
-    lines = read_lines(REPO / "Drakenhold_Setting_Outline.md")
-    for line in lines:
-        s = line.strip()
-        if s.startswith('- Roots:') or s.startswith('- Further roots'):
-            for m in _ROOT_ENTRY_RE.finditer(s):
-                roots[m.group(1)] = m.group(2).strip()
+    for f in corpus_files():
+        for line in read_lines(f):
+            s = line.strip()
+            if s.startswith('- Roots:') or s.startswith('- Further roots'):
+                for m in _ROOT_ENTRY_RE.finditer(s):
+                    roots[m.group(1)] = m.group(2).strip()
     return roots
 
 
@@ -1128,6 +1134,233 @@ def m8(ctx: dict) -> list[Finding]:
 
 
 # ---------------------------------------------------------------------------
+# Shared: the editorial markup layer (used by M9 and M10)
+# ---------------------------------------------------------------------------
+#
+# Two forms, ratified in DECISIONS.md ## NOTATION AND EDGE TYPES.
+#
+#   (SECTION, key)      a reference token. Survives to the finished playbook
+#                       and becomes a link in the web and PDF targets.
+#   [[ ... ]]           an editorial note. Designer-register, struck at the
+#                       final pass alongside working notes and field labels.
+#
+# Single brackets are deliberately not used: `[local]`/`[setting]` already
+# scope Standing Mysteries and `[tile]`/`[rod]`/`[hidden]`/... already type
+# diagram edges. Double brackets collide with neither.
+
+EDITORIAL_NOTE_RE = re.compile(r'\[\[(.+?)\]\]')
+
+_CODE_SPAN_RE = re.compile(r'`[^`]*`')
+_FENCE_RE = re.compile(r'^\s*```')
+
+
+def markup_lines(path: Path):
+    """Yield (lineno, text) for every line, with fenced blocks skipped and
+    backtick code spans blanked out.
+
+    A mark shown inside backticks is being *named* — in this file's own docs,
+    in DECISIONS.md, in a worked example — not used. Same exemption the
+    renderers apply when they substitute pointers and strip notes, so what
+    the checks read and what a reader sees agree on where the markup is."""
+    in_fence = False
+    for lineno, line in enumerate(read_lines(path), 1):
+        if _FENCE_RE.match(line):
+            in_fence = not in_fence
+            continue
+        if in_fence:
+            continue
+        yield lineno, _CODE_SPAN_RE.sub(lambda m: ' ' * len(m.group(0)), line)
+
+# (SECTION, key) — SECTION is ALL CAPS, matching an outline `## ` heading
+# (or the literal LORE, for LORE_INDEX.md). The key is optional; a token may
+# also carry a second key, as in (TREASURE, II, 14).
+REFERENCE_TOKEN_RE = re.compile(
+    r'\(([A-Z][A-Z ]{2,}?)((?:,\s*[^(),]+){0,2})\)'
+)
+
+# Entry shapes the resolver keys on, one per section format actually in use.
+_BESTIARY_ENTRY_RE = re.compile(r'^\*\*([^*]+)\*\*\s*\(')          # **Wolf** (Beast)
+_BULLET_ENTRY_RE = re.compile(r'^-\s+\*\*([^*]+?)\.?\*\*')          # - **The covered pit.**
+_TABLE_NAMED_RE = re.compile(r'^\*\*([^*]+)\*\*\s*—\s*d\d+')        # **What Is On The Board** — d6
+_SUBSECTION_RE = re.compile(r'^###\s+(?:Type\s+)?([IVX]+)\b')       # ### Type II — ...
+_DIE_HEADER_RE = re.compile(r'^\|\s*(d\d+)\s*\|')                   # | d20 | Graffiti |
+_TABLE_ROW_RE = re.compile(r'^\|\s*(\d+)\s*\|')                     # | 14 | ... |
+_LORE_ROW_RE = re.compile(r'^\|\s*([^|]+?)\s*\|')                   # | The watch log | ...
+
+_ROMAN_RE = re.compile(r'^[IVX]+$')
+
+
+def _outline_section_lines() -> dict[str, list[str]]:
+    """SECTION name → its lines, gathered from wherever the field now lives.
+
+    Sections are found by `## ` heading across the corpus plus LORE_INDEX.md,
+    so splitting the outline into outlines/ — or moving a field again later —
+    needs no change here."""
+    sections: dict[str, list[str]] = {}
+    for f in corpus_files() + [REPO / "LORE_INDEX.md"]:
+        if f.parent.name == "regions" or f.parent.name == "blocks":
+            continue
+        current: str | None = None
+        for line in read_lines(f):
+            s = line.rstrip()
+            if s.startswith('## '):
+                name = s[3:].strip()
+                current = name if name.isupper() else None
+                if current:
+                    sections.setdefault(current, [])
+                continue
+            if current:
+                sections[current].append(s)
+    # LORE_INDEX's register table is addressed as LORE.
+    if 'THE REGISTER' in sections:
+        sections['LORE'] = sections['THE REGISTER']
+    return sections
+
+
+def _section_entry_names(name: str, lines: list[str]) -> set[str]:
+    """Every key a named reference into this section may use, lowercased."""
+    names: set[str] = set()
+    for s in lines:
+        if name == 'LORE':
+            if s.startswith('|') and not s.startswith('|---') and '|' in s[1:]:
+                m = _LORE_ROW_RE.match(s)
+                if m and m.group(1).lower() not in ('item', ''):
+                    names.add(m.group(1).strip('` ').lower())
+            continue
+        for rx in (_BESTIARY_ENTRY_RE, _BULLET_ENTRY_RE, _TABLE_NAMED_RE):
+            m = rx.match(s)
+            if m:
+                names.add(m.group(1).strip().lower())
+    return names
+
+
+def _section_subsections(lines: list[str]) -> set[str]:
+    return {m.group(1) for s in lines if (m := _SUBSECTION_RE.match(s))}
+
+
+def _section_dice(lines: list[str]) -> set[str]:
+    return {m.group(1) for s in lines if (m := _DIE_HEADER_RE.match(s))}
+
+
+def _section_row_numbers(lines: list[str], subsection: str | None) -> set[int]:
+    """Row numbers of the section's tables. When a subsection key is given,
+    only the rows of that subsection's table count."""
+    rows: set[int] = set()
+    active = subsection is None
+    for s in lines:
+        sm = _SUBSECTION_RE.match(s)
+        if sm:
+            active = (subsection is not None and sm.group(1) == subsection)
+            continue
+        if active and (m := _TABLE_ROW_RE.match(s)):
+            rows.add(int(m.group(1)))
+    return rows
+
+
+# ---------------------------------------------------------------------------
+# M9 — Editorial reference integrity
+# ---------------------------------------------------------------------------
+def m9(ctx: dict) -> list[Finding]:
+    """
+    Every `(SECTION, key)` reference token resolves.
+
+    The section must be a real `## ` heading in the outline (or LORE), and the
+    key — where one is given — must name something that section actually
+    holds: a Bestiary creature, a Treasure type or row, a Traps entry, a
+    procedural table, a die to roll, or a Lore register row.
+
+    Location codes are not referenced this way. They keep their backticked
+    form and stay M1's business, which is why a token carrying one fails here.
+    """
+    sections = _outline_section_lines()
+    findings: list[Finding] = []
+
+    for f in corpus_files():
+        for lineno, line in markup_lines(f):
+            for m in REFERENCE_TOKEN_RE.finditer(line):
+                section = m.group(1).strip()
+                keys = [k.strip() for k in m.group(2).split(',') if k.strip()]
+                token = m.group(0)
+
+                if section not in sections:
+                    # Not every ALL-CAPS parenthetical is a reference token;
+                    # only flag ones that look like one, i.e. that carry keys.
+                    if keys:
+                        findings.append(Finding(
+                            f, lineno,
+                            f"{token}: {section!r} is not an outline section"
+                        ))
+                    continue
+
+                lines = sections[section]
+                if not keys:
+                    continue
+
+                if LOC_CODE_RE.search(' '.join(keys)):
+                    findings.append(Finding(
+                        f, lineno,
+                        f"{token}: carries a location code — write codes as "
+                        f"backticked references, not reference tokens"
+                    ))
+                    continue
+
+                subsection: str | None = None
+                unresolved: list[str] = []
+                for key in keys:
+                    if _ROMAN_RE.match(key):
+                        if key in _section_subsections(lines):
+                            subsection = key
+                        else:
+                            unresolved.append(key)
+                    elif key.startswith('d') and key[1:].isdigit():
+                        if key not in _section_dice(lines):
+                            unresolved.append(key)
+                    elif key.isdigit():
+                        if int(key) not in _section_row_numbers(lines, subsection):
+                            unresolved.append(key)
+                    else:
+                        if key.lower() not in _section_entry_names(section, lines):
+                            unresolved.append(key)
+
+                for key in unresolved:
+                    findings.append(Finding(
+                        f, lineno,
+                        f"{token}: {key!r} resolves to no entry in {section}"
+                    ))
+
+    return findings
+
+
+# ---------------------------------------------------------------------------
+# M10 — Editorial notes
+# ---------------------------------------------------------------------------
+def m10(ctx: dict) -> list[Finding]:
+    """
+    `[[ ... ]]` editorial notes are the designer register. CLAUDE.md: it
+    "must not survive". They are struck at the final pass, alongside the
+    working notes M8 governs and the field labels DECISIONS.md retires.
+
+    During authoring this reports what is outstanding and passes. Run with
+    --final it fails, which is the gate on the final pass.
+    """
+    findings: list[Finding] = []
+    for f in corpus_files():
+        for lineno, line in markup_lines(f):
+            for m in EDITORIAL_NOTE_RE.finditer(line):
+                note = m.group(1).strip()
+                findings.append(Finding(
+                    f, lineno,
+                    f"editorial note outstanding: [[{note}]]"
+                ))
+
+    if not ctx.get("final"):
+        for finding in findings:
+            print(finding.render(), flush=True)
+        return []
+    return findings
+
+
+# ---------------------------------------------------------------------------
 # Check registry
 # ---------------------------------------------------------------------------
 CHECKS: dict[str, tuple[str, object]] = {
@@ -1139,6 +1372,8 @@ CHECKS: dict[str, tuple[str, object]] = {
     "M6": ("Vocabulary",            m6),
     "M7": ("Format",                m7),
     "M8": ("Struck notes",          m8),
+    "M9": ("Editorial references",  m9),
+    "M10": ("Editorial notes",      m10),
 }
 
 
@@ -1155,7 +1390,9 @@ def main() -> None:
         )
 
     # Determine which checks to run.
-    requested: list[str] = sys.argv[1:] if len(sys.argv) > 1 else list(CHECKS)
+    args = [a for a in sys.argv[1:] if a != "--final"]
+    final = "--final" in sys.argv[1:]
+    requested: list[str] = args if args else list(CHECKS)
     unknown = [r for r in requested if r.upper() not in CHECKS]
     if unknown:
         print(f"Unknown check(s): {', '.join(unknown)}", file=sys.stderr)
@@ -1164,7 +1401,7 @@ def main() -> None:
     # Normalise case so "m1" works too.
     requested = [r.upper() for r in requested]
 
-    ctx: dict = {}
+    ctx: dict = {"final": final}
     failed = 0
 
     for key in requested:
