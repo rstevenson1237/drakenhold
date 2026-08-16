@@ -13,7 +13,7 @@ file is a build failure, reported to stderr with the offending path; no
 output is written.
 
 Section mapping:
-  SETTING .. UNANSWERED QUESTIONS  -> Drakenhold_Setting_Outline.md, verbatim
+  SETTING .. STANDING MYSTERIES    -> Drakenhold_Setting_Outline.md, verbatim
                                        (its own title/tagline serve as SETTING;
                                        its own headings already match the
                                        template's order exactly)

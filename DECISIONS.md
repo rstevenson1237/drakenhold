@@ -89,3 +89,40 @@
 **Two regions have a hub that is not a room.** `I.7`, the assessment, and `HE.5`, the broken geometry — the mechanism is the corridor a party walks rather than an obstacle it meets. Arrived at independently in the two regions furthest apart in the module.
 
 **Every descent from every peak lands on `J`'s spine**, which is why the light rule can be taught once, at `J.6`, and why that teaching is unmissable rather than lucky.
+
+---
+
+## THE DESIGN PATTERN CATALOGUE
+
+*Ratified when the catalogue was wired into the procedures. The catalogue itself is `DESIGN_PATTERNS.md` (tier one) and `patterns/` (tier two, nine files). The reasoning behind these calls, as it stood at the harvest close, is archived at `archive/DESIGN_PATTERNS_HANDOFF_at_harvest_close.md` — **where the archive disagrees with a working file, the working file is right.***
+
+**The retrieval key is `mode × weight`, and one file is opened.** Mode is a property of the region, declared at step 3. Weight is a property of the location, decided at step 7 by which locations are named and which are unnamed fill. Both are known before a word is written, which is what makes the catalogue nine small files rather than one large one. A writer opens the cell for the region they are in and does not carry the other eight.
+
+**Patterns are applied after writing and reach no page.** The ten patterns — `CONNECTIVE`, `EMPTY`, `THRESHOLD`, `READING`, `TRACE`, `HIDDEN CLUE`, `STANDING HAZARD`, `OCCUPIED`, `CACHE`, `PUZZLE` — classify a finished location. **There is no pattern field and no pattern tag.** Reading a location against the list changes the location, not a label on it. The pattern-conditional checks are judgement checks at `RECONCILIATION.md` J11 for exactly that reason, and the sequencing problem a tag would have created — a checker obliged to run before the scaffolding is struck — does not arise.
+
+**`SET PIECE` is merged into `THRESHOLD` and is not a pattern.** They were one pattern at two weights. A threshold inside one mode is thin; a mode-crossing threshold carries the heaviest landmark writing in the module, because the players' picture has to change register and not merely location. Recorded because the old name will be met in older material.
+
+**The nine cells are unequal on purpose and are not padded to match.** `DANGEROUS LOW` is the largest cell by room count and the smallest by content. `SAFE LOW` is near-empty because an empty shop is a dead town, not a thin location. `WILD LOW` dissolves into procedure — watches, Navigate, the Encounter table — rather than being keyed as locations.
+
+**`HIGH` is capped at one per ten locations, maximum two in any region.** A twenty-stub region carries two; a ten-stub region carries one. **This is a cap on the structural form and is not the same measure as rule 7's negative-space thirds**, which govern how detail is distributed. The two were written as though they were one thing and they are not; both documents now say so in the same words. A third `HIGH` is evidence the region has no landmark rather than three of them.
+
+**No secret is gated on a search roll, anywhere in the module.** Gates are physical: standing somewhere, clearing something, opening something, speaking a name, looking back. The previous revision of `Setting_Playbook_Template.md` allowed secret detail to surface on "a granted Difficulty roll" and **that allowance is withdrawn**. Recorded rather than deleted quietly, so a later pass reads the absence as a decision and not as an oversight. A `PUZZLE`'s solution chain carries no attribute check at any link.
+
+**The three location forms bind from the first-level block forward.** `HIGH`, `MEDIUM` and `LOW` share their fields and differ in how much of each is written; the form declares the weight and there is no weight tag. They bind from `FA`/`GA`/`HA` onward. **`A` through `E` were written before the forms existed and are not read against them here** — the retrofit is a booked pass of its own, recorded in `OPEN_QUESTIONS.md`.
+
+**A `LOW` location may not contain a find.** Not a small one, not a hidden one. A thin location with treasure in it teaches a party to search every thin location in the module and destroys the pacing function of every honest one. If it has something in it, it is `MEDIUM` and is written as `MEDIUM`.
+
+**A location may belong to two regions of different modes.** Fenn's boundary is one node on two diagrams. This is legal; the edges must be identical at both ends, and an asymmetry is the error rather than the sharing.
+
+**The catalogue is process material.** `DESIGN_PATTERNS.md` and `patterns/` are not assembled into the Playbook and are not published to the web view, exactly as `PROCEDURES_AND_RULES.md` and `RECONCILIATION.md` are not. They are also outside the corpus `scripts/check.sh` reads, which is why their worked examples may carry `X.n` codes and `->` pointers without tripping M1, M2 or M3.
+
+**The template's `STYLE` section binds every section below it** and is the authority J8 checks against. Its worked examples, like all template content, are illustrative and never enter the setting — and the catalogue's worked examples are deliberately set nowhere, using `X.n` codes and no Drakenhold names, so they cannot be quarried into canon by accident.
+
+**The rumour truth-marker scheme is adopted, with four deliberate blanks.** Every rumour carries `(T)`, `(P)` or `(F)` in the source, stripped by the renderer from anything player-facing. Sixteen of the twenty are marked. **Rumours 4, 7, 9 and 15 carry no marker on purpose** — each rests on a question the module has not answered, and a marker would settle that question by side effect. They are open in `OPEN_QUESTIONS.md` with the pass that owns each; rumour 4, the lance, stays unmarked permanently, because its properties are a Standing Mystery. **An unmarked rumour is a warning and never a failure**, and `RECONCILIATION.md` states it that way. **The markers record current state and are not locked**: a marker changes when the pass owning its question decides differently, and that is a revision rather than a contradiction. Only the true set is constrained — expanding it devalues every clue in the module.
+
+**The six Standing Mysteries are scoped.** `[local]` — hireling statlines, Baldrun's prepared and never-filled interment at `HB.6`, the cutter at `A.12`, and the Hobgoblin lean-season raid. `[setting]` — the properties of the lance, and the Knight's fate, which History preserves as unknown while `HB` resolves it on the ground.
+
+**Two template changes were proposed by the incoming revision and declined.** *Recorded because the archived catalogue handoff still asserts both, and a later pass reading it must not reinstate them.*
+
+- **The `Ooze` creature type is not adopted.** The one candidate — the Bestiary's `**Ooze** (Fantasy Creature)`, met at `FB.12` and in `J`'s flooded galleries — stays `Fantasy Creature`, which is the catch-all and is carrying it correctly. Typing an entry named *Ooze* as `(Ooze)` reads as an error on the page, and the retype would also have stripped its Morale by making it a no-Morale type. The type is removed from the template's Creature Types **and from the Morale standing rule**, which now scopes to `Undead` and `Construct`. No Bestiary entry and no region file changed.
+- **The all-pairs faction relation requirement is not adopted.** The existing Factions format stands. The template keeps the original position — factions need not know one another exist, ignorance is its own relation, and discovery should be worth something — and drops the added requirement to state a relation for every ordered pair. Stating the full matrix is work the module has not asked for and would fill the outline with pairs that never meet.

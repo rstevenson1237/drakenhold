@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-Drakenhold — a tabletop RPG setting delivered as a Setting Playbook. Read `README.md` for structure and current phase. Read `PROCEDURES_AND_RULES.md` before any authoring work. Read `RECONCILIATION.md` before any pass that closes a region.
+Drakenhold — a tabletop RPG setting delivered as a Setting Playbook. Read `README.md` for structure and current phase. Read `PROCEDURES_AND_RULES.md` before any authoring work. Read `RECONCILIATION.md` before any pass that closes a region. Before writing a location, read `DESIGN_PATTERNS.md` and **exactly one** file from `patterns/` — `<MODE>_<WEIGHT>.md` for the cell being written, never the other eight.
 
 ## Non-negotiables
 
@@ -27,6 +27,8 @@ Drakenhold — a tabletop RPG setting delivered as a Setting Playbook. Read `REA
 - **Tables follow Classification, not terrain.** SAFE→Events, WILD→Encounters, DANGEROUS→Dangers. Danger tables count down from 6; all others ascend.
 - **Half a region's room budget is stubbed.** The rest is unnamed fill. Rooms may be empty.
 - **Every gate has an answer that is not the gate**, and the answer is priced — longer, darker, or watched by something worse.
+- **No secret is gated on a search roll.** Gates are physical: standing somewhere, clearing something, opening something, speaking a name, looking back.
+- **`HIGH` is one location per ten, two at most in a region.** That is a cap on the form, not the negative-space thirds, which are a different measure. A `LOW` location may not contain a find.
 - **Region fields narrow as locations develop.** Anything true of one named location belongs in that location, not the field.
 - **A field may be empty.** State "None" with a brief reason. Never pad.
 
