@@ -143,59 +143,15 @@
 
 *Procedure step 8. Drawn from the stubs, before the location outlines. Reconciled against the finished outlines before the region closes. The diagram is authoritative: the **Connections:** field under each stub is checked against it, never the reverse. Worked as one block with the other three levels of Peak 2 against `blocks/PEAK_2_BLOCK.md`, because one thing moves through all four.*
 
-```mermaid
-graph TD
-  GC15["GC.15 · The Treasury Approach"]
-  GE1["GE.1 · The Head of the Ramp"]
-  I3["I.3 · The Central Terminus"]
-  I14["I.14 · The GD Run"]
+*Tier 3 first — the region's location groups and how they interconnect — then one tier-4 diagram per group, resolving to locations. **Connection type is drawn at tier 4 and nowhere else**, and a destination outside the group is drawn on the group's own diagram. Each diagram is a file in `diagrams/`, spliced in here by the build.*
 
-  subgraph HOUSE["The counting house"]
-    GD1["GD.1 · The Ramp Checkpoint"]
-    GD14["GD.14 · The Holding Room"]
-    GD7["GD.7 · The Weighing Floor"]
-    GD2["GD.2 · Valdgir, the Skybridge Terminus"]
-    GD5["GD.5 · The Tally Room"]
-    GD6["GD.6 · Isskavar's Room"]
-    GD15["GD.15 · The Skimmers' Cache"]
-    GD16["GD.16 · The Ramp to the Lair"]
-  end
+<!-- DIAGRAM: T3_GD.md -->
 
-  subgraph VAULT["The sundered vault"]
-    GD3["GD.3 · The Sundered Vault"]
-    GD4["GD.4 · The Working Hoard"]
-    GD12["GD.12 · The Orphaned Run"]
-    GD8["GD.8 · The First Sub-Vault"]
-    GD9["GD.9 · The Second Sub-Vault"]
-    GD10["GD.10 · The Third Sub-Vault"]
-  end
+<!-- DIAGRAM: T4_GD_HOUSE.md -->
 
-  subgraph OCC["The occupation"]
-    GD11["GD.11 · The Lizardman Quarters"]
-    GD13["GD.13 · The Fallback"]
-  end
+<!-- DIAGRAM: T4_GD_VAULT.md -->
 
-  GD1 --- GC15
-  GD1 --- GD3
-  GD1 --- GD7
-  GD1 --- GD14
-  GD2 --- GD7
-  GD2 --- I3
-  GD3 --- GD4
-  GD3 --- GD7
-  GD3 --- GD8
-  GD3 --- GD9
-  GD3 --- GD10
-  GD3 --- GD12
-  GD5 --- GD6
-  GD5 --- GD7
-  GD6 -.- GD15
-  GD7 --- GD11
-  GD7 --- GD16
-  GD11 --- GD13
-  GD12 -.- I14
-  GD16 --- GE1
-```
+<!-- DIAGRAM: T4_GD_OCC.md -->
 
 **Reading the diagram.** Solid edges are open floor, and there is a great deal of it — this is the only busy region in the hold and its locks are on rooms rather than on routes. The rod-gated edges are the three sub-vaults, all hanging off `GD.3`. The two dotted edges are the skimmers' cache and the orphaned Skybridge run.
 

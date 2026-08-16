@@ -240,118 +240,19 @@
 
 *Procedure step 8. Drawn from the stubs, before the location outlines. Reconciled against the finished outlines before the region closes. The diagram is authoritative: the **Connections:** field under each stub is checked against it, never the reverse. Worked as one block with the other two main levels against `blocks/FIRST_LEVEL_BLOCK.md`, because the three share a warren.*
 
-```mermaid
-graph TD
-  E12["E.12 · The Great Doors"]
-  FB1["FB.1 · The Stairwell Foot"]
-  FB9["FB.9 · The Kitchen Chute Bottom"]
-  FC1["FC.1 · The Ramp Landing"]
-  FC15["FC.15 · The Bypass Mouth"]
-  FB4["FB.4 · Khorven, the Vent Chimney"]
-  GA5["GA.5 · The Monument of the Driving Down"]
-  GA10["GA.10 · The Long Run, Peak 2 Stretch"]
-  GA12["GA.12 · The Ash Run, Peak 2 Terminus"]
+*Tier 3 first — the region's location groups and how they interconnect — then one tier-4 diagram per group, resolving to locations. **Connection type is drawn at tier 4 and nowhere else**, and a destination outside the group is drawn on the group's own diagram. Each diagram is a file in `diagrams/`, spliced in here by the build.*
 
-  subgraph HALL["The hall and the kitchens"]
-    FA1["FA.1 · The Threshold"]
-    FA2["FA.2 · The Trade Hall"]
-    FA3["FA.3 · The Tapestry Fragments"]
-    FA4["FA.4 · The Weighing Floor"]
-    FA12["FA.12 · The Cut-Down Panels"]
-    FA5["FA.5 · The Great Kitchens"]
-    FA6["FA.6 · The Bakehouse Ranks"]
-    FA7["FA.7 · The Cold Stores"]
-    FA8["FA.8 · The Service Chute Head"]
-    FA14["FA.14 · The Kitchen Tally Post"]
-    FA13["FA.13 · The Porters' Gate"]
-    FA9["FA.9 · The Domed Antechamber"]
-  end
+<!-- DIAGRAM: T3_FA.md -->
 
-  subgraph PROC["The Processional of the Living"]
-    FA10["FA.10 · The Processional of the Living"]
-    FA11["FA.11 · The Founding Panel"]
-  end
+<!-- DIAGRAM: T4_FA_HALL.md -->
 
-  subgraph ART["The arteries"]
-    FA16["FA.16 · The Long Run, Peak 1 Stretch"]
-    FA17["FA.17 · The Seal"]
-    FA18["FA.18 · The Ash Run Head"]
-  end
+<!-- DIAGRAM: T4_FA_PROC.md -->
 
-  subgraph WARREN["The warren"]
-    FA15["FA.15 · The Runners' Ways"]
-    FA19["FA.19 · The Scullery Warren"]
-    FA20["FA.20 · The Deep Cold Store"]
-    FA33["FA.33 · The Vent Gallery"]
-    FA21["FA.21 · The Dry-Goods Stores"]
-    FA22["FA.22 · Brannek's Tally-Niche"]
-    FA25["FA.25 · The Tally Rooms"]
-    FA23["FA.23 · The Porters' Quarters"]
-    FA24["FA.24 · The Haulers' Yard"]
-    FA26["FA.26 · The Bunk Warrens"]
-    FA31["FA.31 · The Fallen Run"]
-    FA32["FA.32 · The Chute Bottom Access"]
-    FA30["FA.30 · The Bypass"]
-    FA34["FA.34 · The Old Digging"]
-  end
+<!-- DIAGRAM: T4_FA_ART.md -->
 
-  subgraph POCKET["The Peak 1 pocket"]
-    FA27["FA.27 · A Survivor's Cache"]
-    FA28["FA.28 · The Buried"]
-    FA29["FA.29 · The Watching Place"]
-  end
+<!-- DIAGRAM: T4_FA_WARREN.md -->
 
-  E12 === FA1
-  FA1 --- FA2
-  FA2 --- FA3
-  FA2 --- FA4
-  FA2 --- FA12
-  FA2 --- FA5
-  FA2 --- FA13
-  FA2 --- FA9
-  FA2 === FA10
-  FA5 --- FA6
-  FA5 --- FA7
-  FA5 --- FA8
-  FA5 --- FA14
-  FA8 -.-> FB9
-  FA9 --- FB1
-  FA9 --- FC1
-  FA9 --- FA15
-  FA9 --- FA16
-  FA10 --- FA11
-  FA10 === GA5
-  FA13 --- FA15
-  FA15 --- FA16
-  FA15 --- FA19
-  FA15 --- FA21
-  FA15 --- FA29
-  FA15 --- FA32
-  FA16 --- FA17
-  FA16 --- FA18
-  FA16 --- FA23
-  FA16 --- FA26
-  FA16 --- FA29
-  FA16 -.- FA34
-  FA17 -.- GA10
-  FA18 --- GA12
-  FA19 --- FA20
-  FA20 --- FA33
-  FA21 --- FA25
-  FA21 -.- FA22
-  FA23 --- FA24
-  FA24 --- FA25
-  FA24 -.- FA34
-  FA26 --- FA27
-  FA26 --- FA29
-  FA26 --- FA31
-  FA26 -.- FA30
-  FA26 -.- FA34
-  FA27 --- FA28
-  FA27 --- FA29
-  FA30 -.- FC15
-  FA33 -.- FB4
-```
+<!-- DIAGRAM: T4_FA_POCKET.md -->
 
 **Reading the diagram.** Solid edges are open passage. The heavy edges are the two ceremonial roads — `E.12`═`FA.1`, the broken doors, drawn undirected because they are broken open and pass in both directions, and `FA.2`═`FA.10`═`GA.5`, the Processional of the Living running east to the monument. Dotted edges are hidden or secret. The one tile-gated edge is `FA.17`–`GA.10`, and it is the block's central lock.
 

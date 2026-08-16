@@ -29,39 +29,7 @@
 
 ### The skeleton
 
-```mermaid
-graph TD
-    FA["FA · Takdun<br/>Main Level"]
-    WAR["FA warren"]
-
-    FB["FB · Brankel<br/>Under Level — kobolds"]
-    FC["FC · Mekdun<br/>Level 2 — workshop"]
-    FD["FD · Khorvak<br/>Level 3 — forge"]
-    FE["FE · Aztak<br/>Level 4 — guild"]
-    I["I · Brynaz<br/>the Skybridge"]
-    J["J · Mordrak<br/>the Lost Caverns"]
-
-    FA -->|"stair down"| FB
-    FA ==>|"the great ramp"| FC
-    FB ==>|"the great ramp · the toll road"| FC
-    WAR -.-|"size · the vent gallery onto Khorven"| FB
-    FC ==>|"the great ramp"| FD
-    FD ==>|"the great ramp"| FE
-    FA -.->|"kitchen chute · one-way"| FB
-    WAR -.-|"secret · the bypass"| FC
-
-    FC -.-|"chutes · mechanism"| FB
-    FC -.-|"chutes · mechanism"| FD
-    FC -.->|"hidden access · correct sequence"| FD
-
-    FB ---|"Khorven · size"| FD
-    FB -.-|"Khorven continues · size · hidden"| J
-    FB -->|"the marked descent"| J
-    FD -.->|"slag channel · secret"| J
-
-    FD ---|"gated by tile"| I
-    I -.-|"orphaned run · mechanism"| FE
-```
+*The skeleton is now **`diagrams/T2_PEAK_1.md`**, tier 2 of the diagram layer: the five regions of the peak and how they interconnect, one plain untyped edge per connected pair. The routes named above are what those edges are made of, and each is drawn typed — tile, size, secret, mechanism, vertical — on the tier-4 diagram of the group it leaves. The peak's edges to `I` and to `J` cross a block boundary and appear at tier 1 rather than here. `diagrams/Drakenhold_Relational_Diagram.md` hosts every tier-1 and tier-2 graph and explains the tiering; this document keeps the argument, not a second drawing of it.*
 
 ---
 

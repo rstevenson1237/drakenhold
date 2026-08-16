@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Drakenhold mechanical reconciliation checks M1–M10.
+Drakenhold mechanical reconciliation checks M1–M11.
 
 Usage:
     check.py [M1 [M2 ...]]   run the named checks (no args = all)
@@ -23,6 +23,9 @@ import re
 import sys
 from pathlib import Path
 from typing import NamedTuple
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import diagrams  # noqa: E402  — the diagram layer, shared with build.py
 
 # ---------------------------------------------------------------------------
 # Paths
@@ -245,67 +248,8 @@ def m2(ctx: dict) -> list[Finding]:
 
 
 # ---------------------------------------------------------------------------
-# Shared: mermaid edge parser (used by M3)
+# Shared: section location (used by M3 and M7)
 # ---------------------------------------------------------------------------
-
-# Mermaid edge line patterns.  Directionality (one-way vs bidirectional) is
-# encoded in the operator:
-#   directed:      -->  -.->  ==>  (ends with >)
-#   undirected:    ---  -.-   ===  (no arrowhead)
-# Labels appear as |label| or |"label"|.
-#
-# We capture: node_a, operator_core, node_b from a single edge line.
-# Node IDs may carry a display label: ID["display text"]; we resolve code
-# from the label if present, else treat the ID itself as the code.
-
-# Matches node id (with optional ["..."]), operator, node id
-_MERMAID_EDGE_RE = re.compile(
-    r'^\s*'
-    r'(\w+)'                         # node A id
-    r'(?:\[[^\]]*\])?'               # optional ["label"] on A (ignored here)
-    r'\s*'
-    r'(-[-=.]*>?|-\.[-=.]*>?|={2,}>?)'  # edge operator
-    r'(?:\|[^|]*\|)?'               # optional |label|
-    r'\s*'
-    r'(\w+)'                         # node B id
-    r'(?:\[[^\]]*\])?'               # optional ["label"] on B
-    r'\s*$'
-)
-
-# Node definition: ID["display text"] or ID[display text]
-_MERMAID_NODE_RE = re.compile(r'(\w+)\["?([^"\]]+)"?\]')
-
-
-def _parse_mermaid_edges(lines: list[str], start: int, end: int
-                         ) -> list[tuple[str, str, bool]]:
-    """
-    Parse mermaid edges from lines[start:end].
-    Returns [(node_a, node_b, is_directed), ...] where node ids are raw.
-    Also builds a node-id → display-label map for the caller to resolve codes.
-    """
-    # First pass: build node label map
-    label_map: dict[str, str] = {}
-    for line in lines[start:end]:
-        for m in _MERMAID_NODE_RE.finditer(line):
-            label_map[m.group(1)] = m.group(2).strip()
-
-    edges = []
-    for line in lines[start:end]:
-        m = _MERMAID_EDGE_RE.match(line)
-        if not m:
-            continue
-        a_id, op, b_id = m.group(1), m.group(2), m.group(3)
-        directed = op.endswith('>')
-        # Resolve display label to code if available
-        a = label_map.get(a_id, a_id)
-        b = label_map.get(b_id, b_id)
-        # If display label is "CODE · Name" style, extract just the code token
-        a_code = a.split('·')[0].strip() if '·' in a else a
-        b_code = b.split('·')[0].strip() if '·' in b else b
-        edges.append((a_code, b_code, directed))
-    return edges
-
-
 def _section_range(lines: list[str], heading: str) -> tuple[int, int]:
     """Return (start, end) line indices of content under a ## heading (exclusive)."""
     start = end = -1
@@ -318,21 +262,6 @@ def _section_range(lines: list[str], heading: str) -> tuple[int, int]:
     if start < 0:
         return (-1, -1)
     return (start, end if end >= 0 else len(lines))
-
-
-def _find_mermaid_block(lines: list[str], sec_start: int, sec_end: int
-                        ) -> tuple[int, int]:
-    """Return (start, end) indices of the first ```mermaid…``` block in a slice."""
-    in_block = False
-    bstart = -1
-    for i in range(sec_start, sec_end):
-        s = lines[i].rstrip()
-        if not in_block and s.startswith('```mermaid'):
-            in_block = True
-            bstart = i + 1
-        elif in_block and s == '```':
-            return (bstart, i)
-    return (-1, -1)
 
 
 # ---------------------------------------------------------------------------
@@ -393,34 +322,60 @@ def _parse_location_connections_in_region(
 
 
 # ---------------------------------------------------------------------------
+# Shared: the tier-4 diagram files (used by M3 and M11)
+# ---------------------------------------------------------------------------
+def _tier4_by_region(ctx: dict, findings: list[Finding]) -> dict[str, list[dict]]:
+    """Parse every diagrams/T4_*.md once per run.  A file that will not parse
+    is reported as a finding by whichever check asked for it first and then
+    left out of the set, so one malformed diagram does not mask the rest."""
+    if 'tier4' in ctx:
+        return ctx['tier4']
+
+    by_region: dict[str, list[dict]] = {}
+    for path in sorted((REPO / 'diagrams').glob('T4_*.md')):
+        try:
+            parsed = diagrams.parse_tier4(path)
+        except ValueError as e:
+            findings.append(Finding(path, 1, str(e)))
+            continue
+        by_region.setdefault(parsed['region'], []).append(parsed)
+    ctx['tier4'] = by_region
+    return by_region
+
+
+# ---------------------------------------------------------------------------
 # M3 — Diagram agreement
 # ---------------------------------------------------------------------------
 def m3(ctx: dict) -> list[Finding]:
     """
-    Every location connection bullet appears in the region's diagram, and
+    Every location connection bullet appears in the region's diagrams, and
     every diagram edge appears in some location's Connections field.
-    Diagram is authoritative.
+    Diagrams are authoritative.
 
-    At step 7 all per-region diagrams are deferred and no Connections fields
-    exist.  M3 passes trivially and earns its keep at steps 8–9.
+    The region's diagram is no longer one mermaid block inside the region
+    file: it is the region's tier-4 group diagrams in `diagrams/`, one file
+    per location group, spliced back into the region file by the build.  The
+    region's edge set is the union of what those files draw — which is why
+    a cross-group edge, drawn on both endpoints' diagrams, counts once here.
+
+    At step 7 a region has no Connections fields.  M3 passes trivially for it
+    and earns its keep at steps 8–9.
     """
     findings: list[Finding] = []
+    tier4 = _tier4_by_region(ctx, findings)
 
     for f in region_files():
         src = f.name.split('_')[0]
         lines = read_lines(f)
 
-        # Locate the ## REGION RELATIONAL DIAGRAM section
-        sec_s, sec_e = _section_range(lines, '## REGION RELATIONAL DIAGRAM')
-        diag_lineno = sec_s  # line of the heading content
+        diagrams_for_region = tier4.get(src, [])
+        has_diagram = bool(diagrams_for_region)
 
-        # Extract mermaid block within that section
-        blk_s, blk_e = (-1, -1)
-        if sec_s >= 0:
-            blk_s, blk_e = _find_mermaid_block(lines, sec_s, sec_e)
-
-        has_diagram = blk_s >= 0
-        diagram_edges = _parse_mermaid_edges(lines, blk_s, blk_e) if has_diagram else []
+        # (a, b, directed, path, lineno), deduplicated across group diagrams.
+        diagram_edges: dict[tuple[str, str, bool], tuple[Path, int]] = {}
+        for d in diagrams_for_region:
+            for a, b, directed, lineno in d['typed']:
+                diagram_edges.setdefault((a, b, directed), (d['path'], lineno))
 
         # Extract location Connections fields
         loc_conns = _parse_location_connections_in_region(lines, src)
@@ -432,16 +387,18 @@ def m3(ctx: dict) -> list[Finding]:
 
         # One side absent when the other is present → failure
         if has_conns and not has_diagram:
+            sec_s, _ = _section_range(lines, '## REGION RELATIONAL DIAGRAM')
             findings.append(Finding(
                 f, sec_s + 1 if sec_s >= 0 else 1,
-                f"region {src}: location Connections fields exist but diagram is missing"
+                f"region {src}: location Connections fields exist but no tier-4 "
+                f"diagrams were found in diagrams/"
             ))
             continue
 
         if has_diagram and not has_conns:
             findings.append(Finding(
-                f, blk_s,
-                f"region {src}: diagram present but no location Connections fields found"
+                diagrams_for_region[0]['path'], 1,
+                f"region {src}: diagrams present but no location Connections fields found"
             ))
             continue
 
@@ -453,13 +410,7 @@ def m3(ctx: dict) -> list[Finding]:
             if not directed:
                 diag_pairs.add((b, a))
 
-        conn_pairs: set[tuple[str, str]] = set()
-        for loc_a, loc_b, one_way, _, _ in loc_conns:
-            conn_pairs.add((loc_a, loc_b))
-            if not one_way:
-                conn_pairs.add((loc_b, loc_a))
-
-        # Diagram authoritative: bullets not in diagram fail
+        # Diagram authoritative: bullets not in a diagram fail
         for loc_a, loc_b, one_way, _, cln in loc_conns:
             if (loc_a, loc_b) not in diag_pairs:
                 findings.append(Finding(
@@ -467,12 +418,16 @@ def m3(ctx: dict) -> list[Finding]:
                     f"connection {loc_a}→{loc_b} in Connections field not found in diagram"
                 ))
 
-        # Diagram edges with no corresponding bullet also fail
+        # Diagram edges with no corresponding bullet also fail.  Only edges
+        # with an endpoint in this region are this region's to answer for;
+        # a wholly external edge on a group diagram belongs to its own region.
         conn_any = {(a, b) for a, b, *_ in loc_conns} | {(b, a) for a, b, *_ in loc_conns}
-        for a, b, directed in diagram_edges:
+        for (a, b, _directed), (dpath, dline) in diagram_edges.items():
+            if not (a.startswith(src + '.') or b.startswith(src + '.')):
+                continue
             if (a, b) not in conn_any and (b, a) not in conn_any:
                 findings.append(Finding(
-                    f, blk_s,
+                    dpath, dline,
                     f"diagram edge {a}↔{b} has no corresponding location Connections entry"
                 ))
 
@@ -1361,6 +1316,129 @@ def m10(ctx: dict) -> list[Finding]:
 
 
 # ---------------------------------------------------------------------------
+# M11 — Diagram tiering
+# ---------------------------------------------------------------------------
+def m11(ctx: dict) -> list[Finding]:
+    """
+    The five-tier diagram layer resolves, end to end.
+
+    1. Every stub in regions/ is a member of exactly one tier-4 group frame,
+       in its own region.
+    2. Every location a tier-4 file draws outside its frame is a member of
+       some other frame — no diagram ends in a code nothing defines.
+    3. A cross-group edge is drawn on both endpoints' group diagrams.
+    4. The tier-1 to tier-3 files match what `diagrams.py` derives from the
+       tier-4 files.  They are derived, never authored.
+    5. Every diagram file is spliced in by exactly one marker somewhere in the
+       corpus, and every marker names a file that exists.
+    """
+    findings: list[Finding] = []
+    by_region = _tier4_by_region(ctx, findings)
+    tier4 = [d for ds in by_region.values() for d in ds]
+
+    # --- 1. every stub is a member of exactly one frame ---
+    member_of: dict[str, list[dict]] = {}
+    for d in tier4:
+        for code in d['members']:
+            member_of.setdefault(code, []).append(d)
+            if not code.startswith(d['region'] + '.'):
+                findings.append(Finding(
+                    d['path'], 1,
+                    f"{code} is inside region {d['region']}'s group frame but "
+                    f"belongs to another region"
+                ))
+
+    for f in region_files():
+        for lineno, line in enumerate(read_lines(f), 1):
+            m = STUB_HEADING_RE.match(line)
+            if not m:
+                continue
+            code = m.group(1)
+            holders = member_of.get(code, [])
+            if not holders:
+                findings.append(Finding(
+                    f, lineno, f"{code} appears in no tier-4 group diagram"))
+            elif len(holders) > 1:
+                where = ', '.join(sorted(d['path'].name for d in holders))
+                findings.append(Finding(
+                    f, lineno, f"{code} is a member of more than one group: {where}"))
+
+    # --- 2. every external node resolves to a frame elsewhere ---
+    for d in tier4:
+        members = set(d['members'])
+        for code in d['labels']:
+            if code not in members and code not in member_of:
+                findings.append(Finding(
+                    d['path'], 1,
+                    f"{code} is drawn as a destination but is a member of no group"))
+
+    # --- 3. cross-group edges are drawn at both ends ---
+    # A one-way edge is the exception: it is drawn from the end it leaves, and
+    # asks nothing of the end it arrives at.  `J.9`→`D.6` is the ratified case.
+    drawn: dict[frozenset[str], set[str]] = {}
+    tails: dict[frozenset[str], set[str]] = {}
+    for d in tier4:
+        for a, b, directed, _ in d['typed']:
+            pair = frozenset((a, b))
+            drawn.setdefault(pair, set()).add(d['key'])
+            if directed:
+                tails.setdefault(pair, set()).update(
+                    g['key'] for g in member_of.get(a, []))
+    for pair, keys in sorted(drawn.items(), key=lambda kv: sorted(kv[0])):
+        a, b = sorted(pair)
+        if pair in tails:
+            ends = tails[pair]
+        else:
+            ends = {g['key'] for g in member_of.get(a, [])} | \
+                   {g['key'] for g in member_of.get(b, [])}
+        missing = sorted(ends - keys)
+        if missing:
+            path = member_of[a][0]['path'] if a in member_of else member_of[b][0]['path']
+            findings.append(Finding(
+                path, 1,
+                f"edge {a}↔{b} is not drawn on {', '.join(missing)}"))
+
+    # --- 4. tiers 1 to 3 match derivation ---
+    if tier4 and not findings:
+        for name, expected in sorted(diagrams.derive(tier4).items()):
+            path = REPO / 'diagrams' / name
+            if not path.is_file():
+                findings.append(Finding(path, 1, f"derived diagram missing: {name}"))
+            elif path.read_text(encoding='utf-8') != expected:
+                findings.append(Finding(
+                    path, 1,
+                    f"{name} does not match its derivation — "
+                    f"run scripts/diagrams.py --write"))
+
+    # --- 5. markers and files agree ---
+    on_disk = {p.name for p in (REPO / 'diagrams').glob('T[1-4]_*.md')}
+    spliced: dict[str, list[tuple[Path, int]]] = {}
+    for f in corpus_files():
+        for lineno, line in enumerate(read_lines(f), 1):
+            m = diagrams.MARKER_RE.match(line)
+            if not m:
+                continue
+            spliced.setdefault(m.group(1), []).append((f, lineno))
+            if m.group(1) not in on_disk:
+                findings.append(Finding(
+                    f, lineno,
+                    f"diagram marker names a file that does not exist: {m.group(1)}"))
+    for name in sorted(on_disk):
+        hosts = spliced.get(name, [])
+        if not hosts:
+            findings.append(Finding(
+                REPO / 'diagrams' / name, 1,
+                f"{name} is spliced in by no marker — it would reach no reader"))
+        elif len(hosts) > 1:
+            where = ', '.join(f"{relpath(p)}:{n}" for p, n in hosts)
+            findings.append(Finding(
+                REPO / 'diagrams' / name, 1,
+                f"{name} is spliced in more than once: {where}"))
+
+    return findings
+
+
+# ---------------------------------------------------------------------------
 # Check registry
 # ---------------------------------------------------------------------------
 CHECKS: dict[str, tuple[str, object]] = {
@@ -1374,6 +1452,7 @@ CHECKS: dict[str, tuple[str, object]] = {
     "M8": ("Struck notes",          m8),
     "M9": ("Editorial references",  m9),
     "M10": ("Editorial notes",      m10),
+    "M11": ("Diagram tiering",      m11),
 }
 
 

@@ -26,62 +26,9 @@
 
 ### The skeleton
 
-```mermaid
-graph LR
-    E["E · Girkel"]
+*The skeleton is drawn in the diagram layer, and this block is the one that does not have a tier-2 graph of its own. `FA`, `GA` and `HA` are stubbed together because they share a warren, a seal and a room budget — but on the graph each belongs to its own peak, and a peak drawn without its main level is not a legible diagram. So the block's regions appear at tier 2 in **`diagrams/T2_PEAK_1.md`**, **`T2_PEAK_2.md`** and **`T2_PEAK_3.md`**, one apiece, and the Processionals between them are cross-block edges carried at tier 1.*
 
-    subgraph FAB["FA · TAKDUN — PEAK 1"]
-        FAH["The Trade Hall<br/>300 ft"]
-        FAK["The Kitchens"]
-        FAA["The Antechamber"]
-    end
-
-    subgraph GAB["GA · GRATHDUN — PEAK 2"]
-        GAH["The Judgement Chamber<br/>100 ft circular"]
-        GAA["The Antechamber"]
-    end
-
-    subgraph HAB["HA · THALDUN — PEAK 3"]
-        HAG["The Gathering Area<br/>the obelisk"]
-        HAH["The Celebration Hall<br/>200 ft oval"]
-        HAA["The Antechamber"]
-    end
-
-    subgraph SB["S · THE SERVANTS' PASSAGES"]
-        S1["Peak 1 warren<br/>kitchen service, stores, porters"]
-        SEAL["THE SEAL<br/>gated by tile"]
-        S2["Peak 2 warren<br/>clerks, court staff, holding"]
-        S3["Peak 3 warren<br/>funerary, vestries, Runemaster service"]
-    end
-
-    E ==>|"the broken doors"| FAH
-    FAH --- FAK
-    FAH ---|"rearward"| FAA
-    FAH ===|"Processional of the Living"| GAH
-    GAH ---|rearward| GAA
-    GAH ===|"Processional of the Dead"| HAG
-    HAG --- HAH
-    HAG --- HAA
-
-    FAA ---|"mouths"| S1
-    GAA ---|"mouths"| S2
-    HAA ---|"mouths"| S3
-    S1 ---|"the main run"| SEAL
-    SEAL ---|"the main run"| S2
-    S2 ---|"the main run"| S3
-
-    FAA -->|"stair down"| FB["FB"]
-    FAA -->|"ramp up"| FC["FC"]
-    GAA -->|"stair down"| GB["GB"]
-    GAA -->|"ramp up"| GC["GC"]
-    HAA -->|"stair down"| HB["HB"]
-    HAA -->|"ramp up"| HC["HC"]
-
-    FAK -.->|"service chute, one-way"| FB
-    S1 -.-|"bypasses a gate above"| FC
-    S2 -.-|"past the crater"| GE["GE"]
-    S3 -.-|"the survivors' burials"| HB
-```
+***The passages are not a node and never were one.*** *The old overview drew `S` as a box because it had nothing below it to resolve into. The warrens are location groups inside `FA`, `GA` and `HA` — `T4_FA_WARREN.md`, `T4_GA_WARREN.md`, `T4_GA_SEALED.md`, `T4_HA_WARREN.md` and the pockets beside them — and the Long Run, the Ash Run and the Cold Run are ordinary edges between locations in them, drawn typed at tier 4. The four arteries are tabulated at pass 4 below, which is now the block's own summary of what the drawing settled rather than a gloss on a second drawing.*
 
 ---
 
@@ -228,7 +175,7 @@ Everything it cannot walk to is behind the passages.
 | 3B | `GA` Grathdun | 27 | 52 | `regions/GA_Grathdun_Peak_2_Main_Level_Judgement_Hall.md` |
 | 3C | `HA` Thaldun | 33 | 63 | `regions/HA_Thaldun_Peak_3_Main_Level_Celebration_Hall.md` |
 
-**What stays here:** the four kinds of movement, the skeleton diagram, the seal, the three arteries, the grouping tables and room budget, and the survivor pockets across all three peaks. These are block facts and belong to no single region.
+**What stays here:** the four kinds of movement, the pointer to the tier-2 graphs, the seal, the three arteries, the grouping tables and room budget, and the survivor pockets across all three peaks. These are block facts and belong to no single region.
 
 ---
 
@@ -255,7 +202,7 @@ Everything it cannot walk to is behind the passages.
 
 **The two mouths onto the Processionals are not the same object.** `GA.27` is unmarked from the road, so it is a way off the exposed ground and never a way onto it unseen. `HA.33` is findable from both sides. Peak 3's warren is the only one of the three that something walking a Processional can enter without being shown the way.
 
-**The block's second seal is recorded on the skeleton.** The skeleton diagram in pass 1 draws the main run as `S1`—SEAL—`S2`—`S3`. The regions carry a second tile-gated face at `GA.11`, between the sealed segment and the Peak 3 warren, which the skeleton does not show. The regions are right and the skeleton is the older abstraction; it is left standing as a block-level sketch and this note is the reconciliation.
+**The block's second seal is drawn, and the abstraction that hid it is gone.** The old pass-1 skeleton drew the main run as `S1`—SEAL—`S2`—`S3`, a single tile lock on a chain of three warrens, and it could not show the second tile-gated face at `GA.11` between the sealed segment and the Peak 3 warren. The regions were right and the skeleton was the older abstraction. **Resolved at the retiering rather than left standing:** the sealed segment is `GA`'s own location group, both faces are edges in `T4_GA_SEALED.md`, and there is no longer a block-level sketch to disagree with the regions.
 
 **Cross-region threads opened in this block**, to be checked at every later pass:
 

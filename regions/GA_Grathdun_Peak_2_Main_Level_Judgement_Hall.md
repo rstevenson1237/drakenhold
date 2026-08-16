@@ -207,106 +207,19 @@
 
 *Procedure step 8. Drawn from the stubs, before the location outlines. Reconciled against the finished outlines before the region closes. The diagram is authoritative: the **Connections:** field under each stub is checked against it, never the reverse. Worked as one block with the other two main levels against `blocks/FIRST_LEVEL_BLOCK.md`, because the three share a warren.*
 
-```mermaid
-graph TD
-  FA10["FA.10 · The Processional of the Living"]
-  FA17["FA.17 · The Seal"]
-  FA18["FA.18 · The Ash Run Head"]
-  GB1["GB.1 · The Stairwell Foot"]
-  GB5["GB.5 · The Armoury"]
-  GC1["GC.1 · The Ramp Head"]
-  GC7["GC.7 · The Bypass Mouth"]
-  GE9["GE.9 · The Servants' Way"]
-  HA8["HA.8 · The Processional of the Dead"]
-  HA13["HA.13 · The Cold Run, Peak 3 Terminus"]
-  HA14["HA.14 · The Long Run, Peak 3 Stretch"]
+*Tier 3 first — the region's location groups and how they interconnect — then one tier-4 diagram per group, resolving to locations. **Connection type is drawn at tier 4 and nowhere else**, and a destination outside the group is drawn on the group's own diagram. Each diagram is a file in `diagrams/`, spliced in here by the build.*
 
-  subgraph CHAMBER["The judgement chamber"]
-    GA1["GA.1 · The Judgement Chamber"]
-    GA2["GA.2 · The Council Table"]
-    GA3["GA.3 · The Standing Floor"]
-    GA4["GA.4 · The Seven Figures"]
-  end
+<!-- DIAGRAM: T3_GA.md -->
 
-  subgraph JOIN["Where the Processionals meet"]
-    GA5["GA.5 · The Monument of the Driving Down"]
-  end
+<!-- DIAGRAM: T4_GA_CHAMBER.md -->
 
-  subgraph SUPPORT["The court and its support"]
-    GA6["GA.6 · The Domed Antechamber"]
-    GA7["GA.7 · The Writ-Rooms"]
-    GA8["GA.8 · The Holding Approach"]
-  end
+<!-- DIAGRAM: T4_GA_JOIN.md -->
 
-  subgraph SEALED["The sealed segment of the Long Run"]
-    GA10["GA.10 · The Long Run, Peak 2 Stretch"]
-    GA11["GA.11 · The Second Seal"]
-    GA18["GA.18 · The Watchers' Nest"]
-    GA19["GA.19 · The Pocket"]
-    GA20["GA.20 · Their Buried"]
-  end
+<!-- DIAGRAM: T4_GA_SUPPORT.md -->
 
-  subgraph WARREN["The Peak 2 warren"]
-    GA9["GA.9 · The Clerks' Warrens"]
-    GA14["GA.14 · The Record Stores"]
-    GA21["GA.21 · A Clerk's Private Cache"]
-    GA15["GA.15 · The Court Staff Quarters"]
-    GA16["GA.16 · The Holding Rooms"]
-    GA17["GA.17 · The Armoury Support"]
-    GA24["GA.24 · The Court Vent Gallery"]
-    GA22["GA.22 · The Capillary Maze"]
-    GA23["GA.23 · The Blocked Run"]
-    GA25["GA.25 · The Older Course"]
-    GA26["GA.26 · The Bypass"]
-    GA27["GA.27 · The Wrong Mouth"]
-    GA12["GA.12 · The Ash Run, Peak 2 Terminus"]
-    GA13["GA.13 · The Cold Run Head"]
-  end
+<!-- DIAGRAM: T4_GA_SEALED.md -->
 
-  GA1 --- GA2
-  GA1 --- GA3
-  GA1 --- GA4
-  GA1 --- GA5
-  GA1 --- GA6
-  GA3 --- GA8
-  GA5 === FA10
-  GA5 === HA8
-  GA6 --- GA7
-  GA6 --- GA9
-  GA6 --- GB1
-  GA6 --- GC1
-  GA7 --- GA9
-  GA8 --- GA16
-  GA9 --- GA14
-  GA9 --- GA15
-  GA9 --- GA22
-  GA10 -.- FA17
-  GA10 --- GA11
-  GA10 --- GA18
-  GA11 -.- HA14
-  GA11 -.- GA25
-  GA12 --- FA18
-  GA12 --- GA22
-  GA13 --- GA22
-  GA13 --- HA13
-  GA14 -.- GA21
-  GA14 -.- GA25
-  GA15 --- GA16
-  GA16 --- GA17
-  GA17 --- GA22
-  GA17 --- GA24
-  GA17 --- GB5
-  GA18 --- GA19
-  GA18 -.- GA22
-  GA19 --- GA20
-  GA22 --- GA23
-  GA22 --- GA27
-  GA22 -.- GA25
-  GA22 -.- GA26
-  GA26 -.- GC7
-  GA22 -.- GE9
-  GA27 --> GA5
-```
+<!-- DIAGRAM: T4_GA_WARREN.md -->
 
 **Reading the diagram.** Solid edges are open passage. The two heavy edges are the Processionals, and they meet at `GA.5` — the monument stands in the join and faces the chamber. Dotted edges are hidden, secret or tile-gated; `GA.10`–`FA.17` and `GA.11`–`HA.14` are the two faces of the seal. The single arrow is `GA.27`, which comes out onto the Processional and cannot be found from it.
 

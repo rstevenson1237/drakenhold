@@ -236,49 +236,15 @@
 
 *Procedure step 8. Drawn from the stubs, before the location outlines. **Reconciled against the finished outlines at step 9; this is the reconciled diagram and it is the deliverable.** The diagram is authoritative: the **Connections:** field under each stub is checked against it, never the reverse.*
 
-```mermaid
-graph TD
-  B9["B.9 · The Last Rise"]
-  B4a["B.4a · The Drain Mouth"]
-  E1["E.1 · The Guard Wall"]
+*Tier 3 first — the region's location groups and how they interconnect — then one tier-4 diagram per group, resolving to locations. **Connection type is drawn at tier 4 and nowhere else**, and a destination outside the group is drawn on the group's own diagram. Each diagram is a file in `diagrams/`, spliced in here by the build.*
 
-  subgraph OVER["The overlook"]
-    D1["D.1 · The Overlook"]
-    D2["D.2 · The Guard Outpost"]
-    D3["D.3 · The Outpost Cache"]
-    D4["D.4 · The Watch Log"]
-  end
+<!-- DIAGRAM: T3_D.md -->
 
-  subgraph BELOW["Below the overlook"]
-    D10["D.10 · The Charter Camp"]
-  end
+<!-- DIAGRAM: T4_D_OVER.md -->
 
-  subgraph GORGE["The gorge"]
-    D5["D.5 · The Near Booth"]
-    D6["D.6 · The Drain Outfall"]
-    D7["D.7 · The Three Spans"]
-    D8["D.8 · The Far Booth"]
-    D9["D.9 · The Broken Ground"]
-    D11["D.11 · The Climbing Road"]
-  end
+<!-- DIAGRAM: T4_D_BELOW.md -->
 
-  B9 --- D1
-  D1 --- D2
-  D1 --- D5
-  D1 --- D10
-  D2 --- D4
-  D2 -.- D3
-  D10 --- D5
-  D5 --- D6
-  D5 --- D7
-  D6 -.- B4a
-  D7 --- D8
-  D7 -.- D11
-  D8 --- D9
-  D8 --- D11
-  D9 --- D11
-  D11 --- E1
-```
+<!-- DIAGRAM: T4_D_GORGE.md -->
 
 **Reading the diagram.** Solid edges are open — walked, in daylight, in the open, watched from at least one direction. Three edges are dotted and hidden: the sealed cache inside the outpost (`D.2`–`D.3`), the drain onto the near bank (`D.6`–`B.4a`), and the old course under the far booth (`D.7`–`D.11`), which is described below.
 

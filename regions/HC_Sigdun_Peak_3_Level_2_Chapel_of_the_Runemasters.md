@@ -164,74 +164,15 @@
 
 *Procedure step 8. Drawn from the stubs, before the location outlines. Reconciled against the finished outlines before the region closes. The diagram is authoritative: the **Connections:** field under each stub is checked against it, never the reverse. Worked as one block with the other three levels of Peak 3 against `blocks/PEAK_3_BLOCK.md`.*
 
-```mermaid
-graph TD
-  HA10["HA.10 · The Domed Antechamber"]
-  HA30["HA.30 · The Bypass"]
-  HA19["HA.19 · The Scholars' Stair"]
-  HD1["HD.1 · The Ramp Head"]
-  HD4["HD.4 · The Circuit"]
+*Tier 3 first — the region's location groups and how they interconnect — then one tier-4 diagram per group, resolving to locations. **Connection type is drawn at tier 4 and nowhere else**, and a destination outside the group is drawn on the group's own diagram. Each diagram is a file in `diagrams/`, spliced in here by the build.*
 
-  subgraph CHAPEL["The chapel"]
-    HC1["HC.1 · The Ramp Head"]
-    HC2["HC.2 · The Chapel Proper"]
-    HC3["HC.3 · The Sigil Walls"]
-    HC4["HC.4 · Vekkut"]
-    HC5["HC.5 · What He Carried Up"]
-    HC6["HC.6 · The Loyalists' Camp"]
-    HC7["HC.7 · The Bypass Mouth"]
-    HC14["HC.14 · The Vestry"]
-    HC16["HC.16 · The Refectory"]
-  end
+<!-- DIAGRAM: T3_HC.md -->
 
-  subgraph CELLS["The cells and side chambers"]
-    HC8["HC.8 · The Cells"]
-    HC9["HC.9 · The Listening Cell"]
-    HC10["HC.10 · The Copied Wall"]
-    HC15["HC.15 · The Instruction Rooms"]
-    HC17["HC.17 · The Chapel Records"]
-    HC18["HC.18 · The Sealed Chamber"]
-    HC19["HC.19 · The Shaft"]
-    HC20["HC.20 · What He Saw Coming Up"]
-  end
+<!-- DIAGRAM: T4_HC_CHAPEL.md -->
 
-  subgraph DIG["The excavation"]
-    HC11["HC.11 · The Survey Line"]
-    HC12["HC.12 · The Excavation Face"]
-    HC13["HC.13 · The Spoil"]
-  end
+<!-- DIAGRAM: T4_HC_CELLS.md -->
 
-  HC1 --- HA10
-  HC1 --- HD1
-  HC1 --- HC2
-  HC2 --- HC3
-  HC2 --- HC4
-  HC2 --- HC6
-  HC2 --- HC8
-  HC2 --- HC14
-  HC2 --- HC16
-  HC3 --- HC10
-  HC4 --- HC5
-  HC4 --- HC9
-  HC4 --- HC12
-  HC4 --- HC20
-  HC6 --- HC12
-  HC6 --- HC16
-  HC7 -.- HA30
-  HC7 --- HC8
-  HC8 --- HC9
-  HC8 --- HC15
-  HC8 -.- HC18
-  HC9 --- HC10
-  HC9 --- HC19
-  HC11 --- HC12
-  HC11 --- HC13
-  HC12 --- HC13
-  HC12 -.- HD4
-  HC15 --- HA19
-  HC15 --- HC17
-  HC16 --- HC20
-```
+<!-- DIAGRAM: T4_HC_DIG.md -->
 
 **Reading the diagram.** Solid edges are open floor; this level locks almost nothing. The three dotted edges are the bypass down to `HA`, the rod-gated chamber the squat could not open, and the excavation, which is drawn dotted because it is not through yet. **It is drawn undirected rather than one-way**, because once it is through it is a hole in a floor and a hole in a floor is a hole in a floor. *`HC`'s region-level `## CONNECTIONS` bullet called it one-way; **ratified as bidirectional and the bullet is corrected.** The gate on this edge is time and intervention — the dig completing — and never direction.*
 

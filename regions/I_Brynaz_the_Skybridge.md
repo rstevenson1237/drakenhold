@@ -147,71 +147,15 @@
 
 *Procedure step 8. Drawn from the stubs, before the location outlines. Reconciled against the finished outlines before the region closes. The diagram is authoritative: the **Connections:** field under each stub is checked against it, never the reverse. Worked as one block with `J` against `blocks/I_AND_J_BLOCK.md`, because the two regions are the same idea inverted.*
 
-```mermaid
-graph TD
-  FD15["FD.15 · The Toll Road Head"]
-  GD2["GD.2 · Valdgir"]
-  HD3["HD.3 · The Skybridge Terminus"]
-  FE7["FE.7 · The Scorched Gallery"]
-  GD12["GD.12 · Inside the Vaults"]
-  GE3["GE.3 · The Crater Floor"]
+*Tier 3 first — the region's location groups and how they interconnect — then one tier-4 diagram per group, resolving to locations. **Connection type is drawn at tier 4 and nowhere else**, and a destination outside the group is drawn on the group's own diagram. Each diagram is a file in `diagrams/`, spliced in here by the build.*
 
-  subgraph SPAN["The span"]
-    I1["I.1 · The Western Terminus"]
-    I2["I.2 · The Great Span"]
-    I3["I.3 · The Central Terminus"]
-    I5["I.5 · The Ice Stretch"]
-    I4["I.4 · The Eastern Terminus"]
-  end
+<!-- DIAGRAM: T3_I.md -->
 
-  subgraph FACES["The faces"]
-    I6["I.6 · The Run-Heads"]
-    I7["I.7 · The Assessment"]
-    I8["I.8 · The Ladder-Stairs"]
-    I9["I.9 · The Watchtowers"]
-    I10["I.10 · The Attack Points"]
-    I11["I.11 · The Guard's Quarters"]
-    I12["I.12 · The Fallen Runs"]
-  end
+<!-- DIAGRAM: T4_I_SPAN.md -->
 
-  subgraph PRIZES["The prizes and the drop"]
-    I13["I.13 · The FE Run"]
-    I14["I.14 · The GD Run"]
-    I15["I.15 · The Crater Descent"]
-    I16["I.16 · The Undefended Approach"]
-  end
+<!-- DIAGRAM: T4_I_FACES.md -->
 
-  I1 -.- FD15
-  I1 --- I2
-  I2 --- I3
-  I2 --- I6
-  I3 -.- GD2
-  I3 --- I5
-  I5 --- I4
-  I5 --- I6
-  I4 -.- HD3
-  I6 --- I7
-  I6 --- I8
-  I6 --- I12
-  I7 --- I8
-  I7 --- I12
-  I7 -.- I13
-  I7 -.- I14
-  I7 -.- I16
-  I8 --- I9
-  I8 --- I10
-  I8 --- I11
-  I8 --- I15
-  I9 --- I10
-  I9 --- I11
-  I10 --- I11
-  I12 -.- I13
-  I12 -.- I14
-  I12 -.- I16
-  I13 -.- FE7
-  I14 -.- GD12
-  I15 --> GE3
-```
+<!-- DIAGRAM: T4_I_PRIZES.md -->
 
 **Reading the diagram.** Solid edges are span and sound run — passable now, by anyone, at the cost of exposure. Dotted edges are tile-gated or conditional on a mechanism: the three termini, and the four runs that are intact and have no approach left. The one arrowhead in the region is `I.15`, and it points at a sleeping dragon.
 

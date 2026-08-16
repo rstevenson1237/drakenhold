@@ -164,66 +164,15 @@
 
 *Procedure step 8. Drawn from the stubs, before the location outlines. Reconciled against the finished outlines before the region closes. The diagram is authoritative: the **Connections:** field under each stub is checked against it, never the reverse. Worked as one block with the other three levels of Peak 2 against `blocks/PEAK_2_BLOCK.md`, because one thing moves through all four.*
 
-```mermaid
-graph TD
-  GA6["GA.6 · The Domed Antechamber"]
-  GA17["GA.17 · The Armoury Support"]
-  GC13["GC.13 · The Steward's Rooms"]
-  J3["J.3 · The Hidden Descents"]
+*Tier 3 first — the region's location groups and how they interconnect — then one tier-4 diagram per group, resolving to locations. **Connection type is drawn at tier 4 and nowhere else**, and a destination outside the group is drawn on the group's own diagram. Each diagram is a file in `diagrams/`, spliced in here by the build.*
 
-  subgraph BARRACKS["The barracks half"]
-    GB1["GB.1 · The Stairwell Foot"]
-    GB2["GB.2 · The Arena"]
-    GB9["GB.9 · The Benches"]
-    GB10["GB.10 · The Fallen Ground"]
-    GB8["GB.8 · The Soldiers' Quarters"]
-    GB6["GB.6 · The Muster Office"]
-    GB7["GB.7 · The Planning Rooms"]
-    GB3["GB.3 · The Formation"]
-    GB4["GB.4 · Karn Rudgir"]
-    GB5["GB.5 · The Armoury"]
-  end
+<!-- DIAGRAM: T3_GB.md -->
 
-  subgraph PRISON["The prison half"]
-    GB11["GB.11 · The Prison Gate"]
-    GB12["GB.12 · The Cell Corridors"]
-    GB13["GB.13 · The Confiscation Store"]
-    GB14["GB.14 · The Register"]
-    GB15["GB.15 · The Jailer's Rod"]
-  end
+<!-- DIAGRAM: T4_GB_BARRACKS.md -->
 
-  subgraph DEEP["The deep cells"]
-    GB16["GB.16 · The Descent"]
-    GB17["GB.17 · The Jailer"]
-    GB18["GB.18 · The Talking Cell"]
-    GB19["GB.19 · The Kept Thing"]
-    GB20["GB.20 · The Broken Floor"]
-  end
+<!-- DIAGRAM: T4_GB_PRISON.md -->
 
-  GB1 --- GA6
-  GB1 --- GB2
-  GB2 --- GB3
-  GB2 --- GB6
-  GB2 --- GB8
-  GB2 --- GB9
-  GB2 --- GB10
-  GB2 --- GB11
-  GB3 --- GB4
-  GB3 --- GB5
-  GB5 --- GA17
-  GB6 --- GB7
-  GB11 --- GB12
-  GB12 --- GB13
-  GB12 --- GB14
-  GB12 --- GB15
-  GB12 --- GB16
-  GB12 -.- GC13
-  GB16 --- GB17
-  GB17 --- GB18
-  GB17 --- GB19
-  GB19 --- GB20
-  GB20 -.- J3
-```
+<!-- DIAGRAM: T4_GB_DEEP.md -->
 
 **Reading the diagram.** Solid edges are open floor or a stated lock — `GB.11` and `GB.16` are both drawn solid because they are doors that exist and are shut, not doors that are hidden. The two dotted edges are the Crown's own stair and the broken floor, and between them they are the reason this region is enterable at all.
 

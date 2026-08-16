@@ -304,62 +304,13 @@
 
 *Procedure step 8. Drawn from the stubs, before the location outlines. **Reconciled against the finished outlines at step 9; this is the reconciled diagram and it is the deliverable.** The diagram is authoritative: the **Connections:** field under each stub is checked against it, never the reverse.*
 
-```mermaid
-graph TD
-  A1["A.1 · The Landing Gate"]
-  A12["A.12 · The Cutting Ground"]
-  A13["A.13 · Wyla Fenn's Grove"]
-  C1["C.1 · Ashfoot Camp"]
-  C2["C.2 · Wetreed Camp"]
-  C3["C.3 · Longmire Camp"]
-  D1["D.1 · The Overlook"]
-  D6["D.6 · The Drain Outfall"]
+*Tier 3 first — the region's location groups and how they interconnect — then one tier-4 diagram per group, resolving to locations. **Connection type is drawn at tier 4 and nowhere else**, and a destination outside the group is drawn on the group's own diagram. Each diagram is a file in `diagrams/`, spliced in here by the build.*
 
-  subgraph ROAD["On the road"]
-    B1["B.1 · The Road Out"]
-    B2["B.2 · The First Waystone"]
-    B3["B.3 · The Wheel-Rut Reach"]
-    B4["B.4 · The Silted Culvert"]
-    B4a["B.4a · The Drain Mouth"]
-    B5["B.5 · The Second Waystone"]
-    B6["B.6 · The Deadfall"]
-    B7["B.7 · The Turning"]
-    B8["B.8 · The Third Waystone"]
-    B9["B.9 · The Last Rise"]
-  end
+<!-- DIAGRAM: T3_B.md -->
 
-  subgraph OFF["Off the road"]
-    B10["B.10 · The Webbed Thickets"]
-    B11["B.11 · The Collapsed Waystation"]
-    B12["B.12 · The Sprite Hollow"]
-    B13["B.13 · Fenn's Boundary"]
-  end
+<!-- DIAGRAM: T4_B_ROAD.md -->
 
-  B1 --- A1
-  B1 --- B2
-  B2 --- B3
-  B2 --- B13
-  B13 --- A12
-  B13 --- A13
-  B3 --- B4
-  B4 -.- B4a
-  B4a -.- D6
-  B4 --- B5
-  B5 --- B6
-  B5 --- B10
-  B5 --- B11
-  B10 --- B11
-  B10 --- B7
-  B6 --- B7
-  B7 --- B8
-  B7 --- C1
-  B7 --- C2
-  B7 --- C3
-  B8 --- B9
-  B8 --- B12
-  B12 --- B9
-  B9 --- D1
-```
+<!-- DIAGRAM: T4_B_OFF.md -->
 
 **Reading the diagram.** Solid edges are open passage on foot. The two dotted edges are hidden: the drain mouth under the culvert (`B.4`–`B.4a`) shows only to a party that clears the silt or goes into the water, and the culverted run north (`B.4a`–`D.6`) is a crawl in the dark under the whole last stretch of the trail. Everything else is walked, in daylight, without a roll — that is the region's job.
 

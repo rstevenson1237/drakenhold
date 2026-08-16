@@ -135,59 +135,13 @@
 
 *Procedure step 8. Drawn from the stubs, before the location outlines. Reconciled against the finished outlines before the region closes. The diagram is authoritative: the **Connections:** field under each stub is checked against it, never the reverse. Worked as one block with the other three levels of Peak 2 against `blocks/PEAK_2_BLOCK.md`, because one thing moves through all four.*
 
-```mermaid
-graph TD
-  GA6["GA.6 · The Domed Antechamber"]
-  GA26["GA.26 · The Bypass"]
-  GB12["GB.12 · The Cell Corridors"]
-  GD1["GD.1 · The Ramp Checkpoint"]
+*Tier 3 first — the region's location groups and how they interconnect — then one tier-4 diagram per group, resolving to locations. **Connection type is drawn at tier 4 and nowhere else**, and a destination outside the group is drawn on the group's own diagram. Each diagram is a file in `diagrams/`, spliced in here by the build.*
 
-  subgraph THRONE["The throne"]
-    GC1["GC.1 · The Ramp Head"]
-    GC2["GC.2 · The Throne Room"]
-    GC3["GC.3 · The Struck Surfaces"]
-    GC4["GC.4 · The Overlook Balcony"]
-    GC5["GC.5 · The Burned Wing"]
-    GC10["GC.10 · The Line of Kings"]
-    GC9["GC.9 · The Name Beneath"]
-    GC15["GC.15 · The Treasury Approach"]
-  end
+<!-- DIAGRAM: T3_GC.md -->
 
-  subgraph CHAMBERS["The chambers"]
-    GC6["GC.6 · The Chancery"]
-    GC7["GC.7 · The Bypass Mouth"]
-    GC8["GC.8 · The Petition Rooms"]
-    GC11["GC.11 · The Order"]
-    GC12["GC.12 · The Rod Schedule"]
-    GC13["GC.13 · The Steward's Rooms"]
-    GC14["GC.14 · The Seventh Chair"]
-  end
+<!-- DIAGRAM: T4_GC_THRONE.md -->
 
-  GC1 --- GA6
-  GC1 --- GC2
-  GC2 --- GC3
-  GC2 --- GC4
-  GC2 --- GC5
-  GC2 --- GC6
-  GC2 --- GC8
-  GC2 --- GC10
-  GC2 --- GC15
-  GC2 -.- GC9
-  GC3 --- GC6
-  GC3 --- GC8
-  GC5 --- GC6
-  GC6 --- GC7
-  GC6 --- GC11
-  GC6 --- GC12
-  GC6 --- GC13
-  GC7 -.- GA26
-  GC8 -.- GC9
-  GC9 -.- GC10
-  GC11 --- GC13
-  GC13 --- GC14
-  GC13 -.- GB12
-  GC15 --- GD1
-```
+<!-- DIAGRAM: T4_GC_CHAMBERS.md -->
 
 **Reading the diagram.** Solid edges are open floor — the level was emptied rather than held and almost nothing on it is locked, which is why its difficulty is reading and not passage. Dotted edges are hidden or secret: the three places the name survives, the bypass from the warren, and the Crown's own stair. `GC.3` is drawn as edges rather than as a room because the defacing is a condition of the level.
 

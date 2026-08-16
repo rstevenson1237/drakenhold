@@ -170,76 +170,15 @@
 
 *Procedure step 8. Drawn from the stubs, before the location outlines. Reconciled against the finished outlines before the region closes. The diagram is authoritative: the **Connections:** field under each stub is checked against it, never the reverse. Worked as one block with the other three levels of Peak 1 against `blocks/PEAK_1_BLOCK.md`, because the four are stitched together by shared machinery.*
 
-```mermaid
-graph TD
-  FA9["FA.9 · The Domed Antechamber"]
-  FA30["FA.30 · The Bypass"]
-  FB8["FB.8 · The Chute Mouths"]
-  FB16["FB.16 · The Collectors' Landing"]
-  FD1["FD.1 · The Ramp Head"]
-  FD8["FD.8 · The Stock Rooms"]
+*Tier 3 first — the region's location groups and how they interconnect — then one tier-4 diagram per group, resolving to locations. **Connection type is drawn at tier 4 and nowhere else**, and a destination outside the group is drawn on the group's own diagram. Each diagram is a file in `diagrams/`, spliced in here by the build.*
 
-  subgraph DISPATCH["The dispatch floor"]
-    FC1["FC.1 · The Ramp Landing"]
-    FC2["FC.2 · Mekgir, the Dispatch Floor"]
-    FC3["FC.3 · The Sequence Board"]
-    FC4["FC.4 · The Chute Heads"]
-    FC5["FC.5 · The Rising Chutes"]
-    FC21["FC.21 · The Hidden Access"]
-  end
+<!-- DIAGRAM: T3_FC.md -->
 
-  subgraph HALLS["The four halls"]
-    FC6["FC.6 · The Stonecraft Hall"]
-    FC7["FC.7 · The Ledger Hall"]
-    FC8["FC.8 · The Metalwork Hall"]
-    FC9["FC.9 · The Fine Goods Hall"]
-    FC10["FC.10 · The Frozen Scales"]
-    FC11["FC.11 · The Lamp Brackets"]
-    FC12["FC.12 · The Practice Bench"]
-    FC13["FC.13 · The Wrong Room"]
-  end
+<!-- DIAGRAM: T4_FC_DISPATCH.md -->
 
-  subgraph GATED["Behind the craftsmen's gate"]
-    FC14["FC.14 · The Craftsmen's Gate"]
-    FC15["FC.15 · The Bypass Mouth"]
-    FC16["FC.16 · The Craftsmen's Housing"]
-    FC17["FC.17 · The Meeting Rooms"]
-    FC18["FC.18 · The Shrine"]
-    FC19["FC.19 · The Ledger-Stones"]
-    FC20["FC.20 · The Grievance Room"]
-  end
+<!-- DIAGRAM: T4_FC_HALLS.md -->
 
-  FC1 --- FA9
-  FC1 --- FB16
-  FC1 --- FD1
-  FC1 --- FC2
-  FC1 --- FC14
-  FC2 --- FC3
-  FC2 --- FC4
-  FC2 --- FC5
-  FC2 --- FC6
-  FC2 --- FC7
-  FC2 --- FC8
-  FC2 --- FC9
-  FC2 -.- FC21
-  FC4 -.- FB8
-  FC5 -.- FD8
-  FC6 --- FC11
-  FC6 --- FC13
-  FC7 --- FC10
-  FC7 --- FC11
-  FC8 --- FC11
-  FC8 --- FC12
-  FC9 --- FC11
-  FC14 --- FC16
-  FC15 --- FC16
-  FC15 -.- FA30
-  FC16 --- FC17
-  FC16 --- FC18
-  FC17 --- FC20
-  FC17 -.- FC19
-  FC21 -.- FD8
-```
+<!-- DIAGRAM: T4_FC_GATED.md -->
 
 **Reading the diagram.** Solid edges are open floor. Dotted edges are hidden, secret or mechanism-conditional — the chutes at both ends, the hidden access, the bypass and the ledger-stones. `FC.11` is drawn as edges to all four halls because it is a condition of the halls rather than a room in one of them.
 

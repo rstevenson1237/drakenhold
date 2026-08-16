@@ -107,45 +107,15 @@
 
 *Procedure step 8. Drawn from the stubs, before the location outlines. Reconciled against the finished outlines before the region closes. The diagram is authoritative: the **Connections:** field under each stub is checked against it, never the reverse. Worked as one block with the other three levels of Peak 2 against `blocks/PEAK_2_BLOCK.md`, because one thing moves through all four.*
 
-```mermaid
-graph TD
-  GD16["GD.16 · The Ramp to the Lair"]
-  GA22["GA.22 · The Capillary Maze"]
-  I15["I.15 · The Crater Descent"]
+*Tier 3 first — the region's location groups and how they interconnect — then one tier-4 diagram per group, resolving to locations. **Connection type is drawn at tier 4 and nowhere else**, and a destination outside the group is drawn on the group's own diagram. Each diagram is a file in `diagrams/`, spliced in here by the build.*
 
-  subgraph CORRIDOR["The corridor"]
-    GE1["GE.1 · The Head of the Ramp"]
-    GE2["GE.2 · The Stately Corridor"]
-  end
+<!-- DIAGRAM: T3_GE.md -->
 
-  subgraph KING["The King's end"]
-    GE3["GE.3 · The Crater"]
-    GE4["GE.4 · Vermakith"]
-    GE5["GE.5 · The Hoard Beneath Him"]
-    GE6["GE.6 · The King's Chambers"]
-  end
+<!-- DIAGRAM: T4_GE_CORRIDOR.md -->
 
-  subgraph QUEEN["The Queen's end"]
-    GE7["GE.7 · The Queen's Apartments"]
-    GE8["GE.8 · The Queen's Correspondence"]
-    GE9["GE.9 · The Servants' Way"]
-  end
+<!-- DIAGRAM: T4_GE_KING.md -->
 
-  GE1 --- GD16
-  GE1 --- GE2
-  GE2 --- GE3
-  GE2 --- GE6
-  GE2 --- GE7
-  GE2 --- GE9
-  GE3 --- GE4
-  GE3 --- GE5
-  GE3 --- GE6
-  GE4 --- GE5
-  GE7 --- GE8
-  GE7 --- GE9
-  GE9 -.- GA22
-  I15 ---|"one-way · down the outer face"| GE3
-```
+<!-- DIAGRAM: T4_GE_QUEEN.md -->
 
 **Reading the diagram.** Nine nodes and one dotted edge. The single arrow is `I.15`, the crater descent, which is one-way and arrives on top of him. Everything else on this level is an open walk, which is precisely the problem.
 

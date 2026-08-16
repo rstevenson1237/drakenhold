@@ -168,81 +168,19 @@
 
 *Procedure step 8. Drawn from the stubs, before the location outlines. Reconciled against the finished outlines before the region closes. The diagram is authoritative: the **Connections:** field under each stub is checked against it, never the reverse. Worked as one block with the other three levels of Peak 3 against `blocks/PEAK_3_BLOCK.md`, because one chain of clues runs through all four.*
 
-```mermaid
-graph TD
-  HA10["HA.10 · The Domed Antechamber"]
-  HA29["HA.29 · The Crypt Access"]
-  HA21["HA.21 · The Survivors' Burials"]
-  J2["J.2 · The Marked Descents"]
+*Tier 3 first — the region's location groups and how they interconnect — then one tier-4 diagram per group, resolving to locations. **Connection type is drawn at tier 4 and nowhere else**, and a destination outside the group is drawn on the group's own diagram. Each diagram is a file in `diagrams/`, spliced in here by the build.*
 
-  subgraph DESCENT["The descent"]
-    HB1["HB.1 · The Stairwell Foot"]
-    HB2["HB.2 · The Tiering"]
-    HB3["HB.3 · The Crypt Access"]
-    HB10["HB.10 · The Interment Record"]
-  end
+<!-- DIAGRAM: T3_HB.md -->
 
-  subgraph ROYAL["The royal gallery"]
-    HB4["HB.4 · The Royal Gallery"]
-    HB5["HB.5 · The Empty Interments"]
-    HB6["HB.6 · Baldrun Azkelith's Place"]
-  end
+<!-- DIAGRAM: T4_HB_DESCENT.md -->
 
-  subgraph MIDDLE["The Runemaster and guild galleries"]
-    HB7["HB.7 · The Runemaster Gallery"]
-    HB8["HB.8 · The Guild Gallery"]
-    HB9["HB.9 · The Grave-Goods"]
-    HB18["HB.18 · The Thickening"]
-  end
+<!-- DIAGRAM: T4_HB_ROYAL.md -->
 
-  subgraph GUARD["The guard gallery"]
-    HB11["HB.11 · The Guard Gallery"]
-    HB12["HB.12 · The Late Burials"]
-    HB13["HB.13 · The Watch That Stayed"]
-  end
+<!-- DIAGRAM: T4_HB_MIDDLE.md -->
 
-  subgraph BELOW["Below the tiers"]
-    HB14["HB.14 · The Blank Wall"]
-    HB15["HB.15 · The Niche"]
-    HB16["HB.16 · The Lance"]
-    HB17["HB.17 · The Survivors' Burials"]
-    HB19["HB.19 · The Marked Descent"]
-    HB20["HB.20 · The Older Course"]
-  end
+<!-- DIAGRAM: T4_HB_GUARD.md -->
 
-  HB1 --- HA10
-  HB1 --- HB2
-  HB2 --- HB4
-  HB2 --- HB10
-  HB3 -.- HA29
-  HB3 --- HB12
-  HB4 --- HB5
-  HB4 --- HB7
-  HB4 --- HB9
-  HB4 --- HB10
-  HB4 --- HB13
-  HB4 --- HB18
-  HB5 --- HB6
-  HB7 --- HB8
-  HB7 --- HB9
-  HB7 --- HB18
-  HB8 --- HB9
-  HB8 --- HB11
-  HB8 --- HB18
-  HB9 --- HB11
-  HB11 --- HB12
-  HB11 --- HB13
-  HB11 --- HB14
-  HB11 --- HB18
-  HB12 --- HB17
-  HB14 --- HB17
-  HB14 --- HB19
-  HB14 --- HB20
-  HB15 -.- HB20
-  HB15 --- HB16
-  HB17 -.- HA21
-  HB19 -.- J2
-```
+<!-- DIAGRAM: T4_HB_BELOW.md -->
 
 **Reading the diagram.** Solid edges are open floor. `HB.9` and `HB.18` are distributed conditions rather than rooms — the grave-goods and the dead that object to them are drawn touching each of the four galleries, because that is exactly how they are placed. Dotted edges are hidden or secret: the two ways in from `HA` that are not the stair, the niche, and the descent into `J`.
 

@@ -165,76 +165,15 @@
 
 *Procedure step 8. Drawn from the stubs, before the location outlines. Reconciled against the finished outlines before the region closes. The diagram is authoritative: the **Connections:** field under each stub is checked against it, never the reverse. Worked as one block with the other three levels of Peak 1 against `blocks/PEAK_1_BLOCK.md`, because the four are stitched together by shared machinery.*
 
-```mermaid
-graph TD
-  FA9["FA.9 · The Domed Antechamber"]
-  FA8["FA.8 · The Service Chute Head"]
-  FA33["FA.33 · The Vent Gallery"]
-  FC1["FC.1 · The Ramp Landing"]
-  FC4["FC.4 · The Chute Heads"]
-  FD9["FD.9 · The Chimney Head"]
-  J2["J.2 · The Marked Descents"]
-  J3["J.3 · The Hidden Descents"]
+*Tier 3 first — the region's location groups and how they interconnect — then one tier-4 diagram per group, resolving to locations. **Connection type is drawn at tier 4 and nowhere else**, and a destination outside the group is drawn on the group's own diagram. Each diagram is a file in `diagrams/`, spliced in here by the build.*
 
-  subgraph HALL["The great under hall"]
-    FB1["FB.1 · The Stairwell Foot"]
-    FB2["FB.2 · The Granary Floor"]
-    FB3["FB.3 · The Water Tanks"]
-    FB5["FB.5 · The Chieftain's Seat"]
-    FB6["FB.6 · Snath's Fires"]
-    FB18["FB.18 · Vekkut's Den"]
-    FB7["FB.7 · The Tribute Floor"]
-    FB16["FB.16 · The Collectors' Landing"]
-    FB10["FB.10 · The Brood Warren"]
-  end
+<!-- DIAGRAM: T3_FB.md -->
 
-  subgraph STORES["The stores"]
-    FB8["FB.8 · The Chute Mouths"]
-    FB9["FB.9 · The Kitchen Chute Bottom"]
-    FB13["FB.13 · The Tally Gallery"]
-    FB11["FB.11 · The Sealed Bins"]
-    FB17["FB.17 · The Skimmed Count"]
-    FB12["FB.12 · The Drowned Rank"]
-    FB19["FB.19 · The Undeclared Cache"]
-    FB20["FB.20 · The Wet Dark"]
-  end
+<!-- DIAGRAM: T4_FB_HALL.md -->
 
-  subgraph VERT["The vertical"]
-    FB4["FB.4 · Khorven, the Vent Chimney"]
-    FB15["FB.15 · The Chimney Ledges"]
-    FB14["FB.14 · The Marked Descent"]
-  end
+<!-- DIAGRAM: T4_FB_STORES.md -->
 
-  FA9 --- FB1
-  FB1 --- FB2
-  FB2 --- FB3
-  FB2 --- FB4
-  FB2 --- FB5
-  FB2 --- FB7
-  FB2 --- FB8
-  FB2 --- FB10
-  FB2 --- FB13
-  FB2 --- FB16
-  FB3 --- FB4
-  FB4 --- FB15
-  FB4 -.- FA33
-  FB4 -.- J3
-  FB5 --- FB6
-  FB5 --- FB18
-  FB7 --- FB16
-  FB8 --- FB9
-  FB8 -.- FC4
-  FB9 -.- FA8
-  FB11 --- FB13
-  FB12 --- FB13
-  FB12 --- FB20
-  FB12 -.- FB19
-  FB13 -.- FB17
-  FB14 --- FB20
-  FB14 -.- J2
-  FB15 -.- FD9
-  FB16 --- FC1
-```
+<!-- DIAGRAM: T4_FB_VERT.md -->
 
 **Reading the diagram.** Solid edges are open floor — this is the one region inside the mountain where a party can walk almost everywhere without solving anything, because somebody lives here and keeps it working. Dotted edges are hidden, size-conditional or mechanism-conditional: the chimney at both ends, the chutes, the kitchen fall, and the two caches.
 

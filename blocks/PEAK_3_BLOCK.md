@@ -37,34 +37,7 @@ Peak 1 is a machine nobody is running. Peak 2 is occupied. **Peak 3 is the answe
 
 ### The skeleton
 
-```mermaid
-graph TD
-    HA["HA · Thaldun<br/>Main Level"]
-    WAR["HA warren"]
-
-    HB["HB · Nurmor<br/>Under Level — the crypts"]
-    HC["HC · Sigdun<br/>Level 2 — the chapel"]
-    HD["HD · Zarkel<br/>Level 3 — the temple"]
-    HE["HE · Sigaz<br/>Level 4 — the Sanctuary"]
-    I["I · Brynaz"]
-    J["J · Mordrak"]
-
-    HA -->|"stair down"| HB
-    HA ==>|"the great ramp"| HC
-    HC ==>|"the great ramp"| HD
-    HD ==>|"the great ramp"| HE
-    HA -.->|"HA.29 · loaded trigger"| HB
-    WAR -.-|"secret · the bypass"| HC
-    WAR -.-|"burials connect through"| HB
-
-    HC -.->|"the excavation · one-way · on a clock"| HD
-    HD -.->|"observation rooms · secret"| HE
-    HD ---|"gated by tile"| I
-
-    HB -->|"the marked descent"| J
-    NICHE["the niche<br/>opened by a name"]
-    HB --- NICHE
-```
+*The skeleton is now **`diagrams/T2_PEAK_3.md`**, tier 2 of the diagram layer: the five regions of the peak and how they interconnect, one plain untyped edge per connected pair. The routes named above are what those edges are made of, and each is drawn typed on the tier-4 diagram of the group it leaves — the excavation, the observation route and the niche included, each now a location-to-location edge rather than a box hanging off a region. The peak's edges to `I` and to `J` cross a block boundary and appear at tier 1. `diagrams/Drakenhold_Relational_Diagram.md` hosts every tier-1 and tier-2 graph and explains the tiering.*
 
 ---
 

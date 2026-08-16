@@ -364,74 +364,17 @@
 
 *Procedure step 8. Drawn from the stubs, before the location outlines. **Reconciled against the finished outlines at step 9; this is the reconciled diagram and it is the deliverable.** The diagram is authoritative: the **Connections:** field under each stub is checked against it, never the reverse.*
 
-```mermaid
-graph TD
-  B1["B.1 · The Road Out"]
-  B13["B.13 · Fenn's Boundary"]
+*Tier 3 first — the region's location groups and how they interconnect — then one tier-4 diagram per group, resolving to locations. **Connection type is drawn at tier 4 and nowhere else**, and a destination outside the group is drawn on the group's own diagram. Each diagram is a file in `diagrams/`, spliced in here by the build.*
 
-  subgraph UPPER["Upper town"]
-    A1["A.1 · The Landing Gate"]
-    A2["A.2 · The Well Square"]
-    A3["A.3 · The Old Toll-House"]
-    A4["A.4 · The Reeve's Hall"]
-    A5["A.5 · The Riverside Temple"]
-    A6["A.6 · The Kingfisher"]
-    A7["A.7 · The Shuttered Trade Houses"]
-  end
+<!-- DIAGRAM: T3_A.md -->
 
-  subgraph WHARF["Wharf quarter"]
-    A8["A.8 · The Boat Landing"]
-    A9["A.9 · Skeed's Wharf Office"]
-    A10["A.10 · The Idle Warehouses"]
-    A11["A.11 · The Sunken Oar"]
-  end
+<!-- DIAGRAM: T4_A_UPPER.md -->
 
-  subgraph OUT["Outskirts"]
-    A12["A.12 · The Cutting Ground"]
-    A13["A.13 · Wyla Fenn's Grove"]
-  end
+<!-- DIAGRAM: T4_A_WHARF.md -->
 
-  subgraph FARM["Ketter's Farmstead"]
-    A14["A.14 · The Farmyard"]
-    A15["A.15 · The Farmhouse"]
-    A16["A.16 · The Cellar Stair"]
-    A17["A.17 · The Cold Store"]
-    A18["A.18 · The First Gallery"]
-    A19["A.19 · The Lower Niches"]
-    A20["A.20 · The Grave of Brannek Kelmor"]
-  end
+<!-- DIAGRAM: T4_A_OUT.md -->
 
-  A1 --- B1
-  A1 --- A2
-  A1 --- A3
-  A1 --- A12
-  A1 --- A14
-  A2 --- A3
-  A2 --- A4
-  A2 --- A5
-  A2 --- A6
-  A2 --- A7
-  A3 --- A4
-  A5 --- A8
-  A7 --- A10
-  A8 --- A9
-  A8 --- A10
-  A8 --- A11
-  A9 --- A10
-  A10 --- A11
-  A12 --- A13
-  A12 --- A14
-  A12 --- B13
-  A13 --- B13
-  A14 --- A15
-  A14 --- A17
-  A15 --- A16
-  A16 --- A17
-  A17 --- A18
-  A18 --- A19
-  A18 -.- A20
-  A19 --- A20
-```
+<!-- DIAGRAM: T4_A_FARM.md -->
 
 **Reading the diagram.** Solid edges are open passage. The dotted edge `A.18`–`A.20` is hidden: the processional way from the gallery to the grave was walled and dressed to match, and the gallery stones name the direction for anyone who reads them. Every other edge in the region is open, on foot, in daylight, without a roll.
 

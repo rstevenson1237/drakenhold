@@ -190,46 +190,15 @@
 
 *Procedure step 8. Drawn from the stubs, before the location outlines. **Reconciled against the finished outlines at step 9; this is the reconciled diagram and it is the deliverable.** The diagram is authoritative: the **Connections:** field under each stub is checked against it, never the reverse.*
 
-```mermaid
-graph TD
-  B7["B.7 · The Turning"]
-  E1["E.1 · The Guard Wall"]
+*Tier 3 first — the region's location groups and how they interconnect — then one tier-4 diagram per group, resolving to locations. **Connection type is drawn at tier 4 and nowhere else**, and a destination outside the group is drawn on the group's own diagram. Each diagram is a file in `diagrams/`, spliced in here by the build.*
 
-  subgraph CAMPS["The three camps"]
-    C1["C.1 · Ashfoot Camp"]
-    C2["C.2 · Wetreed Camp"]
-    C3["C.3 · Longmire Camp"]
-  end
+<!-- DIAGRAM: T3_C.md -->
 
-  subgraph BETWEEN["The ground between"]
-    C4["C.4 · The Contested Hollow"]
-    C5["C.5 · The Scavenger Track"]
-    C6["C.6 · The Bone Midden"]
-  end
+<!-- DIAGRAM: T4_C_CAMPS.md -->
 
-  subgraph OWLBEAR["Owlbear country"]
-    C7["C.7 · The Deadwood Fringe"]
-    C8["C.8 · The Den Mouth"]
-    C9["C.9 · The Nest"]
-  end
+<!-- DIAGRAM: T4_C_BETWEEN.md -->
 
-  B7 --- C1
-  B7 --- C2
-  B7 --- C3
-  C1 --- C4
-  C2 --- C4
-  C3 --- C4
-  C1 --- C5
-  C2 --- C5
-  C2 --- C6
-  C5 --- C6
-  C5 --- E1
-  C3 --- C7
-  C4 --- C7
-  C7 --- C8
-  C8 --- C9
-  C7 -.- C9
-```
+<!-- DIAGRAM: T4_C_OWLBEAR.md -->
 
 **Reading the diagram.** Solid edges are open ground, walked, in cover that closes sightlines to a few yards — there is no single approach to anything here and no path is clear in the sense that a corridor is clear. The dotted edge `C.7`–`C.9` is hidden: the root sink at the back of the nest, described below.
 

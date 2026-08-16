@@ -28,9 +28,15 @@ Section mapping:
                                        Diagram together, so nothing is split
                                        out of them.
   RELATIONAL DIAGRAMS               -> diagrams/Drakenhold_Relational_Diagram.md,
-                                       the one setting-level diagram. Per-
-                                       region diagrams live inside their
-                                       region files above, not here.
+                                       which explains the five tiers and hosts
+                                       the tier-1 and tier-2 graphs. Tier-3 and
+                                       tier-4 graphs are hosted by the region
+                                       files above.
+
+Every diagram is its own file in diagrams/. A host document carries a marker
+line — <!-- DIAGRAM: T3_FA.md --> — and assembly replaces it with that file's
+contents; see scripts/diagrams.py. A marker naming a file that is not there is
+a build failure like any other missing source.
   LOCATIONS                         -> omitted; already embedded per-region.
 
 This script never writes to or modifies any content file — only the
@@ -40,6 +46,8 @@ assembled output path.
 import re
 import sys
 from pathlib import Path
+
+import diagrams
 
 REPO = Path(__file__).resolve().parent.parent
 DEFAULT_OUT = REPO / "build" / "Drakenhold_Playbook.md"
@@ -88,9 +96,14 @@ def read_or_fail(path: Path) -> str:
         print(f"build failed: missing source file: {path}", file=sys.stderr)
         sys.exit(1)
     try:
-        return path.read_text(encoding='utf-8')
+        text = path.read_text(encoding='utf-8')
     except OSError as e:
         print(f"build failed: cannot read {path}: {e}", file=sys.stderr)
+        sys.exit(1)
+    try:
+        return diagrams.splice(text, source=str(path))
+    except FileNotFoundError as e:
+        print(f"build failed: {e}", file=sys.stderr)
         sys.exit(1)
 
 
@@ -116,7 +129,7 @@ def main() -> None:
     parts.append("\n---\n\n## RELATIONAL DIAGRAMS\n")
     parts.append("\n" + read_or_fail(SETTING_DIAGRAM).rstrip() + "\n")
     parts.append(
-        "\n*Per-region diagrams are embedded in each region file's own "
+        "\n*Tier-3 and tier-4 diagrams are embedded in each region file's own "
         "REGION RELATIONAL DIAGRAM section above.*\n"
     )
 

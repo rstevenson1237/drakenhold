@@ -24,6 +24,7 @@ Drakenhold — a tabletop RPG setting delivered as a Setting Playbook. Read `REA
 ## Structural rules that are easy to break
 
 - **Diagrams are authoritative.** Connection bullets are checked against them, never the reverse.
+- **One diagram, one file, in `diagrams/`, in five tiers** — setting, block, region, location group, location. Each shows only the tier below it. **Edge type is drawn at tier 4 and nowhere else**; above it a connected pair gets one plain untyped edge. A tier-4 edge leaving its group draws the destination location outside the frame. **Tier 4 is authored; tiers 1–3 are derived** by `scripts/diagrams.py --write`. Never hand-edit a derived file, and never write a mermaid block outside `diagrams/` — hosts carry `<!-- DIAGRAM: NAME.md -->` and the build splices.
 - **Tables follow Classification, not terrain.** SAFE→Events, WILD→Encounters, DANGEROUS→Dangers. Danger tables count down from 6; all others ascend.
 - **Half a region's room budget is stubbed.** The rest is unnamed fill. Rooms may be empty.
 - **Every gate has an answer that is not the gate**, and the answer is priced — longer, darker, or watched by something worse.

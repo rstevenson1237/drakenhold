@@ -248,52 +248,17 @@
 
 *Procedure step 8. Drawn from the stubs, before the location outlines. **Reconciled against the finished outlines at step 9; this is the reconciled diagram and it is the deliverable.** The diagram is authoritative: the **Connections:** field under each stub is checked against it, never the reverse.*
 
-```mermaid
-graph TD
-  D11["D.11 · The Climbing Road"]
-  C5["C.5 · The Scavenger Track"]
-  FA1["FA.1 · The Threshold"]
+*Tier 3 first — the region's location groups and how they interconnect — then one tier-4 diagram per group, resolving to locations. **Connection type is drawn at tier 4 and nowhere else**, and a destination outside the group is drawn on the group's own diagram. Each diagram is a file in `diagrams/`, spliced in here by the build.*
 
-  subgraph AXIS["The processional axis"]
-    E1["E.1 · The Guard Wall"]
-    E2["E.2 · The Town Square"]
-    E12["E.12 · The Great Doors"]
-  end
+<!-- DIAGRAM: T3_E.md -->
 
-  subgraph HILL1["The first hill — beneath Peak 1"]
-    E3["E.3 · The Merchant Halls"]
-    E4["E.4 · The Bonded Warehouses"]
-    E5["E.5 · The Sealed Cellar"]
-  end
+<!-- DIAGRAM: T4_E_AXIS.md -->
 
-  subgraph HILL2["The second hill — beneath Peak 2"]
-    E6["E.6 · The Government Quarter"]
-    E7["E.7 · Ashen's Squat"]
-    E8["E.8 · The Guard Barracks"]
-  end
+<!-- DIAGRAM: T4_E_HILL1.md -->
 
-  subgraph HILL3["The third hill — beneath Peak 3"]
-    E9["E.9 · The Fine Houses"]
-    E10["E.10 · The Servants' Rows"]
-    E11["E.11 · The Burying Ground"]
-  end
+<!-- DIAGRAM: T4_E_HILL2.md -->
 
-  D11 --- E1
-  C5 --- E1
-  E1 --- E2
-  E2 --- E3
-  E2 --- E6
-  E2 --- E9
-  E2 --- E12
-  E3 --- E4
-  E3 -.- E5
-  E6 --- E7
-  E6 --- E8
-  E9 --- E10
-  E9 --- E11
-  E10 --- E11
-  E12 === FA1
-```
+<!-- DIAGRAM: T4_E_HILL3.md -->
 
 **Reading the diagram.** Solid edges are open street — the destruction is total and nothing in Girkel is locked, which is why the region's difficulty is search and not passage. The one dotted edge is `E.3`–`E.5`, the sealed cellar, which is hidden because nobody has found it in thirty years and not because anyone hid the entrance well. The heavy edge `E.12`═`FA.1` is the great doors, broken open, and it is the only opening to the outside world in the entire hold. **It is drawn undirected**, because the doors are broken open and pass both ways, and this is the one edge in the module where a reader mistaking emphasis for direction would conclude that a party can get in and not out.
 

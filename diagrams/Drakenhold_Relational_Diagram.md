@@ -1,12 +1,34 @@
 # DRAKENHOLD — SETTING RELATIONAL DIAGRAM
 
-*Procedure step 6. Companion to the Setting Outline and the region files. One overview graph of the whole setting, then one detail graph per grouping. Diagrams are authoritative: the Connections section in each region file is checked against them.*
+*Procedure step 6, and the head of the diagram layer. Diagrams are authoritative: the Connections section in each region file is checked against them, never the reverse.*
+
+---
+
+## THE FIVE TIERS
+
+Every diagram in the module is a file of its own in `diagrams/`, and every one of them shows **only the tier below it** and how those elements interconnect.
+
+| Tier | The diagram | Shows | File |
+|---|---|---|---|
+| 1 | the setting | the region blocks | `T1_SETTING.md` |
+| 2 | a region block | the regions in it | `T2_<BLOCK>.md`, five of them |
+| 3 | a region | the location groups in it | `T3_<REGION>.md`, one per region |
+| 4 | a location group | the locations in it | `T4_<REGION>_<GROUP>.md` |
+| 5 | a location | nothing — it is the leaf | — |
+
+**Connection type is drawn at tier 4 and nowhere else.** Above it, two children that are connected at all are joined by one plain untyped edge, however many typed routes actually run between them and whatever kind they are. Counting the ways from Peak 1 to Peak 2 is a tier-4 question and the tier-1 graph refuses to answer it.
+
+**A destination outside the group is drawn on the group's own diagram.** When a location connects to a location in another group — in this region or another — that destination location appears on the tier-4 diagram, outside the group's frame. That is the only duplication the layer permits, and it is what makes a group diagram readable alone.
+
+**Tier 4 is authored. Tiers 1 to 3 are derived from it** by `scripts/diagrams.py --write`, and `check.py` M11 re-derives them and fails on drift. Every fact about the graph is therefore written down in exactly one place: the tier-4 file for the group the location belongs to. Nothing above tier 4 is edited by hand.
+
+**Diagrams are spliced into their host documents by the build.** A host carries a marker line — `<!-- DIAGRAM: T3_FA.md -->` — and `scripts/build.py` and `scripts/pdf/render_web.mjs` replace it with the file's contents. Tiers 1 and 2 are hosted here; tiers 3 and 4 are hosted in the region files, under `## REGION RELATIONAL DIAGRAM`. M11 fails if a marker names a file that is not there, or if a file is spliced in twice or not at all.
 
 ---
 
 ## EDGE VOCABULARY
 
-Not a closed list. New types are proposed and added here rather than coined in passing.
+Drawn at tier 4. Not a closed list: new types are proposed and added here rather than coined in passing.
 
 | Type | Mermaid style | Meaning |
 |---|---|---|
@@ -23,280 +45,78 @@ Not a closed list. New types are proposed and added here rather than coined in p
 
 ---
 
-## 1. OVERVIEW — THE SETTING ENTIRE
+## TIER 1 — THE SETTING
 
-Groupings rather than every edge. The four detail graphs below resolve each box.
-
-```mermaid
-graph TD
-    subgraph APPROACH
-        A["A · Thornhaven<br/>SAFE d6"]
-        B["B · Ironwood Trail<br/>WILD d10"]
-        C["C · Goblin Camps<br/>WILD d6"]
-        D["D · River Crossing<br/>WILD d8"]
-        E["E · Girkel, Outer City<br/>WILD d8"]
-    end
-
-    subgraph PEAKS
-        F["PEAK 1 · F<br/>Trade and Craft<br/>FA FB FC FD FE"]
-        G["PEAK 2 · G<br/>Authority and the Dragon<br/>GA GB GC GD GE"]
-        H["PEAK 3 · H<br/>Spirit and the Dead<br/>HA HB HC HD HE"]
-    end
-
-    S["S · Servants' Passages<br/>within FA / GA / HA"]
-    I["I · Brynaz, the Skybridge<br/>WILD d6"]
-    J["J · Mordrak, the Lost Caverns<br/>WILD d8"]
-
-    A ---|open| B
-    B ---|open| C
-    B ---|open| D
-    C ---|"open · the scavenger track, two days west"| E
-    D ---|"open · toll · faction"| E
-    E ==>|"open · the broken doors"| F
-
-    F ---|"open · Processional of the Living"| G
-    G ---|"open · Processional of the Dead"| H
-
-    F --- S
-    G --- S
-    H --- S
-
-    F -.-|"tile · FD terminus"| I
-    G -.-|"tile · GD terminus"| I
-    H -.-|"tile · HD terminus"| I
-
-    F -.-|vert| J
-    G -.-|vert| J
-    H -.-|vert| J
-
-    I -.->|"one-way · the crater"| G
-```
+<!-- DIAGRAM: T1_SETTING.md -->
 
 **Reading it.** Everything above the peaks is the road in, and it is a single chain with one branch **and one bypass**. The scavenger track runs `C`→`E` direct, two days west, and does not pass the crossing at `D` — the goblins have been using it for thirty years and it is how the tile came out of the Outer City. A party that leaves the road to deal with the camps can come back onto the road past `D` entirely, paying no toll, meeting no hobgoblins and never seeing the Charter camp. That is the price of the branch and it is deliberate: `D` is skippable, and skipping it is a choice made in ignorance of what is being skipped.
 
 Everything below and around them is the answer to a locked door: the Skybridge is the horizontal cheat, the servants' passages are the lateral one, and the Lost Caverns are the vertical one. **FA is the only opening to the outside world.** Every other way in — the Skybridge termini, the crater, the hidden descents — is a way *out* first, discovered from inside, and only becomes an entrance on a second visit.
 
+**The rule the three answers encode.** Every gate in Drakenhold has at least one answer that is not the gate. A party that cannot pay the Lizardmen's toll can go under the mountain or over it; a party that cannot open a Royal lock can come at the room from a direction the room was never defended against. The cost is always the same shape — the alternate route is longer, darker, or watched by something worse.
+
+**The approach edge that runs the other way.** `I_AND_J`—`APPROACH` is one edge and it is `J.9`→`D.6`: the drain's far mouth, forty feet downstream and underwater, one-way outward and unenterable against the flow. It is drawn from `J`'s side alone, which is why it is the only tier-1 edge with nothing at the other end to meet it.
+
 ---
 
-## 2. DETAIL — THE APPROACH
+## TIER 2 — THE APPROACH
 
-```mermaid
-graph LR
-    A["A · Thornhaven"]
-    WF["Wyla Fenn's grove"]
-    FS["The haunted farmstead"]
-    B["B · Ironwood Trail"]
-    WS["Three waystones"]
-    CU["The silted culvert"]
-    WY["Collapsed waystation"]
-    C["C · Goblin Camps"]
-    OB["The owlbear's den"]
-    D["D · River Crossing"]
-    OV["Overlook and outpost"]
-    BR["The bridge · far booth"]
-    E["E · Girkel, Outer City"]
-    FA["FA · Takdun"]
-
-    A ---|"open · one hour"| WF
-    A ---|"open · half that"| FS
-    A ---|open| B
-    B --- WS
-    B --- CU
-    B -.-|hidden| WY
-    B ---|"open · off the trail"| C
-    C ---|"open · west of all three"| OB
-    C ---|"open · the scavenger track, two days west"| E
-    B ---|open| D
-    D --- OV
-    D --- BR
-    BR ---|"faction · toll or blood"| E
-    E ==>|"open · the great doors, broken"| FA
-```
+<!-- DIAGRAM: T2_APPROACH.md -->
 
 *Held for the location pass on B: the culverted dwarven drain, and the waystones' two unheard-of destinations. The drain's far end is likeliest to surface on the near bank at D rather than at E — the Outer City is a long way off and the river lies between.*
 
 ---
 
-## 3. DETAIL — PEAK 1 (F), TRADE AND CRAFT
+## TIER 2 — PEAK 1 (F), TRADE AND CRAFT
 
-```mermaid
-graph TD
-    E["E · Girkel"]
-    FA["FA · Takdun<br/>Main · DANGEROUS d10"]
-    FB["FB · Brankel<br/>Under · WILD d8"]
-    FC["FC · Mekdun<br/>L2 · DANGEROUS d10"]
-    FD["FD · Khorvak<br/>L3 · DANGEROUS d10"]
-    FE["FE · Aztak<br/>L4 · DANGEROUS d8"]
-    S["S · Servants' Passages"]
-    I["I · Skybridge"]
-    J["J · Lost Caverns"]
-    GA["GA · Grathdun"]
+<!-- DIAGRAM: T2_PEAK_1.md -->
 
-    E ==>|"open · the broken doors"| FA
-    FA ---|"open · Processional of the Living"| GA
-    FA ---|"open · mouths at the antechamber"| S
-    FA ---|"vert · stairwell down"| FB
-    FA ---|"vert · the great ramp"| FC
-    FA -.->|"hidden · vert · kitchen service chute"| FB
-    FB ---|"vert · the great ramp · the toll road"| FC
-    S -.-|"vert · size · the vent gallery onto Khorven"| FB
-    FC ---|"vert · the great ramp"| FD
-    FD ---|"vert · the great ramp"| FE
-    FB -.-|"vert · size · the vent chimney"| FD
-    FC -.-|"mech · vert · chute dispatch"| FB
-    FC -.-|"mech · vert · chute dispatch"| FD
-    FD -.-|"tile · western terminus"| I
-    FE -.-|"mech · vert · an intact run, approach lost"| I
-    FB -.-|"vert · size · chimney, marked descent"| J
-    FD -.-|"secret · vert · a magma channel"| J
-    S -.-|"secret · bypasses a gate above"| FC
-```
+**Notes.** The dispatch floor on FC is the level's puzzle and also its map: correct sequencing opens a hidden access that appears on no plan, and wrong sequencing strands a party between FB and FD. The chimney is the peak's spine — it is the only thing touching the Under Level, Level 3 and the caverns at once, and it is the flow that relighting the forge depends on. **The great ramp reaches FB** at `FB.16`, the collectors' landing, and the toll road runs down it from `FD.15`. **The FA warren touches Khorven** by the vent gallery at `FA.33`, size-conditional, which is the warren's own way onto the shaft.
 
-*Two edges added at the Peak 1 block's step 8 pass, both reconciling facts the block document already stated and the graph did not carry. **The great ramp reaches FB** at `FB.16`, the collectors' landing — the toll road runs down it from `FD.15` and `FB.16`'s own stub is named for it. **The FA warren touches Khorven** by the vent gallery at `FA.33`, size-conditional, which is the warren's own way onto the shaft.*
-
-**Notes.** The dispatch floor on FC is the level's puzzle and also its map: correct sequencing opens a hidden access that appears on no plan, and wrong sequencing strands a party between FB and FD. The chimney is the peak's spine — it is the only thing touching the Under Level, Level 3 and the caverns at once, and it is the flow that relighting the forge depends on.
+The peak's edges to the Skybridge and the Lost Caverns are cross-block and do not appear here: `FD` and `FE` reach `I`, and `FB` and `FD` reach `J`. Tier 1 carries them as one edge apiece, and tier 4 carries them typed.
 
 ---
 
-## 4. DETAIL — PEAK 2 (G), AUTHORITY AND THE DRAGON
+## TIER 2 — PEAK 2 (G), AUTHORITY AND THE DRAGON
 
-```mermaid
-graph TD
-    FA["FA · Takdun"]
-    GA["GA · Grathdun<br/>Main · DANGEROUS d10"]
-    GB["GB · Karmor<br/>Under · DANGEROUS d10"]
-    GC["GC · Azdun<br/>L2 · DANGEROUS d8"]
-    GD["GD · Valdmor<br/>L3 · DANGEROUS d8"]
-    GE["GE · Azith<br/>L4 · DANGEROUS d4"]
-    DC["GB deep cells<br/>separately gated"]
-    S["S · Servants' Passages"]
-    I["I · Skybridge"]
-    J["J · Lost Caverns"]
-    HA["HA · Thaldun"]
-
-    FA ---|"open · Processional of the Living"| GA
-    GA ---|"open · Processional of the Dead"| HA
-    GA ---|"open · mouths at the antechamber"| S
-    GA ---|"vert · stairwell down"| GB
-    GA ---|"vert · the great ramp"| GC
-    GC ---|"vert · the great ramp"| GD
-    GD ---|"vert · the great ramp"| GE
-    GB -.-|"rod · secret · hidden and separately gated"| DC
-    GC -.-|"secret · vert · the Crown's own stair, past GA"| GB
-    GD -.-|"tile · faction · central terminus"| I
-    GD -.-|"mech · vert · an intact run, past the checkpoint"| I
-    I -.->|"one-way · vert · down through the crater"| GE
-    S -.-|"secret · vert · GA.22 to GE.9, into the corridor past the crater"| GE
-    GB -.-|"vert · marked descent"| J
-    DC -.-|"secret · vert"| J
-```
+<!-- DIAGRAM: T2_PEAK_2.md -->
 
 **Notes.** The direct horizontal route between peaks runs through the dragon's counting house, and the counting house is held by people who assess before they reach. That is the design. GC's balcony has no Skybridge access and is drawn with none. The crater is the one place the outside gets in, and it gets in on top of the dragon — the edge is one-way for a reason.
 
-*Added at the first-level block's step 8 pass, directed: **the Crown's own stair**, `GC.13`→`GB.12`, secret and vertical, running two levels from the Steward's rooms to the cell corridors without a landing on `GA` and arriving past the rod-locked gate at `GB.11`. Undeclared access from leadership to the prisons, for captives who were not going to appear in the register. It is `GB.11`'s answer that is not the gate and it is priced: it begins on the level a party reaches last and ends on the wrong side of a lock.*
+**The Crown's own stair**, `GC.13`→`GB.12`, is secret and vertical, running two levels from the Steward's rooms to the cell corridors without a landing on `GA` and arriving past the rod-locked gate at `GB.11`. Undeclared access from leadership to the prisons, for captives who were not going to appear in the register. It is `GB.11`'s answer that is not the gate and it is priced: it begins on the level a party reaches last and ends on the wrong side of a lock.
 
-*Ratified this pass: the deep cells descend into J. It is how the Elder Wyrm came up, it is how the Runemasters learned the yoke without hauling their subject the length of the marked descent, and it is why the mad Runemaster has had something to listen to for thirty-two years.*
+**The deep cells descend into J.** It is how the Elder Wyrm came up, it is how the Runemasters learned the yoke without hauling their subject the length of the marked descent, and it is why the mad Runemaster has had something to listen to for thirty-two years.
 
 ---
 
-## 5. DETAIL — PEAK 3 (H), SPIRIT AND THE DEAD
+## TIER 2 — PEAK 3 (H), SPIRIT AND THE DEAD
 
-```mermaid
-graph TD
-    GA["GA · Grathdun"]
-    HA["HA · Thaldun<br/>Main · DANGEROUS d8"]
-    HB["HB · Nurmor<br/>Under · DANGEROUS d6"]
-    HC["HC · Sigdun<br/>L2 · DANGEROUS d8"]
-    HD["HD · Zarkel<br/>L3 · DANGEROUS d6"]
-    HE["HE · Sigaz<br/>L4 · DANGEROUS d4"]
-    OR["HD observation rooms<br/>heavily gated"]
-    NI["HB · the niche<br/>Torvin Ganthur, the lance"]
-    S["S · Servants' Passages"]
-    I["I · Skybridge"]
-    J["J · Lost Caverns"]
-
-    GA ---|"open · Processional of the Dead"| HA
-    HA ---|"open · mouths at the antechamber"| S
-    HA ---|"vert · stairwell down"| HB
-    HA ---|"vert · the great ramp"| HC
-    HC ---|"vert · the great ramp"| HD
-    HD ---|"vert · the great ramp"| HE
-    HB -.-|"secret · the name is the key"| NI
-    HC -.->|"mech · vert · the excavation, unfinished"| HD
-    HD ---|"rod · Runemaster tier, or the circuit run honestly"| OR
-    OR -.-|"secret · does not use the ramp"| HE
-    HD -.-|"tile · eastern terminus"| I
-    HB -.-|"vert · marked descent"| J
-    S -.-|"hidden · the survivors' own burials"| HB
-```
+<!-- DIAGRAM: T2_PEAK_3.md -->
 
 **Notes.** Peak 3 is the only peak whose internal routes are all earned rather than walked. The circuit can be run honestly for a rod or cheated from the observation rooms, and the shortcut costs more than the road. The kobold chieftain's excavation is a live edge that completes on a clock whether or not the party touches it — accelerating, redirecting or collapsing it are three different campaigns, and one of them hands HE to something that cannot read what it finds.
 
+**HE has no edge except from HD.** The dragon never came, nothing has been carried out in thirty-two years, and the only ways in are the ramp and the observation-room route. This is deliberate and is why HE pays what it pays.
+
 ---
 
-## 6. DETAIL — THE THREE ANSWERS
+## TIER 2 — THE SKYBRIDGE AND THE LOST CAVERNS
 
-The Skybridge, the servants' passages and the Lost Caverns exist so that no gate is final. Each answers a different axis.
+<!-- DIAGRAM: T2_I_AND_J.md -->
 
-```mermaid
-graph TD
-    subgraph HORIZONTAL["I · Brynaz — the Skybridge (open air, exposure, weather)"]
-        FD2["FD"] -.-|tile| SPAN["The great span"]
-        SPAN -.-|"tile · faction"| GD2["GD"]
-        SPAN -.-|tile| HD2["HD"]
-        SPAN --- RUNS["Vertical runs, ladder-stairs,<br/>observation posts, attack points"]
-        RUNS -.->|"one-way · the crater"| GE2["GE"]
-        RUNS -.-|"mech · intact, no approach left"| FE2["FE · Aztak<br/>otherwise a single-entrance cul-de-sac"]
-        RUNS -.-|"mech · intact, no approach left"| GD3["GD · Valdmor<br/>arrives past the checkpoint"]
-    end
+**Notes.** `I` and `J` are the horizontal answer and the vertical one, and the graph of the block they share is two nodes and no edge between them. That is the finding, not an omission: the top of the mountain and the bottom of it are connected only by going through the mountain. Everything either region is *for* is a cross-block edge — `I` reaches `FD`, `FE`, `GD`, `GE` and `HD`; `J` reaches `FB`, `FD`, `GB` and `HB`, and `D.6` one way outward. Tier 1 carries the fact that they connect; the tier-4 diagrams carry which shaft, at what price, in which direction.
 
-    subgraph LATERAL["S · Servants' Passages (within FA / GA / HA)"]
-        SF["Peak 1 zone<br/>kitchens, stores, porters"]
-        SG["Peak 2 zone<br/>clerks, court staff, holding"]
-        SH["Peak 3 zone<br/>funerary, vestries, Runemaster service"]
-        SF ---|"tile · the seal, on the Long Run"| SEG["The sealed segment<br/>a locked door at each end,<br/>and nine people living inside it"]
-        SEG ---|"tile · the second seal"| SH
-        SF ---|"open · the Ash Run"| SG
-        SG ---|"open · the Cold Run"| SH
-        SG -.-|"hidden · watched · the one run they kept"| SEG
-        SF -.-|"secret · bypasses a gate above"| FC2["FC"]
-        SG -.-|"secret · vert · to GE.9"| GE3["GE"]
-        SH -.-|hidden| HB2["HB"]
-    end
-
-    subgraph VERTICAL["J · Mordrak — the Lost Caverns (the great tunnel)"]
-        TUN["The great tunnel<br/>beneath F, G and H"]
-        TUN --- T1["Flooded galleries"]
-        TUN --- T2["Exhausted workings"]
-        TUN --- T3["Natural cavern"]
-        TUN --- T4["The vent system"]
-        TUN --- T5["The vein"]
-        TUN --- T6["The deep dark"]
-        TUN -.-|"vert · marked"| FB2["FB"]
-        TUN -.-|"vert · marked"| GB2["GB"]
-        TUN -.-|"vert · marked"| HB2b["HB"]
-        TUN -.-|"vert · size · hidden"| FB3["FB chimney"]
-        TUN -.-|"vert · secret"| FD3["FD channel"]
-        TUN -.-|"vert · secret"| DC2["GB deep cells"]
-        T4 -.-|mech| FD4["FD forge flow"]
-    end
-```
-
-**The rule the three encode.** Every gate in Drakenhold has at least one answer that is not the gate. A party that cannot pay the Lizardmen's toll can go under the mountain or over it; a party that cannot open a Royal lock can come at the room from a direction the room was never defended against. The cost is always the same shape — the alternate route is longer, darker, or watched by something worse.
+**The two orphaned Skybridge runs.** One arrives in `FE`, which is otherwise reachable only by the `FD` ramp, and one arrives in `GD`, inside the vaults without passing the Lizardman checkpoint. Both are intact and both have lost their approach; restoring either is a mechanism problem and each is a major prize.
 
 ---
 
 ## AUDIT
 
-Checked against the Gazetteer this pass:
+Standing findings, carried forward through the retiering:
 
 - **FA is the sole exterior entrance.** GA and HA have none; E connects only to FA. Held.
 - **GC has no Skybridge access.** The balcony is a nobles' balcony. Held, and drawn with no edge to I.
-- **One ramp up, one stairwell down between peak levels.** Held. All additional vertical edges are chutes, chimneys, channels or excavations, and each is typed.
-- **The servants' passages interconnect all three peaks.** Placed as edges SF–SG–SH, and as the second internal cross-connection alongside the Processionals.
-- **Six previously unwritten routes placed:** FB chimney to FD and to J; FD channel to J; HD observation rooms to HE; servants' route into GE past the crater; hidden descents into J from each peak.
-- **The two orphaned Skybridge runs are placed:** one into FE, which is otherwise reachable only by the FD ramp, and one into GD, which arrives inside the vaults without passing the Lizardman checkpoint. Both are intact and both have lost their approach; restoring either is a mechanism problem and each is a major prize.
-- **Ratified this pass:** the deep cells descend into J; the yoke was learned in GB from the Elder Wyrm still in the building; the wyrms below and the Drakmorith above are the same story told from two ends.
-- **Graph legibility.** The overview will not stay readable as routes accumulate, and sub-region nodes (S, the deep cells, the observation rooms, the niche) are carried deliberately rather than pruned. Held as-is to preserve detail; the overview collapses to a simpler shape once the per-region diagrams exist to hold the specifics.
-- **The lateral graph is amended at the first-level block's step 8 pass.** Section 6 previously drew the passages as one open chain, `SF`—`SG`—`SH`, which under-stated the seal it also documents elsewhere. Redrawn: the Long Run passes through a **sealed segment** with a tile lock at each face, and the open chain between the three warrens is the **Ash Run** and the **Cold Run** in series — the answer that is not the gate, at three times the distance. One hidden, watched edge connects the Peak 2 warren to the sealed segment, which is how the second tile can be reached without holding the first. **Flagged rather than assumed:** this is a correction to an under-specified step-6 diagram, not new content, and every fact in it was already stated in `FIRST_LEVEL_BLOCK.md`.
-- **HE has no edge except from HD.** The dragon never came, nothing has been carried out in thirty-two years, and the only ways in are the ramp and the observation-room route. This is deliberate and is why HE pays what it pays.
+- **One ramp up, one stairwell down between peak levels.** Held. All additional vertical edges are chutes, chimneys, channels or excavations, and each is typed at tier 4.
+- **The servants' passages interconnect all three peaks**, as the second internal cross-connection alongside the Processionals. **They are no longer a node.** `S` was a fiction the old overview needed because it had no tier below it: the passages are location groups inside `FA`, `GA` and `HA` and always were, and the runs between them are ordinary region-to-region edges now that the graph resolves that far. The Long Run passes through a **sealed segment** with a tile lock at each face, and the way around is the **Ash Run** and the **Cold Run** in series, at three times the distance.
+- **Sub-region nodes are gone with it.** The deep cells, the observation rooms and Torvin Ganthur's niche were drawn as boxes hanging off a region because the overview could not reach a location. Each is a location, each sits in its group's tier-4 diagram, and each is now named by its code rather than by a paraphrase.
+- **The three detail graphs the old file carried for the Skybridge, the passages and the caverns are gone, and nothing was lost with them.** Every edge they drew is drawn once, at tier 4, in the group it belongs to. What they were really carrying was the argument above about gates and answers, which is prose and has been kept as prose.
+- **Graph legibility, resolved.** The old overview was known to be unreadable as routes accumulated, and was held as-is until the per-region diagrams existed to hold the specifics. They exist, and the tiering is the collapse that was promised: five nodes at tier 1, five regions at most per tier 2, and no diagram in the module larger than one location group.

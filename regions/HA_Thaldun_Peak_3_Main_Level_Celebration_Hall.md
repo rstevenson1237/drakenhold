@@ -242,117 +242,21 @@
 
 *Procedure step 8. Drawn from the stubs, before the location outlines. Reconciled against the finished outlines before the region closes. The diagram is authoritative: the **Connections:** field under each stub is checked against it, never the reverse. Worked as one block with the other two main levels against `blocks/FIRST_LEVEL_BLOCK.md`, because the three share a warren.*
 
-```mermaid
-graph TD
-  GA5["GA.5 · The Monument of the Driving Down"]
-  GA11["GA.11 · The Second Seal"]
-  GA13["GA.13 · The Cold Run Head"]
-  HB1["HB.1 · The Stairwell Foot"]
-  HB3["HB.3 · The Crypt Access"]
-  HB17["HB.17 · The Survivors' Burials"]
-  HC1["HC.1 · The Ramp Head"]
-  HC7["HC.7 · The Bypass Mouth"]
+*Tier 3 first — the region's location groups and how they interconnect — then one tier-4 diagram per group, resolving to locations. **Connection type is drawn at tier 4 and nowhere else**, and a destination outside the group is drawn on the group's own diagram. Each diagram is a file in `diagrams/`, spliced in here by the build.*
 
-  subgraph HALLG["The hall and the gathering area"]
-    HA1["HA.1 · The Celebration Hall"]
-    HA2["HA.2 · The Scrubbed Floor"]
-    HA3["HA.3 · The Singers' Gallery"]
-    HA4["HA.4 · The Gathering Area"]
-    HA5["HA.5 · The Black Obelisk"]
-    HA6["HA.6 · The Struck Names"]
-    HA7["HA.7 · The Uncut Spaces"]
-    HA10["HA.10 · The Domed Antechamber"]
-  end
+<!-- DIAGRAM: T3_HA.md -->
 
-  subgraph PROC["The Processional of the Dead"]
-    HA8["HA.8 · The Processional of the Dead"]
-    HA9["HA.9 · The Wedge"]
-  end
+<!-- DIAGRAM: T4_HA_HALLG.md -->
 
-  subgraph SUPPORT["Hall support"]
-    HA11["HA.11 · The Vestry Approaches"]
-    HA12["HA.12 · The Vessel Stores"]
-    HA17["HA.17 · The Vestries"]
-    HA27["HA.27 · The Sealed Vestry"]
-  end
+<!-- DIAGRAM: T4_HA_PROC.md -->
 
-  subgraph ART["The arteries"]
-    HA13["HA.13 · The Cold Run, Peak 3 Terminus"]
-    HA14["HA.14 · The Long Run, Peak 3 Stretch"]
-  end
+<!-- DIAGRAM: T4_HA_SUPPORT.md -->
 
-  subgraph WARREN["The Peak 3 warren"]
-    HA15["HA.15 · The Funerary Preparation Rooms"]
-    HA16["HA.16 · The Cold Rooms"]
-    HA32["HA.32 · The Vent Gallery"]
-    HA18["HA.18 · The Runemasters' Service Warren"]
-    HA19["HA.19 · The Scholars' Stair"]
-  HC15["HC.15 · The Instruction Rooms"]
-    HA31["HA.31 · The Listening Place"]
-    HA20["HA.20 · The Tenders' Quarters"]
-    HA33["HA.33 · The Wrong Mouth"]
-    HA25["HA.25 · The Collapsed Quarter"]
-    HA26["HA.26 · The Rerouted Way"]
-    HA28["HA.28 · The Older Course"]
-    HA30["HA.30 · The Bypass"]
-  end
+<!-- DIAGRAM: T4_HA_ART.md -->
 
-  subgraph POCKET["The Peak 3 pocket"]
-    HA21["HA.21 · The Survivors' Burials"]
-    HA22["HA.22 · The Pocket"]
-    HA23["HA.23 · The Long Watch"]
-    HA24["HA.24 · What They Took Down"]
-    HA29["HA.29 · The Crypt Access"]
-  end
+<!-- DIAGRAM: T4_HA_WARREN.md -->
 
-  HA1 --- HA2
-  HA1 --- HA3
-  HA1 --- HA4
-  HA4 --- HA5
-  HA4 --- HA10
-  HA4 === HA8
-  HA5 --- HA6
-  HA5 --- HA7
-  HA8 --- HA9
-  HA8 --- HA33
-  HA8 === GA5
-  HA10 --- HB1
-  HA10 --- HC1
-  HA10 --- HA11
-  HA10 --- HA15
-  HA10 --- HA18
-  HA11 --- HA12
-  HA11 --- HA17
-  HA13 --- HA14
-  HA13 --- HA15
-  HA13 --- GA13
-  HA14 -.- GA11
-  HA14 -.- HA28
-  HA15 --- HA16
-  HA15 --- HA20
-  HA15 --- HA25
-  HA16 --- HA32
-  HA17 --- HA20
-  HA17 --- HA27
-  HA18 --- HA19
-  HA19 --- HC15
-  HA18 --- HA20
-  HA18 --- HA31
-  HA18 -.- HA30
-  HA20 --- HA23
-  HA20 --- HA33
-  HA21 --- HA26
-  HA21 --- HA29
-  HA21 -.- HB17
-  HA22 --- HA23
-  HA22 --- HA24
-  HA22 --- HA26
-  HA25 --- HA26
-  HA25 -.- HA28
-  HA28 -.- HA32
-  HA29 -.- HB3
-  HA30 -.- HC7
-```
+<!-- DIAGRAM: T4_HA_POCKET.md -->
 
 **Reading the diagram.** Solid edges are open passage. The heavy edge is the Processional of the Dead running west to the monument. Dotted edges are hidden, secret or tile-gated. `HA.19` runs upward into `HC.15`, the instruction rooms. *Drawn as a stub end at this region's own pass; the landing was fixed at `HC`'s step 8 pass and the edge is amended in here — a reconciliation rather than new content.*
 
