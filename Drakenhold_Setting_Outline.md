@@ -208,6 +208,14 @@ The campaign's spine is extraction and survival. Drakenhold is a place to rob an
 
 **Owlbear** (Beast) – AD: 5d6+3 MA: 2 Description: A hulking fusion of owl and bear, silent until the moment it isn't. Hunts by sound in total dark and territorial well past the point of reason, tearing into anything that lingers in its den.
 
+**Giant Rat** (Beast) – AD: 1d6-2 Description: Waist-high vermin bred fat on thirty years of spoiled stores, moving in numbers that make the count the danger rather than the bite. Where they are thickest the grain is still worth something, which is the only reason to go where they are.
+
+**Cave Bear** (Beast) – AD: 4d6+2 Description: A denning bear that came in through a broken run and never found a reason to leave, sleeping out the cold in a chamber with one way in. It does not hunt intruders and it does not tolerate them between itself and that door.
+
+**Giant Bat** (Beast) – AD: 1d6 Description: Roosting in the flues and high vaults in colonies of dozens, harmless asleep and a blinding, flame-killing storm the moment noise or light disturbs them. The floor beneath a roost is ankle-deep and audible from two chambers away.
+
+**Sootwing** (Beast) – AD: 1d6-1 Description: A long-billed flier the size of a hand, nesting in the warm flues and dropping onto whatever passes below to drink. Singly a nuisance; a disturbed flue empties itself, and a party that does not get out of the shaft loses blood faster than it can count.
+
 **Kobold** (Humanoid) – AD: 1d6-2 Description: Small, cowardly reptilian opportunists who fight only in numbers and flee the instant those numbers thin. Favour traps, tunnels and noise over any direct confrontation.
 
 **Kobold Warrior** (Humanoid) – AD: 1d6 Description: A kobold given crude armour, a spear, and just enough drilling to hold a line — as long as someone braver is visibly watching.
@@ -224,6 +232,12 @@ The campaign's spine is extraction and survival. Drakenhold is a place to rob an
 
 **Dwarven Survivor** (Humanoid) – AD: 2d6 Description: One of the last dwarves of the original hold, alive only because it has spent thirty years in passages even the Automatons do not patrol. Avoidant and suspicious by default, and will not fight unless cornered.
 
+**Orc** (Humanoid) – AD: 1d6+1 Description: Broad, sullen and hired, brought up the road by the Hobgoblins for the seasons when a toll needs enforcing and given the work their employers will not do themselves. They fight for terms, they know exactly what the terms are, and they can be bought by anyone willing to better them.
+
+**Bugbear** (Humanoid) – AD: 3d6 Description: Head and shoulders above a hobgoblin and quieter than a man half its weight, working alone or in pairs and opening a fight from behind wherever the ground allows it. Takes the far post of a warren and lets the smaller things ahead of it do the counting.
+
+**Ostmor** (Humanoid) – AD: 2d6 Description: *ost* and *mor*, water-deep — the dwarven name for the pale crested things that came up the flooded workings after the pumps stopped. They stink strongly enough to be met around a corner, they see in no light at all, and they hold the wet galleries because nothing else wants them.
+
 **Sellsword** (Man) – AD: 2d6+1 Description: Hired steel with a season or two of real fighting behind it, competent, unheroic and acutely aware of what it is being paid. Holds while the terms hold.
 
 **Delver** (Man) – AD: 2d6 Description: A treasure hunter far enough into their trade to be dangerous and not far enough to be careful. Reads a room for its exits and its valuables and rarely in that order.
@@ -234,11 +248,21 @@ The campaign's spine is extraction and survival. Drakenhold is a place to rob an
 
 **Living Statue** (Construct) – AD: 3d6+1 Description: A stone guardian animated purely by rune magic, holding a single post or threshold with total indifference to anything beyond the bounds of its watch. Slow and nearly silent, unsettling mainly for how long it stays motionless before moving at all.
 
+**Brynkar** (Construct) – AD: 3d6 Description: *bryn* and *kar*, span-guard — squat stone figures set into the parapets and cornices of the Skybridge and the high outside galleries, indistinguishable from the roof-work until one of them moves. They hold a stretch of exposed stone and nothing else, and they do not follow anything indoors.
+
+**Sigkar** (Construct) – AD: 2d6+1 Description: *sig* and *kar*, rune-guard — a waist-high post of banded stone standing beside a door, lesser work than a Living Statue and built to challenge rather than to kill. It asks once in old dwarven, it asks again, and it strikes on the third failure to answer.
+
 **Skeletal Warrior** (Undead) – AD: 2d6+1 Description: The drilled remains of a fallen soldier, still working through old formation and weapon drills with no fear, fatigue or judgement left to interrupt them. Holds a post or a patrol route with total indifference to the cost.
 
 **Shadow** (Undead) – AD: 2d6-1 Description: A sliver of negative life-force clinging to total darkness, cold and nearly silent until it is already touching you. Flinches from real light rather than press a losing fight, and drains warmth from anything it gets a grip on.
 
 **Dwarven Wraith** (Undead) – AD: 4d6+2 Description: The vengeful spirit of a dwarven defender who died holding this place, bound by oath, grudge or both. Recognises every intruder as the next in a long line of looters, but may still parley in old dwarven for someone who shows the hold real respect. Every one of them carries some private fear or fury toward the Dragon, and that is the lever.
+
+**Ghoul** (Undead) – AD: 2d6 Description: The unburied of the Outer City, gone hungry and gone wrong across the ten years since anyone came to claim them. They keep to the cellars and the collapsed streets through the day, and they are the reason Girkel is quiet at night rather than merely empty.
+
+**Drowned** (Undead) – AD: 1d6+1 Description: Whatever went under when the lower stores flooded, standing where the water left it and moving again when something warm comes past. Slow, silent, and dangerous only in the numbers the flood made of them — which in the deep galleries is the whole of the danger.
+
+**Unnamed Dead** (Undead) – AD: 4d6+1 Description: A dwarven wraith whose name has gone off every surface that ever carried it, leaving nothing it can be addressed as. It cannot be parleyed with, cannot be turned by showing the hold respect, and cannot be given what it wants, because it no longer knows what that was. The lever that works on every other wraith in Drakenhold is precisely the thing this one has lost.
 
 **Drakmorith** (Horror) – AD: 5d6+2 Description: A wyrm spirit thirty years free of the collar the dwarves put on it, no longer shaped like anything that was ever alive. It arrives as wrongness in the architecture before it arrives as a thing — a corridor that has gained a turn, a door that opens from a side the room does not have. It does not negotiate and does not appear to want. The name is dwarven and it is a confession: the survivors know exactly what these were.
 
@@ -250,9 +274,286 @@ The campaign's spine is extraction and survival. Drakenhold is a place to rob an
 
 **Ooze** (Fantasy Creature) – AD: 2d6 Description: A mindless corrosive mass that has pooled and fed in the hold's flooded lower halls for decades, swollen on collapsed stores and whatever drowned alongside them. Flows toward movement, warmth or noise with nothing behind it, and eats through cheap gear left sitting in it.
 
+**Glass Ooze** (Fantasy Creature) – AD: 3d6 Description: A near-transparent mass filling a corridor wall to wall and floor to ceiling, moving at a slow walking pace and visible chiefly by what hangs suspended inside it. Everything it has already taken is still in there and still worth carrying, which is the problem it sets rather than the fight it offers.
+
+**Rust-Eater** (Fantasy Creature) – AD: 2d6-1 Description: A low whiskered feeder that finds worked iron by scent and reduces it to red dust at a touch, wholly uninterested in flesh. It is barely a fight and it is among the worst things that can happen four levels down, because everything it ruins was carried in.
+
+**Grave-Crawler** (Fantasy Creature) – AD: 2d6+1 Description: A segmented scavenger the length of a man, worked up into the crypt galleries through whatever the flooding opened and feeding on what the tiers hold. Its forward tendrils carry a paralytic, and it drags what it stops back down the gallery rather than eating where it kills.
+
+**Wearer** (Fantasy Creature) – AD: 3d6+1 Description: A pale unfinished thing that takes the shape and manner of anything it has watched long enough, and which has had thirty years of a nearly empty mountain in which to practise. It does not fight while the shape is holding, and the shape is the whole of its threat.
+
 **Wood Sprite** (Fey) – AD: 1d6-2 Description: Palm-sized, light-bending fae bound to the Ironwood and unable to stray past its edge. More trickster than threat — they scatter trail markers, mimic voices and lead travellers in circles, preferring riddles and petty bargains to any kind of fight.
 
 *Unique NPCs and one-off variants — a named hobgoblin captain, a mad Runemaster, a particular wraith — are stated inline within their Gazetteer entry. The Bestiary holds only the reusable templates.*
+
+---
+
+## TREASURE
+
+*Five types, per the Design Notes. Types I through IV read as d20 tables; Type V is bespoke. **Every row states weight in slots (wt) and value in coins (cn), and the weight is the point.** The campaign's spine is extraction: five slots may be worn and ten carried, a hundred coins is a slot, and every one of these finds is a decision made hours from the door. A Referee who prices a find and forgets to weigh it has removed the module's central tension.*
+
+*Value is what a thing is worth, not what it fetches. Resale runs a ten to twenty percent fee and foreign coin runs three percent to change, both per the Design Notes. **Rolled results are a starting point and the Referee is expected to substitute** — a table result that contradicts what a location already holds loses to the location.*
+
+### Type I — Scavenged Loot
+
+*Personal possessions and loose coinage. What is found on a body, in a pack, under a bunk. Averages one slot and a hundred coins; both range from a tenth of that to five times it. This is the module's most common find by a wide margin and the one that teaches the slot rule.*
+
+| d20 | Scavenged Loot | wt | cn |
+|---|---|---|---|
+| 1 | A belt-purse of mixed copper, cut from someone who did not need it afterward. | 0 | 15 |
+| 2 | Boots off a delver who stopped needing them, and better than the ones being worn. | 1 | 40 |
+| 3 | Loose silver spilled across a floor where someone was robbed in a hurry. | 1 | 100 |
+| 4 | A dwarven hand-lamp, dry, with its wick and striker still in the base. | 1 | 60 |
+| 5 | A folded oilcloth cape, still waterproof, still smelling of the river. | 1 | 25 |
+| 6 | Three days of hard rations wrapped in wax, edible and unpleasant. | 1 | 20 |
+| 7 | A signet ring in soft gold, worn thin, the device unreadable. | 0 | 120 |
+| 8 | A knife with a name scratched down the tang that is not the owner's. | 0 | 30 |
+| 9 | A wound coil of good rope, forty feet, one splice in it. | 1 | 35 |
+| 10 | A sealed flask of spirits, dwarven, strong enough to burn. | 1 | 50 |
+| 11 | Foreign coin — northern, heavy, and needing a changer before it spends. | 2 | 200 |
+| 12 | A tally-stick and a stub of chalk, worthless, and it says where its owner was going. | 0 | 5 |
+| 13 | A brooch of silver and jet, a mourning piece, made for a dwarf. | 0 | 180 |
+| 14 | Somebody's whole pay, buried in a bedroll and never collected. | 4 | 400 |
+| 15 | A cracked carved tile, whole enough to be sold to someone who will not check. | 1 | 90 |
+| 16 | Spare boot-nails, buckles and a horn of grease — a repair kit in everything but name. | 1 | 20 |
+| 17 | A child's carved animal, dwarven work, worn smooth by a thumb. | 0 | 10 |
+| 18 | A purse of good silver, untouched, and the hand still through the strap. | 5 | 500 |
+| 19 | Two flasks of lamp oil and a bundle of tapers. | 2 | 30 |
+| 20 | Letters, a map fragment or a page of a ledger. **No coin value.** Roll on the Lore register instead, or take the nearest unplaced entry from it. | 0 | — |
+
+### Type II — Equipment and Armaments
+
+*Kits, gear, weapons and armour. Value and effect both turn on Quality, and Quality is rolled separately: **1–2 Poor, 3–16 standard, 17–19 Fine at three to ten times value, 20 Masterwork at ten to a hundred times.** Cursed is never rolled — it is placed, and placed for a reason. All four grades and their effects are the Design Notes' and are not restated here.*
+
+| d20 | Equipment and Armaments | wt | cn |
+|---|---|---|---|
+| 1 | Thieves' tools, complete, in a roll that has been used. | 1 | 200 |
+| 2 | Blacksmith tools — the bench half, not the forge half. | 3 | 150 |
+| 3 | Climbing gear: pitons, hammer, harness, line. | 2 | 120 |
+| 4 | A writing kit, sealed ink still liquid. | 1 | 80 |
+| 5 | Arctic clothing sized for a dwarf, which is to say sized wrong. | 2 | 100 |
+| 6 | A disguise kit, and the disguises in it are dwarven livery. | 1 | 150 |
+| 7 | A hand axe, dwarven, the head still true. | 1 | 40 |
+| 8 | A war hammer with a guild mark under the grip. | 2 | 90 |
+| 9 | A spear, human work, cheap, and there are eleven more of them. | 1 | 15 |
+| 10 | A short sword and belt, oiled and wrapped and put away properly. | 1 | 100 |
+| 11 | A crossbow with a cracked stock and a full quiver. | 2 | 70 |
+| 12 | A shield with a house device painted over another house device. | 1 | 60 |
+| 13 | Light mail, dwarven, needing a day's work to fit anyone else. | 3 | 250 |
+| 14 | Heavy plate off a guard post, magnificent, and nobody can carry it out and anything else. | 6 | 600 |
+| 15 | A surveyor's chain and rods, and the marks on it are Drakenhold's. | 2 | 110 |
+| 16 | A miner's kit — pick, wedges, candle-hat, drag-bag. | 3 | 90 |
+| 17 | A physician's roll, dwarven, the instruments unrusted. | 1 | 180 |
+| 18 | A lantern built to shield to a slit, which is worth more below than its price says. | 1 | 130 |
+| 19 | A pump-bellows or a valve wheel — machine parts, and something upstairs is missing them. | 4 | 200 |
+| 20 | A weapon or harness fitted for a rod, and useless without one. | 2 | 300 |
+
+### Type III — Luxury and Trade Goods
+
+*Furniture, jewelry, gemstones, artwork, commodities. One to fifty slots, a hundred to five thousand coins, and the heavy end of it is where a party learns what a mule is for. **The most valuable rows here cannot be carried out by a party on foot in one trip**, and that is deliberate: `E.4` and `E.5` already teach it on the way in.*
+
+| d20 | Luxury and Trade Goods | wt | cn |
+|---|---|---|---|
+| 1 | A pouch of cut gemstones, guild-graded, small and absurd in value per slot. | 1 | 1200 |
+| 2 | Uncut stone still in its matrix — worth a third of cut and four times the weight. | 4 | 400 |
+| 3 | A gold torc, dwarven, heavy, and recognisable to anyone who knows the houses. | 1 | 900 |
+| 4 | A set of silver plate for eight, boxed. | 8 | 700 |
+| 5 | Bolts of dyed cloth, dry and unspoiled, worth more downriver than here. | 10 | 300 |
+| 6 | A cask of dwarven spirits, thirty years old and improved by it. | 12 | 500 |
+| 7 | Ingots of worked iron, stamped, stacked, and the stamp is Khorvak's. | 20 | 400 |
+| 8 | Copper ingots, the same, and heavier per coin. | 30 | 350 |
+| 9 | A carved stone relief prised from a wall, cracked in the prising. | 25 | 600 |
+| 10 | A tapestry of the founding, rolled, and the moths have had a corner. | 6 | 800 |
+| 11 | A chest of guild seals and stamps — no bullion value, considerable value to the wrong buyer. | 3 | 400 |
+| 12 | Lamp oil in quantity, sealed, which below the Under Levels is not a trade good at all. | 15 | 200 |
+| 13 | A jewelled ceremonial cup, royal work, and provenance that will hang the seller. | 1 | 1500 |
+| 14 | A dwarven strongbox, empty, and worth carrying for the lock alone. | 8 | 350 |
+| 15 | Preserved stores — salt, wax, dried grain — the whole reason Brankel was cut. | 20 | 250 |
+| 16 | A table, chairs and a cabinet in ironwood, immaculate, and immovable in any real sense. | 50 | 1000 |
+| 17 | A gemstone the size of a thumb, flawed, and still the single richest slot in most campaigns. | 1 | 2500 |
+| 18 | A rune-marked strongchest whose contents are Type IV and whose lock is somebody else's problem. | 30 | 5000 |
+| 19 | Silver in bar, banded, counted, and the count is written on the band. | 25 | 2500 |
+| 20 | A guild's whole working stock of one commodity, in one room, priced in mules rather than in slots. | 50+ | 5000 |
+
+### Type IV — Caches
+
+*Gathered valuables, gathered **for a reason**, and almost always hidden or gated. Five to fifty slots, five hundred to ten thousand coins. A cache is a pattern before it is a find: **its reason for surviving is the whole discipline**, and a cache without a stated reason and a stated gate is a pile of coins in a room. **A `LOW` location may not contain one** — a location holding a cache is written `MEDIUM` or above.*
+
+*Each row states the cache and, in the same breath, why it is still there. The gate is the Referee's to place, and it is physical: a thing to move, a thing to open, a name to speak, a place to stand.*
+
+| d20 | Cache | wt | cn |
+|---|---|---|---|
+| 1 | A house's flight money, packed for a departure that never happened. Behind a hearth-stone. | 10 | 1000 |
+| 2 | Guild dues collected and never banked, because the collector died on the way. Under a floor. | 12 | 1500 |
+| 3 | A crew's pooled take from a previous expedition, buried to be recovered on the way out. None came out. | 8 | 900 |
+| 4 | Tribute skimmed off the chain and hidden by a lizardman who has not been caught yet. **He is still checking on it.** | 15 | 2000 |
+| 5 | Grave-goods lifted from the tiers and stashed to be carried in a second load. | 10 | 1200 |
+| 6 | The pay chest of a guard post, bolted down, and the post fell before payday. | 20 | 1800 |
+| 7 | A Runemaster's private reserve of rune-silver, in a room with a ward on it. | 6 | 3000 |
+| 8 | A smuggler's parcel walled up in the Outer City, and the wall is newer than the building. | 9 | 1100 |
+| 9 | Coin swept up off a hall floor by survivors and hidden where survivors go. | 14 | 800 |
+| 10 | A clan's regalia, hidden rather than surrendered when the war turned. Worth more to a wraith than to a fence. | 12 | 2500 |
+| 11 | Bullion moved out of a vault in the last week and never moved any further. | 40 | 6000 |
+| 12 | A dowry, boxed, sealed, addressed, and never delivered. | 7 | 1400 |
+| 13 | A workshop's stock of finished pieces, crated for a caravan that did not come. | 30 | 4000 |
+| 14 | The takings of a toll, thirty years of them, in a booth nobody has entered. | 25 | 3500 |
+| 15 | Something a Guildmaster hid from his own guild, and the ledger that says why. | 5 | 2200 |
+| 16 | A royal reserve, rod-locked, and one rod is not enough. | 45 | 10000 |
+| 17 | The hold's emergency store of coin against a siege, in the place a siege store goes. | 50 | 8000 |
+| 18 | A private hoard belonging to something still living in the mountain. **It will notice.** | 20 | 5000 |
+| 19 | Tribute assembled and never carried up, because the carriers ran. | 35 | 7000 |
+| 20 | A cache whose gate is a name, and the name is recoverable two regions away. | 18 | 4500 |
+
+### Type V — Magical Baubles
+
+*Bespoke, per the Design Notes. Enchanted weapons and armour, spell scrolls, rings, wands, oils and potions. **This table stops below Artifact tier.** Artifacts are unique, named, priceless and placed by hand; the lance is the module's and its properties are a Standing Mystery that no rolled result may settle. Nothing on this list is a lance, resembles a lance, or hints at what a lance does.*
+
+*Value is stated where a fence would price it and left blank where the thing is worth what it does. Magic here is dwarven and Runemaster work almost without exception, which means most of it is legible, marked, and traceable to whoever made it.*
+
+| d12 | Magical Bauble | wt | cn |
+|---|---|---|---|
+| 1 | An oil that makes worked stone grip like dry rope for an hour. Two applications left. | 0 | 400 |
+| 2 | A ring cut with a warding rune that answers once and then is a ring. | 0 | 800 |
+| 3 | A hand-lamp that gives light without flame. **Below the Under Levels this is worth more than any coin in the module.** | 1 | — |
+| 4 | A scroll in Runemaster hand. Read Magic is needed for the effect and never for the meaning. | 0 | 600 |
+| 5 | A weapon with a rune along the fuller that warms in the presence of Wyrms. | 1 | — |
+| 6 | A wand of three charges that throws a door bolt, a valve or a lift — a rod's work at a distance. | 0 | 1200 |
+| 7 | Mail that does not rust, does not sound, and does not fit. | 3 | 1000 |
+| 8 | A potion of dwarven make, unlabelled, and there is a ledger somewhere that labels it. | 0 | 300 |
+| 9 | A salve that closes a wound and leaves the rune that closed it. | 0 | 250 |
+| 10 | A carved tile that is also enchanted, and the enchantment is not what the tile is for. | 1 | — |
+| 11 | A rod of a tier the party has not yet met, and it opens exactly one thing. | 1 | — |
+| 12 | An enchanted piece whose maker's mark names a Runemaster, and naming him is worth more than the piece. | 1 | 900 |
+
+---
+
+## TRAPS
+
+*Referee-facing. **This is a catalogue, not a random table** — a trap is placed, never rolled, and it is placed at `MEDIUM` weight or above. A trap with a tell and a decision is a location; a trap without one is a die roll wearing furniture, and this module does not carry them. `LOW` locations hold none.*
+
+*Every entry states four things and is not written until all four exist: **the tell** (what a careful party perceives before triggering it), **the trigger** (the physical act that sets it off), **the effect**, and **the decision** (what the party is choosing between once they know). Resolution uses the Design Notes as they stand — the Find and Remove Traps move, the Keen Eyed advantage, and the guidance that a large mechanism may be broken into successive rolls for its several parts. **No trap here introduces a mechanic.***
+
+***The module's position on traps.** Drakenhold's traps are dwarven security, built by people who expected robbers and expected to catch them. They are designed to stop, mark, hold and alarm far more often than to kill, because a thief who is caught can be questioned and a thief who is dead cannot. A Referee running these as lethal randomness is running a different dungeon. The exceptions are the Runemaster wards, which were built to kill and have.*
+
+- **The covered pit.** *Tell:* the dust lies flat across a floor that is scuffed everywhere else, and the flagstone ring does not run true. *Trigger:* weight at the centre. *Effect:* a drop of ten to twenty feet onto old stone. *Decision:* the pit is crossable at the edges by anyone unencumbered, and the party is carrying loads.
+- **The dart volley.** *Tell:* a wall of small dark holes at chest height, and no dust in them. *Trigger:* a pressure plate or a drawn bolt. *Effect:* a volley across a corridor. *Decision:* the corridor is passable low or passable fast, and both cost something the party would rather keep.
+- **The falling block.** *Tell:* a ceiling course cut across rather than along, and a channel in the floor to catch it. *Trigger:* passing beneath the midpoint. *Effect:* the block drops and seals the corridor. *Decision:* it is a door as much as a weapon — the party may be shut in, shut out, or shut apart.
+- **The cascading sand.** *Tell:* a fine dry drift in the corners of a sealed room, and a whistle from the vents when the door moves. *Trigger:* the door closing behind. *Effect:* the room fills, slowly enough to work in and fast enough to matter. *Decision:* the room holds something worth the time, and the time is now counted.
+- **The poison needle in the lock.** *Tell:* a keyhole with a burr of green on the ward, and a scratch pattern that says someone else already tried. *Trigger:* picking or forcing without clearing it. *Effect:* a wound and a dwarven soporific, which was meant to hold a thief until the guard came. *Decision:* the guard is thirty years gone and the soporific is not.
+- **The counterweight grave-trap.** *Tell:* the slab sits proud of its tier by a finger's width and the mortar around it is packed, not set. *Trigger:* lifting the goods rather than the slab. *Effect:* a deadfall, or a gallery door dropping behind. *Decision:* the goods can be taken with the slab left seated, by anyone who works out that the slab is the trigger and not the lid. Built by professionals; see `HB.9`.
+- **The rod-locked strongbox.** *Tell:* a lock with no keyhole and a socket instead, and a maker's mark. *Trigger:* opening it by any means that is not its rod. *Effect:* the box does what it was built to do, which is not lethal by design. *Decision:* find the rod, take the whole box, or accept being marked. See `FE.6`.
+- **The proximity ward.** *Tell:* runes cut around a threshold rather than on the door, and dead vermin at the line. *Trigger:* proximity, not touch — the door need never be reached. *Effect:* Runemaster work, and it has killed. *Decision:* wards are legible to anyone who learned the script on the way in, which is why the waystones exist. See `GD.9`.
+- **The alarm that is not a trap.** *Tell:* a wire, a stone on a ledge, a strung line of shells — crude work, and recent. *Trigger:* passage. *Effect:* something two rooms away knows. *Decision:* the party may spring it deliberately, and there are places where that is the right play.
+- **The flooded step.** *Tell:* a waterline on the wall that is higher than the water. *Trigger:* opening the wrong door in a flooded run. *Effect:* the level equalises through the party. *Decision:* the door can be opened from the other side at leisure, by a party willing to go the long way.
+- **The false floor over the works.** *Tell:* the floor sounds hollow and warm, and the vents below it are the ones that still run. *Trigger:* concentrated weight, most often a party bunched at a find. *Effect:* a fall into live machinery or a hot flue. *Decision:* spread out and lose the light, or bunch up and take the risk.
+- **The lock that records.** *Tell:* a lock with a ratchet and a small paper drum behind a grille. *Trigger:* opening it at all, correctly or otherwise. *Effect:* nothing, now. The attempt is written down with its hour. *Decision:* the party will be back this way, and so will whoever reads the drum.
+
+---
+
+## GRAFFITI
+
+*d20. Rolled where a party stops to read a wall, a doorpost, a bench-underside or a jamb. Setting-wide and heavily used — scratched names are the hold's unofficial index, and they check against the written ledgers elsewhere. `D.6`, `E`, `GB.9` and `GA.16` each carry a worked instance; this table furnishes everywhere else.*
+
+***Carved and scratched are different words in this setting and the distinction is load-bearing.*** *Official stone is **carved**: square letters, cut deep, made by someone with authority to cut it. Graffiti is **scratched** or **scrawled**: a plainer hand, shallow, made by someone with none. A party that learns to tell them apart can read who was permitted and who was merely present, and that reading is how the King's struck name and the Knight's absent one are eventually understood.*
+
+***Rolled names are generic.*** *They are built from the recorded roots and mean nothing. **Where a result would be better as a placed name, the Referee substitutes one** — Torvin Ganthur belongs in graffiti by design and appears nowhere in official carving, and a party that finds him under a bench has found something. Substituting a placed name is a decision to hand the party a thread; rolling a generic one is a decision not to.*
+
+| d20 | Graffiti |
+|---|---|
+| 1 | A name, scratched shallow, with a stroke cut through it. Whoever cut the stroke came back. |
+| 2 | A name, scratched shallow, with no stroke. Most of them have no stroke. |
+| 3 | Four or five names one under the other going down a doorpost, oldest at the top and furred with lichen. |
+| 4 | A name and a date in the dwarven reckoning, and the date is before the Breaking. |
+| 5 | A delver company's mark — a device, not letters — and the same device appears three regions away. |
+| 6 | A tally of strokes in fives, cut by someone counting days, and it stops mid-group. |
+| 7 | A warning in the square letters, cut by someone with the authority to cut it, and painted over in a plainer hand with a different warning. |
+| 8 | *Do not go down.* No signature, no date, and a good hand. |
+| 9 | An arrow, and it does not point at anything the party can see from here. |
+| 10 | A grievance about a named guild, obscene, detailed, and thirty years stale. |
+| 11 | A prayer, or the beginning of one, scratched at a height that means the writer was sitting. |
+| 12 | Two hands arguing across the same stretch of wall, months apart, and the second hand wins. |
+| 13 | A rune of warding, scratched by someone who could not really write runes and meant it anyway. |
+| 14 | A carved official inscription with one name chiselled out of it, and the chiselling is cruder than the carving. |
+| 15 | A map, scratched, of four rooms — three of which the party can identify and one of which they cannot. |
+| 16 | A child's hand, low on the wall, drawing something with wings. |
+| 17 | Marks that are not letters in any script the party knows, cut with something that was not a chisel. |
+| 18 | A name scratched over a carved name, claiming a place that was somebody else's. |
+| 19 | A threat, specific, naming a person and a debt, and it has been answered underneath. |
+| 20 | A name that a party has already met somewhere else in the module. **Referee's choice, and this result is the reason the register exists.** |
+
+---
+
+## PROCEDURAL TABLES
+
+*Organic content that belongs to no other table and fits no state machine. **These are colour, and colour is all they are.** They are permitted at location, region and block level, and a table that scores something the players were not already tracking is not a procedural table — it is a mechanic, it belongs to the rules project, and it is not written into a region file.*
+
+*Two mechanical constraints on any procedural table written into a region file, both of them the mechanical checks' and neither negotiable:*
+
+1. ***The name line must be more than one word,*** *and the table must be placed **after** the region's mandated Events, Encounter or Danger table. The checker locates a region's mandated table by the first single-word bold name line followed by a die — a table headed `**Menu** — d20,` placed above it will be read as the region's table and the check will fail. `**What Is On The Board** — d20,` is safe.*
+2. ***A procedural table never substitutes for the mandated one.*** *Table type follows Classification: SAFE carries Events, WILD carries Encounters, DANGEROUS carries Dangers, and a procedural table is always in addition.*
+
+*The five below are setting-level and are furnished here so that regions do not each invent their own.*
+
+**What Is On The Board** — d6, at the Thornhaven inn, rolled on arrival and again each day the party stays.
+
+| d6 | On the board |
+|---|---|
+| 1 | River fish, whole, and more bones than anyone wants. |
+| 2 | Mutton and barley, and it has been on since yesterday. |
+| 3 | Bread, hard cheese, onions. The honest option. |
+| 4 | Something shot in the Ironwood, and the cook is not saying what. |
+| 5 | Good stew, good beer, and the price has gone up because a crew came in. |
+| 6 | Nothing hot. The kitchen is feeding somebody else and the party will hear who. |
+
+**Who Is Drinking, And What They Want** — d8, at the Thornhaven inn. Feeds Gather Information alongside the Rumours table; this says who is talking, Rumours says what they say.
+
+| d8 | Drinking |
+|---|---|
+| 1 | A camp hand who has been paid off by a crew that went in without him, and is bitter and cheap. |
+| 2 | Two of Skeed's rivermen, who know exactly what came downriver and when. |
+| 3 | A delver counting slots out loud and arguing with himself about a second trip. |
+| 4 | A sellsword between contracts, listening more than drinking, pricing the party. |
+| 5 | Somebody's widow, who wants a name found and will pay badly for it. |
+| 6 | A trader off the west road who does not care about the mountain and knows what things are worth. |
+| 7 | Nobody worth talking to, and the room goes quiet when the party comes in. |
+| 8 | Someone who has been inside and come out, and will not discuss it while sober. |
+
+**What Grows In The Clearing** — d8, in a clearing off the Ironwood Trail, once per clearing.
+
+| d8 | Foraged |
+|---|---|
+| 1 | Nothing. The clearing is bare and the bareness has a reason. |
+| 2 | Berries, plentiful, and something else has been eating them today. |
+| 3 | Fungus on a fallen ironwood — edible, and the same fungus grows in the Under Levels. |
+| 4 | A bitter root the goblins trade for and will not explain. |
+| 5 | Clean water, a spring, and cart-ruts leading away from it. |
+| 6 | Herbs a physician would pay for, if the party knows one. |
+| 7 | Fenn's mark, cut and bound rather than carved, and the clearing is hers. |
+| 8 | Good forage, and the clearing is a game trail's crossing, which is why. |
+
+**What The Goblins Threw Away** — d8, in a goblin midden. **Nothing here is treasure. One or two things here are information.**
+
+| d8 | In the midden |
+|---|---|
+| 1 | A cracked carved tile, worthless as a tile, and it proves the goblins have had tiles. |
+| 2 | Paper, pulped by rain, and one legible line of a manifest. |
+| 3 | A rod of a tier the goblins could not use and did not recognise. |
+| 4 | Human boots, good ones, and no body anywhere. |
+| 5 | Dwarven bones, old, handled, and not eaten. |
+| 6 | A guild seal, unbroken, on nothing. |
+| 7 | Broken lamp glass in quantity — somebody was carrying a lot of light. |
+| 8 | A weapon too heavy for a goblin and kept anyway, as a trophy from something. |
+
+**What The Body Is Still Carrying** — d6, on a corpse on the road or in the halls. Couples to Treasure Type I; roll there for the specifics.
+
+| d6 | Still on them |
+|---|---|
+| 1 | Nothing. Stripped, and recently. |
+| 2 | One Type I find, and the manner of death is legible. |
+| 3 | Two Type I finds and a name — scratched into gear, or sewn into a collar. |
+| 4 | Their kit, intact, because whatever killed them did not want it. |
+| 5 | A document. Roll on the Lore register, or take the nearest unplaced entry. |
+| 6 | Everything they carried, and the reason nobody took it is still in the room. |
 
 ---
 

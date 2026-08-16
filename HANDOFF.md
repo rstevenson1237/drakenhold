@@ -14,7 +14,8 @@
 | How a location is built — the classification scheme and the rules binding across it | `DESIGN_PATTERNS.md` |
 | **The one file to open before writing a location** — `mode × weight`, nine of them | `patterns/` |
 | Game mechanics — **source of truth, read-only here** | `Rules_Light_TTRPG_Design_Notes.md` |
-| Setting-level content: Truths, Rumours, History, Factions, Bestiary | `Drakenhold_Setting_Outline.md` |
+| Setting-level content: Truths, Rumours, History, Factions, Bestiary, Treasure, Traps, Graffiti, Procedural Tables | `Drakenhold_Setting_Outline.md` |
+| Documentary items with a far end — an index, never a source | `LORE_INDEX.md` |
 | Which regions exist, their Mode, Die, stub count and room budget | `regions/00_INDEX.md` |
 | Region content — **authoritative** | `regions/` |
 | Shared routes, budgets and **cross-region threads** | `blocks/` |
