@@ -196,6 +196,8 @@ code {
 }
 a.code-ref { text-decoration: none; border-bottom: 1px dotted var(--accent); }
 a.code-ref:hover code { background: var(--accent); color: var(--bg); }
+a.ref { color: inherit; text-decoration: none; border-bottom: 1px dotted var(--accent); }
+a.ref:hover { background: var(--accent); color: var(--bg); }
 table {
   border-collapse: collapse;
   width: 100%;
@@ -342,10 +344,23 @@ function slugOf(fileName) {
 
 const pages = [];
 
-// 1. The setting outline.
+// 1. The setting outline: the index (title, tagline, Overview) followed by
+//    its fields from outlines/, in numeric order. Same assembly as
+//    scripts/build.py, and the `## SECTIONS` navigation table is dropped the
+//    same way — it points at source files and is not play content.
 {
   const p = path.join(REPO, "Drakenhold_Setting_Outline.md");
-  const md = read(p);
+  let index = read(p);
+  const marker = "\n## SECTIONS\n";
+  if (index.includes(marker)) {
+    index = index.slice(0, index.indexOf(marker)).replace(/\s*-+\s*$/, "");
+  }
+  const outlineDir = path.join(REPO, "outlines");
+  const fields = existsSync(outlineDir)
+    ? readdirSync(outlineDir).filter((n) => /^\d\d_.*\.md$/.test(n)).sort()
+    : [];
+  const md = [index.trimEnd(), ...fields.map((n) => read(path.join(outlineDir, n)).trimEnd())]
+    .join("\n\n---\n\n") + "\n";
   // The outline's own H1 is "DRAKENHOLD", which is useless as a nav label.
   pages.push({ slug: "setting-outline", title: "Setting Outline",
                group: "The Setting", md, source: path.relative(REPO, p) });
@@ -449,16 +464,21 @@ function escapeHtml(s) {
 const _PRE_OR_CODE_RE = /<pre[\s\S]*?<\/pre>|<code[\s\S]*?<\/code>/g;
 const _ARROW_RE = /(^|\s)-&gt;(\s|$)/g;
 
-function arrowify(html) {
+// Apply fn to every stretch of html that is not inside a pre or code span.
+function outsidePreOrCode(html, fn) {
   const out = [];
   let last = 0;
   for (const m of html.matchAll(_PRE_OR_CODE_RE)) {
-    out.push(html.slice(last, m.index).replace(_ARROW_RE, "$1\u2192$2"));
+    out.push(fn(html.slice(last, m.index)));
     out.push(m[0]);
     last = m.index + m[0].length;
   }
-  out.push(html.slice(last).replace(_ARROW_RE, "$1\u2192$2"));
+  out.push(fn(html.slice(last)));
   return out.join("");
+}
+
+function arrowify(html) {
+  return outsidePreOrCode(html, (s) => s.replace(_ARROW_RE, "$1\u2192$2"));
 }
 
 const CODE_SPAN_RE = /<code>([A-Z]{1,2}\.[0-9]+[a-z]?)<\/code>/g;
@@ -471,6 +491,13 @@ const CODE_SPAN_RE = /<code>([A-Z]{1,2}\.[0-9]+[a-z]?)<\/code>/g;
 function linkifyAndAnchor(html, currentSlug) {
   const out = [];
   for (const line of html.split("\n")) {
+    // Outline field headings become the targets reference tokens point at.
+    const sectionMatch = /^<h2[^>]*>([A-Z][A-Z ]+)<\/h2>/.exec(line);
+    if (sectionMatch && outlineSections.has(sectionMatch[1].trim())) {
+      const slug = sectionSlug(sectionMatch[1].trim());
+      out.push(line.replace(/^<h2([^>]*)>/, `<h2$1 id="${slug}">`));
+      continue;
+    }
     const headingMatch = /^<h3[^>]*><code>([A-Z]{1,2}\.[0-9]+[a-z]?) /.exec(line);
     if (headingMatch) {
       const code = headingMatch[1];
@@ -487,6 +514,55 @@ function linkifyAndAnchor(html, currentSlug) {
     out.push(line.replace(CODE_SPAN_RE, (whole, c) => linkFor(c, whole, currentSlug)));
   }
   return out.join("\n");
+}
+
+// ---------------------------------------------------------------------------
+// The editorial markup layer
+// ---------------------------------------------------------------------------
+// Two forms, per DECISIONS.md ## NOTATION AND EDGE TYPES:
+//   [[ ... ]]        an editorial note. Designer register — it never reaches a
+//                    reader, so it is stripped from the markdown before render
+//                    whether or not the final pass has struck it yet.
+//   (SECTION, key)   a reference into a setting-outline field. Becomes a link
+//                    to that field on the outline page.
+const EDITORIAL_NOTE_RE = /\s*\[\[.+?\]\]/g;
+
+function stripEditorialNotes(md) {
+  return md.replace(EDITORIAL_NOTE_RE, "");
+}
+
+// Section headings on the outline page carry ids, so reference tokens have
+// somewhere to point. Slug matches marked's own heading-id convention.
+function sectionSlug(name) {
+  return name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+}
+
+// Which sections the outline page actually publishes. A token naming anything
+// else stays plain text — M9 is what fails it, not the renderer.
+const outlineSections = new Set();
+{
+  const outlinePage = pages.find((p) => p.slug === "setting-outline");
+  if (outlinePage) {
+    for (const line of outlinePage.md.split("\n")) {
+      const m = /^## (.+)$/.exec(line.trimEnd());
+      if (m && m[1] === m[1].toUpperCase()) outlineSections.add(m[1].trim());
+    }
+  }
+}
+
+const REFERENCE_TOKEN_RE = /\(([A-Z][A-Z ]{2,}?)((?:,\s*[^(),]+){1,2})\)/g;
+
+function linkifyReferences(html, currentSlug) {
+  return outsidePreOrCode(html, (chunk) =>
+    chunk.replace(REFERENCE_TOKEN_RE, (whole, section) => {
+      const name = section.trim();
+      if (!outlineSections.has(name)) return whole;
+      const slug = sectionSlug(name);
+      const href = currentSlug === "setting-outline"
+        ? `#${slug}`
+        : `setting-outline.html#${slug}`;
+      return `<a class="ref" href="${href}" title="${escapeHtml(name)}">${whole}</a>`;
+    }));
 }
 
 function linkFor(code, whole, currentSlug) {
@@ -555,8 +631,12 @@ mkdirSync(path.join(OUT, "assets"), { recursive: true });
 console.log(`Rendering ${pages.length} page(s) to ${path.relative(REPO, OUT)}/ ...`);
 
 pages.forEach((page, i) => {
-  const withDiagrams = page.md.replace(MERMAID_BLOCK_RE, (_m, code) => renderMermaidToSvg(code));
-  const body = arrowify(linkifyAndAnchor(marked.parse(withDiagrams), page.slug));
+  const withDiagrams = stripEditorialNotes(page.md)
+    .replace(MERMAID_BLOCK_RE, (_m, code) => renderMermaidToSvg(code));
+  const body = linkifyReferences(
+    arrowify(linkifyAndAnchor(marked.parse(withDiagrams), page.slug)),
+    page.slug,
+  );
 
   const prev = pages[i - 1];
   const next = pages[i + 1];

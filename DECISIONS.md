@@ -74,6 +74,10 @@
 
 **Connection pointers in location text use `->`.** Written as plain ASCII in the markdown, because the source must stay human-writable in any editor. The renderers substitute a single typographic glyph for the web and PDF targets. See `Setting_Playbook_Template.md`.
 
+**Setting-outline references are written `(SECTION, key)`.** The section name is ALL CAPS and matches an outline `##` heading exactly, plus the literal `LORE` for `LORE_INDEX.md`. The key names what is being pointed at, and a token may carry two. `(BESTIARY, Goblin)` is one creature. `(TREASURE, II)` is the whole Type II table and means roll it; `(TREASURE, II, 14)` is one row of it. `(GRAFFITI, d20)` is the die and means roll the table. `(TRAPS, The covered pit)` and `(LORE, The watch log)` are one entry each. **A reference token never carries a location code** — codes keep their backticked form, `` `A.13` ``, and stay M1's business. The token is checked by M9 and becomes a link in the web and PDF targets, so a token that names nothing is a build-visible error rather than a piece of dead prose.
+
+**Editorial notes are written `[[ ... ]]`, in double brackets.** Designer register, per `CLAUDE.md`: it must not survive. `[[ needs a second exit once GB closes ]]`. **Single brackets are not available** — `[local]`/`[setting]` already scope Standing Mysteries and `[tile]`/`[rod]`/`[hidden]`/`[secret]`/`[vert]`/`[mech]`/`[faction]`/`[size]` already type diagram edges, and both are declared vocabularies rather than free-form annotation. Double brackets collide with neither. A note that records something already written elsewhere takes the form `[[ already: ... ]]`. **Notes are struck at the final pass**, alongside the working notes M8 governs and the field labels above; M10 reports them during authoring and fails on them under `check.sh --final`. The renderers strip them unconditionally, so a missed note can never reach a reader — but that is a floor, not a licence to leave them in.
+
 ---
 
 ## STRUCTURAL FINDINGS THAT NOW GOVERN

@@ -67,7 +67,13 @@ function renderMermaidToSvg(code) {
 }
 
 console.log(`Rendering mermaid diagrams from ${path.relative(REPO, inputPath)}...`);
-const withDiagramsInlined = markdown.replace(MERMAID_BLOCK_RE, (_match, code) => renderMermaidToSvg(code));
+// Editorial notes are the designer register and never reach a reader; they
+// are stripped here whether or not the final pass has struck them yet.
+// See DECISIONS.md ## NOTATION AND EDGE TYPES.
+const EDITORIAL_NOTE_RE = /\s*\[\[.+?\]\]/g;
+const withDiagramsInlined = markdown
+  .replace(EDITORIAL_NOTE_RE, "")
+  .replace(MERMAID_BLOCK_RE, (_match, code) => renderMermaidToSvg(code));
 console.log(`  ${diagramCount} diagram(s) processed, ${renderFailures} failed`);
 
 if (renderFailures > 0) {
@@ -86,19 +92,60 @@ if (renderFailures > 0) {
 const _PRE_OR_CODE_RE = /<pre[\s\S]*?<\/pre>|<code[\s\S]*?<\/code>/g;
 const _ARROW_RE = /(^|\s)-&gt;(\s|$)/g;
 
-function arrowify(html) {
+// Apply fn to every stretch of html that is not inside a pre or code span.
+function outsidePreOrCode(html, fn) {
   const out = [];
   let last = 0;
   for (const m of html.matchAll(_PRE_OR_CODE_RE)) {
-    out.push(html.slice(last, m.index).replace(_ARROW_RE, "$1\u2192$2"));
+    out.push(fn(html.slice(last, m.index)));
     out.push(m[0]);
     last = m.index + m[0].length;
   }
-  out.push(html.slice(last).replace(_ARROW_RE, "$1\u2192$2"));
+  out.push(fn(html.slice(last)));
   return out.join("");
 }
 
-const bodyHtml = arrowify(marked.parse(withDiagramsInlined));
+function arrowify(html) {
+  return outsidePreOrCode(html, (s) => s.replace(_ARROW_RE, "$1\u2192$2"));
+}
+
+// ---------------------------------------------------------------------------
+// Reference tokens
+// ---------------------------------------------------------------------------
+// `(SECTION, key)` points into a setting-outline field. The playbook is one
+// document here, so the target is an in-document anchor on that field's
+// heading. A token naming a section the document does not carry is left as
+// plain text \u2014 check.py M9 is what fails it, not the renderer.
+const SECTION_HEADING_RE = /^<h2[^>]*>([A-Z][A-Z ]+)<\/h2>/;
+const REFERENCE_TOKEN_RE = /\(([A-Z][A-Z ]{2,}?)((?:,\s*[^(),]+){1,2})\)/g;
+
+function sectionSlug(name) {
+  return name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+}
+
+function anchorSections(html, sections) {
+  return html.split("\n").map((line) => {
+    const m = SECTION_HEADING_RE.exec(line);
+    if (!m) return line;
+    sections.add(m[1].trim());
+    return line.replace(/^<h2([^>]*)>/, `<h2$1 id="${sectionSlug(m[1].trim())}">`);
+  }).join("\n");
+}
+
+function linkifyReferences(html, sections) {
+  return outsidePreOrCode(html, (chunk) =>
+    chunk.replace(REFERENCE_TOKEN_RE, (whole, section) => {
+      const name = section.trim();
+      if (!sections.has(name)) return whole;
+      return `<a class="ref" href="#${sectionSlug(name)}">${whole}</a>`;
+    }));
+}
+
+const sectionNames = new Set();
+const bodyHtml = linkifyReferences(
+  arrowify(anchorSections(marked.parse(withDiagramsInlined), sectionNames)),
+  sectionNames,
+);
 
 const page = `<!doctype html>
 <html>
@@ -118,6 +165,7 @@ const page = `<!doctype html>
   h2 { font-size: 15pt; margin-top: 1.4em; border-bottom: 1px solid #999; padding-bottom: 0.1em; }
   h3 { font-size: 12.5pt; margin-top: 1.2em; }
   code, pre { font-family: "Courier New", monospace; }
+  a.ref { color: inherit; text-decoration: none; border-bottom: 1px dotted #999; }
   table { border-collapse: collapse; width: 100%; margin: 0.8em 0; font-size: 9.5pt; }
   th, td { border: 1px solid #999; padding: 0.3em 0.5em; text-align: left; vertical-align: top; }
   th { background: #eee; }

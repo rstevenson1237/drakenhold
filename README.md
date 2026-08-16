@@ -14,7 +14,7 @@ Because assembly is scripted, **every file must be structurally predictable**. H
 
 Two further outputs are built from the same source: a paginated **PDF** for the table, and a browsable **web version** for reference during play. Both are built in CI on every push and pull request; the web version is published to GitHub Pages from `main`.
 
-**Read it here: <https://rstevenson1237.github.io/drakenhold/>** — every location code in the text (`FA.17`, `A.20`) is a link to the stub it names, and the PDF is linked from the contents page. The site publishes play content only: the setting outline, the regions, the block documents and the setting diagram. `HANDOFF.md` and the process documents are authoring instruments and stay out of it.
+**Read it here: <https://rstevenson1237.github.io/drakenhold/>** — every location code in the text (`FA.17`, `A.20`) is a link to the stub it names, every setting-outline reference (`(BESTIARY, Goblin)`, `(TREASURE, II)`) is a link to the field it names, and the PDF is linked from the contents page. Editorial notes (`[[ ... ]]`) are stripped by both renderers and never reach a reader. The site publishes play content only: the setting outline, the regions, the block documents and the setting diagram. `HANDOFF.md` and the process documents are authoring instruments and stay out of it.
 
 ---
 
@@ -49,11 +49,14 @@ Two further outputs are built from the same source: a paginated **PDF** for the 
 │                                 Read-only in this repo: never edited, never extended.
 │                                 Replaced wholesale when a new revision is uploaded.
 ├── Setting_Playbook_Template.md  the deliverable's shape. Illustrative content never enters the setting.
-├── Drakenhold_Setting_Outline.md steps 1–2. Truths, Rumours, History, Factions, Bestiary,
-│                                 Treasure, Traps, Graffiti, Procedural Tables.
-│                                 Referee-facing only. Its Unanswered Questions section holds
-│                                 what the module leaves open at the table on purpose —
-│                                 authors' open items go in OPEN_QUESTIONS.md instead.
+├── Drakenhold_Setting_Outline.md steps 1–2, the index: title, tagline, Overview, and a
+│                                 SECTIONS table pointing at outlines/. The build drops
+│                                 that table and reads the fields below in numeric order.
+├── outlines/                     one file per outline field, in template order —
+│                                 01_TRUTHS … 10_STANDING_MYSTERIES. Referee-facing only.
+│                                 Standing Mysteries holds what the module leaves open at
+│                                 the table on purpose; authors' open items go in
+│                                 OPEN_QUESTIONS.md instead.
 ├── LORE_INDEX.md                 register of documentary items that have a far end —
 │                                 engravings, ledgers, maps, notes. An index and not a
 │                                 source: the text lives in the region file, which stays
@@ -78,7 +81,8 @@ Two further outputs are built from the same source: a paginated **PDF** for the 
 │   └── DESIGN_PATTERNS_HANDOFF_at_harvest_close.md  the catalogue's reasoning, kept
 │                                 after its content was distributed to the working files.
 └── scripts/
-    ├── check.sh                  runs every mechanical check; must pass before commit
+    ├── check.sh                  runs every mechanical check; must pass before commit.
+    │                             check.sh --final also fails on surviving editorial notes
     ├── build.sh                  assembles the Playbook markdown from the sources
     ├── render_pdf.sh             assembled markdown -> paginated PDF
     ├── build_web.sh              sources -> browsable site in build/web/

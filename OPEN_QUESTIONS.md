@@ -190,6 +190,20 @@
 
 ---
 
+## OPEN — RAISED BY THE EDITORIAL MARKUP AND OUTLINE SPLIT PASS
+
+*The pass that added the `(SECTION, key)` and `[[ ... ]]` marks and split the setting outline into `outlines/` also asked what shape the deliverable is in. It decided the notation and it did not decide the shape. **Nothing here is answered by the pass that raised it.***
+
+**Open items.**
+
+- **Is the setting relational diagram one document or three tiers?** *Owner: a pass of its own, before the builder phase.* `diagrams/Drakenhold_Relational_Diagram.md` already carries six graphs, and four of them are block-level detail — `## 2. DETAIL — THE APPROACH`, `## 3. DETAIL — PEAK 1 (F)`, and so on. The block documents in `blocks/` each carry their own mermaid under a `PASS N — THE REGION DIAGRAMS` heading, and the region files carry a third set. **That is real overlap, not apparent overlap**, and it is the reason `diagrams/` holds one file while thirty-two diagrams live inline. Three genuine answers: **(a)** leave it — a diagram belongs beside the prose that explains it, and the current split is that rule applied honestly; **(b)** the setting diagram keeps the overview graph only, and each detail graph moves into the block document it describes, which makes `diagrams/` small and the blocks self-contained; **(c)** every diagram consolidates into `diagrams/`, one file per tier, and the prose links to them, which makes the diagram layer separately readable and separately checkable at the cost of splitting each block's argument across two files. **(b) is the one that reduces duplication without moving anything a reader wants adjacent.**
+- **Do the blocks become published parts, or stay authoring instruments?** *Owner: the same pass.* `PROCEDURES_AND_RULES.md` item 14 defines a block as a connective document holding what belongs to no single region, and its headings are pass-shaped — `PASS 1 — MAJOR ROUTES`, `PASS 3 — LOCATIONS`. They are published to the web view today under file-name labels. Three answers: **(a)** blocks stay authoring instruments and come out of the published site, which is the cleanest reading of what they are; **(b)** blocks become named parts of the deliverable — `BOOK I: THE APPROACH`, `BOOK II: PEAK 1`, and so on — which requires giving each one reader-facing structure and a register, and is a real writing job, not a rename; **(c)** blocks publish as they stand under thematic names, which is (b)'s label without (b)'s work and leaves pass-shaped headings in front of a reader. **The three-tier hierarchy — setting, block, region — is sound as an authoring structure; the question is whether it is also a reading structure.**
+- **What fits in none of the three tiers?** *Owner: the same pass.* Named candidates, each of which is currently a file with no tier: `LORE_INDEX.md`, which spans regions and is a register rather than content; `Setting_Playbook_Template.md`; `DESIGN_PATTERNS.md` and `patterns/`; `RECONCILIATION.md`. The first is the only one that carries play-adjacent material, and it has its own open item above.
+- **Should `[[ already: ... ]]` be a checked reference instead of an editorial note?** *Owner: whichever pass first needs it.* As an editorial note it is struck at the final pass and nothing ever verifies the claim it makes. The alternative is a checked token so `M9` can confirm the thing it says already exists actually does. **The note form is what is ratified now**, on the ground that the claim's far end is usually a section or a diagram rather than a nameable entry — but the first pass that writes several of these should say whether that held.
+- **`LORE_INDEX.md` rows have no stable ids.** *Owner: the same pass as the item above about wiring the file into the corpus.* `(LORE, key)` resolves on the item's name, because names are what the register carries. Names are also what gets edited. If the file is wired into the checker corpus, giving each row a stable number — and referencing `(LORE, #37)` — is the cheaper form. **Not done now**, because numbering a register whose rows are still settling invites renumbering.
+
+---
+
 ## ANSWERED
 
 *Struck, with where the answer lives. Never deleted.*
