@@ -114,47 +114,15 @@
 
 *Procedure step 8. Drawn from the stubs, before the location outlines. Reconciled against the finished outlines before the region closes. The diagram is authoritative: the **Connections:** field under each stub is checked against it, never the reverse. Worked as one block with the other three levels of Peak 3 against `blocks/PEAK_3_BLOCK.md`.*
 
-```mermaid
-graph TD
-  HD1["HD.1 · The Ramp Head"]
-  HD16["HD.16 · The Way Up"]
+*Tier 3 first — the region's location groups and how they interconnect — then one tier-4 diagram per group, resolving to locations. **Connection type is drawn at tier 4 and nowhere else**, and a destination outside the group is drawn on the group's own diagram. Each diagram is a file in `diagrams/`, spliced in here by the build.*
 
-  subgraph APPROACH["The approach"]
-    HE1["HE.1 · The Ramp Head"]
-    HE2["HE.2 · The Halls"]
-    HE3["HE.3 · The Way Down From Observation"]
-  end
+<!-- DIAGRAM: T3_HE.md -->
 
-  subgraph CENTRE["The centre"]
-    HE4["HE.4 · Sigmor, the Rift"]
-    HE5["HE.5 · The Broken Geometry"]
-    HE6["HE.6 · The Drakmorith"]
-  end
+<!-- DIAGRAM: T4_HE_APPROACH.md -->
 
-  subgraph SANCTUARY["The Sanctuary itself"]
-    HE7["HE.7 · The Libraries"]
-    HE8["HE.8 · The Workrooms"]
-    HE9["HE.9 · Ulgrin Thurvak"]
-    HE10["HE.10 · The Register"]
-  end
+<!-- DIAGRAM: T4_HE_CENTRE.md -->
 
-  HE1 --- HD1
-  HE1 --- HE2
-  HE2 --- HE3
-  HE2 --- HE5
-  HE2 --- HE7
-  HE3 -.- HD16
-  HE4 --- HE5
-  HE4 --- HE6
-  HE4 --- HE8
-  HE5 --- HE6
-  HE5 --- HE7
-  HE5 --- HE8
-  HE5 --- HE9
-  HE5 --- HE10
-  HE7 --- HE9
-  HE9 --- HE10
-```
+<!-- DIAGRAM: T4_HE_SANCTUARY.md -->
 
 **Reading the diagram.** Only two edges on this floor are dependable and they are both drawn on the left: `HD.1`–`HE.1`–`HE.2` and `HE.3`. Everything else passes through `HE.5`, which is not a room. The single dotted edge is the observation-room route, and it is dotted because it is secret, not because it is unreliable — it is the most reliable thing here.
 

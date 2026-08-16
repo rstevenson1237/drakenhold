@@ -144,62 +144,15 @@
 
 *Procedure step 8. Drawn from the stubs, before the location outlines. Reconciled against the finished outlines before the region closes. The diagram is authoritative: the **Connections:** field under each stub is checked against it, never the reverse. Worked as one block with the other three levels of Peak 3 against `blocks/PEAK_3_BLOCK.md`.*
 
-```mermaid
-graph TD
-  HC1["HC.1 · The Ramp Head"]
-  HC12["HC.12 · The Excavation Face"]
-  HE1["HE.1 · The Ramp Head"]
-  HE3["HE.3 · The Way Down From Observation"]
-  I4["I.4 · The Eastern Terminus"]
+*Tier 3 first — the region's location groups and how they interconnect — then one tier-4 diagram per group, resolving to locations. **Connection type is drawn at tier 4 and nowhere else**, and a destination outside the group is drawn on the group's own diagram. Each diagram is a file in `diagrams/`, spliced in here by the build.*
 
-  subgraph FLOOR["The receiving floor"]
-    HD1["HD.1 · The Ramp Head"]
-    HD2["HD.2 · The Receiving Room"]
-    HD3["HD.3 · The Skybridge Terminus"]
-  end
+<!-- DIAGRAM: T3_HD.md -->
 
-  subgraph RING["The circuit"]
-    HD4["HD.4 · The Circuit"]
-    HD5["HD.5 · The Trial of Weight"]
-    HD6["HD.6 · The Trial of the Word"]
-    HD7["HD.7 · The Trial of the Dark"]
-    HD8["HD.8 · The Trial of the Post"]
-    HD9["HD.9 · The Trial of Refusal"]
-    HD10["HD.10 · The Grant"]
-  end
+<!-- DIAGRAM: T4_HD_FLOOR.md -->
 
-  subgraph CENTRE["The centre"]
-    HD11["HD.11 · The Observation Rooms"]
-    HD12["HD.12 · The Scattered Notes"]
-    HD13["HD.13 · Wyla Fenn's Assessment"]
-    HD14["HD.14 · The Hidden Piece"]
-    HD15["HD.15 · The Leadership's Equipment"]
-    HD16["HD.16 · The Way Up"]
-  end
+<!-- DIAGRAM: T4_HD_RING.md -->
 
-  HD1 --- HC1
-  HD1 --- HE1
-  HD1 --- HD2
-  HD2 --- HD3
-  HD2 --- HD4
-  HD3 -.- I4
-  HD4 --- HD5
-  HD5 --- HD6
-  HD6 --- HD7
-  HD7 --- HD8
-  HD8 --- HD9
-  HD9 --- HD10
-  HD10 --- HD4
-  HD4 -.- HD11
-  HD10 -.- HD11
-  HD4 -.- HC12
-  HD11 --- HD12
-  HD11 --- HD13
-  HD11 --- HD14
-  HD11 --- HD15
-  HD11 --- HD16
-  HD16 -.- HE3
-```
+<!-- DIAGRAM: T4_HD_CENTRE.md -->
 
 **Reading the diagram.** Solid edges are open floor and open circuit. Dotted edges are gated, secret or not yet through: the tile at the Skybridge terminus, the two ways into the centre, the excavation arriving from below, and the way up into `HE`. The circuit is drawn as a literal ring because it is one.
 

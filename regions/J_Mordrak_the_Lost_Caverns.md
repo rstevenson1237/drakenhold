@@ -194,93 +194,21 @@
 
 *Procedure step 8. Drawn from the stubs, before the location outlines. Reconciled against the finished outlines before the region closes. The diagram is authoritative: the **Connections:** field under each stub is checked against it, never the reverse. Worked as one block with `I` against `blocks/I_AND_J_BLOCK.md`.*
 
-```mermaid
-graph TD
-  FB14["FB.14 · The Marked Descent"]
-  FB4["FB.4 · Khorven"]
-  FD16["FD.16 · The Slag Channel"]
-  GB20["GB.20 · The Broken Floor"]
-  HB19["HB.19 · The Marked Descent"]
-  D6["D.6 · The Drain Outfall"]
+*Tier 3 first — the region's location groups and how they interconnect — then one tier-4 diagram per group, resolving to locations. **Connection type is drawn at tier 4 and nowhere else**, and a destination outside the group is drawn on the group's own diagram. Each diagram is a file in `diagrams/`, spliced in here by the build.*
 
-  subgraph TUNNEL["The tunnel"]
-    J1["J.1 · The Great Tunnel"]
-    J2["J.2 · The Marked Descents"]
-    J3["J.3 · The Hidden Descents"]
-    J4["J.4 · The Sealed Shafts"]
-    J5["J.5 · The Middens"]
-    J6["J.6 · The Burnt-Out Torch"]
-  end
+<!-- DIAGRAM: T3_J.md -->
 
-  subgraph FLOOD["The flooded galleries"]
-    J7["J.7 · The Flooded Galleries"]
-    J8["J.8 · The Drowned Working"]
-    J9["J.9 · The Outfall"]
-  end
+<!-- DIAGRAM: T4_J_TUNNEL.md -->
 
-  subgraph WORKINGS["The exhausted workings"]
-    J10["J.10 · The Exhausted Workings"]
-    J11["J.11 · Where They Stopped in a Hurry"]
-    J12["J.12 · The Gem Faces"]
-  end
+<!-- DIAGRAM: T4_J_FLOOD.md -->
 
-  subgraph CAVERN["The natural cavern and the vents"]
-    J13["J.13 · The Natural Cavern"]
-    J14["J.14 · The Vent System"]
-    J15["J.15 · The Hot Runs"]
-    J16["J.16 · The Draught Reading"]
-  end
+<!-- DIAGRAM: T4_J_WORKINGS.md -->
 
-  subgraph VEIN["The vein"]
-    J17["J.17 · The Vein"]
-    J18["J.18 · What Was Brought Back"]
-    J19["J.19 · What Else Is In It"]
-  end
+<!-- DIAGRAM: T4_J_CAVERN.md -->
 
-  subgraph DEEP["The deep dark"]
-    J20["J.20 · The Deep Dark"]
-    J21["J.21 · The Ones Who Remember the Collar"]
-    J22["J.22 · The Driven Ground"]
-    J23["J.23 · The Sunless Water"]
-    J24["J.24 · Further Down"]
-  end
+<!-- DIAGRAM: T4_J_VEIN.md -->
 
-  J1 --- J2
-  J1 --- J3
-  J1 --- J4
-  J1 --- J5
-  J1 --- J6
-  J1 --- J7
-  J1 --- J10
-  J1 --- J13
-  J1 --- J16
-  J2 --- FB14
-  J2 --- HB19
-  J3 -.- FB4
-  J3 -.- FD16
-  J3 -.- GB20
-  J3 --- J14
-  J5 --- J22
-  J7 --- J8
-  J7 --- J9
-  J9 -.-> D6
-  J10 --- J11
-  J10 --- J12
-  J10 --- J17
-  J11 --- J12
-  J13 --- J14
-  J13 --- J20
-  J13 --- J23
-  J14 --- J15
-  J14 --- J16
-  J16 --- J20
-  J17 --- J18
-  J17 --- J19
-  J20 --- J21
-  J20 --- J22
-  J20 --- J23
-  J20 --- J24
-```
+<!-- DIAGRAM: T4_J_DEEP.md -->
 
 **Reading the diagram.** Solid edges are open cavern and open dwarven cut. Dotted edges are the hidden descents from the peaks and the one way out that is not a way in. **Not one edge in this region is locked**, and the two lines that look like exceptions — the sealed shafts and the outfall — are a warning and a current respectively. The distances are not drawn because they cannot be: every solid edge on this graph is watches long.
 

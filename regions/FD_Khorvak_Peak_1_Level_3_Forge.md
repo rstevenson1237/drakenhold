@@ -148,69 +148,17 @@
 
 *Procedure step 8. Drawn from the stubs, before the location outlines. Reconciled against the finished outlines before the region closes. The diagram is authoritative: the **Connections:** field under each stub is checked against it, never the reverse. Worked as one block with the other three levels of Peak 1 against `blocks/PEAK_1_BLOCK.md`, because the four are stitched together by shared machinery.*
 
-```mermaid
-graph TD
-  FB15["FB.15 · The Chimney Ledges"]
-  FC1["FC.1 · The Ramp Landing"]
-  FC5["FC.5 · The Rising Chutes"]
-  FC21["FC.21 · The Hidden Access"]
-  FE1["FE.1 · The Central Antechamber"]
-  I1["I.1 · The Western Terminus"]
-  J3["J.3 · The Hidden Descents"]
+*Tier 3 first — the region's location groups and how they interconnect — then one tier-4 diagram per group, resolving to locations. **Connection type is drawn at tier 4 and nowhere else**, and a destination outside the group is drawn on the group's own diagram. Each diagram is a file in `diagrams/`, spliced in here by the build.*
 
-  subgraph FLOOR["The forge floor"]
-    FD1["FD.1 · The Ramp Head"]
-    FD2["FD.2 · The Forge Floor"]
-    FD3["FD.3 · The Banked Channels"]
-    FD4["FD.4 · The Soot Frieze"]
-    FD5["FD.5 · The Order Post"]
-    FD15["FD.15 · The Skybridge Terminus"]
-  end
+<!-- DIAGRAM: T3_FD.md -->
 
-  subgraph GALLERIES["The galleries"]
-    FD6["FD.6 · The Production Galleries"]
-    FD7["FD.7 · The Line of Work"]
-    FD8["FD.8 · The Stock Rooms"]
-  end
+<!-- DIAGRAM: T4_FD_FLOOR.md -->
 
-  subgraph SHAFT["The chimney and the channels"]
-    FD9["FD.9 · The Chimney Head"]
-    FD10["FD.10 · The Flow Gate"]
-    FD16["FD.16 · The Slag Channel"]
-  end
+<!-- DIAGRAM: T4_FD_GALLERIES.md -->
 
-  subgraph SCHOOL["The school and the residence"]
-    FD11["FD.11 · The Training Halls"]
-    FD12["FD.12 · The Student Dorms"]
-    FD13["FD.13 · Durnek Balvak's Rooms"]
-    FD14["FD.14 · The Private Work"]
-  end
+<!-- DIAGRAM: T4_FD_SHAFT.md -->
 
-  FD1 --- FC1
-  FD1 --- FE1
-  FD1 --- FD2
-  FD1 --- FD15
-  FD2 --- FD3
-  FD2 --- FD4
-  FD2 --- FD5
-  FD2 --- FD6
-  FD2 --- FD9
-  FD2 --- FD11
-  FD2 --- FD13
-  FD3 --- FD10
-  FD3 --- FD16
-  FD5 --- FD6
-  FD6 --- FD7
-  FD7 --- FD8
-  FD8 -.- FC5
-  FD8 -.- FC21
-  FD9 --- FD10
-  FD9 -.- FB15
-  FD11 --- FD12
-  FD13 -.- FD14
-  FD15 --- I1
-  FD16 -.- J3
-```
+<!-- DIAGRAM: T4_FD_SCHOOL.md -->
 
 **Reading the diagram.** Solid edges are open floor — the forge level is walkable, and that is deliberate. Dotted edges are hidden, secret, rod-gated or size-conditional: the private work, the chimney, the chutes, the hidden access and the slag channel.
 

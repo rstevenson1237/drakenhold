@@ -12,7 +12,7 @@ Two kinds of check. **Mechanical** checks are scripted, run every pass, and take
 
 **M2 · Connection symmetry.** Where `X` names an edge to `Y`, `Y` names the edge back — unless the edge is explicitly typed one-way. Asymmetry without a one-way type fails.
 
-**M3 · Diagram agreement.** Every edge in a region's connection bullets appears in its diagram, and every edge in the diagram appears in some entry's bullets. Diagrams are authoritative; the bullets are what gets corrected.
+**M3 · Diagram agreement.** Every edge in a region's connection bullets appears in one of the region's tier-4 diagrams, and every edge those diagrams draw with an end in the region appears in some entry's bullets. Diagrams are authoritative; the bullets are what gets corrected.
 
 **M4 · Budget and ratio.** Stub count against stated room budget, at roughly half. Region totals against block totals. Flags drift rather than enforcing a number.
 
@@ -23,6 +23,12 @@ Two kinds of check. **Mechanical** checks are scripted, run every pass, and take
 **M7 · Format.** Headings, field names and entry formats match `Setting_Playbook_Template.md`. Required fields present, including those stating "None." This is what makes scripted assembly possible.
 
 **M8 · Struck notes.** No working note survives in a location whose Overviews and Features are written.
+
+**M9 · Editorial references.** Every `(SECTION, key)` token resolves to a field that exists.
+
+**M10 · Editorial notes.** Reports every surviving `[[ ... ]]` during authoring; fails on them under `check.sh --final`.
+
+**M11 · Diagram tiering.** The five-tier diagram layer resolves end to end. Every stub is a member of exactly one tier-4 group frame in its own region; every location a tier-4 file draws outside its frame is a member of some other frame; a cross-group edge is drawn at both ends, unless it is one-way, which is drawn from the end it leaves; the tier-1 to tier-3 files match what `scripts/diagrams.py` derives from the tier-4 files; and every diagram file is spliced in by exactly one marker, with every marker naming a file that exists.
 
 ---
 
@@ -90,7 +96,7 @@ Two kinds of check. **Mechanical** checks are scripted, run every pass, and take
 
 ## MECHANICAL — NOT YET BUILT
 
-*The predicate backlog from the design-pattern harvest, held here because this file is where checks live. **None of these is implemented; `scripts/check.sh` is still M1–M8.*** Building them is its own pass and it needs a field grammar for the location Markdown first — what the parser recognises as a header, an Overview, a feature, a pointer. That does not exist; the catalogue describes the shapes in prose.
+*The predicate backlog from the design-pattern harvest, held here because this file is where checks live. **None of these is implemented; `scripts/check.sh` runs M1–M11 and none of them is one of these.*** Building them is its own pass and it needs a field grammar for the location Markdown first — what the parser recognises as a header, an Overview, a feature, a pointer. That does not exist; the catalogue describes the shapes in prose.
 
 Predicates that duplicate an existing check are **not** listed: pointer-set-against-diagram is M3, `->` target resolution is M1, every-field-resolves-or-says-`None` is M7, and `SAFE` carries no encounter table by rule 15 and M5 already. The backlog is what is genuinely new.
 

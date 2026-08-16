@@ -62,34 +62,7 @@ Neither region is a dungeon level. Both are ways of getting to one.
 
 ### The skeleton
 
-```mermaid
-graph TD
-    subgraph OUT["I · Brynaz — the outside"]
-        SPAN["the great span"]
-        NET["runs · posts · ladder-stairs"]
-    end
-    subgraph UND["J · Mordrak — the underneath"]
-        TUN["the great tunnel"]
-        TERR["seven territories"]
-    end
-
-    SPAN ---|"tile"| FD["FD"]
-    SPAN ---|"tile · checkpoint"| GD["GD"]
-    SPAN ---|"tile"| HD["HD"]
-    NET -.->|"mechanism"| FE["FE"]
-    NET -.->|"mechanism"| GD
-    NET -->|"one-way · onto the dragon"| GE["GE"]
-    SPAN --- NET
-
-    TUN --- TERR
-    FB["FB"] -->|"marked"| TUN
-    GB["GB"] -->|"marked"| TUN
-    HB["HB"] -->|"marked"| TUN
-    FB -.->|"Khorven · hidden"| TUN
-    FD -.->|"slag channel · secret"| TUN
-    GBD["GB deep cells"] -.->|"not cut by dwarves"| TUN
-    TERR -.->|"vent system · mechanism"| FD
-```
+*The skeleton is now **`diagrams/T2_I_AND_J.md`**, tier 2 of the diagram layer — and it is two nodes with no edge between them, because the top of the mountain and the bottom of it connect only by going through the mountain. Everything either region is *for* is a cross-block edge to a peak, carried once at tier 1 and drawn typed on the tier-4 diagram of the group it leaves: the span's three termini, the two orphaned runs, the crater, the marked descents, Khorven, the slag channel and the vent system. `diagrams/Drakenhold_Relational_Diagram.md` hosts every tier-1 and tier-2 graph and explains the tiering.*
 
 ---
 

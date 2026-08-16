@@ -37,37 +37,7 @@ The consequence for movement: **on this peak the party is the traffic.** There i
 
 ### The skeleton
 
-```mermaid
-graph TD
-    GA["GA · Grathdun<br/>Main Level"]
-    WAR["GA warren"]
-
-    GB["GB · Karmor<br/>Under Level — the last stand"]
-    GC["GC · Azdun<br/>Level 2 — the throne"]
-    GD["GD · Valdmor<br/>Level 3 — the vaults"]
-    GE["GE · Azith<br/>Level 4 — the lair"]
-    I["I · Brynaz"]
-    J["J · Mordrak"]
-
-    GA -->|"stair down"| GB
-    GA ==>|"the great ramp"| GC
-    GC ==>|"the great ramp"| GD
-    GD ==>|"the great ramp · checkpointed"| GE
-    WAR -.-|"secret · the bypass"| GC
-    WAR -.-|"secret · past the crater"| GE
-    GC -.-|"secret · vert · the Crown's own stair, GC.13 to GB.12"| GB
-    WAR -.-|"secret · vert · the servants' way, GA.22 to GE.9"| GE
-
-    GD ---|"tile · faction · Valdgir"| I
-    I -.-|"orphaned run · mechanism"| GD
-    I -->|"one-way · through the crater"| GE
-
-    GB -->|"the marked descent"| J
-    GB -.->|"deep cells · secret"| J
-    DC["the deep cells<br/>rod-gated, below the prison"]
-    GB --- DC
-    DC -.-> J
-```
+*The skeleton is now **`diagrams/T2_PEAK_2.md`**, tier 2 of the diagram layer: the five regions of the peak and how they interconnect, one plain untyped edge per connected pair. The routes named above are what those edges are made of, and each is drawn typed on the tier-4 diagram of the group it leaves — including the Crown's own stair, which is a `GC`-to-`GB` edge like any other once the graph resolves to locations. The peak's edges to `I` and to `J` cross a block boundary and appear at tier 1. `diagrams/Drakenhold_Relational_Diagram.md` hosts every tier-1 and tier-2 graph and explains the tiering.*
 
 ---
 
@@ -130,7 +100,7 @@ Everything above that is a negotiation, a mechanism or a bad idea. The deep cell
 
 *The four region relational diagrams live in the region files. What is recorded here is what the drawing settled across the block.*
 
-**One edge reconciled.** `GA.22` — `GE.9`, secret and vertical. *The back ways* has always said a servants' route arrives at the Queen's end of the lair corridor without passing the crater, and the setting diagram has always drawn it; it had no end in any region file. It leaves the Peak 2 warren from the capillary maze — the same node that already carries the bypass, the older course and the way to the pocket — and climbs three levels to `GE.9`. Written into `GA`, `GE`, the skeleton above and the setting diagram. **This is the warren's third standing reward on Peak 2 and much the longest of the three.**
+**One edge reconciled.** `GA.22` — `GE.9`, secret and vertical. *The back ways* has always said a servants' route arrives at the Queen's end of the lair corridor without passing the crater, and the setting diagram has always drawn it; it had no end in any region file. It leaves the Peak 2 warren from the capillary maze — the same node that already carries the bypass, the older course and the way to the pocket — and climbs three levels to `GE.9`. Written into `GA` and `GE`, and drawn at tier 4 from both ends. **This is the warren's third standing reward on Peak 2 and much the longest of the three.**
 
 **One correction.** *Cross-region threads* said `GC.13` holds the rod schedule. `GC.12` does; `GC.13` is the Steward's rooms. Corrected in place.
 

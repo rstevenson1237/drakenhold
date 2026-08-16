@@ -1,6 +1,6 @@
 # DRAKENHOLD — REGION FILE INDEX
 
-*Procedures steps 3–5 are complete in each file. Step 6 lives in `Drakenhold_Relational_Diagram.md` and is mirrored into each file's Connections section.*
+*Procedures steps 3–5 are complete in each file. Step 6 lives in `diagrams/Drakenhold_Relational_Diagram.md`, which is the head of the diagram layer, and is mirrored into each file's Connections section. Steps 8's diagrams are files in `diagrams/` too — `T3_<CODE>.md` and one `T4_<CODE>_<GROUP>.md` per location group — spliced into each region file's `## REGION RELATIONAL DIAGRAM` section by the build.*
 
 *Step 7 — location stubs and region tables — is **closed for all twenty-two regions**. Step 8 — region relational diagrams — is **closed for all twenty-two regions**. Step 9 — location outlines — is **closed for the whole approach, `A` through `E`**, and has not begun in the other seventeen. Connective documents: `FIRST_LEVEL_BLOCK.md` (FA/GA/HA), `PEAK_1_BLOCK.md` (FB/FC/FD/FE) `PEAK_2_BLOCK.md` (GB/GC/GD/GE) `PEAK_3_BLOCK.md` (HB/HC/HD/HE) and `I_AND_J_BLOCK.md` (I/J).*
 
@@ -31,4 +31,4 @@
 
 **Stubs and Rooms** are the ratified figures from the step-7 close, moved here from `HANDOFF.md` so that one table carries them. `Rooms` is the region's room budget; `Stubs` is the count of named locations, at roughly half that budget, with the balance unnamed fill inside the stated groupings. The approach regions A–E have no room budget by design. `scripts/check.sh` M4 checks this table against the stub headings actually on disk.
 
-**S — the servants' passages** are not a region. They are written into FA, GA and HA as those regions' true body, and they interconnect all three peaks. They appear in the relational diagram as a shared node.
+**S — the servants' passages** are not a region. They are written into FA, GA and HA as those regions' true body, and they interconnect all three peaks. **They are not a node on any diagram.** They are location groups inside those three regions, and the runs between them are ordinary edges between locations; the shared `S` node the old overview drew was an abstraction it needed because it had no tier below it.

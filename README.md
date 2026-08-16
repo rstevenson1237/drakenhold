@@ -14,7 +14,7 @@ Because assembly is scripted, **every file must be structurally predictable**. H
 
 Two further outputs are built from the same source: a paginated **PDF** for the table, and a browsable **web version** for reference during play. Both are built in CI on every push and pull request; the web version is published to GitHub Pages from `main`.
 
-**Read it here: <https://rstevenson1237.github.io/drakenhold/>** — every location code in the text (`FA.17`, `A.20`) is a link to the stub it names, every setting-outline reference (`(BESTIARY, Goblin)`, `(TREASURE, II)`) is a link to the field it names, and the PDF is linked from the contents page. Editorial notes (`[[ ... ]]`) are stripped by both renderers and never reach a reader. The site publishes play content only: the setting outline, the regions, the block documents and the setting diagram. `HANDOFF.md` and the process documents are authoring instruments and stay out of it.
+**Read it here: <https://rstevenson1237.github.io/drakenhold/>** — every location code in the text (`FA.17`, `A.20`) is a link to the stub it names, every setting-outline reference (`(BESTIARY, Goblin)`, `(TREASURE, II)`) is a link to the field it names, and the PDF is linked from the contents page. Editorial notes (`[[ ... ]]`) are stripped by both renderers and never reach a reader. The site publishes play content only: the setting outline, the regions, the block documents and the setting diagram — with all 107 diagrams pre-rendered to inline SVG and spliced into the pages that host them. `HANDOFF.md` and the process documents are authoring instruments and stay out of it.
 
 ---
 
@@ -62,10 +62,17 @@ Two further outputs are built from the same source: a paginated **PDF** for the 
 │                                 source: the text lives in the region file, which stays
 │                                 authoritative. Outside the corpus check.sh reads, for now.
 │
-├── diagrams/
-│   └── Drakenhold_Relational_Diagram.md   step 6 and every level of zoom below it:
-│                                 the setting graph, then a graph per block. Region-level
-│                                 graphs live in the region files' own diagram sections.
+├── diagrams/                     every diagram in the module, one file each, in five
+│   │                             tiers. Nothing else in the repo contains a mermaid
+│   │                             block: hosts carry a marker and the build splices
+│   │                             the file into place.
+│   ├── Drakenhold_Relational_Diagram.md   the head of the layer — the tiering, the
+│   │                             edge vocabulary, and the host for tiers 1 and 2
+│   ├── T1_SETTING.md             the region blocks
+│   ├── T2_<BLOCK>.md             the regions in a block — five files
+│   ├── T3_<REGION>.md            the location groups in a region — 22 files
+│   └── T4_<REGION>_<GROUP>.md    the locations in a group — 79 files, and the only
+│                                 tier that is authored or that draws edge type
 │
 ├── blocks/                       connective documents — systems, budgets, shared routes
 │   ├── FIRST_LEVEL_BLOCK.md

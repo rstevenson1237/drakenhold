@@ -112,45 +112,15 @@
 
 *Procedure step 8. Drawn from the stubs, before the location outlines. Reconciled against the finished outlines before the region closes. The diagram is authoritative: the **Connections:** field under each stub is checked against it, never the reverse. Worked as one block with the other three levels of Peak 1 against `blocks/PEAK_1_BLOCK.md`, because the four are stitched together by shared machinery.*
 
-```mermaid
-graph TD
-  FD1["FD.1 · The Ramp Head"]
-  I13["I.13 · The FE Run"]
+*Tier 3 first — the region's location groups and how they interconnect — then one tier-4 diagram per group, resolving to locations. **Connection type is drawn at tier 4 and nowhere else**, and a destination outside the group is drawn on the group's own diagram. Each diagram is a file in `diagrams/`, spliced in here by the build.*
 
-  subgraph ANTE["The antechamber"]
-    FE1["FE.1 · The Central Antechamber"]
-    FE10["FE.10 · The Scion's Room"]
-  end
+<!-- DIAGRAM: T3_FE.md -->
 
-  subgraph CHAMBERS["The four chambers"]
-    FE2["FE.2 · The Mining Chamber"]
-    FE3["FE.3 · The Smithing Chamber"]
-    FE9["FE.9 · What Dovrek Did After the Vote"]
-    FE4["FE.4 · The Masonry Chamber"]
-    FE5["FE.5 · The Trade Chamber"]
-    FE8["FE.8 · The Hung Panel"]
-    FE6["FE.6 · The Rod-Locked Strongrooms"]
-  end
+<!-- DIAGRAM: T4_FE_ANTE.md -->
 
-  subgraph UPPER["The upper gallery"]
-    FE7["FE.7 · The Scorched Gallery"]
-  end
+<!-- DIAGRAM: T4_FE_CHAMBERS.md -->
 
-  FE1 --- FD1
-  FE1 --- FE2
-  FE1 --- FE3
-  FE1 --- FE4
-  FE1 --- FE5
-  FE1 --- FE7
-  FE1 --- FE10
-  FE2 --- FE6
-  FE3 --- FE6
-  FE3 --- FE9
-  FE4 --- FE6
-  FE5 --- FE6
-  FE5 --- FE8
-  FE7 -.- I13
-```
+<!-- DIAGRAM: T4_FE_UPPER.md -->
 
 **Reading the diagram.** Every edge on this level is open except one. `FE.6` is drawn as a single node with four edges because it is four strongrooms, one to each chamber, and the lock is the same problem four times — **gated by rod** at every one of them. The dotted edge is the orphaned Skybridge run.
 
