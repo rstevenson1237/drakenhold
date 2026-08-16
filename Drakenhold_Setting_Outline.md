@@ -292,6 +292,8 @@ The campaign's spine is extraction and survival. Drakenhold is a place to rob an
 
 *Five types, per the Design Notes. Types I through IV read as d20 tables; Type V is bespoke. **Every row states weight in slots (wt) and value in coins (cn), and the weight is the point.** The campaign's spine is extraction: five slots may be worn and ten carried, a hundred coins is a slot, and every one of these finds is a decision made hours from the door. A Referee who prices a find and forgets to weigh it has removed the module's central tension.*
 
+***Foraged goods are not among the five.*** *They were a treasure type under an older taxonomy and they are a procedural table under this one, region-locked to `B`, `C` and `J`. See Procedural Tables below. Nothing a party forages is worth a slot on the way home, which is exactly why it is not treasure.*
+
 *Value is what a thing is worth, not what it fetches. Resale runs a ten to twenty percent fee and foreign coin runs three percent to change, both per the Design Notes. **Rolled results are a starting point and the Referee is expected to substitute** — a table result that contradicts what a location already holds loses to the location.*
 
 ### Type I — Scavenged Loot
@@ -518,18 +520,29 @@ The campaign's spine is extraction and survival. Drakenhold is a place to rob an
 | 7 | Nobody worth talking to, and the room goes quiet when the party comes in. |
 | 8 | Someone who has been inside and come out, and will not discuss it while sober. |
 
-**What Grows In The Clearing** — d8, in a clearing off the Ironwood Trail, once per clearing.
+***Foraging is a procedure and not a treasure type.*** *Under the Notes' older taxonomy Foraged Goods were Type II; under the ratified one they are not a type at all, because forage is not carried out and sold — it is eaten, traded to the people who live there, or left. **It is region-locked**: the two tables below are the only places in the module a party forages, and a region that is not one of them has nothing to find. Both are d6 and both are colour. Neither counts anything.*
 
-| d8 | Foraged |
+**What Grows In The Clearing** — d6, in a clearing off the Ironwood Trail. **Locked to `B` and `C`**, once per clearing.
+
+| d6 | Foraged |
 |---|---|
 | 1 | Nothing. The clearing is bare and the bareness has a reason. |
 | 2 | Berries, plentiful, and something else has been eating them today. |
 | 3 | Fungus on a fallen ironwood — edible, and the same fungus grows in the Under Levels. |
 | 4 | A bitter root the goblins trade for and will not explain. |
 | 5 | Clean water, a spring, and cart-ruts leading away from it. |
-| 6 | Herbs a physician would pay for, if the party knows one. |
-| 7 | Fenn's mark, cut and bound rather than carved, and the clearing is hers. |
-| 8 | Good forage, and the clearing is a game trail's crossing, which is why. |
+| 6 | Good forage, and the clearing is a game trail's crossing, which is why. |
+
+**What Grows In The Dark** — d6, in the Lost Caverns. **Locked to `J`**, once per stretch of gallery.
+
+| d6 | Foraged |
+|---|---|
+| 1 | Nothing. Bare wet rock, and it stays bare a long way. |
+| 2 | Pale fungus in a sheet, edible, tasting of the water it grew in. |
+| 3 | Cut stumps where a sheet was harvested — clean, deliberate, and not old. |
+| 4 | Blind fish in a still pool, slow, and easy. |
+| 5 | Fungus that glows faintly. **It is not light.** It will not read a page or find a door, and a party will spend an hour learning that. |
+| 6 | Good forage, plentiful, and something else feeds here on a circuit. |
 
 **What The Goblins Threw Away** — d8, in a goblin midden. **Nothing here is treasure. One or two things here are information.**
 
