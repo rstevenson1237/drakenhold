@@ -118,11 +118,75 @@
 
 **The test these are held to, and the test anything else must pass:** a one-off procedure earns its place where **the players are already keeping score in their heads and the procedure only makes the scoring visible.** Bloat is a procedure that tracks something the table was not already tracking. All three below are proposals for the rules project. **None of them is written, and none may be written into a region file.**
 
+*Narrowed at the trope content pass, by direction, and the sentence above is left standing because it is still true of everything in this section.* **What was narrowed is its reach, not its content:** a table that only supplies colour — what is on the board, who is drinking, what forages in a clearing — scores nothing, is content rather than procedure, and **may now be written into a location or region description.** A table that keeps state, escalates, or asks the players to hold a number is a procedure and still belongs here. The dividing line and the two mechanical constraints on a region-file table are ratified in `DECISIONS.md` under *Trope Content*.
+
 - **Buying the warrens.** `DECISIONS.md` records the standing call for the three arteries: *no landmark system, no service marks, no mechanic — a sheer numbers game of twisting paths and trying to keep track.* That call stands and this does not overturn it. But the survivors' stated advantage is **thirty years of memory a party cannot buy** — which is precisely the thing a party will try to buy, and there is no procedure for what a bought or coerced guide is worth, what a wrong guide costs, or what happens when the guide leaves. The table will want that negotiation scored. **Proposed as a rules-project question, not a mapping system.**
 - **The `HD` circuit.** A closed ring, no chord, an attempt imposed at every segment in either direction, with the rod that opens `HD.11` at the far end of it. It is already a mini-game in everything but name and the fiction is fully built. What it lacks is a stated order and a stated cost for a failed segment. **The smallest of the three, and the one players will most visibly engage with as a system.**
 - **Weight against the way out.** The module's spine is extraction, and the Notes carry Encumbrance as slots. Every treasure decision here is a slot decision made hours from the door, and the earned rod at `HD.10` already **buys a way back out rather than treasure.** A light procedure for hauling under load back through a region already crossed — not a new subsystem, only what the existing slots cost on the return leg — would make the module's central tension mechanical instead of implied. **The largest in scope and the one most worth getting right.**
 
 **Deliberately not proposed:** any further scoring of the light rule. It works because it is three states and a Referee call, and `J.6` teaches it without a table.
+
+---
+
+## OPEN — RAISED BY THE TROPE CONTENT PASS
+
+*The pass added sixteen Bestiary entries and authored the setting outline's Treasure, Traps, Graffiti and Procedural Tables sections, plus `LORE_INDEX.md`. **By direction it edited no region file.** What follows is therefore a register of recommendations addressed to each region's own step-9 pass, not a set of instructions. **A recommendation here is not a decision** — the owning pass takes it, refuses it, or improves it, and records which.*
+
+*The register exists for one reason. `DECISIONS.md` and this file both record that an unused Bestiary entry is a tracked defect: three entries once sat unplaced until the steps 1–8 sweep found them. **Sixteen new entries could not be written without saying where each one goes**, so each has a named home below.*
+
+**Bestiary placements — recommended, per owning pass.**
+
+- **`Giant Rat`** → `FB`. Thirty years of spoiled stores is the reason the entry exists; the granaries are the reason the party is there.
+- **`Cave Bear`** → `FA`. Came in through the broken doors, denned in a side chamber, and is a hazard of the threshold rather than of the hall. One entrance is the whole encounter.
+- **`Giant Bat`** → `I` and `HA`. The Skybridge's high vaults and `HA.32`'s vent gallery. **Flame-killing in a place where light is the resource** — this is the entry's real function and it should be placed where a party is carrying open flame.
+- **`Sootwing`** → `FD`. The forge flues are warm and the entry needs warm flues.
+- **`Bugbear`** → `FB` or `J`. The far post of a warren, behind the smaller things.
+- **`Ostmor`** → `J`, with `FB.12` as the shallower instance. The flooded workings after the pumps stopped is the fiction the entry was written from.
+- **`Brynkar`** → `I`. Parapet and cornice work on the span, indistinguishable from the roof-work until it moves, and it does not follow anything indoors — which makes the span itself the trap.
+- **`Sigkar`** → `FC`. The region already teaches the tiles and the rods; a post that challenges three times before it strikes teaches that a dwarven guardian is a condition rather than a monster.
+- **`Drowned`** → `FB`. Whatever went under when the stores flooded.
+- **`Unnamed Dead`** → `HB`, with `HA.6` as its clue site. **This is the strongest of the sixteen and the one most worth getting right.** Every other wraith in the module is levered with a name; this one has had its name taken off every surface and cannot be reached at all. The struck names at `HA.6` are the evidence and the crypts are where it is met. **`HA` and `HB` own it jointly and neither should place it alone.**
+- **`Grave-Crawler`** → `HB`. Worked up into the tiers through whatever the flooding opened.
+- **`Glass Ooze`** → `J`. A corridor-filling mass whose contents are still worth carrying is an Encumbrance problem wearing a monster, which is `J`'s whole register.
+- **`Rust-Eater`** → `FD`. A hold built on iron, and a creature that destroys what a party carried in rather than what it came for.
+
+**Bestiary placements that need direction rather than a pass.**
+
+- **`Orc`.** Written as the Hobgoblins' hired spears, which puts its natural home in `B` or `D` — **both closed.** Placing it means revising an established Creatures field under rule 17. *Alternatives: place it in `D` by direction; leave it unplaced against a later Hobgoblin raid; or cut the entry.* **Not to be resolved by assumption.**
+- **`Ghoul`.** Written as the unburied of the Outer City, which puts its natural home in `E` — **closed**, and `E`'s Creatures field is settled. *Alternatives: revise `E` by direction; move the entry's fiction to `HB`'s untended tiers, which costs it the Girkel-is-quiet-at-night line; or leave it for the `A`–`E` retrofit pass already booked above.*
+- **`Wearer`.** No home proposed, and the reason is a collision rather than an absence. Rumour 10 is marked **`(F)`** — *"Every dwarf in Drakenhold is dead. Whatever you hear moving in there is wearing them."* Placing a shape-taking creature anywhere makes the second sentence of a false rumour true, and `DECISIONS.md` holds that the true set is the one constrained. **The marker may be correct as it stands** — the rumour's false half is *every dwarf is dead*, which survives — but that is a call about the rumour scheme and belongs to whoever owns it, not to a placement. *Alternatives: place it in `HA`/`HC`'s service warrens and leave rumour 10 at `(F)`; place it and re-mark the rumour `(P)`; or cut the entry.*
+
+**Trap placements — recommended.** The catalogue is in the setting outline and every entry is `MEDIUM` or above by construction.
+
+- `HB` — the counterweight grave-trap is already named at `HB.9` and the catalogue entry is written to it.
+- `FE` — the rod-locked strongbox is already named at `FE.6`, likewise.
+- `GD` — the proximity ward is already named at `GD.9`, likewise. **These three are descriptions of what the region files already say and are not new content.**
+- `FC`, `FD` — the false floor over the works, where the vents still run.
+- `GB`, `J` — the flooded step, and the alarm that is not a trap.
+- `GD`, `FE` — the lock that records. **A trap whose whole effect is that the attempt is written down, in a module about ledgers.**
+- `HB`, `GD` — the covered pit, the dart volley, the falling block, the cascading sand, the poison needle. Placed where a level was secured against robbers, which is what these levels are.
+
+**Treasure-type placements — recommended.** Each region's existing prose `Treasure:` field stays authoritative and is not replaced by a type number; this maps the field onto the tables so a Referee improvising in that region rolls on the right one.
+
+- Type I everywhere, and it is the default. Type I is what a body carries.
+- Type II — `FC`, `FD`, `GB`, `FA`. Workshops, forge, barracks, trade hall.
+- Type III — `E`, `FA`, `GD`, `HA`. Note `E.4` and `E.5` already teach the heavy end of this table on the way in and should be left as the teaching site.
+- Type IV — `GD`, `FE`, `HB`, `GB`, `C`. Every one gated, every one with a stated reason for surviving.
+- Type V — sparingly, and `HC`/`HE` first. **The lance is not on this table and is not reachable from it.**
+
+**Procedural tables — recommended, at region level.** The five setting-level tables are written. Each below is offered to its region's pass and none is written.
+
+- `A` — the two inn tables are setting-level and sited here; `A` may take them by reference rather than restating them.
+- `B` and `C` — the clearing forage table, which is **locked to these two regions** and is the whole of foraging in the module.
+- `C` — the midden table, which extends the existing negative-find bullet rather than replacing it.
+- `J` — the dark forage table, **locked to `J`**. Its glowing-fungus result is written to be refused by the light rule rather than to weaken it.
+- `J` — additionally, a table of what the dark has done to a stretch of gallery since it was last crossed. **Colour only. The moment it counts anything it is the depth crawl below and is not written.**
+
+**Open items.**
+
+- **The treasure taxonomy diverges from the Notes.** *Owner: the rules project.* `Rules_Light_TTRPG_Design_Notes.md` reads II Foraged Goods, III Caches, IV Hoards, V Unique Treasures. The setting is written to II Equipment and Armaments, III Luxury and Trade Goods, IV Caches, V Magical Baubles, ratified by direction and recorded in `DECISIONS.md`. **The Notes are read-only here and this repo does not amend them.** Raised so the next upload closes the gap; until it does, the divergence is deliberate and documented. ~~*Foraged Goods have no table in the setting under the new taxonomy — whether foraging keeps a treasure type or becomes a procedure is part of the same question.*~~ *Answered by direction: **foraging is a procedure, not a treasure type**, and it is region-locked to `B`, `C` and `J`. Two d6 tables are written into the outline's Procedural Tables section and nothing a party forages is worth a slot on the way home. The rules-project question narrows accordingly — it is now only whether the Notes keep a Type II slot for Foraged Goods at all.*
+- **The Horror depth crawl.** *Owner: the rules project. Proposal only, and it is not written.* A short procedure for how the Drakmorith reshapes and closes the ground behind a party — a corridor that has gained a turn, a door opening from a side the room does not have, and the way back going progressively wrong. The fiction is fully built in the Bestiary entry and in `HE`. **It fails the test in the section above as things stand**: it would ask the players to hold state that nothing currently asks them to hold, which is the definition of bloat given there. *It is recorded because the alternative reading is arguable — a party in a Horror's reach is already keeping score of the way out, and the procedure would only make that scoring visible, which is exactly the ground the light rule was ratified on.* Answering it either way is a rules-project call and not a region's.
+- **`LORE_INDEX.md` into the checker corpus.** *Owner: a pass of its own, after one full region has been closed against it.* The file is outside `scripts/check.py`'s `_CORPUS_FILES` on purpose while its rows are still settling; adding it puts every pointer under M1 reference integrity, which is where it should end up. **The risk to watch is the one `HANDOFF.md` names** — an index that grows into a fifth place the truth lives. If a later pass finds rows carrying content rather than pointers, the file is cut back before it is wired in.
 
 ---
 

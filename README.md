@@ -49,10 +49,15 @@ Two further outputs are built from the same source: a paginated **PDF** for the 
 │                                 Read-only in this repo: never edited, never extended.
 │                                 Replaced wholesale when a new revision is uploaded.
 ├── Setting_Playbook_Template.md  the deliverable's shape. Illustrative content never enters the setting.
-├── Drakenhold_Setting_Outline.md steps 1–2. Truths, Rumours, History, Factions, Bestiary.
+├── Drakenhold_Setting_Outline.md steps 1–2. Truths, Rumours, History, Factions, Bestiary,
+│                                 Treasure, Traps, Graffiti, Procedural Tables.
 │                                 Referee-facing only. Its Unanswered Questions section holds
 │                                 what the module leaves open at the table on purpose —
 │                                 authors' open items go in OPEN_QUESTIONS.md instead.
+├── LORE_INDEX.md                 register of documentary items that have a far end —
+│                                 engravings, ledgers, maps, notes. An index and not a
+│                                 source: the text lives in the region file, which stays
+│                                 authoritative. Outside the corpus check.sh reads, for now.
 │
 ├── diagrams/
 │   └── Drakenhold_Relational_Diagram.md   step 6 and every level of zoom below it:
