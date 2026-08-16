@@ -252,9 +252,11 @@ The campaign's spine is extraction and survival. Drakenhold is a place to rob an
 
 ---
 
-## UNANSWERED QUESTIONS
+## STANDING MYSTERIES
 
-*What the module leaves open **at the table, on purpose**. These are not tasks. They are the places where the Referee rules and the setting declines to.*
+*Formerly Unanswered Questions. What the module leaves open **at the table, on purpose**. These are not tasks. They are the places where the Referee rules and the setting declines to. **Nothing in this section is ever struck** — a mystery that later acquires an answer is moved into the section that answers it, and the move is recorded.*
+
+*Each entry takes a scope. **`[local]`** belongs to one location or a small cluster and to nothing else; a Referee may answer it freely at their own table. **`[setting]`** reaches across regions, and the Playbook's position is that no answer exists — a party pressing on it is holding everything anybody knows. **The six entries below are unscoped pending the question batch that proposes their scopes.***
 
 - Hireling statlines are deliberately postponed to Referee ruling.
 - The properties of the lance are unfixed. `HB.16` holds the line that nothing about how it was laid suggests it was meant to be used again.

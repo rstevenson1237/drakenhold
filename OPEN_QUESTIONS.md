@@ -73,6 +73,37 @@
 - **`HB.6`, Baldrun Azkelith's empty interment.** The last unanswered question in the module. `GC`, `HB`, `I` and `J` have all been drawn and none of them answers it.
 - **`J.24`.** Unanswered on purpose.
 
+## OPEN — RAISED BY WIRING IN THE DESIGN PATTERN CATALOGUE
+
+*The catalogue landed as `DESIGN_PATTERNS.md` and `patterns/`. What it decided is in `DECISIONS.md`; what it assumed without confirmation, or named and did not build, is below. Its own reasoning is archived at `archive/DESIGN_PATTERNS_HANDOFF_at_harvest_close.md`.*
+
+**Booked passes — work with a name and no date.**
+
+- **The `A`–`E` retrofit to the three location forms.** *Owner: a pass of its own, before the builder phase.* The five closed approach regions were written before `HIGH`/`MEDIUM`/`LOW` existed as forms, and the forms bind only from `FA`/`GA`/`HA` forward. Ruled: retrofit, but separately, so that this pass stayed additive. They are read against: the form each location should take by feature count and Overview length; **`LOW` may not contain a find**; the adjacency floor of no more than two consecutive locations sharing a weight class; and the `HIGH` cap of one per ten, maximum two. **`A` is the region most likely to move**, at twenty locations with one honestly `LOW` entry.
+- **The checker.** *Owner: a pass of its own; nothing of it is written yet.* The predicate backlog is in `RECONCILIATION.md` under `MECHANICAL — NOT YET BUILT`. It is blocked on **a field grammar for the location Markdown** — what a parser recognises as a header, an Overview, a feature, a pointer — which does not exist; the catalogue describes the shapes in prose only. Build order: the structural and pointer checks first, because they are exact, catch the most common real failure and need no judgement; then the mode-conditional checks, which need the region header parsed; the document-level checks last. **The pattern-conditional predicates are deliberately not in that backlog** — they are judgement checks at J11 and stay there.
+- **The trope pass.** *Owner: unassigned.* Every cell file ends with a `FOR THE TROPE PASS` section naming where classic furniture would land and under what constraint. Nothing was inserted. Two cautions to carry: a `HIGH` location carries **one** central mechanism, and a `WILD` region carries **one** lethal off-road site — three means leaving the road is forbidden rather than chosen.
+
+**Assumptions in the catalogue that may want revisiting.**
+
+- **`WILD LOW` "does not exist as locations" rests on one worked WILD region.** *Owner: the first WILD step-9 pass after the approach.* The module has six WILD regions — `B`, `C`, `D`, `E`, `I` and `J` — and the conclusion was drawn from one. `C`, the goblin camps, and `J`, the lost caverns, are the two most likely to want keyed thin locations. **Check the file against them before treating it as binding, and revise the file rather than follow it if they disagree.**
+- **Mode is a property of the region, not the location.** One exception is already live: a boundary location may belong to two regions of different modes, with identical edges at both ends. If more appear, mode may need to become a per-location field with the region carrying a default.
+- **`Extent` and `shared node` have no template slot.** Both are named in tier one as things the grid does not capture — a location may occupy six rooms or run under half a region — and both are currently stated by convention in the Referee Overview. If a checker ever needs them structured, they need a home. Same shape of problem as the pattern tag, which was ruled to have no slot at all.
+- **Faction relations are not stated for every ordered pair.** The template now requires it, including the "does not know they exist" value, which is the relation a party can change. The setting outline's Factions section does not carry the full matrix. **The gaps are not written here and are not to be invented** — they are proposed in the question batch.
+
+**Named and not settled.**
+
+- **The mine and quarry source material was never supplied.** The `CONNECTIVE` gap was closed from *The Hole in the Oak* instead — the noun-phrase headline form and the directional sense-cue rule — and the original request for real mine workings, haulage ways and underground industrial architecture was withdrawn as unnecessary. **If the deep levels want an industrial texture the current files do not supply, that source request is still open.**
+
+**Techniques noticed and not yet used. Not tasks; candidates.**
+
+- **The single-character sighting.** One player sees the thing and the others do not. A one-clause technique that produces table behaviour nothing else does. Used nowhere in Drakenhold.
+- **An unreliable informant must be right once**, or the players simply discount them and the source is wasted. Drakenhold has unreliable sources; **check that at least one has a verified truth attached.**
+- **Ambient-to-actionable ratio on event and encounter tables** sits around 15–35% across two independent sources. A soft target, recorded and not enforced; it is in the predicate backlog as report-only.
+- **The Danger, Encounter and Events tables are state machines, not draw tables.** The `DANGEROUS` countdown from 6 escalating to *the way back is gone* is better than anything in the corpus, and predicates written against random-draw tables do not describe it. **Anything written about table composition elsewhere should be re-read against this.**
+- **Sub-lettering** is in use and the template calls it rare. **The catalogue named two live instances and there is one** — the drain outfall in `B`, which is load-bearing and closed at `D.6` and `J.9`. The other code it cited is the template's own illustrative example and names nothing. No action beyond the correction; noted so nobody prunes the real one for tidiness.
+
+---
+
 ## OPEN — MECHANICAL DEPENDENCIES
 
 *Raised against `Rules_Light_TTRPG_Design_Notes.md`. Answered in the rules project, never in a region file. Answers received are written into `DECISIONS.md`.*

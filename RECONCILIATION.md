@@ -46,9 +46,9 @@ Two kinds of check. **Mechanical** checks are scripted, run every pass, and take
 
 **Demotion runs *after* the destination exists, never before.** A field's detail is pushed down once the location that will carry it has been written, as part of closing that region — not audited out of the fields in advance of the pass that gives it somewhere to go. Moving material between midpoints before the endpoint exists loses it. **Until a location is written, a field carrying its detail is correct**, and the check does not apply.
 
-**J3 · Clue chain.** Rule 10: clues to hidden and secret detail always exist. For every secret in the region, at least one clue exists, and at least one of those clues lives **outside the location holding the secret**. A secret discoverable only by standing in the room it is in is not a secret; it is a search roll.
+**J3 · Clue chain.** Rule 10: clues to hidden and secret detail always exist. For every secret in the region, at least one clue exists, and at least one of those clues lives **outside the location holding the secret**. A secret discoverable only by standing in the room it is in is not a secret; it is a search roll. **And no secret is gated on a search roll anywhere in the module** — gates are physical: standing somewhere, clearing something, opening something, speaking a name, looking back. A `PUZZLE`'s solution chain carries no attribute check and no search roll at any link. Ratified; see `DECISIONS.md`.
 
-**J4 · Connections.** Beyond the mechanical check: does every gate still have an answer that is not the gate, and is the answer priced — longer, darker, or watched by something worse? Does the region still have more than one route to most places? Can a party lose the way?
+**J4 · Connections.** Beyond the mechanical check: does every gate still have an answer that is not the gate, and is the answer priced — longer, darker, or watched by something worse? Does the region still have more than one route to most places? Can a party lose the way? **Where a bypass is cheaper in time, is its cost stated as what the party arrives *without*** — unpractised, unmet, burning light they will want later? The module never says which branch is the mistake, and both branches are costed.
 
 **J5 · Creature placement.** Every creature named resolves to a Bestiary entry, and what is specific to *this* group — what they guard, carry, know, or are currently doing — is stated in the location rather than the Bestiary. Unique NPCs are inline. Check the region is not carrying a monster it does not need, and is not empty of consequence where the tables promise one.
 
@@ -61,9 +61,82 @@ Two kinds of check. **Mechanical** checks are scripted, run every pass, and take
 - Every historical layer is legible from a physical trace, not narrated.
 - Anything the player cannot see, touch, hear or ask about is not yet real. Write it or cut it.
 
-**J8 · Register.** Player text lyrical and questioning; Referee text plain, bounded and spatially precise, with measurements and cardinal directions stated. **Architect voice appears nowhere.** Drift here is gradual and invisible from inside a single region, so it is checked against a region closed several passes earlier rather than against itself.
+**J8 · Register.** Checked against the template's `STYLE` section, which is the authority. Player text lyrical and questioning; Referee text plain, bounded and spatially precise, with measurements and cardinal directions stated. **Architect voice appears nowhere.** The vocabulary rule and its one constraint apply: a precise term is preferred to an accessible one, and the term must be reconstructible from its own sentence. Load-bearing facts must survive paraphrase, because the Referee describes rather than recites. Drift here is gradual and invisible from inside a single region, so it is checked against a region closed several passes earlier rather than against itself.
 
-**J9 · Negative space.** Roughly a third low detail, a third medium, a third high — or a third combat and hazard, a third puzzle and conundrum, a third connective tissue. Rooms may be empty. A region where everything is interesting has no landmarks.
+**J9 · Negative space.** Roughly a third low detail, a third medium, a third high — or a third combat and hazard, a third puzzle and conundrum, a third connective tissue. Rooms may be empty. A region where everything is interesting has no landmarks. **This is a detail-distribution check and not a count of the `HIGH` form**, which is capped separately at one per ten locations, maximum two.
+
+**J10 · The landmark promise.** *The module's most common real failure, and the cheapest to check.* **Every bolded noun in a Player's Overview appears below as a feature.** A noun given weight in the read-aloud and then absent from the Features block is a promise the Referee cannot keep at the table — the player asks about the thing and there is nothing to answer with. Either the feature is written or the bolding comes off.
+
+**J11 · Pattern conformance.** *Run against `DESIGN_PATTERNS.md` and the region's cell files. These are judgement checks and not mechanical ones, because no pattern tag is authored and there is nothing for a script to read.* Each location is read against the ten patterns, and where one applies its discipline is checked:
+
+- **`EMPTY`** — no find of any kind. The load-bearing variant carries exactly one remnant and no other feature.
+- **`TRACE`** — the remnant is named in the present tense before any past-tense verb, and the past tense attaches to something currently touchable.
+- **`HIDDEN CLUE`** — both ends exist, and the far end does not explain itself. An unplaced far end is recorded in `OPEN_QUESTIONS.md` rather than assumed.
+- **`CACHE`** — states a reason it survived, and the reason is not solely a guardian.
+- **`OCCUPIED`** — the want is stateable in one clause, and at least two reaction branches key to named player actions rather than to a reaction roll.
+- **`STANDING HAZARD`** — the announcement distance is stated, with the condition that changes it.
+- **`THRESHOLD`** — mode-crossing instances carry no roll, no cost and no encounter. Crossing is the event.
+
+**J12 · The house rules.** *Stated in `DESIGN_PATTERNS.md`; checked here because they are the ones a region breaks without noticing.*
+- **The clue lives outside the location holding the secret.** Overlaps J3 deliberately; J3 checks existence, this checks placement.
+- **A guardian is usually a condition, not a monster.** A beast that will not touch anyone wearing the right mask, a thing that escalates through four refusals, a toll-taker who bans you for life. Violence is the least interesting version.
+- **Repetition before explanation.** The same stone shown several times across regions before anything names it.
+- **Withholding is content.** The first genuinely rich-looking room contains nothing, and the module declines to say what became of some of what it raises.
+- **Trope defiance is funded.** Each deliberate defiance names the straight instances that pay for it. A module that subverts constantly teaches players that no clue means what it looks like.
+- **State the nil.** A field that resolves to nothing says `None` with a brief reason. An omitted field is ambiguous — did the author decide, or forget?
+- **One central mechanism per `HIGH`.** Puzzle plus hazard plus hoard is three `MEDIUM` locations stacked and plays as none of them.
+
+---
+
+## MECHANICAL — NOT YET BUILT
+
+*The predicate backlog from the design-pattern harvest, held here because this file is where checks live. **None of these is implemented; `scripts/check.sh` is still M1–M8.*** Building them is its own pass and it needs a field grammar for the location Markdown first — what the parser recognises as a header, an Overview, a feature, a pointer. That does not exist; the catalogue describes the shapes in prose.
+
+Predicates that duplicate an existing check are **not** listed: pointer-set-against-diagram is M3, `->` target resolution is M1, every-field-resolves-or-says-`None` is M7, and `SAFE` carries no encounter table by rule 15 and M5 already. The backlog is what is genuinely new.
+
+**Structural, all modes.**
+
+| Check | Severity |
+|---|---|
+| Location parses into exactly one Player's Overview, one Referee Overview and a Features block | error |
+| Every bolded noun in the Player's Overview appears as a feature below (**J10**, mechanised) | error |
+| Weight inferred from form: `LOW` = ≤2 features and one-sentence Overviews | — |
+| No more than two consecutive locations in a region share a weight class | warning |
+| Variety floors — a sentence under eight words; no three consecutive sentences within four words; feature lengths varying by ×2 — applied to `MEDIUM` and `HIGH` only | warning |
+| `->` appears only in connection pointers | error |
+| A location shared between two regions carries identical edges at both ends | error |
+
+**Mode-conditional.**
+
+| Mode | Required | Forbidden |
+|---|---|---|
+| `SAFE` | ≥1 service with a stated cost in coin, standing, obligation or risk; ≥1 refusal; a region-level ceiling; any find carrying a social consequence in the same location; named occupants carrying ≥1 relation to another occupant | combat statistics anywhere in the region |
+| `WILD` | keyed sites declaring a non-visual approach cue with a distance the party can still turn back from; occupants declaring a trigger condition, not only a disposition; terrain declaring a rate | — |
+| `DANGEROUS` | reactions branching on named player actions; gates declaring an answer that is not the gate; exits carrying sensory cues | search-roll gates on any secret |
+
+**Weight-conditional.**
+
+| Weight | Check | Severity |
+|---|---|---|
+| `LOW` | contains no treasure, no inhabitant and no gated find | error |
+| `LOW` `CONNECTIVE` | declares a sensory cue per significant exit, **or** declares a traversal cost | error |
+| `LOW` | exit cues resolve to something actually present at the destination | error |
+| `MEDIUM` | a secret tier present in roughly half of a region's `MEDIUM` locations | warning |
+| `HIGH` | ≤1 per ten locations, ≤2 per region | error |
+| `HIGH` `PUZZLE` | solution string present in the Referee Overview; ≥1 clue reference resolving to an existing location; **zero** attribute-check or search-roll tokens in the solution chain | error |
+| `HIGH` | declares one central mechanism, not several | warning |
+
+**Document-level.**
+
+| Check | Severity |
+|---|---|
+| Every rumour carries `(T)` / `(P)` / `(F)`, and the count of `(T)` does not exceed the count of existing clue destinations | error |
+| Every ordered faction pair declares a relation; *unaware of* is a legal value | warning |
+| Every Standing Mystery carries `[local]` or `[setting]` | error |
+| Region declares its scale, and check cadence is consistent with it | warning |
+| Ambient-to-actionable ratio on event and encounter tables, 15–35% | report only |
+
+*The pattern-conditional predicates are deliberately absent from this backlog. They live at **J11** and stay there: no pattern tag is authored anywhere, so there is nothing for a parser to read, and the sequencing problem they would otherwise create — a checker that must run before the scaffolding is struck — does not arise.*
 
 ---
 

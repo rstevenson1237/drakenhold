@@ -24,7 +24,18 @@ Two further outputs are built from the same source: a paginated **PDF** for the 
 ├── CLAUDE.md                     instructions loaded every turn — kept short on purpose
 ├── README.md                     this file
 ├── PROCEDURES_AND_RULES.md       the build sequence and the authorial rules
-├── RECONCILIATION.md             the checklist every closing pass runs
+├── RECONCILIATION.md             the checklist every closing pass runs, and the backlog
+│                                 of checks specified but not yet built
+├── DESIGN_PATTERNS.md            tier one of the design pattern catalogue: the three
+│                                 layers, the nine mode × weight groupings, the ten
+│                                 patterns, and the house rules that bind across them.
+├── patterns/                     tier two — one file per grouping. A writer opens
+│                                 exactly one, chosen by the region's mode and the
+│                                 location's weight, and does not carry the other eight.
+│                                 DESIGN_PATTERNS.md and patterns/ are process documents:
+│                                 not assembled into the Playbook, not published to the
+│                                 web, and outside the corpus check.sh reads — which is
+│                                 why their worked examples use X.n codes freely.
 ├── HANDOFF.md                    what the next conversation does first. Nothing else. Kept to a page.
 ├── DECISIONS.md                  what has been ratified and is not re-litigated, including
 │                                 mechanical rulings received from the rules project.
@@ -58,7 +69,9 @@ Two further outputs are built from the same source: a paginated **PDF** for the 
 ├── regions/                      22 region files + 00_INDEX.md — authoritative
 ├── archive/                      frozen. Never edited, never cited as current.
 │   ├── Drakenhold_Gazetteer.md   superseded by regions/.
-│   └── HANDOFF_at_step_8_close.md  the handoff as it stood before it was cut back.
+│   ├── HANDOFF_at_step_8_close.md  the handoff as it stood before it was cut back.
+│   └── DESIGN_PATTERNS_HANDOFF_at_harvest_close.md  the catalogue's reasoning, kept
+│                                 after its content was distributed to the working files.
 └── scripts/
     ├── check.sh                  runs every mechanical check; must pass before commit
     ├── build.sh                  assembles the Playbook markdown from the sources
@@ -102,4 +115,4 @@ Classifications and difficulty dice per region are in `regions/00_INDEX.md`.
 
 ## WORKING ON THIS PROJECT
 
-One region per conversation. Read `CLAUDE.md`, then `PROCEDURES_AND_RULES.md`, then the region's own file and its block document. Run `scripts/check.sh` before committing. Close with an updated `HANDOFF.md`.
+One region per conversation. Read `CLAUDE.md`, then `PROCEDURES_AND_RULES.md`, then `DESIGN_PATTERNS.md` and the one `patterns/` file for the cell being written, then the region's own file and its block document. Run `scripts/check.sh` before committing. Close with an updated `HANDOFF.md`.
