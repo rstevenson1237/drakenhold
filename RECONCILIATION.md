@@ -30,6 +30,8 @@ Two kinds of check. **Mechanical** checks are scripted, run every pass, and take
 
 **M10 · Editorial notes.** Reports every surviving `[[ ... ]]` during authoring; fails on them under `check.sh --final`, **which is now step 12's acceptance test rather than a mode anyone may pass in the middle of a pass**. It counts notes and does not read them — **`J13` is what reads them**, and a `[[ playtest: ... ]]` note must be routed there before this check is allowed to go quiet.
 
+**M12 · Pointer completeness.** Every code named in a written location's `Connections:` field also appears as an `->` pointer inside one of its features. **This is the precondition for step 12 dropping that field** — `HANDOFF.md` has required it since `A`'s pass and nothing verified it, so a missing pointer would have been an edge deleted silently, on a branch never merged back, in the one step that cannot be re-run. One-directional on purpose: it asks whether the pointers cover the field, not whether the field covers the pointers. Stubs are skipped — they carry the field and no features at all.
+
 **M11 · Diagram tiering.** The five-tier diagram layer resolves end to end. Every stub is a member of exactly one tier-4 group frame in its own region; every location a tier-4 file draws outside its frame is a member of some other frame; a cross-group edge is drawn at both ends, unless it is one-way, which is drawn from the end it leaves; the tier-1 to tier-3 files match what `scripts/diagrams.py` derives from the tier-4 files; and every diagram file is spliced in by exactly one marker, with every marker naming a file that exists.
 
 ---

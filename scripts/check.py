@@ -189,7 +189,25 @@ _FEATURES_FIELD_RE = re.compile(r'^\*\*Features:\*\*')
 # A feature bullet: `* **Label:** prose`, asterisk-led (not `-`).
 _FEATURE_BULLET_RE = re.compile(r'^\* \*\*(?P<label>[^*]+?):\*\*\s*(?P<body>.*)')
 # An exit pointer inside a feature: `-> \`A.2\``
-_POINTER_RE = re.compile(r'->\s*`([A-Z]{1,2}\.[0-9]+[a-z]?)`')
+#
+# One arrow may carry several destinations as a comma list, and it does where
+# a single physical exit genuinely leads to more than one place:
+#     * **Exits:** ... west by three traces -> `C.1`, `C.2`, `C.3`
+# B.7 is the only instance in the corpus and it is correct — three traces
+# part company at one point on the road. A pattern that captured only the
+# first code would silently drop C.2 and C.3, which is precisely the loss
+# M12 exists to catch, so the grammar has to read the whole run.
+_POINTER_RUN_RE = re.compile(
+    r'->\s*(`[A-Z]{1,2}\.[0-9]+[a-z]?`(?:\s*,\s*`[A-Z]{1,2}\.[0-9]+[a-z]?`)*)'
+)
+
+
+def _pointers_in(text: str) -> list:
+    """Every destination code reached by an `->` in one feature line."""
+    out: list[str] = []
+    for run in _POINTER_RUN_RE.findall(text):
+        out.extend(LOC_CODE_RE.findall(run))
+    return out
 
 
 class Feature(NamedTuple):
@@ -276,7 +294,7 @@ def parse_locations(path: Path) -> list:
                         fm.group('label').strip(),
                         fm.group('body').strip(),
                         i + 1,
-                        _POINTER_RE.findall(s),
+                        _pointers_in(s),
                     ))
         entries.append(Location(
             code, path, start + 1, end, tags,
@@ -1593,6 +1611,46 @@ def m11(ctx: dict) -> list[Finding]:
 
 
 # ---------------------------------------------------------------------------
+# M12 — Pointer completeness
+# ---------------------------------------------------------------------------
+def m12(ctx: dict) -> list[Finding]:
+    """
+    Every code named in a written location's Connections field also appears
+    as an `->` pointer inside one of its features.
+
+    This is the precondition for step 12 dropping the Connections field.
+    HANDOFF.md states the requirement — "every edge in the Connections field
+    must also be written as a feature pointer, so that dropping the field
+    later loses nothing" — and until now nothing verified it. A missing
+    pointer means the strike silently deletes an edge, on a branch that is
+    never merged back, in the one step that cannot be re-run.
+
+    One-directional on purpose. It asks whether the pointers cover the
+    field, not whether the field covers the pointers: a feature may
+    legitimately point at a location it does not connect to, and whether
+    that is legitimate is a separate question about what `->` means.
+
+    Stubs are skipped. They carry a Connections field and no features at
+    all, so the check would fire on all 327 of them.
+    """
+    findings: list[Finding] = []
+    for f in region_files():
+        for loc in parse_locations(f):
+            if not loc.written or not loc.connections:
+                continue
+            text, lineno = loc.connections
+            named = set(LOC_CODE_RE.findall(text))
+            pointed = {p for feat in loc.features for p in feat.pointers}
+            for code in sorted(named - pointed):
+                findings.append(Finding(
+                    f, lineno,
+                    f"{loc.code}: Connections names {code} but no feature points "
+                    f"at it — the strike would drop this edge"
+                ))
+    return findings
+
+
+# ---------------------------------------------------------------------------
 # Check registry
 # ---------------------------------------------------------------------------
 # key → (label, function, severity). Severity may be a callable taking ctx,
@@ -1613,6 +1671,7 @@ CHECKS: dict[str, tuple[str, object, object]] = {
     # Outstanding notes are expected during authoring and forbidden at step 12.
     "M10": ("Editorial notes",      m10, lambda ctx: ERROR if ctx.get("final") else REPORT),
     "M11": ("Diagram tiering",      m11, ERROR),
+    "M12": ("Pointer completeness", m12, ERROR),
 }
 
 

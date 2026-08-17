@@ -93,6 +93,8 @@ Two further outputs are built from the same source: a paginated **PDF** for the 
     │                             --final is step 12's acceptance test and promotes
     │                             surviving editorial notes from REPORT to ERROR.
     │                             --repo PATH runs against a fixture tree.
+    ├── strip.py                  step 12, the strike. Subtractive only, refuses to run
+    │                             on main, dry-run by default. --write performs it.
     ├── build.sh                  assembles the Playbook markdown from the sources
     ├── render_pdf.sh             assembled markdown -> paginated PDF
     ├── build_web.sh              sources -> browsable site in build/web/
