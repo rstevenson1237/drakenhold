@@ -2,6 +2,8 @@
 
 *Run before a region closes, and again as a full sweep across steps 1–9 before the builder phase begins anywhere. "Reconcile" without a list becomes "reread and feel fine about it," which is why this is a list.*
 
+*The judgement checks are ordered by weight and not by number. **`J13` is new and runs before `J7`**, because a playtest note changes what the show-don't-tell read is looking for; it is numbered last because the earlier numbers are cited elsewhere and renumbering them would break those citations for no gain.*
+
 Two kinds of check. **Mechanical** checks are scripted, run every pass, and take no judgement — a failure is a fact. **Judgement** checks are read by a person and by Claude, per region, and a failure is an argument.
 
 ---
@@ -26,7 +28,7 @@ Two kinds of check. **Mechanical** checks are scripted, run every pass, and take
 
 **M9 · Editorial references.** Every `(SECTION, key)` token resolves to a field that exists.
 
-**M10 · Editorial notes.** Reports every surviving `[[ ... ]]` during authoring; fails on them under `check.sh --final`.
+**M10 · Editorial notes.** Reports every surviving `[[ ... ]]` during authoring; fails on them under `check.sh --final`. It counts notes and does not read them — **`J13` is what reads them**, and a `[[ playtest: ... ]]` note must be routed there before this check is allowed to go quiet.
 
 **M11 · Diagram tiering.** The five-tier diagram layer resolves end to end. Every stub is a member of exactly one tier-4 group frame in its own region; every location a tier-4 file draws outside its frame is a member of some other frame; a cross-group edge is drawn at both ends, unless it is one-way, which is drawn from the end it leaves; the tier-1 to tier-3 files match what `scripts/diagrams.py` derives from the tier-4 files; and every diagram file is spliced in by exactly one marker, with every marker naming a file that exists.
 
@@ -59,6 +61,18 @@ Two kinds of check. **Mechanical** checks are scripted, run every pass, and take
 **J5 · Creature placement.** Every creature named resolves to a Bestiary entry, and what is specific to *this* group — what they guard, carry, know, or are currently doing — is stated in the location rather than the Bestiary. Unique NPCs are inline. Check the region is not carrying a monster it does not need, and is not empty of consequence where the tables promise one.
 
 **J6 · Treasure placement.** Distribution across the region and against the module — weight, portability, and what taking it costs socially. Treasure with an owner, a witness or a count attached is doing more work than treasure without. Check the region is not uniformly rich or uniformly bare.
+
+**J13 · Playtest notes.** *Runs before J7, because a table observation changes what the show-don't-tell read is looking for. Applies only where step 11 has run; where no session has touched this ground, the check is nil and says so.*
+
+Every `[[ playtest: ... ]]` note in the ground this run covers is read, diagnosed and **routed under the six resolution routes in `OPEN_QUESTIONS.md`**. A note leaves this check in exactly one of three states:
+
+- **Resolved in place** — the fix is local and in scope. The content is edited and the note struck.
+- **Promoted** — the note raises something not settled. It becomes an item in `OPEN_QUESTIONS.md` under `OPEN — RAISED AT THE TABLE`, with an owner, and the note is struck against that item.
+- **Booked for regeneration** — the note is evidence that the step which produced this ground produced it wrongly. The owning step is re-run over that region or block as its own pass; the note stays where it is until that pass runs, and the register carries the booking.
+
+**A playtest note is never deleted for being stale, and never struck to make `check.sh --final` pass.** M10 is a deletion gate with no judgement in it; this check is the judgement that must run in front of it. A note that survives to the final pass unrouted is a failure of this check, not of M10.
+
+**One table is not a finding.** A note that a party missed a clue is a fact about one party. It becomes a defect when the clue chain fails J3 on re-reading, when the far end was never placed, or when the same note arrives from a second table. **The check asks what the corpus already says, not what the players wanted** — a party that hated a gate is not evidence the gate is wrong, and may be evidence it worked.
 
 **J7 · Show don't tell.** *The heaviest check, run last, on player-facing text only.*
 - No player-facing text states a conclusion the player should reach. Not "the room feels dangerous" — the thing that makes it so.

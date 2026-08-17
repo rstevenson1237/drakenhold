@@ -104,7 +104,7 @@ Two further outputs are built from the same source: a paginated **PDF** for the 
 
 Architect (steps 1–6) complete. Engineer step 7 — location stubs and region tables — **complete for all 22 regions**. Engineer step 8 — region relational diagrams, drawn from the stubs before the outlines — **complete for all 22 regions**.
 
-Current: **step 9, location outlines**, one region per conversation, with each region's diagram reconciled against its finished outlines before the region closes. The reconciled diagram is the deliverable. Procedure 12 requires a reconciliation pass over steps 1–8 before step 9 begins anywhere. Then the full 1–9 sweep, then the builder phase.
+Current: **step 9, location outlines**, one region per conversation, with each region's diagram reconciled against its finished outlines before the region closes. The reconciled diagram is the deliverable. Practice 2 requires a reconciliation pass over steps 1–8 before step 9 begins anywhere. Then the full 1–9 sweep, then the builder phase.
 
 `HANDOFF.md` says what the next conversation does. `OPEN_QUESTIONS.md` and `DECISIONS.md` carry the live detail and are updated at the close of every region.
 

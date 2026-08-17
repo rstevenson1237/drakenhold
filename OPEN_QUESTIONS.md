@@ -18,6 +18,28 @@
 
 ---
 
+## THE SIX ROUTES
+
+*Added at the open-item resolution pass, because the register had grown to roughly forty live items and they are not one kind of thing. **Every open item carries exactly one route**, written into the item so the next author does not re-derive it. An item whose route is not yet obvious is routed by direction, not by guess.*
+
+**A · Strike as already answered.** The work that answers it demonstrably landed in a later pass and nobody came back to close the item. **No content changes.** Strike it, with an italic note naming the file and the pass where the answer now lives. If it states a standing call rather than a fact about one location, restate the call positively in `DECISIONS.md` first.
+
+**B · Direct edit.** Local, in scope, one location or one field, no procedure implicated. Edit, then strike. **Practice 7 still binds** — a change that removes established content is proposed and flagged, never applied in passing because the item invited it.
+
+**C · Editorial note.** The step that answers it has not yet run on that ground. Write a `[[ ... ]]` note at the exact spot the next author will meet it, naming the owning step. **The item stays open.** The note is the inline duplicate this file already permits; it is not a resolution and does not shorten the register.
+
+**D · Regenerate by re-running the step.** The item is architectural: it changes how the content was *produced* rather than what it says. **Re-run the owning numbered step over that region or block**, with the single correct `patterns/<MODE>_<WEIGHT>.md` open, under practice 3. Do not hand-patch prose toward the new shape — patching closes the symptom and leaves the region unable to survive its own re-run, which is the failure this route exists to prevent. Each D item is a booked pass of its own and is not done in passing by whatever pass discovers it.
+
+**E · Ratify only.** The item is a call, not a content gap. Write it into `DECISIONS.md` and strike here with a pointer. The content that follows from it is a separate D item, and saying so is part of the ratification.
+
+**F · Refer out.** A mechanical dependency owned by the rules project. It stays open, tagged as not ours. `OPEN — MECHANICAL DEPENDENCIES` is this route entire.
+
+**Two items carry no route and never will.** `OPEN — DELIBERATELY, AND STAYING THAT WAY` is not a backlog. A pass that routes an item out of that section has made a decision it was not asked to make.
+
+**The order the routes are worked.** A first, because it is free and shrinks the register furthest. Then E, because the D passes are not decidable until the calls exist. Then the checker predicate backlog and M3's repoint, both recorded below. **Then D, and not before** — regenerating a region before the predicates that would check it exist means regenerating it twice. B and C are opportunistic and ride along with whatever pass is already standing on that ground.
+
+---
+
 ## OPEN — CONTENT
 
 - **`I.16`, the undefended approach.** Drawn in `I` with its far end absent, hanging off `I.7` and `I.12`. Which level and from which direction is deferred by the stub itself, and naming it settles by side effect which of three closed regions has a hole in it. **Resolves at `I`'s step 9 pass or by direction before it.**
@@ -42,7 +64,7 @@
 
 ## OPEN — RAISED BY THE STEPS 1–8 SWEEP
 
-*Procedure 12's reconciliation pass, run before step 9 begins anywhere. `scripts/check.sh` M1–M8 all pass; every item here is a judgement finding. The five contradictions the sweep raised were batched and **answered by direction** — they are struck below and the calls are in `DECISIONS.md`. What remains are the watch items, each naming the pass that owns it. J2 was not run: it is a closing check and belongs to each region's own step-9 pass.*
+*Practice 2's reconciliation pass, run before step 9 begins anywhere. `scripts/check.sh` M1–M8 all pass; every item here is a judgement finding. The five contradictions the sweep raised were batched and **answered by direction** — they are struck below and the calls are in `DECISIONS.md`. What remains are the watch items, each naming the pass that owns it. J2 was not run: it is a closing check and belongs to each region's own step-9 pass.*
 
 **Truths**
 
@@ -201,6 +223,14 @@
 - **What fits in none of the three tiers?** *Owner: the same pass.* Named candidates, each of which is currently a file with no tier: `LORE_INDEX.md`, which spans regions and is a register rather than content; `Setting_Playbook_Template.md`; `DESIGN_PATTERNS.md` and `patterns/`; `RECONCILIATION.md`. The first is the only one that carries play-adjacent material, and it has its own open item above.
 - **Should `[[ already: ... ]]` be a checked reference instead of an editorial note?** *Owner: whichever pass first needs it.* As an editorial note it is struck at the final pass and nothing ever verifies the claim it makes. The alternative is a checked token so `M9` can confirm the thing it says already exists actually does. **The note form is what is ratified now**, on the ground that the claim's far end is usually a section or a diagram rather than a nameable entry — but the first pass that writes several of these should say whether that held.
 - **`LORE_INDEX.md` rows have no stable ids.** *Owner: the same pass as the item above about wiring the file into the corpus.* `(LORE, key)` resolves on the item's name, because names are what the register carries. Names are also what gets edited. If the file is wired into the checker corpus, giving each row a stable number — and referencing `(LORE, #37)` — is the cheaper form. **Not done now**, because numbering a register whose rows are still settling invites renumbering.
+
+---
+
+## OPEN — RAISED AT THE TABLE
+
+*Step-11 intake. **Empty, and correctly so — no session has been run against this material yet.** The section exists ahead of the first playtest so that the first one has somewhere to put what it finds, rather than inventing a place under pressure.*
+
+*What lands here: an observation with no place in the corpus to attach a `[[ playtest: ... ]]` note to, and any note `J13` has promoted. Each item names **which region and which session**, records **what happened rather than what to do about it**, and carries a route like every other item. **One table is not a finding** — an item here is a fact about a session until a second table or a failing judgement check makes it a fact about the module, and the item says which it currently is.*
 
 ---
 
