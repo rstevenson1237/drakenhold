@@ -201,7 +201,7 @@ Locations are numbered within their parent region code (`FA.1`, `FA.2`). A compl
 
 Never use `->` for anything but a connection. Prose relationships between things — a name leading to a place, a clue leading to an answer — are written in words.
 
-*During the iterative passes a location may also carry a **Connections:** bullet list and a working note. Both are scaffolding. **Both are struck at the final write.*** The pointers are what survives.
+*During the iterative passes a location may also carry a **Connections:** bullet list and a working note. Both are scaffolding. **Both are struck at step 12, the strike.*** The pointers are what survives.
 
 ---
 

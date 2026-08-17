@@ -89,7 +89,8 @@ Two further outputs are built from the same source: a paginated **PDF** for the 
 │                                 after its content was distributed to the working files.
 └── scripts/
     ├── check.sh                  runs every mechanical check; must pass before commit.
-    │                             check.sh --final also fails on surviving editorial notes
+    │                             check.sh --final is step 12's acceptance test and also
+    │                             fails on surviving editorial notes
     ├── build.sh                  assembles the Playbook markdown from the sources
     ├── render_pdf.sh             assembled markdown -> paginated PDF
     ├── build_web.sh              sources -> browsable site in build/web/
@@ -104,7 +105,11 @@ Two further outputs are built from the same source: a paginated **PDF** for the 
 
 Architect (steps 1–6) complete. Engineer step 7 — location stubs and region tables — **complete for all 22 regions**. Engineer step 8 — region relational diagrams, drawn from the stubs before the outlines — **complete for all 22 regions**.
 
-Current: **step 9, location outlines**, one region per conversation, with each region's diagram reconciled against its finished outlines before the region closes. The reconciled diagram is the deliverable. Practice 2 requires a reconciliation pass over steps 1–8 before step 9 begins anywhere. Then the full 1–9 sweep, then the builder phase.
+Current: **step 9, location outlines**, one region per conversation, with each region's diagram reconciled against its finished outlines before the region closes. The reconciled diagram is the deliverable. Practice 2 requires a reconciliation pass over steps 1–8 before step 9 begins anywhere. Then the full 1–9 sweep, then the builder phase — **step 10, the decorator phase**, which carries feature detail and the trope pass, and **step 11, playtest intake**.
+
+**Blocked, deliberately.** No further step-9 region is opened while `RECONCILIATION.md`'s `MECHANICAL — NOT YET BUILT` list is non-empty: a check that will exist shapes what an author writes, so ground written ahead of the checks is ground to be written twice. The checker is the next unit of work, not `FA`/`GA`/`HA`.
+
+**Step 12, the strike, ends the project and runs once.** It is the only step that is neither iterative nor additive: it removes the working notes, the location-entry field labels, the whole `Connections:` field and every `[[ ... ]]` editorial note, leaving a Playbook in which italic *is* the Player's Overview and a `->` pointer is the whole record of a connection. It runs on a release branch cut from `main` and never merged back, because it removes exactly the data the checks read — after the strike, most of the checker cannot run at all. `check.sh --final` is its acceptance test.
 
 `HANDOFF.md` says what the next conversation does. `OPEN_QUESTIONS.md` and `DECISIONS.md` carry the live detail and are updated at the close of every region.
 

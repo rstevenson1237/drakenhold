@@ -28,7 +28,7 @@ Two kinds of check. **Mechanical** checks are scripted, run every pass, and take
 
 **M9 · Editorial references.** Every `(SECTION, key)` token resolves to a field that exists.
 
-**M10 · Editorial notes.** Reports every surviving `[[ ... ]]` during authoring; fails on them under `check.sh --final`. It counts notes and does not read them — **`J13` is what reads them**, and a `[[ playtest: ... ]]` note must be routed there before this check is allowed to go quiet.
+**M10 · Editorial notes.** Reports every surviving `[[ ... ]]` during authoring; fails on them under `check.sh --final`, **which is now step 12's acceptance test rather than a mode anyone may pass in the middle of a pass**. It counts notes and does not read them — **`J13` is what reads them**, and a `[[ playtest: ... ]]` note must be routed there before this check is allowed to go quiet.
 
 **M11 · Diagram tiering.** The five-tier diagram layer resolves end to end. Every stub is a member of exactly one tier-4 group frame in its own region; every location a tier-4 file draws outside its frame is a member of some other frame; a cross-group edge is drawn at both ends, unless it is one-way, which is drawn from the end it leaves; the tier-1 to tier-3 files match what `scripts/diagrams.py` derives from the tier-4 files; and every diagram file is spliced in by exactly one marker, with every marker naming a file that exists.
 
@@ -70,7 +70,7 @@ Every `[[ playtest: ... ]]` note in the ground this run covers is read, diagnose
 - **Promoted** — the note raises something not settled. It becomes an item in `OPEN_QUESTIONS.md` under `OPEN — RAISED AT THE TABLE`, with an owner, and the note is struck against that item.
 - **Booked for regeneration** — the note is evidence that the step which produced this ground produced it wrongly. The owning step is re-run over that region or block as its own pass; the note stays where it is until that pass runs, and the register carries the booking.
 
-**A playtest note is never deleted for being stale, and never struck to make `check.sh --final` pass.** M10 is a deletion gate with no judgement in it; this check is the judgement that must run in front of it. A note that survives to the final pass unrouted is a failure of this check, not of M10.
+**A playtest note is never deleted for being stale, and never struck to make `check.sh --final` pass.** M10 is a deletion gate with no judgement in it; this check is the judgement that must run in front of it. A note that survives to **step 12** unrouted is a failure of this check, not of M10 — the strike removes the mark, this check removes the question, and reaching the strike with the question still open means the gate was not satisfied.
 
 **One table is not a finding.** A note that a party missed a clue is a fact about one party. It becomes a defect when the clue chain fails J3 on re-reading, when the far end was never placed, or when the same note arrives from a second table. **The check asks what the corpus already says, not what the players wanted** — a party that hated a gate is not evidence the gate is wrong, and may be evidence it worked.
 
@@ -111,6 +111,8 @@ Every `[[ playtest: ... ]]` note in the ground this run covers is read, diagnose
 ## MECHANICAL — NOT YET BUILT
 
 *The predicate backlog from the design-pattern harvest, held here because this file is where checks live. **None of these is implemented; `scripts/check.sh` runs M1–M11 and none of them is one of these.*** Building them is its own pass and it needs a field grammar for the location Markdown first — what the parser recognises as a header, an Overview, a feature, a pointer. That does not exist; the catalogue describes the shapes in prose.
+
+**This list is a block and not a backlog.** *Ratified at the strike pass.* **No further step-9 region is opened while it is non-empty.** A predicate that will exist shapes what an author writes — a `LOW` that may hold no find, a `HIGH` that declares one mechanism — so seventeen regions written ahead of the checks are seventeen regions to regenerate afterward, and that is the same mistake the six routes were written to stop. **Expect these to fail on `A`–`E`**, which were written before the three location forms existed: that failure is evidence for the retrofit already booked in `OPEN_QUESTIONS.md` and is not grounds to weaken a predicate. The severities stated below are real and need a severity concept in `scripts/check.py`, which today fails on any finding at all.
 
 Predicates that duplicate an existing check are **not** listed: pointer-set-against-diagram is M3, `->` target resolution is M1, every-field-resolves-or-says-`None` is M7, and `SAFE` carries no encounter table by rule 15 and M5 already. The backlog is what is genuinely new.
 
