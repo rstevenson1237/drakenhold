@@ -5,8 +5,9 @@ Drakenhold mechanical reconciliation checks M1–M11.
 Usage:
     check.py [M1 [M2 ...]]   run the named checks (no args = all)
     check.py M1              run M1 alone
-    check.py --final         run all checks in final-pass mode, where
-                             surviving editorial notes are a failure (M10)
+    check.py --final         run in step-12 mode, where surviving editorial
+                             notes are a failure rather than a report (M10)
+    check.py --repo PATH     run against a different tree (fixtures)
 
 Output per check:
     M1 · Reference integrity … PASS
@@ -14,7 +15,16 @@ or
     M1 · Reference integrity … FAIL (3)
       regions/FA_Takdun.md:42 — dangling reference: ZZ.99
 
-Exit code: 0 = all checks pass; else count of failed checks (1–127).
+Three severities, because RECONCILIATION.md's predicate backlog states them
+and a check that cannot say "this is a soft target" has to either enforce a
+soft target or drop it:
+
+    ERROR    a failure. Contributes to the exit code.
+    WARN     a drift signal. Printed as WARN, exit code untouched.
+    REPORT   an observation. Printed as REPORT, exit code untouched.
+
+Exit code: 0 = no ERROR-severity check failed; else the count (1–127).
+WARN and REPORT never fail a build; that is what distinguishes them.
 
 This script never writes to or modifies any content file.
 """
@@ -31,6 +41,20 @@ import diagrams  # noqa: E402  — the diagram layer, shared with build.py
 # Paths
 # ---------------------------------------------------------------------------
 REPO = Path(__file__).resolve().parent.parent
+
+
+def set_repo(path) -> None:
+    """Point every check at a different tree.
+
+    `REPO` is read at call time by corpus_files(), region_files(), relpath()
+    and STALE_TREE, so rebinding it here redirects the whole script. This
+    exists so the checks can be run against fixture trees: without it the
+    only corpus available is the real one, which makes a check that reports
+    nothing indistinguishable from a check that is broken.
+    """
+    global REPO, STALE_TREE
+    REPO = Path(path).resolve()
+    STALE_TREE = REPO / "mnt"
 
 # Authoritative corpus: what every check reads.
 # Excluded by design:
@@ -96,6 +120,28 @@ class Finding(NamedTuple):
 
 
 # ---------------------------------------------------------------------------
+# Severity
+# ---------------------------------------------------------------------------
+# A check declares one in the registry. It may also declare a callable taking
+# ctx, for the checks whose severity depends on how the run was invoked — M10
+# is REPORT during authoring and ERROR at step 12, which it previously
+# expressed by printing its own findings and returning an empty list. That
+# worked and was invisible: nothing could tell a check that found nothing from
+# a check that had demoted itself.
+ERROR = "ERROR"
+WARN = "WARN"
+REPORT = "REPORT"
+
+# Only ERROR contributes to the exit code.
+_FAILS_BUILD = {ERROR}
+
+
+def _severity_of(spec, ctx: dict) -> str:
+    """Resolve a registry severity, which may be a constant or a callable."""
+    return spec(ctx) if callable(spec) else spec
+
+
+# ---------------------------------------------------------------------------
 # Shared patterns
 # ---------------------------------------------------------------------------
 # Location code: 1–2 uppercase letters · dot · digits · optional lowercase letter
@@ -108,6 +154,152 @@ LOC_CODE_RE = re.compile(r'\b([A-Z]{1,2}\.[0-9]+[a-z]?)\b')
 # Stub heading: ### `CODE Name` — Three, Thematic, Tags
 # The em-dash is U+2014.
 STUB_HEADING_RE = re.compile(r'^### `([A-Z]{1,2}\.[0-9]+[a-z]?) [^`]+` — .+')
+
+
+# ---------------------------------------------------------------------------
+# The location-entry grammar
+# ---------------------------------------------------------------------------
+#
+# One parser for the shape of a location entry, memoized in ctx. Before this,
+# every per-location check re-implemented the same walk over STUB_HEADING_RE
+# with its own idea of where an entry ends, which is why RECONCILIATION.md's
+# predicate backlog recorded itself as blocked on "a field grammar for the
+# location Markdown". This is that grammar. It is deliberately descriptive:
+# it reports the shape it finds and judges nothing.
+#
+# Two shapes exist in the corpus and the parser must not confuse them.
+#
+#   A step-7 stub                        A step-9 written entry
+#   ### `FA.1 Name` — Tag, Tag, Tag      ### `A.1 Name` — Tag, Tag, Tag
+#   *Working note: ...*                  *Player's Overview: ...*
+#                                        **Referee Overview:** ...
+#   **Connections:** `E.12` gloss ·      **Features:**
+#                                        * **Label:** prose -> `A.2`
+#                                        **Connections:** `A.2` gloss ·
+#
+# Both carry Connections, so "has a Connections field" is true of all 393
+# locations and is useless as a written-ness test. `written` is the predicate
+# that matters and it is stated once here rather than buried in one check.
+
+_WORKING_NOTE_RE = re.compile(r'^\*Working note:')
+_PLAYERS_OVERVIEW_RE = re.compile(r"^\*Player'?s Overview:")
+_REFEREE_OVERVIEW_RE = re.compile(r'^\*\*Referee Overview:\*\*')
+_FEATURES_FIELD_RE = re.compile(r'^\*\*Features:\*\*')
+
+# A feature bullet: `* **Label:** prose`, asterisk-led (not `-`).
+_FEATURE_BULLET_RE = re.compile(r'^\* \*\*(?P<label>[^*]+?):\*\*\s*(?P<body>.*)')
+# An exit pointer inside a feature: `-> \`A.2\``
+_POINTER_RE = re.compile(r'->\s*`([A-Z]{1,2}\.[0-9]+[a-z]?)`')
+
+
+class Feature(NamedTuple):
+    label: str
+    body: str
+    lineno: int
+    pointers: list          # location codes this feature exits to
+
+
+class Location(NamedTuple):
+    code: str
+    path: Path
+    lineno: int             # the ### heading
+    end_lineno: int         # first line after the entry
+    tags: list
+    working_notes: list     # linenos of surviving *Working note: lines
+    players_overview: object    # (text, lineno) or None
+    referee_overview: object    # (text, lineno) or None
+    features: list          # list[Feature]
+    connections: object     # (text, lineno) or None
+
+    @property
+    def written(self) -> bool:
+        """Past the stub: both Overviews and a Features field present.
+
+        M8 used `referee_overview and features` and never consulted the
+        Player's Overview, though it had a pattern for it. All 66 written
+        locations carry all three, so the stricter test agrees with the
+        looser one on the current corpus — and a location carrying only two
+        of the three is malformed rather than written, which is a thing a
+        later check should be able to say.
+        """
+        return bool(self.referee_overview and self.features and self.players_overview)
+
+    @property
+    def is_stub(self) -> bool:
+        return not self.written
+
+
+def parse_locations(path: Path) -> list:
+    """Every location entry in one region file, in document order.
+
+    An entry runs from its `###` stub heading to the next stub heading or the
+    next `## ` section heading, whichever comes first.
+    """
+    lines = read_lines(path)
+    entries: list[Location] = []
+    starts: list[tuple[int, str, list]] = []
+    bounds: list[int] = []
+
+    for i, line in enumerate(lines):
+        s = line.rstrip()
+        hm = STUB_HEADING_RE.match(s)
+        if hm:
+            if starts:
+                bounds.append(i)
+            tags = [t.strip() for t in s.split('—', 1)[1].split(',')] if '—' in s else []
+            starts.append((i, hm.group(1), tags))
+        elif s.startswith('## ') and starts and len(bounds) < len(starts):
+            bounds.append(i)
+    while len(bounds) < len(starts):
+        bounds.append(len(lines))
+
+    for (start, code, tags), end in zip(starts, bounds):
+        working: list[int] = []
+        players = referee = conns = None
+        features: list[Feature] = []
+        for i in range(start + 1, end):
+            s = lines[i].rstrip()
+            if _WORKING_NOTE_RE.match(s):
+                working.append(i + 1)
+            elif _PLAYERS_OVERVIEW_RE.match(s):
+                players = (s, i + 1)
+            elif _REFEREE_OVERVIEW_RE.match(s):
+                referee = (s, i + 1)
+            elif _FEATURES_FIELD_RE.match(s):
+                features = features or []
+            elif _CONN_FIELD_RE.match(s):
+                conns = (s, i + 1)
+            else:
+                fm = _FEATURE_BULLET_RE.match(s)
+                if fm:
+                    features.append(Feature(
+                        fm.group('label').strip(),
+                        fm.group('body').strip(),
+                        i + 1,
+                        _POINTER_RE.findall(s),
+                    ))
+        entries.append(Location(
+            code, path, start + 1, end, tags,
+            working, players, referee, features, conns,
+        ))
+    return entries
+
+
+def locations(ctx: dict) -> dict:
+    """All locations across every region file, keyed by code. Memoized in ctx.
+
+    Follows _tier4_by_region's shape: a check run alone must not depend on
+    another check having populated ctx first.
+    """
+    cached = ctx.get("locations")
+    if cached is not None:
+        return cached
+    out: dict[str, Location] = {}
+    for f in region_files():
+        for loc in parse_locations(f):
+            out.setdefault(loc.code, loc)
+    ctx["locations"] = out
+    return out
 
 
 # ---------------------------------------------------------------------------
@@ -1015,15 +1207,6 @@ def m7(ctx: dict) -> list[Finding]:
 
 
 # ---------------------------------------------------------------------------
-# Shared: working-note / location-development markers (used by M8)
-# ---------------------------------------------------------------------------
-_WORKING_NOTE_RE = re.compile(r'^\*Working note:')
-_PLAYERS_OVERVIEW_RE = re.compile(r"^\*Player'?s Overview:")
-_REFEREE_OVERVIEW_RE = re.compile(r'^\*\*Referee Overview:\*\*')
-_FEATURES_FIELD_RE = re.compile(r'^\*\*Features:\*\*')
-
-
-# ---------------------------------------------------------------------------
 # M8 — Struck notes
 # ---------------------------------------------------------------------------
 def m8(ctx: dict) -> list[Finding]:
@@ -1037,54 +1220,24 @@ def m8(ctx: dict) -> list[Finding]:
     At step 7 every location is still a bare stub with no Overviews or
     Features, so this is expected to pass quietly; it earns its keep once
     steps 8–9 begin writing location outlines.
+
+    Reads the shared location grammar rather than walking the file itself.
+    `written` is stricter than the walk this replaced — it consults the
+    Player's Overview too, where the old code had a pattern for it and never
+    used it — and the two agree on the whole corpus, because all 66 written
+    locations carry all three fields.
     """
     findings: list[Finding] = []
-
     for f in region_files():
-        lines = read_lines(f)
-
-        current_loc: str | None = None
-        loc_start: int = 0
-        has_ref_overview = False
-        has_features = False
-        working_note_lines: list[int] = []
-
-        def _flush(end_idx: int) -> None:
-            if current_loc is None:
-                return
-            if has_ref_overview and has_features and working_note_lines:
-                for wn_lineno in working_note_lines:
-                    findings.append(Finding(
-                        f, wn_lineno,
-                        f"{current_loc}: Working note remains but Referee Overview "
-                        f"and Features are both written — strike the note"
-                    ))
-
-        for i, line in enumerate(lines):
-            s = line.rstrip()
-            hm = STUB_HEADING_RE.match(s)
-            if hm:
-                _flush(i)
-                current_loc = hm.group(1)
-                has_ref_overview = False
-                has_features = False
-                working_note_lines = []
+        for loc in parse_locations(f):
+            if not (loc.written and loc.working_notes):
                 continue
-            if s.startswith('## '):
-                _flush(i)
-                current_loc = None
-                continue
-            if current_loc is None:
-                continue
-            if _WORKING_NOTE_RE.match(s):
-                working_note_lines.append(i + 1)
-            elif _REFEREE_OVERVIEW_RE.match(s):
-                has_ref_overview = True
-            elif _FEATURES_FIELD_RE.match(s):
-                has_features = True
-
-        _flush(len(lines))
-
+            for wn_lineno in loc.working_notes:
+                findings.append(Finding(
+                    f, wn_lineno,
+                    f"{loc.code}: Working note remains but Referee Overview "
+                    f"and Features are both written — strike the note"
+                ))
     return findings
 
 
@@ -1292,11 +1445,17 @@ def m9(ctx: dict) -> list[Finding]:
 def m10(ctx: dict) -> list[Finding]:
     """
     `[[ ... ]]` editorial notes are the designer register. CLAUDE.md: it
-    "must not survive". They are struck at the final pass, alongside the
-    working notes M8 governs and the field labels DECISIONS.md retires.
+    "must not survive". They are struck at step 12, alongside the working
+    notes M8 governs and the field labels DECISIONS.md retires.
 
-    During authoring this reports what is outstanding and passes. Run with
-    --final it fails, which is the gate on the final pass.
+    During authoring this is REPORT severity; under --final it is ERROR,
+    which is the gate on step 12. The registry states that, so the check
+    itself just reports what it finds. It previously printed its own
+    findings and returned an empty list to fake a pass, which worked and was
+    invisible — nothing could distinguish it from a check finding nothing.
+
+    This check counts notes; it does not read them. J13 reads them, and a
+    `[[ playtest: ... ]]` note must be routed there before this goes quiet.
     """
     findings: list[Finding] = []
     for f in corpus_files():
@@ -1307,11 +1466,6 @@ def m10(ctx: dict) -> list[Finding]:
                     f, lineno,
                     f"editorial note outstanding: [[{note}]]"
                 ))
-
-    if not ctx.get("final"):
-        for finding in findings:
-            print(finding.render(), flush=True)
-        return []
     return findings
 
 
@@ -1441,18 +1595,24 @@ def m11(ctx: dict) -> list[Finding]:
 # ---------------------------------------------------------------------------
 # Check registry
 # ---------------------------------------------------------------------------
-CHECKS: dict[str, tuple[str, object]] = {
-    "M1": ("Reference integrity",   m1),
-    "M2": ("Connection symmetry",   m2),
-    "M3": ("Diagram agreement",     m3),
-    "M4": ("Budget and ratio",      m4),
-    "M5": ("Table conformance",     m5),
-    "M6": ("Vocabulary",            m6),
-    "M7": ("Format",                m7),
-    "M8": ("Struck notes",          m8),
-    "M9": ("Editorial references",  m9),
-    "M10": ("Editorial notes",      m10),
-    "M11": ("Diagram tiering",      m11),
+# key → (label, function, severity). Severity may be a callable taking ctx,
+# for a check whose weight depends on how the run was invoked.
+#
+# Insertion order is run order, and a check may read what an earlier one left
+# in ctx — but must not require it, because any check can be run alone.
+CHECKS: dict[str, tuple[str, object, object]] = {
+    "M1": ("Reference integrity",   m1,  ERROR),
+    "M2": ("Connection symmetry",   m2,  ERROR),
+    "M3": ("Diagram agreement",     m3,  ERROR),
+    "M4": ("Budget and ratio",      m4,  ERROR),
+    "M5": ("Table conformance",     m5,  ERROR),
+    "M6": ("Vocabulary",            m6,  ERROR),
+    "M7": ("Format",                m7,  ERROR),
+    "M8": ("Struck notes",          m8,  ERROR),
+    "M9": ("Editorial references",  m9,  ERROR),
+    # Outstanding notes are expected during authoring and forbidden at step 12.
+    "M10": ("Editorial notes",      m10, lambda ctx: ERROR if ctx.get("final") else REPORT),
+    "M11": ("Diagram tiering",      m11, ERROR),
 }
 
 
@@ -1469,8 +1629,25 @@ def main() -> None:
         )
 
     # Determine which checks to run.
-    args = [a for a in sys.argv[1:] if a != "--final"]
-    final = "--final" in sys.argv[1:]
+    argv = sys.argv[1:]
+    final = "--final" in argv
+    args: list[str] = []
+    i = 0
+    while i < len(argv):
+        a = argv[i]
+        if a == "--final":
+            pass
+        elif a == "--repo":
+            i += 1
+            if i >= len(argv):
+                print("--repo needs a path", file=sys.stderr)
+                sys.exit(1)
+            set_repo(argv[i])
+        elif a.startswith("--repo="):
+            set_repo(a.split("=", 1)[1])
+        else:
+            args.append(a)
+        i += 1
     requested: list[str] = args if args else list(CHECKS)
     unknown = [r for r in requested if r.upper() not in CHECKS]
     if unknown:
@@ -1484,15 +1661,18 @@ def main() -> None:
     failed = 0
 
     for key in requested:
-        label, fn = CHECKS[key]
+        label, fn, sev_spec = CHECKS[key]
         findings: list[Finding] = fn(ctx)
-        if findings:
-            print(f"{key} · {label} … FAIL ({len(findings)})")
-            for f in findings:
-                print(f.render())
-            failed += 1
-        else:
+        if not findings:
             print(f"{key} · {label} … PASS")
+            continue
+        severity = _severity_of(sev_spec, ctx)
+        verdict = "FAIL" if severity in _FAILS_BUILD else severity
+        print(f"{key} · {label} … {verdict} ({len(findings)})")
+        for f in findings:
+            print(f.render())
+        if severity in _FAILS_BUILD:
+            failed += 1
 
     sys.exit(min(failed, 127))
 

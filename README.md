@@ -89,8 +89,10 @@ Two further outputs are built from the same source: a paginated **PDF** for the 
 │                                 after its content was distributed to the working files.
 └── scripts/
     ├── check.sh                  runs every mechanical check; must pass before commit.
-    │                             check.sh --final is step 12's acceptance test and also
-    │                             fails on surviving editorial notes
+    │                             three severities: ERROR fails, WARN and REPORT do not.
+    │                             --final is step 12's acceptance test and promotes
+    │                             surviving editorial notes from REPORT to ERROR.
+    │                             --repo PATH runs against a fixture tree.
     ├── build.sh                  assembles the Playbook markdown from the sources
     ├── render_pdf.sh             assembled markdown -> paginated PDF
     ├── build_web.sh              sources -> browsable site in build/web/
