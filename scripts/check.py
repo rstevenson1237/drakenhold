@@ -195,6 +195,14 @@ _PLAYERS_OVERVIEW_RE = re.compile(r"^\*Player'?s Overview:")
 _REFEREE_OVERVIEW_RE = re.compile(r'^\*\*Referee Overview:\*\*')
 _FEATURES_FIELD_RE = re.compile(r'^\*\*Features:\*\*')
 
+# The weight declaration: `**Weight:** MEDIUM`. Authoring scaffolding, struck
+# at step 12 — the form is what carries weight to a reader. Declared rather
+# than inferred because the form proved unreadable as a signal: the only
+# inference rule was LOW = two features or fewer and no written location has
+# fewer than three. See DECISIONS.md.
+_WEIGHT_FIELD_RE = re.compile(r'^\*\*Weight:\*\*\s*(LOW|MEDIUM|HIGH)\s*$')
+WEIGHTS = ("LOW", "MEDIUM", "HIGH")
+
 # A feature bullet: `* **Label:** prose`, asterisk-led (not `-`).
 _FEATURE_BULLET_RE = re.compile(r'^\* \*\*(?P<label>[^*]+?):\*\*\s*(?P<body>.*)')
 # An exit pointer inside a feature: `-> \`A.2\``
@@ -237,6 +245,7 @@ class Location(NamedTuple):
     referee_overview: object    # (text, lineno) or None
     features: list          # list[Feature]
     connections: object     # (text, lineno) or None
+    weight: object          # ("LOW"|"MEDIUM"|"HIGH", lineno) or None
 
     @property
     def written(self) -> bool:
@@ -282,7 +291,7 @@ def parse_locations(path: Path) -> list:
 
     for (start, code, tags), end in zip(starts, bounds):
         working: list[int] = []
-        players = referee = conns = None
+        players = referee = conns = weight = None
         features: list[Feature] = []
         for i in range(start + 1, end):
             s = lines[i].rstrip()
@@ -296,6 +305,8 @@ def parse_locations(path: Path) -> list:
                 features = features or []
             elif _CONN_FIELD_RE.match(s):
                 conns = (s, i + 1)
+            elif _WEIGHT_FIELD_RE.match(s):
+                weight = (_WEIGHT_FIELD_RE.match(s).group(1), i + 1)
             else:
                 fm = _FEATURE_BULLET_RE.match(s)
                 if fm:
@@ -307,7 +318,7 @@ def parse_locations(path: Path) -> list:
                     ))
         entries.append(Location(
             code, path, start + 1, end, tags,
-            working, players, referee, features, conns,
+            working, players, referee, features, conns, weight,
         ))
     return entries
 

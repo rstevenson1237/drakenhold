@@ -56,6 +56,9 @@ _PLAYERS_LABEL = re.compile(r"^\*Player'?s Overview:\s*")
 _REFEREE_LABEL = re.compile(r'^\*\*Referee Overview:\*\*\s*')
 _FEATURES_LINE = re.compile(r'^\*\*Features:\*\*\s*$')
 _CONNECTIONS_LINE = re.compile(r'^\*\*Connections:\*\*')
+# The weight declaration is an authoring constraint and never a reader's
+# business: the form carries weight to a reader.
+_WEIGHT_LINE = re.compile(r'^\*\*Weight:\*\*')
 
 # An editorial note, anywhere in a line.
 _NOTE = re.compile(r'\[\[.+?\]\]')
@@ -172,6 +175,13 @@ def strip_text(text: str) -> str:
 
         # Working note: drop the line, and the blank after it if it leaves a gap.
         if _WORKING_NOTE_LINE.match(line):
+            i += 1
+            if i < len(lines) and not lines[i].strip() and out and not out[-1].strip():
+                i += 1
+            continue
+
+        # The weight declaration.
+        if _WEIGHT_LINE.match(line):
             i += 1
             if i < len(lines) and not lines[i].strip() and out and not out[-1].strip():
                 i += 1

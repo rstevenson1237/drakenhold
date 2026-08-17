@@ -40,6 +40,9 @@
 **The three camps**
 
 ### `C.1 Ashfoot Camp` — The Strongest Chief, Fewest Goblins, Holds the Tile
+
+**Weight:** MEDIUM
+
 *Player's Overview: The smallest camp, and the quiet one. Lean-tos in ranks rather than in a heap, a fire that is not smoking, and a cleared field of view out to the tree line that somebody made deliberately with an axe. There are perhaps twenty of them and they do not swarm you. They watch, and one of them goes to fetch someone, and the rest keep doing what they were doing. The chief comes out at his own pace. He is grey around the muzzle and there is a flat grey stone on a thong at his throat, cut all over with lines, and it is the only clean thing in the camp.*
 
 **Referee Overview:** The northernmost camp, in a stand of old timber with cleared ground on three sides. Roughly twenty `Goblin`, better disciplined than their numbers deserve, with sentries actually posted and actually awake. **Chief Grask Ashfoot** (`Goblin Chieftain`) is old for a goblin, unhurried, and the only one of the three who understands his own position: fewest bodies, best ground, and the respect of the other two camps whether he wants it or not. He will not ask for the alliance. He will let a party propose it, and he will let them talk him into what he already intends.
@@ -55,6 +58,9 @@
 **Connections:** `B.7` the turning on the Ironwood Trail, east — one of the three traces off the road · `C.4` the contested hollow, the only way to either other camp · `C.5` the scavenger track, west out of camp.
 
 ### `C.2 Wetreed Camp` — The Most Goblins, The Worst Chief, Loudest Grievance
+
+**Weight:** MEDIUM
+
 *Player's Overview: You smell it a long way out. Sixty or seventy of them, maybe more, in a sprawl of hide and salvage with no shape to it at all, and the noise carries so far that nothing in this wood does not know exactly where they are. Half the camp comes out to look at you and none of them commits to anything. The chief is enormous by the standards of the others and he is talking before you are inside the ring of fires — about the beast, about the other two camps, about what he will give you, and the list of what he will give you does not stop growing.*
 
 **Referee Overview:** The largest camp, sprawled across a wet clearing east of the track, sixty-plus `Goblin` and no discipline whatsoever. **Chief Nub** (`Goblin Chieftain`) is the biggest goblin here and that is the entire basis of his position. He wants the owlbear dealt with, he will promise anything to whoever does it, and a good deal of what he promises is not his: the other camps' warriors, Ashfoot's tile, the trail itself. The bone midden lies downwind at the camp's edge and the scavenger track passes it.
@@ -70,6 +76,9 @@
 **Connections:** `B.7` the turning, east · `C.4` the contested hollow · `C.5` the scavenger track, which the camp's salvage files come down · `C.6` the bone midden, downwind at the camp's edge.
 
 ### `C.3 Longmire Camp` — Nearest the Den, Bleeding Scouts, Ready to Break
+
+**Weight:** MEDIUM
+
 *Player's Overview: This camp has been moved recently and badly. Everything in it is packed in a way that could be picked up again inside an hour, the fires are small, and nobody is talking above a murmur. There are lookouts facing west, and only west, and they are children. The chief is thin and quick and she does not posture at you at all. She asks, before anything else, whether you came past the deadwood — and when you say what you saw there, she watches your faces to see whether you understood it.*
 
 **Referee Overview:** The westernmost camp, forty-odd `Goblin`, pitched close to the fringe and dug in badly because they have moved twice this season already. **Chief Hessa** (`Goblin Chieftain`) is the only one of the three who is frightened rather than proud, and the only one who has correctly worked out what is killing her scouts. She loses somebody most weeks. She is the cheapest of the three to buy and the alliance she wants is not a war-band — it is permission to move her camp east onto ground the other two claim.
@@ -87,6 +96,9 @@
 **The ground between**
 
 ### `C.4 The Contested Hollow` — No Man's Wood, Old Ambush Sign, Crossed More Than Once
+
+**Weight:** LOW
+
 *Player's Overview: A long shallow hollow of second-growth where three sets of tracks cross and none of them stays. There are old ambush places here, on both sides, and they have been used and abandoned and used again — cut brush laid up into blinds that have gone brown, a spear shaft snapped off in a root, and a goblin skull on a stake at the top of the rise that has been there long enough to go green. Nothing is watching you. Something was watching you a moment ago.*
 
 **Referee Overview:** The ground all three camps claim and none holds, and the only route between any two of them. Dense second-growth, sightlines of a few yards, old blinds on both flanks. `Goblin` from any camp may be here and they ambush out of habit rather than plan — quick to start, quicker to break off, and never in numbers that mean it. The open way west into owlbear country leaves from the hollow's far side.
@@ -101,6 +113,9 @@
 **Connections:** `C.1` Ashfoot Camp · `C.2` Wetreed Camp · `C.3` Longmire Camp — every crossing between chiefs comes through here · `C.7` the deadwood fringe, the open way west.
 
 ### `C.5 The Scavenger Track` — Worn Path to the Outer City, Two Days West, Where the Tile Came From
+
+**Weight:** LOW
+
 *Player's Overview: A path, and a real one — worn to bare earth a foot wide, running west, straight enough that somebody has been maintaining the line of it by walking it. Every few hundred yards there is something dropped and left: a bent iron bracket, a length of chain, a hinge the size of a dinner plate. All of it is grey metal, all of it is cut with the same square letters as the road stones, and all of it has been carried a long way by somebody who got tired.*
 
 **Referee Overview:** The goblins' road west, two days on foot, running from Ashfoot and Wetreed out through the wood and ending at the guard wall of the Outer City. It does not pass the crossing at `D` and it does not go near the hobgoblins. Salvage files of six to ten go out and come back every few weeks. The bone midden lies at its eastern end where it passes Wetreed's edge.
@@ -115,6 +130,9 @@
 **Connections:** `C.1` Ashfoot Camp · `C.2` Wetreed Camp · `C.6` the bone midden, where the track passes the camp's edge · `E.1` the guard wall at Girkel, two days west — the track ends at one of the four breaches, which is how a salvage file gets in and out of a walled city unseen. It does not pass the crossing at `D`.
 
 ### `C.6 The Bone Midden` — Everything They Have Eaten, Scouts Not Buried, What Else Is In It
+
+**Weight:** MEDIUM
+
 *Player's Overview: Everything the camp has ever eaten is in this hollow, and a good deal of what has eaten them. It is deep, and it is layered, and the smell arrives before the sight does. Goblins are in it too — not buried, just added. Most of them are in pieces. Some of them are not: whole, laid roughly where they fell, and those ones have neat holes in them and nothing left in their hands.*
 
 **Referee Overview:** Wetreed's midden, downwind at the camp's edge, with the scavenger track passing its western side. Foul, deep, and worth searching. Among the goblin dead are two distinct kinds: the ones the owlbear made, which are obvious, and a smaller number killed cleanly at range or in rank and stripped of anything worth carrying.
@@ -131,6 +149,9 @@
 **Owlbear country**
 
 ### `C.7 The Deadwood Fringe` — Trees Raked to the Heartwood, Silence, Turn Back Here
+
+**Weight:** LOW
+
 *Player's Overview: The trees change. Not thinner — wounded. Every trunk for a hundred paces has been raked from about the height of a tall man's head down to the root, in fours, deep enough in places to show the pale heartwood, and the bark has healed and been opened again over years. Nothing is moving. Nothing is calling. The birds you have listened to for a week are simply not here, and you notice the silence some time after you walked into it.*
 
 **Referee Overview:** The warning apron around the den, roughly two hundred paces of raked and dying timber east and north of the mouth. Marked territory, maintained for years. The silence is real and is the most reliable indicator in the region of where the thing currently is not — birdsong resumes wherever it is absent. At the back of the fringe, where the raked trees have died and gone over, root-mass has pulled the roof off the chamber below.
@@ -145,6 +166,9 @@
 **Connections:** `C.3` Longmire Camp, east · `C.4` the contested hollow, east · `C.8` the den mouth, west through the raked ground · `C.9` the nest — **hidden**. Where the raked trees have died and gone over, roots have pulled the roof off the chamber below and left a sink a body can crawl down.
 
 ### `C.8 The Den Mouth` — A Fallen Trunk Over a Hole, Fouled Ground, One Way In
+
+**Weight:** MEDIUM
+
 *Player's Overview: An ironwood came down years ago across a fold in the ground, and under the trunk there is a hole going down into the dark, worn smooth at the lip. The ground in front of it is fouled and flattened and scattered with bone, some of it very large. There is one way in and it is this one. Whatever uses it is bigger than the hole looks, and it comes and goes in a straight line, and it has never once needed to hurry.*
 
 **Referee Overview:** The den mouth: a fallen ironwood over a shaft into the nest chamber, the only route the `Owlbear` itself uses. Fouled apron in front, bone scattered, sightlines closed to a few yards on every side. Approach is exposed and audible. **This is the fight the region is built around and it is winnable** — at the mouth, on a plan, with the party choosing the moment.
@@ -159,6 +183,9 @@
 **Connections:** `C.7` the deadwood fringe, back east · `C.9` the nest, down through the hole under the fallen trunk. One way in, and the only one the owlbear uses.
 
 ### `C.9 The Nest` — Thirty Years of Kills, Coin Among the Bones, The Pointer
+
+**Weight:** HIGH
+
 *Player's Overview: The chamber is larger than the hole promised and the floor of it is thirty years deep. Bones, mostly, packed and trodden into a mat — but through it and under it there is everything that was ever carried by anything that came this way. Buckles. Coin, loose, in handfuls. A mail shirt with nobody in it. Grey dwarven metal, worked and lettered. And against the wall, chewed at one corner and otherwise perfectly dry, a leather satchel with a strap that was cut rather than broken.*
 
 **Referee Overview:** The nest chamber, some twenty paces across, floored in three decades of kills. Two ways in: the mouth at `C.8`, which the owlbear uses, and the root sink down from `C.7`, which is hidden and worse. **This is the region's real haul** and it is the only concentration of portable wealth between Thornhaven and the Outer City.

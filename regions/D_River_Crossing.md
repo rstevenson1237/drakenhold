@@ -41,6 +41,9 @@
 **The overlook**
 
 ### `D.1 The Overlook` — First Sight of the Peaks, Wind and Cut Stone, Give It Room
+
+**Weight:** LOW
+
 *Player's Overview: The wood lets go of you at the top of a bare shoulder of ground and the wind arrives all at once. Ahead the land falls away into a gorge with brown water in it, and a bridge across the water in three long arches, and a thread of smoke standing off a roof at the bridge's far end. Beyond all of that, across miles of open country, three mountains stand out of the plain with snow on them. The middle one is broken. Its summit is opened out like a cracked cup and there is no snow at all on the rim of the break. Between the peaks, no thicker from here than a hair laid across the sky, there is a line that does not follow the shape of the mountain. It is straight. It does not bend where the rock bends, and it goes from the first peak to the second and on to the third without once giving way to anything. Somebody left a great deal of cut stone lying about the ground you are standing on, and the wind has been going through it for a long time.*
 
 **Referee Overview:** A bare shoulder of ground where the road comes out of the wood — wind-scoured, grown over in low scrub, littered with cut stone — 260 feet above the river and a mile south-east of the bridge. The wood's edge is a short climb back south-east; the road crosses the top west and then drops into the gorge in four switchbacks. The peaks stand nine miles north across open broken country. The outpost is on the height itself, forty paces north of the road; the Charter camp is a quarter mile down the road in the first fold out of the wind. There is no cover on the top and the wind is constant. **A party on this ground is visible from the far booth from the moment it arrives**, and the hobgoblins count everyone who comes over it. Give the view an hour of table time. It is the campaign's establishing shot, there is nothing here to roll for, and the module should not hurry it.
@@ -56,6 +59,9 @@
 **Connections:** `B.9` the last rise, south-east where the canopy breaks · `D.2` the guard outpost, on the height itself · `D.5` the near booth, down the switchbacks into the gorge · `D.10` the Charter camp, below the overlook on the road.
 
 ### `D.2 The Guard Outpost` — Dwarven Work, Held Too Long, Facing the Wrong Way
+
+**Weight:** MEDIUM
+
 *Player's Overview: A squat house of grey blocks stands on the height with its roof fallen in and both its door frames empty. Inside, in the long room, there are dwarves on the floor — mail gone to rust in the shape of what was in it, helms, axes, one shield still strapped to an arm. They are lying in a line and the line is drawn across the room facing the doorway on the mountain side, and every one of them has fallen toward it. Tables, a bench and a stone bin were dragged across that doorway and it was not enough. Behind them the other door, the one that looks down at the bridge, stands wide open. Nothing is piled against it. Nothing died in it. Out on the ground beyond the mountain door there are more bones, weathered white and pulled about by animals, and there is no mail among them.*
 
 **Referee Overview:** A dwarven blockhouse on the crown of the overlook: one room, forty feet by twenty, walls three feet thick, two doors — north onto the road out of the hold, south onto the road down to the bridge. The upper watch floor is down and its stone lies outside on the north slope. **Fourteen dwarven guard dead inside, all facing the north door**, behind a barricade of their own furniture. The wounds are dwarven work — mail split by axe and pick at arm's length — and there is no goblin, hobgoblin or animal bone in the room. Outside the north door lie four more, weathered two years harder than the ones inside: three in travelling kit and one in a courier's harness with the straps cut off it. Nothing has been looted. The guardroom is the partitioned corner at the south-west; the watch log is on its shelf and the strongroom is under its floor. **The party can read the question in ninety seconds and cannot answer it from this room.** The log dates it and the strongroom explains it, and the module never states it in the open.
@@ -72,6 +78,9 @@
 **Connections:** `D.1` the overlook · `D.4` the watch log, in the guardroom where it was kept · `D.3` the outpost cache — **hidden**, sealed, and it is what explains the dead.
 
 ### `D.3 The Outpost Cache` — Sealed, Preserved, Nobody Came Back For It
+
+**Weight:** MEDIUM
+
 *Player's Overview: Under the slab there is a dry room the size of a large cupboard, cut square, with a stone shelf on three sides, and the air that comes up out of it is thirty years old and smells of grease and cold iron. Everything in it was put away properly. Mail rolled in oiled cloth and laid straight. Hafts stacked by length. A bundle of lamp-hooks wired together. A stone jar sealed with wax, and a small iron chest. And on the middle shelf, by itself, a courier's satchel with the straps cut off it, folded shut, weighted down with a stone — and across the cloth somebody has chalked three words, and the chalk is still there.*
 
 **Referee Overview:** The post's strongroom, six feet by eight and six deep, under the guardroom floor, dry and dark and sealed with a stone plug in the war years. Never opened since. It holds the reserve stores in condition — **dwarven guard gear, preserved, and this is the region's honest treasure** — and it holds one confiscation, set aside under the Guard's own seal and never sent on, because every man who could have sent it on died at the north door two years later.
@@ -87,6 +96,9 @@
 **Connections:** `D.2` the guard outpost above — **hidden**. Sealed thirty years and opened by a search, not a fight.
 
 ### `D.4 The Watch Log` — The Last Weeks, From Outside Looking In, Names and Dates
+
+**Weight:** MEDIUM
+
 *Player's Overview: The guardroom has a stone shelf and on the shelf there is a book — leaves of thin scraped hide sewn between wooden boards, and the boards have kept it. The writing is the square lettering off the road stones, small and quick, and down the left margin the same shapes come round and round: the tally strokes you have been reading since the Ironwood. The same short lines run down page after page after page, in one hand, and then in another hand, and then in the first hand again. The last written page stops two-thirds of the way down, in the middle of a row of tally strokes. Every leaf after it is blank.*
 
 **Referee Overview:** The post's watch log, where it was kept and where nothing is hiding it, intact and legible, in runic script throughout and **not bilingual** — a military document, written for the Guard and not for travellers, and the first thing in the module that pays a party back for learning the script instead of being taught it. One or two lines a day: traffic up and down the road by head and by cart, weather, toll taken, declarations made and refused. Reading the whole book is an hour's work; the last three years are worth all the rest of it. **It is the outside world's account of the hold's end, kept by people who could see the mountain and not the inside of it**, and its value is exactly that limitation.
@@ -106,6 +118,9 @@
 **The gorge**
 
 ### `D.5 The Near Booth` — Empty Thirty Years, Doors Off Their Hinges, Nobody's Ground
+
+**Weight:** MEDIUM
+
 *Player's Overview: At the foot of the switchbacks, where the road runs out onto the bridge, there is a small square house of the same grey stone with both its doors leaning against the inside wall. It is dry. The roof is one slab and the slab is sound, and the wind that has been shoving you around all afternoon stops at the doorway. A stone counter runs across one end, worn into a shallow dish where a thousand years of hands went over the same place. Beside the door, cut into the jamb, there are two blocks of writing — the square lettering, and under it, worn but readable, the same thing said in a tongue you were raised in. And in the last few feet of the doorway, where the stone is softer, people have scratched their names — layers of them, the oldest gone furry with lichen and the newest cut white. A few of the names have a stroke cut through them. Most do not.*
 
 **Referee Overview:** The hold's own toll-house at the near end of the bridge: twelve feet square, single-slab roof, two doors, both off their hinges thirty years. Dry, out of the wind, and the only shelter on this bank. It has a clear line west along all three spans to the far booth **and the far booth has the same line back**. This is nobody's ground — the hobgoblins hold the far bank, do not garrison this one and do not cross at night — so camping here is legitimate, comfortable and entirely observed. A fire in this doorway is a fire the far booth can see, and it turns the morning from an ambush into an appointment: two come down at first light to price whoever slept here.
@@ -122,6 +137,9 @@
 **Connections:** `D.1` the overlook, up the switchbacks · `D.7` the three spans, west along the bank · `D.6` the drain outfall, below the near bank · `D.10` the Charter camp, back up the road.
 
 ### `D.6 The Drain Outfall` — Below the Near Bank, Silt and Cut Stone, Under the Toll
+
+**Weight:** LOW
+
 *Player's Overview: Below the booth the bank drops twenty feet to a shelf of silt and cut stone at the water's edge, out of sight of everything but the river. There is a mouth in the bank here — square, dressed, lipped like a doorway laid on its side, half-choked with grey silt — and the air coming out of it is cold and steady and does not smell of the river at all. Forty feet further down the shelf the water keeps lifting in one place: a slow boil in the shallows that never moves and never stops, though nothing is falling into it and there has been no rain in a week.*
 
 **Referee Overview:** A silt shelf at the foot of the near bank, twenty feet below the booth and forty paces downstream of it, screened from the far booth by the shoulder of rock the bridge's near abutment stands on. **This is the one piece of ground on this bank that the hobgoblins cannot see.** It is what the culvert two regions back is worth: a party that cleared `B.4` and walked the service run comes out here after two watches in the dark, unobserved, on the side of the river it was already on. The drain does not cross the water. The crossing still has to be made, and all this changes is who has counted them.
@@ -137,6 +155,9 @@
 **Connections:** `D.5` the near booth, up the bank · `B.4a` the drain mouth under the culvert on the Ironwood Trail — **hidden**, and it comes out on the near bank. It does not cross the river.
 
 ### `D.7 The Three Spans` — No Mortar, Still True, A Thousand Years
+
+**Weight:** HIGH
+
 *Player's Overview: The bridge is the best-made thing any of you has ever stood on. Three arches take it over the gorge in three long easy leaps, resting on two cutwaters that stand in fast brown water and split it clean, and there is no mortar in it anywhere. Every block is shaped to the blocks either side of it and the whole of it is held up by its own weight and by whoever cut it. The road that brought you here is a wreck — heaved, robbed, grass to the ankle, the kerb gone for somebody's wall. The bridge has not moved. In the parapet at the near end, cut deep and filled with a thousand years of black lichen, there is one word, and by now you can read it.*
 
 **Referee Overview:** Three arches over a gorge 130 feet across at the narrows, deck 18 feet wide and 35 feet above the water, two cutwaters standing in the stream. Dry-laid dwarven work, sound throughout, and not a hazard in any weather short of ice. The far booth stands at the far end and has the deck under observation by day; at night the booth is lit and its watch is night-blind past forty feet, which is the entire reason the old course is passable at all. The paved highway on both approaches is ruined — frost-heaved, robbed, grassed over — and the contrast between the two is the region's plainest argument.
@@ -153,6 +174,9 @@
 **Connections:** `D.5` the near booth, at the near end · `D.8` the far booth, at the far end · `D.11` the climbing road — **hidden**. The old course of the ruined highway runs below the modern road on broken rock above fast water and comes up past the booth. Single file, hands needed, worse in the wet. The goblins at `C` know it and will trade it.
 
 ### `D.8 The Far Booth` — Manned Again, Sentries Awake, A Price Not a Fight
+
+**Weight:** MEDIUM
+
 *Player's Overview: The far booth is the near booth's twin and somebody lives in it. There is new thatch laid over the old roof slab, a door that shuts, a fire, and a line of washing. Two of them stand out on the road in front of it in mail that has been kept oiled, and they do not shout and they do not come at you; they wait until you are close enough to be spoken to without raising a voice. Then one of them says a number. Through the doorway behind him there is a slate on the wall with three columns of marks cut into it, thousands of them, in the same square shapes as the word on the bridge — and whoever has been cutting them has never once got a whole word right.*
 
 **Referee Overview:** The hold's far toll-house, twelve feet square, roofed, kept and manned. Four `Hobgoblin` at any hour in two reliefs changing at dawn and dusk. **Vashek**, their captain, is at the booth about half the time and reachable within a quarter hour from the camp at `D.9`, half a mile north-east behind broken ground. The booth commands the bridge deck by day. They are disciplined and commercial, they give terms once and plainly, and they will take payment over a fight whenever the arithmetic favours it. **They are also counting.** Every crossing for three years is on that slate, and Vashek knows exactly who went up the road and who has come back down it.
@@ -169,6 +193,9 @@
 **Connections:** `D.7` the three spans, back across · `D.9` the broken ground, their camp behind them · `D.11` the climbing road, north.
 
 ### `D.9 The Broken Ground` — Hobgoblin Camp, Fallback, Arithmetic of Force
+
+**Weight:** MEDIUM
+
 *Player's Overview: North-east of the booth the country breaks up into low rock and thorn and dead ground, and there is no sightline in it longer than a bowshot. Half a mile in, in a fold with rock on three sides, there is a camp. A dry-stone wall to chest height with thorn laid along the top of it. One gap. A beaten yard behind. There are more of them in there than there are at the bridge, and then you keep watching and there are a great many more of them than there are at the bridge. Hides pegged out to dry. Cook fires. A picket of goats. Young ones. And at the north end of the wall a row of stones set upright, each one with something cut into it, and you count them twice. Somebody is on the rock above the gap. They are looking outward, and they are not bored.*
 
 **Referee Overview:** The hobgoblin camp, half a mile north-east of the far booth in ground that closes sightlines to a hundred yards. A dry-stone stockade in a fold, one entrance, a sentry post on the rock above it manned day and night. **Thirty-one hobgoblins: about twenty of fighting strength, the rest old, young or not fighters.** This is where the booth falls back to and where its numbers actually are, and it is within horn-call of the bridge. Scouting it is `Track or Evade` and `Explore` work in ground built for both, it costs a watch, and it is the most valuable thing a party can do in this region before it opens its mouth at `D.8`.
@@ -187,6 +214,9 @@
 **Below the overlook**
 
 ### `D.10 The Charter Camp` — Twelve Strong, Good Order, Watching the Road
+
+**Weight:** MEDIUM
+
 *Player's Overview: There is a camp on the road below the overlook, in the first fold out of the wind, and it is the tidiest thing you have seen since Thornhaven. Four tents in a line. A picket rope with eight mules on it and the panniers stacked under oiled canvas. A fire ringed with stones, a pot on it, a latrine dug well downhill. Two of them wear mail and are paid to. The rest are hands, and they are busy. A big man in a good coat comes out to meet you on the road before you reach the first tent, and stops there, so that whatever is going to be said is said on the road. He does not ask who you are. He says he has been sitting up here eleven days watching the road you have just come down, and that you are the first thing on it worth putting his boots on for.*
 
 **Referee Overview:** The Grellick Charter's forward camp, on the road a quarter mile below the overlook and half a mile above the near booth — **a party coming off `D.1` for the bridge passes it whether it wants to or not.** Twelve on the charter: **Halvard Grellick**, the charter-holder's factor; two `Sellsword` on retainer; a surveyor; and eight `Camp Hand` with the mules. **Eleven are in camp.** Chartered, methodical, patient and correct, and entirely willing to hire the party as guides and renegotiate the split once the party has done the dangerous part. They have paid the toll four times and know exactly what it costs going up. **They are a surveyor short and they will not raise it.**
@@ -204,6 +234,9 @@
 **Connections:** `D.1` the overlook above · `D.5` the near booth, down the road. The camp sits on the road and a party coming off the overlook passes it.
 
 ### `D.11 The Climbing Road` — North From the Far Bank, Rough Stone, The Gates Visible
+
+**Weight:** LOW
+
 *Player's Overview: North of the bridge the road climbs for two hours and it is two roads, one lying on the other. Underfoot there is paving — wide, level, cut to fit, still holding its line. On top of it there is thirty years of rough stone thrown into the frost-breaks by people who needed to get a mule up here and did not know how a road is made. As you climb, the grey smudge under the peaks resolves. It is a city. Not a village with a wall around it: streets, and squares, and three low hills covered edge to edge in roofless houses, and a wall around the whole of it with four gaps knocked through. Nothing stands above two storeys. Nothing moves anywhere in it. And at the head of the valley, where the road runs straight at the mountain and does not stop, there is a black slot in the rock face with something enormous lying broken across its own threshold.*
 
 **Referee Overview:** The run-out to the Outer City: two hours' climb north from the far booth, four miles and 600 feet of rise on dwarven highway under thirty years of rough patching. The first half mile is under the sentry rock at `D.9` and the camp watches every party that uses it. The old course climbs out of the gorge and rejoins the road a quarter mile north of the booth where the modern line runs along the lip. **What this stretch is for is the reveal** — Girkel's scale becomes legible on the walk, before the party is inside it, and the great doors are visible from the last mile. Give it the same room as the overlook and roll for nothing.

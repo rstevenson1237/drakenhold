@@ -40,6 +40,9 @@
 **The approach**
 
 ### `E.1 The Guard Wall` — Breached in Four Places, Human Scale, Nothing Held Here
+
+**Weight:** LOW
+
 *Player's Overview: The wall is not much of a wall. Twelve feet of grey block, well cut and well laid, running away east and west further than you can follow it, and it has been broken through in four places. The stone out of the breaks is lying outside the line of it, spread in fans across the ground, as though each gap had been pushed rather than beaten. The gate stands open. The bar is still in its brackets, drawn back, where somebody left it on an ordinary evening. And through the gaps and over the top there is a city — streets going up three low hills, the roofs gone off all of it, and it goes on, and on, and it is larger than anywhere any of you has ever stood.*
 
 **Referee Overview:** The city wall: twelve feet, two miles of circuit, dwarven-cut stone laid at human scale for a population that traded with the hold rather than lived in it. Four breaches — the south gate, where the climbing road from `D.11` arrives, and three collapses, of which the eastern one is where the goblin scavenger track from `C.5` comes in. **In all four the fallen stone lies outside the line of the wall.** Entry is trivial from any direction and the wall's whole job is to hand the party the scale of what is in front of them before they are inside it.
@@ -55,6 +58,9 @@
 **Connections:** `D.11` the climbing road up from the river crossing, south · `C.5` the scavenger track in from the wood, two days east — the goblins use the same breach · `E.2` the town square, up the gate road.
 
 ### `E.2 The Town Square` — Three Roads Meet, A Dry Fountain, Where the Hills Divide
+
+**Weight:** LOW
+
 *Player's Overview: The gate road opens into a square big enough for a market and the crowd that came to it, paved edge to edge in fitted stone with grass in every joint. In the middle stands a fountain — a wide basin, a carved column, four spouts — and it is dry, and it has been dry long enough that a birch has come up out of the basin and is taller than a man. Four ways leave the square besides the one you came in by. Three of them climb, one to each of the three hills. The fourth runs straight on and does not climb at all, and at the end of it, framed by the street the way a picture is framed, is the black slot in the mountain. At the head of each of the three climbing roads there is a stone post with square letters cut into it.*
 
 **Referee Overview:** Two hundred feet across, at the crossing of the gate road and the processional. **The city's only hub and the only place in Girkel where all three hills are legible at once.** The first hill's road climbs west, the second hill's north, the third hill's east, and the processional runs north-west to the doors. Everything else in the city is reached from here or is found by accident. The three posts at the road-heads are the region's key and they are standing in the open.
@@ -72,6 +78,9 @@
 **The first hill — beneath Peak 1**
 
 ### `E.3 The Merchant Halls` — Trade Floors, Burned Stock, Weights Still Set
+
+**Weight:** MEDIUM
+
 *Player's Overview: Three long halls stand open to the sky in a row, their columns still up and their roofs entirely gone, and the floors inside are ash a foot deep with shapes slumped in it that used to be bales and barrels and stacked cloth. Everything soft here burned and everything hard here ran. At the end of the nearest floor there is a stone bench, and on the bench a set of scales — the beam level, the chains sound, and the little squared weights still sitting in the near pan where somebody left them.*
 
 **Referee Overview:** The commercial heart of the first hill and the place the city's coin was counted rather than kept: money went downriver or up the road the same week it was taken. Three trade floors, open and burned out, with the counting rooms behind them under a lower roof that partly survived. House-marks are cut over every door on this hill and most are still legible. Nothing on the floors is worth carrying. Everything this hill is worth is in the rooms behind them, in the sheds above them, and under a house in the streets at their back.
@@ -87,6 +96,9 @@
 **Connections:** `E.2` the square · `E.4` the bonded warehouses, further up the hill · `E.5` the sealed cellar — **hidden**, under a burned house in the streets behind the trade floors.
 
 ### `E.4 The Bonded Warehouses` — Roof Beams Like Ribs, Stock Nobody Claimed, Collapse Risk
+
+**Weight:** MEDIUM
+
 *Player's Overview: Four great sheds stand above the trade floors and the roof beams are still on three of them, bare, curved, evenly spaced, so that walking in under them is walking into a ribcage. The fourth shed is down: a heap of beam and slate with the shape of what it was still readable in it. Inside the standing three the bays are stacked to head height with crates and barrels and bar iron, and on a good many of the crates there is a lead seal on a wire, and the wires are not broken. The floor gives underfoot. Somewhere above you, unhurried, something in the roof moves and settles and stops.*
 
 **Referee Overview:** The bonded warehouses: goods held under customs seal against duty, never released, never claimed. **This is real salvage in quantity and it is in the buildings least likely to hold.** Three sheds standing and one already down, with the standing three working on it. The region's third hazard channel is concentrated here and it is at its worst during exactly the activity the treasure requires — levering, stacking, hauling and shifting weight around inside a building that has been holding its breath for thirty years.
@@ -102,6 +114,9 @@
 **Connections:** `E.3` the merchant halls, downhill.
 
 ### `E.5 The Sealed Cellar` — Under a Burned House, Unlooted, Somebody Meant to Come Back
+
+**Weight:** MEDIUM
+
 *Player's Overview: The house is one burned house in a street of burned houses and there is nothing about the front of it worth stopping for. In the back room the fire took the floor, and under the boards, under three feet of fallen slate, there is a slab with an iron ring in it. What is underneath is a barrel-vaulted cellar the width of the house, and it is dry, and it is full — chests and crates stacked in two rows with a clear aisle left down the middle of them so that everything could be carried straight back out again. There is a lamp on a bracket by the stair with oil still in it. Everything down here has been waiting thirty years for somebody to come back and fetch it.*
 
 **Referee Overview:** An intact cellar under a burned house in the streets behind the trade floors, sealed by its own fallen roof rather than by anybody's care. **Hidden because nobody has looked, not because it was well hidden** — no mark on the house, no reason to pick this ruin out of a street of them, and thirty years of scavengers walking past the front door. Household wealth put away by people who expected to return, and the best single find on this hill. **One piece of the artifact is here.**
@@ -119,6 +134,9 @@
 **The second hill — beneath Peak 2**
 
 ### `E.6 The Government Quarter` — Registry and Writ, Who Left and When, Squatted
+
+**Weight:** MEDIUM
+
 *Player's Overview: The building is long and plain and built for queues, with a stone counter running the whole width of it and pigeonholes floor to ceiling behind, most of them empty and spilled. The floor is ankle-deep in leaves of scraped hide, and where the roof let go they have gone to grey pulp and mean nothing any more. At the north end, under a slab of fallen slate that came down whole, there is a block of them dry, stacked, and as sharp as the day they were written. Somebody has been in here since the last rain. There are boot-prints in the wet leaves, a lamp burned dry standing on the counter, and a sheaf of pages squared up neatly and left where anybody could take them.*
 
 **Referee Overview:** The registry of the government quarter, and **the module's first big-picture account of what happened.** Clerks sat at this counter for three years writing down what people coming down the road out of the hold told them, and confiscating and itemising what those people were carrying, and none of them had any idea what they were writing. The dry block under the slate is the surviving third and it is the third that matters. **Ashen's seven are two streets away, they have already read it, and what they took out of it is visible in what is left.** Reading the block properly is a day's work and a party can carry the useful part.
@@ -135,6 +153,9 @@
 **Connections:** `E.2` the square · `E.7` Ashen's squat, fortified inside the quarter itself · `E.8` the guard barracks, the next building up the same road.
 
 ### `E.7 Ashen's Squat` — Seven of Them, Two Who Read Runic, One Rod
+
+**Weight:** MEDIUM
+
 *Player's Overview: One building on this street has a roof, and the roof is other people's slate, laid on properly. Its ground-floor windows are filled with rubble stacked rather than thrown. There is a barricade of cart timber across the door with a gap in it the width of one person. A cord runs across the street at ankle height with tins hung on it. Something is cooking. On the upper floor a shutter is open and somebody is sitting in it watching you come up the road, and they do not move when you look at them, and they do not go and fetch anybody either.*
 
 **Referee Overview:** Seven `Delver` holding a fortified house two streets inside the government quarter. **Ashen** leads them: no charter, no patience, and one score in mind large enough that she never has to come back. Two of the seven read runic script and have spent a month on the registry at `E.6`. One of those two carries a House rod nobody has identified and he will not part with it. They are Neutral toward the party — rivals are competitors, and information is worth trading — **and they turn to open hostility without warning the moment they believe the party is ahead of them**, which is a belief a party controls more than it realises.
@@ -151,6 +172,9 @@
 **Connections:** `E.6` the government quarter, which they hold.
 
 ### `E.8 The Guard Barracks` — Armoury Stripped, Muster Rolls, Where the Wolves Den
+
+**Weight:** MEDIUM
+
 *Player's Overview: A long hall with sleeping niches cut down both walls and an armoury at the far end, and the racks in the armoury are standing empty and straight, every peg still in place. The far third of the floor is a foot deep in dry grass and hide and bone. You smell it from the doorway. The stone of the threshold has been worn shiny down the middle in a way that stone does not wear on its own, and there are scores on both door jambs at about the height of your knee. There is one door. You can see the whole hall from it, and everything in the hall can see the door.*
 
 **Referee Overview:** The city guard's barracks, uphill of the registry on the same road. One door and no second way in or out. **A pack of nine `Wolf` dens at the far end of the hall.** By day the pack is out across the three hills and the building is empty; from dusk it is theirs, and so is the road outside it. The orderly room is immediately inside the door and holds the muster rolls, which is the only thing in this building worth the walk.
@@ -168,6 +192,9 @@
 **The third hill — beneath Peak 3**
 
 ### `E.9 The Fine Houses` — Wealthy Middle Class, Small Reminders, Picked Over Once
+
+**Weight:** LOW
+
 *Player's Overview: The third hill is streets of good houses, tall and narrow and close together, and the roofs are gone off all of them so that you look down into the rooms from the stairs as you climb. In the first one there is a table with plates still on it and the chairs pushed back and away. In another there is a child's wooden cart standing in the middle of the floor with nothing else in the room at all. In a third the front door is barred on the inside, and the window at the back of the house is broken outward, with the glass lying in the yard.*
 
 **Referee Overview:** The quarter of the wealthy middle class, human, and the closest thing in the region to a portrait of the people who lived here. Roofless, wet, and structurally poor. **Picked over once, thirty years ago, in a hurry, by people on foot**: coin and small silver are gone, plate was left standing where it stood, and nothing in a floor, a wall or a chimney has been touched since. Rooms are described by the party's searching rather than by the module — only the hill is written, and the houses on it are conveyed procedurally.
@@ -183,6 +210,9 @@
 **Connections:** `E.2` the square · `E.10` the servants' rows, behind and below the fine houses · `E.11` the burying ground, out past the houses.
 
 ### `E.10 The Servants' Rows` — Those Who Were Never Counted, Plain and Dense, Nothing Taken
+
+**Weight:** MEDIUM
+
 *Player's Overview: Behind the fine houses and below them the streets change. The houses get small, and identical, and there are a great many of them — one room down and one up, doors straight onto the street, not a scrap of carving on anything. And nothing in them has been taken. There are cups on the shelves. There are beds in the corners. There is a pair of shoes by a door, set together and pointing the way shoes are set by somebody who means to put them on in the morning. On every doorpost, cut small and neat at the height of a hand, there are names. A few are in the square letters. Most are in a plainer scratched hand. Some posts carry four or five, one under the other, going down.*
 
 **Referee Overview:** Where the underclass lived outside the hold — the servants, staff and slaves who kept it running and were never counted among its citizens. Denser than the rest of Girkel several times over and physically the poorest ground in the region. **Nothing has been taken because nobody thought there was anything in it, and there is not — except the names.** No wealth, no hazard, no faction, and the quietest and most valuable single thing in the approach.
@@ -198,6 +228,9 @@
 **Connections:** `E.9` the fine houses, uphill · `E.11` the burying ground, at the end of the rows.
 
 ### `E.11 The Burying Ground` — Human Rites, Dwarven Stones Reused, Thirty Years Untended
+
+**Weight:** LOW
+
 *Player's Overview: The rows run out and the ground opens into a field of stones standing in grass up to your waist, and the field goes on for acres. The stones are grey dwarven block, squared and re-cut, and the names on them are human names, and the grass has laid itself over most of them. Go round behind one and there are older letters on the back of it, running the wrong way up, cut deeper and better than the name on the front.*
 
 **Referee Overview:** The city's burying ground: human rites, in ground, marked with dwarven stone salvaged from wherever it could be got. Untended thirty years and heavily overgrown; walking it takes a day and reading it takes two. **There is nothing here.** No dead that rise, no guardian, no lock — and the region has put its least defended ground around the thing nobody thought was worth taking, one region after a farmstead where the dead came up out of the floor when they were robbed. **The contrast is deliberate.** A party will approach this field carefully and the module will let it, and then nothing will happen.
@@ -215,6 +248,9 @@
 **The threshold**
 
 ### `E.12 The Great Doors` — Broken Open, Lying Around Their Own Threshold, Ten Years Silent
+
+**Weight:** HIGH
+
 *Player's Overview: The processional runs a mile straight at the mountain without climbing and without bending, and it ends in a cut in the rock face wide enough for eight carts abreast. Where the cut becomes a doorway there are two doors lying on the ground. They are twenty feet high. They are lying outward, on the road, in three pieces each, and the pins are still in their edges with the sockets torn out of the stone around them. Past them the doorway is open, and black, and taller than any tree you have stood under, and out of it comes cold air, steadily, smelling of stone and old burning. In the dust across the threshold there are tracks. Every one of them is small and three-toed. Some go in and some come out and there are a great many of them, and there is nothing else in the dust at all.*
 
 **Referee Overview:** The great doors of Drakenhold, broken open and lying around their own threshold, and **the only opening to the outside world in the entire hold.** Thirty feet of frame, twenty feet of leaf, and the hinge sockets torn out of the jamb stone. Cold air moves outward at all hours and does not vary with the weather, because it is not weather — the hold breathes, and `FA.1` is where a party feels the same draught from the other side of it. The tracks are `Kobold` scavenging parties in both directions, daily. Nothing else uses this door, and nothing has come out of it in ten years.
