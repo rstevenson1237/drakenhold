@@ -81,9 +81,8 @@ _FIELD_OR_HEADING = re.compile(r'^(\*\*[A-Za-z][^*]*:\*\*|#{1,6} |\*Working note
 # Referee what the unnamed rooms are, and that is play content. So this is
 # sentence-level, with each pattern written out rather than inferred.
 #
-# Still subtractive: every pattern deletes and none rewrites. The room budget
-# and stub counts are left alone deliberately — whether a count belongs in
-# front of a reader is a separate question and not this script's to answer.
+# Still subtractive: every pattern deletes and none rewrites. The room-budget
+# note is handled separately below, as a whole line.
 _ARCHITECT_SENTENCES = [
     re.compile(r'Procedure step \d+ for the code, name and three thematic tags; '
                r'\*\*procedure step \d+ for the outlines below them\.\*\*\s*'),
@@ -110,6 +109,23 @@ _ARCHITECT_SENTENCES = [
     re.compile(r'The diagram is authoritative: the \*\*Connections:\*\* field under each '
                r'stub is checked against it, never the reverse\.\s*'),
 ]
+
+# The room-budget note: "40 rooms budgeted; **20 are stubbed as locations**
+# and the balance is unnamed fill inside the stated groupings — emptied bins,
+# collapsed rank ends, sleeping holes..."
+#
+# Struck whole, and this is the one removal that costs something. The budget
+# and stub count are architect vocabulary and go. The fill description after
+# the dash is referee-facing — it tells a Referee what the unnamed rooms are —
+# and it goes with them, because "the balance is unnamed fill" is a fragment
+# once the count it refers to is gone, and repairing it would be a rewrite
+# rather than a removal.
+#
+# So the content is relocated rather than lost: the fill description belongs
+# in the region's Layout field, in referee register, and moving it there is a
+# step-10 task per region. Step 12's gate names it. This is J2 demotion —
+# write the destination first, then cut — and the strike is the cut.
+_BUDGET_LINE = re.compile(r'^\*[0-9]+ ["“]?rooms?["”]?[ ,]')
 
 # An italic-only line, which is the shape all of this prose takes.
 _ITALIC_LINE = re.compile(r'^\*(?!\*)(?P<body>.*)\*\s*$')
@@ -171,6 +187,13 @@ def strip_text(text: str) -> str:
         # Field labels: keep the prose, drop the name.
         line = _PLAYERS_LABEL.sub('*', line)
         line = _REFEREE_LABEL.sub('', line)
+
+        # The room-budget note, struck whole.
+        if _BUDGET_LINE.match(line):
+            i += 1
+            if i < len(lines) and not lines[i].strip() and out and not out[-1].strip():
+                i += 1
+            continue
 
         # Architect register in an italic note: sentence-level.
         stripped = _strip_architect(line)
