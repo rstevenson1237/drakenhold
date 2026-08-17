@@ -29,7 +29,7 @@ Drakenhold — a tabletop RPG setting delivered as a Setting Playbook. Read `REA
 - **Half a region's room budget is stubbed.** The rest is unnamed fill. Rooms may be empty.
 - **Every gate has an answer that is not the gate**, and the answer is priced — longer, darker, or watched by something worse.
 - **No secret is gated on a search roll.** Gates are physical: standing somewhere, clearing something, opening something, speaking a name, looking back.
-- **`HIGH` is one location per ten, two at most in a region.** That is a cap on the form, not the negative-space thirds, which are a different measure. A `LOW` location may not contain a find.
+- **Weight is declared per location and budgeted: `HIGH` one in ten, `LOW` three in ten, `MEDIUM` six in ten.** `HIGH` counts per region, `LOW`/`MEDIUM` per location group. There is no separate maximum on `HIGH` and the thirds are not a second measure — the budget is the only one. A `LOW` location may not contain a find.
 - **Region fields narrow as locations develop.** Anything true of one named location belongs in that location, not the field.
 - **A field may be empty.** State "None" with a brief reason. Never pad.
 - **Two inline marks, and only two.** `(SECTION, key)` references a setting-outline field — `(BESTIARY, Goblin)`, `(TREASURE, II)` — survives to the finished playbook, becomes a link, and is checked by M9. `[[ ... ]]` is an editorial note, is designer register, and must not survive; M10 reports them and `check.sh --final` fails on them. Location codes stay backticked and belong to M1. Single brackets are already spoken for.

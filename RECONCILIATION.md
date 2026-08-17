@@ -2,6 +2,8 @@
 
 *Run before a region closes, and again as a full sweep across steps 1–9 before the builder phase begins anywhere. "Reconcile" without a list becomes "reread and feel fine about it," which is why this is a list.*
 
+*The judgement checks are ordered by weight and not by number. **`J13` is new and runs before `J7`**, because a playtest note changes what the show-don't-tell read is looking for; it is numbered last because the earlier numbers are cited elsewhere and renumbering them would break those citations for no gain.*
+
 Two kinds of check. **Mechanical** checks are scripted, run every pass, and take no judgement — a failure is a fact. **Judgement** checks are read by a person and by Claude, per region, and a failure is an argument.
 
 ---
@@ -14,7 +16,7 @@ Two kinds of check. **Mechanical** checks are scripted, run every pass, and take
 
 **M3 · Diagram agreement.** Every edge in a region's connection bullets appears in one of the region's tier-4 diagrams, and every edge those diagrams draw with an end in the region appears in some entry's bullets. Diagrams are authoritative; the bullets are what gets corrected.
 
-**M4 · Budget and ratio.** Stub count against stated room budget, at roughly half. Region totals against block totals. Flags drift rather than enforcing a number.
+**M4 · Budget and ratio.** Stated stub count against the headings actually on disk, and region totals against block totals. **The `0.35`–`0.65` stubbed-to-budget band is withdrawn** — the weight budget in rule 7 governs distribution now, and `M17` checks it. Room budgets still describe how much unnamed fill a region carries, which is a different question from how the named locations are weighted.
 
 **M5 · Table conformance.** Classification matches table type — SAFE→Events, WILD→Encounters, DANGEROUS→Dangers. Danger tables count 6→1; all others ascend. Six entries.
 
@@ -26,9 +28,17 @@ Two kinds of check. **Mechanical** checks are scripted, run every pass, and take
 
 **M9 · Editorial references.** Every `(SECTION, key)` token resolves to a field that exists.
 
-**M10 · Editorial notes.** Reports every surviving `[[ ... ]]` during authoring; fails on them under `check.sh --final`.
+**M10 · Editorial notes.** Reports every surviving `[[ ... ]]` during authoring; fails on them under `check.sh --final`, **which is now step 12's acceptance test rather than a mode anyone may pass in the middle of a pass**. It counts notes and does not read them — **`J13` is what reads them**, and a `[[ playtest: ... ]]` note must be routed there before this check is allowed to go quiet.
 
 **M11 · Diagram tiering.** The five-tier diagram layer resolves end to end. Every stub is a member of exactly one tier-4 group frame in its own region; every location a tier-4 file draws outside its frame is a member of some other frame; a cross-group edge is drawn at both ends, unless it is one-way, which is drawn from the end it leaves; the tier-1 to tier-3 files match what `scripts/diagrams.py` derives from the tier-4 files; and every diagram file is spliced in by exactly one marker, with every marker naming a file that exists.
+
+**M12 · Pointer completeness.** Every code named in a written location's `Connections:` field also appears as an `->` pointer inside one of its features. **This is the precondition for step 12 dropping that field** — `HANDOFF.md` has required it since `A`'s pass and nothing verified it, so a missing pointer would have been an edge deleted silently, on a branch never merged back, in the one step that cannot be re-run. One-directional on purpose: it asks whether the pointers cover the field, not whether the field covers the pointers. Stubs are skipped — they carry the field and no features at all.
+
+**M13 · Location structure.** A written location parses into exactly one Player's Overview, one Referee Overview and a Features block. A location carrying two of the three is malformed rather than written, and `M8`'s test could not say so.
+
+**M14 · Pointer discipline.** `->` appears only in a feature's connection pointer. It matters more since the repoint: the pointer set is what `M3` reads, and after step 12 it is the only record a connection has.
+
+**M15 · Shared-node parity.** A location belonging to two regions carries identical edges at both ends. The sharing is legal by ratified decision; the asymmetry is the error.
 
 ---
 
@@ -60,6 +70,18 @@ Two kinds of check. **Mechanical** checks are scripted, run every pass, and take
 
 **J6 · Treasure placement.** Distribution across the region and against the module — weight, portability, and what taking it costs socially. Treasure with an owner, a witness or a count attached is doing more work than treasure without. Check the region is not uniformly rich or uniformly bare.
 
+**J13 · Playtest notes.** *Runs before J7, because a table observation changes what the show-don't-tell read is looking for. Applies only where step 11 has run; where no session has touched this ground, the check is nil and says so.*
+
+Every `[[ playtest: ... ]]` note in the ground this run covers is read, diagnosed and **routed under the six resolution routes in `OPEN_QUESTIONS.md`**. A note leaves this check in exactly one of three states:
+
+- **Resolved in place** — the fix is local and in scope. The content is edited and the note struck.
+- **Promoted** — the note raises something not settled. It becomes an item in `OPEN_QUESTIONS.md` under `OPEN — RAISED AT THE TABLE`, with an owner, and the note is struck against that item.
+- **Booked for regeneration** — the note is evidence that the step which produced this ground produced it wrongly. The owning step is re-run over that region or block as its own pass; the note stays where it is until that pass runs, and the register carries the booking.
+
+**A playtest note is never deleted for being stale, and never struck to make `check.sh --final` pass.** M10 is a deletion gate with no judgement in it; this check is the judgement that must run in front of it. A note that survives to **step 12** unrouted is a failure of this check, not of M10 — the strike removes the mark, this check removes the question, and reaching the strike with the question still open means the gate was not satisfied.
+
+**One table is not a finding.** A note that a party missed a clue is a fact about one party. It becomes a defect when the clue chain fails J3 on re-reading, when the far end was never placed, or when the same note arrives from a second table. **The check asks what the corpus already says, not what the players wanted** — a party that hated a gate is not evidence the gate is wrong, and may be evidence it worked.
+
 **J7 · Show don't tell.** *The heaviest check, run last, on player-facing text only.*
 - No player-facing text states a conclusion the player should reach. Not "the room feels dangerous" — the thing that makes it so.
 - Every hidden route exists as a describable object with a mechanism, searchable by a player who does not know it is there.
@@ -69,7 +91,7 @@ Two kinds of check. **Mechanical** checks are scripted, run every pass, and take
 
 **J8 · Register.** Checked against the template's `STYLE` section, which is the authority. Player text lyrical and questioning; Referee text plain, bounded and spatially precise, with measurements and cardinal directions stated. **Architect voice appears nowhere.** The vocabulary rule and its one constraint apply: a precise term is preferred to an accessible one, and the term must be reconstructible from its own sentence. Load-bearing facts must survive paraphrase, because the Referee describes rather than recites. Drift here is gradual and invisible from inside a single region, so it is checked against a region closed several passes earlier rather than against itself.
 
-**J9 · Negative space.** Roughly a third low detail, a third medium, a third high — or a third combat and hazard, a third puzzle and conundrum, a third connective tissue. Rooms may be empty. A region where everything is interesting has no landmarks. **This is a detail-distribution check and not a count of the `HIGH` form**, which is capped separately at one per ten locations, maximum two.
+**J9 · Negative space.** Read against **the weight budget, which is the only measure**: `HIGH` one in ten counted per region, `LOW` three in ten and `MEDIUM` six in ten counted per location group. Rooms may be empty. **A region where everything is interesting has no landmarks**, and that is what the budget exists to prevent. *This check previously described thirds of detail and insisted they were a different measure from the `HIGH` cap; the two are one and the budget is it. The maximum of two `HIGH` per region is withdrawn.* The arithmetic is `M17`'s; **what stays here is the judgement the arithmetic cannot make** — whether the thin locations are thin because the region needed breathing space or because nobody wrote them.
 
 **J10 · The landmark promise.** *The module's most common real failure, and the cheapest to check.* **Every bolded noun in a Player's Overview appears below as a feature.** A noun given weight in the read-aloud and then absent from the Features block is a promise the Referee cannot keep at the table — the player asks about the thing and there is nothing to answer with. Either the feature is written or the bolding comes off.
 
@@ -98,19 +120,26 @@ Two kinds of check. **Mechanical** checks are scripted, run every pass, and take
 
 *The predicate backlog from the design-pattern harvest, held here because this file is where checks live. **None of these is implemented; `scripts/check.sh` runs M1–M11 and none of them is one of these.*** Building them is its own pass and it needs a field grammar for the location Markdown first — what the parser recognises as a header, an Overview, a feature, a pointer. That does not exist; the catalogue describes the shapes in prose.
 
+**This list is a block and not a backlog.** *Ratified at the strike pass.* **No further step-9 region is opened while it is non-empty.** A predicate that will exist shapes what an author writes — a `LOW` that may hold no find, a `HIGH` that declares one mechanism — so seventeen regions written ahead of the checks are seventeen regions to regenerate afterward, and that is the same mistake the six routes were written to stop. **Expect these to fail on `A`–`E`**, which were written before the three location forms existed: that failure is evidence for the retrofit already booked in `OPEN_QUESTIONS.md` and is not grounds to weaken a predicate. **The severities stated below are now real.** `scripts/check.py` carries three — `ERROR` fails the build, `WARN` and `REPORT` print and leave the exit code alone — and a check declares one in the registry, which may be a callable where the weight depends on the run: `M10` is `REPORT` during authoring and `ERROR` under `--final`.
+
 Predicates that duplicate an existing check are **not** listed: pointer-set-against-diagram is M3, `->` target resolution is M1, every-field-resolves-or-says-`None` is M7, and `SAFE` carries no encounter table by rule 15 and M5 already. The backlog is what is genuinely new.
 
 **Structural, all modes.**
 
 | Check | Severity |
 |---|---|
-| Location parses into exactly one Player's Overview, one Referee Overview and a Features block | error |
-| Every bolded noun in the Player's Overview appears as a feature below (**J10**, mechanised) | error |
-| Weight inferred from form: `LOW` = ≤2 features and one-sentence Overviews | — |
-| No more than two consecutive locations in a region share a weight class | warning |
-| Variety floors — a sentence under eight words; no three consecutive sentences within four words; feature lengths varying by ×2 — applied to `MEDIUM` and `HIGH` only | warning |
-| `->` appears only in connection pointers | error |
-| A location shared between two regions carries identical edges at both ends | error |
+| ~~Location parses into exactly one Player's Overview, one Referee Overview and a Features block~~ **built, `M13`** | error |
+| Every bolded noun in the Player's Overview appears as a feature below (**J10**, mechanised) — **blocked, see below** | error |
+| Weight inferred from form: `LOW` = ≤2 features and one-sentence Overviews — **blocked, see below** | — |
+| No more than two consecutive locations in a region share a weight class — *blocked on weight* | warning |
+| Variety floors — a sentence under eight words; no three consecutive sentences within four words; feature lengths varying by ×2 — applied to `MEDIUM` and `HIGH` only — *blocked on weight* | warning |
+| ~~`->` appears only in connection pointers~~ **built, `M14`** | error |
+| ~~A location shared between two regions carries identical edges at both ends~~ **built, `M15`** | error |
+
+~~**Two of the structural predicates cannot be built as specified.**~~ ***Both unblocked by direction at the weight pass.*** The bolding convention `J10` needs **is being run back in** — it holds a Player's Overview accountable to the features below it, which is what it was written for — and **weight is now declared** in a per-location `**Weight:**` field against a stated budget. The two findings are kept below because the reasoning matters: a predicate written to a convention the corpus does not use is worse than an absent one, since it passes and the pass means nothing. **What was wrong was the corpus, not the predicates**, and that is the rarer of the two answers.
+
+- **`J10` has nothing to mechanise. No Player's Overview in the corpus contains bold — none of the 66.** The judgement check reads *"every bolded noun in a Player's Overview appears below as a feature"* and calls it the module's most common real failure and the cheapest to check; the mechanised form would report zero findings on every run, for ever, because the input set is empty. **Either the bolding convention was intended and never adopted, or `J10` describes a different check than the one it states.** It stays a judgement check and it stays honest — a human reading a Player's Overview against the Features below is doing real work — but it is not mechanisable in this form.
+- **Weight cannot be inferred, so four predicates fall with it.** The backlog defines only `LOW` — *≤2 features and one-sentence Overviews* — and **no written location has fewer than three features**, so the rule identifies nothing. Above `LOW` there is no signal at all: the template puts `HIGH` at five to seven features, which would make 33 of the 66 written locations `HIGH` against a cap of one per ten and two per region, and that is a measurement artefact rather than 33 defects. **`HIGH` is a form an author chooses and there is no tag by ratified decision**, which is exactly the sequencing problem the catalogue recorded and then left in the backlog anyway.
 
 **Mode-conditional.**
 

@@ -15,7 +15,7 @@
 7. The far guard booth at the river crossing is manned again, and they are charging.
 8. (P) — He sleeps a year at a stretch and wakes for a year, and by the reckoning of it this is the sleeping year.
 9. Kobolds hold the granaries under the first peak. They would rather trade than fight, which makes them the only reasonable thing in that mountain.
-10. (F) — Every dwarf in Drakenhold is dead. Whatever you hear moving in there is wearing them.
+10. (P) — Every dwarf in Drakenhold is dead. Whatever you hear moving in there is wearing them.
 11. (P) — The lizard-folk run the toll for the wyrm, and they skim it, and one day he will notice.
 12. (F) — The wyrm is dying. That is why the sightings stopped. Walk up there now and you will find a carcass on a pile of gold.
 13. (T) — The old gates want carved tiles, not keys. A cracked one is worth nothing — the stone has to be whole.

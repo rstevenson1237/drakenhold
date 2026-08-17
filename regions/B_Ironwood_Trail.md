@@ -42,6 +42,9 @@
 **On the road**
 
 ### `B.1 The Road Out` — Last Sight of the Palisade, Where the Ruts Begin, Nobody Waves
+
+**Weight:** LOW
+
 *Player's Overview: The palisade is behind you and still in sight if you turn, and the fields give out, and the wood begins the way a wall begins. The track runs into it. Underfoot the mud has gone hard and flat and square, and if you scrape at it with a heel there is cut stone down there, laid edge to edge by somebody who meant this road to outlast them. Nobody on the wall is watching you go.*
 
 **Referee Overview:** The trailhead, a half day out of Thornhaven at the pace a laden party keeps — two leagues by the stone that stands further up, which is worth stating plainly the first time a party compares the two, because it is how they learn what a *lath* is worth. The wood closes to a canopy corridor within a hundred paces. The dwarven roadway begins to show through the soil here in patches and shows more the further north-west it runs. The party's first Navigate roll of the campaign is made here, in the safest ground it will ever be made in, and a failure costs an afternoon and nothing else.
@@ -56,6 +59,9 @@
 **Connections:** `A.1` the landing gate, half a day south-east — the road, and the last sight of the palisade · `B.2` the first waystone, north-west up the trail.
 
 ### `B.2 The First Waystone` — Bilingual, Standing, Distances to Nowhere
+
+**Weight:** MEDIUM
+
 *Player's Overview: A pillar of grey stone stands at the trailside where the road bends, taller than a man, square-cut, leaning perhaps a hand's width out of true. Both faces carry writing. The upper lines are the deep square letters that were on the gate blocks at home, laid the right way up here. The lower lines are trade tongue, and you can read those. They say the same thing. Somebody cut them at the same time, in the same hand, for people who could only read one.*
 
 **Referee Overview:** The first of three standing waystones, at a bend two leagues out from Thornhaven. Nine feet of dressed stone on a buried footing, sound, legible, unmoved. Its full text is in **THE WAYSTONE INSCRIPTIONS** below, and the Referee reads both lines aloud or hands the table the paper — nothing here is translated for players. West of the stone, Fenn's boundary runs alongside the trail for a stretch and is marked where it does.
@@ -70,6 +76,9 @@
 **Connections:** `B.1` the trailhead, south-east · `B.3` the wheel-rut reach, north-west · `B.13` Fenn's boundary, where her line runs alongside the trail for a stretch west of the stone.
 
 ### `B.3 The Wheel-Rut Reach` — Cut Blocks Underfoot, A Gutter Still Draining, Thousand-Year Work
+
+**Weight:** LOW
+
 *Player's Overview: For four hundred paces the wood has not managed to take the road back. The soil has washed off it and what is underneath is a paved way, wide enough for two carts, with a gutter cut along the downhill edge that is still running clear water away from the surface. There are ruts worn into the stone. Not into the mud — into the stone, a finger deep, in two parallel lines, by wheels that stopped coming a generation ago.*
 
 **Referee Overview:** A reach of exposed roadway on a shallow side-slope, roughly four hundred paces, running north-west. Blocks laid tight without mortar, crowned to shed water, with a cut gutter along the low side that still drains into the wood. Walking is easy and fast here and the surface is loud underfoot in a wood that is otherwise soft. Roots have lifted the edges in three places and nowhere in the middle.
@@ -84,6 +93,9 @@
 **Connections:** `B.2` the first waystone, south-east · `B.4` the silted culvert, north-west where the roadway crosses the stream.
 
 ### `B.4 The Silted Culvert` — A Dry Crossing If Cleared, A Chokepoint If Not, Standing Water
+
+**Weight:** MEDIUM
+
 *Player's Overview: The road meets a stream and does not bridge it. It goes over it, on a stone crossing built flush with the roadway, and the stream is supposed to pass underneath — but it has not passed underneath for years. The mouth is packed to the arch with silt and black leaves, and the water has spread sideways instead, into a slow ankle-deep sheet forty paces across with the road somewhere under it. The banks either side are churned to mud. A great many feet have crossed here, and not one of them was shod.*
 
 **Referee Overview:** Where the roadway crosses a stream, roughly halfway along the region. The culvert is a dwarven arch, four feet at the crown, silted to within a hand of the top. The flooding spreads the crossing to some forty paces of standing water, ankle to knee, with a soft bottom off the road line. Crossing costs time, footing and dry boots; the churned banks show goblin traffic, unshod, in numbers, coming and going west.
@@ -99,6 +111,9 @@
 **Connections:** `B.3` the wheel-rut reach, south-east · `B.5` the second waystone, north-west · `B.4a` the drain mouth beneath the crossing — **hidden**, under the silt, and it shows only to a party that clears the culvert or goes into the water.
 
 ### `B.4a The Drain Mouth` — Cut Stone Under Silt, Air Moving Wrong, Goes Somewhere
+
+**Weight:** MEDIUM
+
 *Player's Overview: Under the silt, in the upstream wall where no stream ever ran, there is a second opening. It is cut, not worn — square, dressed, with a lip and a rebate where a grating used to sit, and the grating is long gone. The stream does not go into it. Nothing goes into it. But the air does: a slow steady cold breath coming out of the hole and along the water, and it does not smell of the wood, and it has been doing this the whole time you were standing in the crossing.*
 
 **Referee Overview:** In the culvert's upstream wall, three feet square, floored a foot below the silt line. Dressed stone throughout, dry-shod once the culvert is cleared and wet through if it is not. This is not drainage for the road — it is a service run under it, going north-west, and it holds its cut section and its slight fall the entire way. Stooped walking for most of it and hands-and-knees in three places. **Two watches end to end** — eight hours underground, which is faster than the road it runs beneath, and that is the point rather than a mistake. It comes out at the drain outfall below the near bank at the River Crossing, and there is nothing else on it: no branch, no chamber, no way up.
@@ -113,6 +128,9 @@
 **Connections:** `B.4` the culvert above, **hidden** · `D.6` the drain outfall below the near bank at the river crossing — **hidden**, a crawl in the dark under the whole northern stretch of the trail.
 
 ### `B.5 The Second Waystone` — Two Names Nobody Knows, Struck Lettering, A Road Network That Ended
+
+**Weight:** MEDIUM
+
 *Player's Overview: The second stone stands where a spur once left the road, and the top of it is gone. Not weathered away — knocked off, with something heavy, and the break is old and green. Everything below the break is untouched and says what it always said: the road, and its name, and then two places with their distances cut in tally strokes, one twenty-six leagues, one forty. Neither name means anything to any of you. Neither meant anything to the reeve either, and he has lived here his whole life.*
 
 **Referee Overview:** The second waystone, standing, with its crown struck off and the three lines of text below it wholly intact. Full text in **THE WAYSTONE INSCRIPTIONS** below. It stands at the head of the old spur that served the waystation; the spur runs a few hundred yards west and is overgrown at its far end. The webbed thickets lie off the road west of here, and the spur runs into them.
@@ -127,6 +145,9 @@
 **Connections:** `B.4` the culvert, south-east · `B.6` the deadfall, north-west up the trail · `B.10` the webbed thickets, off the road west · `B.11` the collapsed waystation, a few hundred yards off the road on the old spur.
 
 ### `B.6 The Deadfall` — Goblin Toll, Quick to Break Off, Cheap to Pay
+
+**Weight:** MEDIUM
+
 *Player's Overview: A tree came down across the road and nobody moved it, and the wood has closed in either side so there is no going round without leaving the trail entirely. The trunk is chest-high and slick. Somebody has cut steps into it. The steps are small — too small — and they are worn smooth, and they are on this side only.*
 
 **Referee Overview:** A fallen ironwood across a narrow reach, the banks steep and thicketed both sides. Passable only by climbing the trunk, which takes hands and puts a party in single file at chest height with their weapons stowed. Six goblins hold it in the usual way: two visible on the far side, four in the brush behind. They are loud, nervous, and break off the moment the arithmetic turns. This is the region's one reliable gate and it is deliberately the cheapest gate in the module.
@@ -136,12 +157,15 @@
 * **The Cut Steps:** goblin work, on the approach side only, because they want people up on the trunk and slow. It is the first evidence in the campaign that something in this wood plans, and it is available before the ambush is.
 * **The Toll:** food, mostly. They want meat and will take it in trade, and they will not press a party that holds ranks. Paying is cheap and buys more than passage — they know the safe way past the far guard booth at the crossing and they will sell it, which is a fact worth real money at `D.8`.
 * **Talking Rather Than Fighting:** `Goblin`, six of them, and the module's introduction to them as a faction rather than as a fight. They do not know the Outer City is inhabited, they have lost scouts to something nesting west, and they will say both to anyone who feeds them. A party that kills all six has bought silence and lost the only cheap source on the crossing.
-* **The Way Around:** there is one, and it is not on the road — the old spur and the thickets run west of the deadfall and rejoin the trail at the turning. It is free of goblins and it costs the thickets -> `B.10`
+* **The Way Around:** there is one, and it is not on the road — the old spur and the thickets run west of the deadfall and rejoin the trail at the turning. It is free of goblins and it costs the thickets. It is not entered from here: the spur leaves the trail back at the second waystone.
 * **Exits:** the second waystone, south-east -> `B.5` · the turning, north-west -> `B.7`
 
 **Connections:** `B.5` the second waystone, south-east · `B.7` the turning, north-west. The trail is narrow here and there is no way past on the road.
 
 ### `B.7 The Turning` — A Path Off the Road, Smoke to the West, The Choice to Leave
+
+**Weight:** LOW
+
 *Player's Overview: The road goes on north-west. It does not fork — it simply has, on its western side, a place where the undergrowth has been walked down into three separate traces, and they leave at three separate angles, and each of them is a path because feet made it one rather than because anyone cut it. Somewhere out that way there is smoke. Not much. Enough to see against the grey, in three thin threads, well apart.*
 
 **Referee Overview:** Where the goblin traces leave the trail, half a day north-west of the deadfall. Three traces, parting company here and running west to three separate camps — this is not one path to a goblin region but three, and which camp a party arrives at is decided by which trace it follows out of here. The road itself continues north-west, unobstructed, and is still the safe thing. The thicket route from the deadfall bypass rejoins the trail here from the south.
@@ -156,6 +180,9 @@
 **Connections:** `B.6` the deadfall, south-east · `B.8` the third waystone, north-west · `B.10` the webbed thickets, off the road south — the way back onto the trail for anyone who went around the deadfall · `C.1` Ashfoot Camp, `C.2` Wetreed Camp and `C.3` Longmire Camp, west. Three traces part company here and each ends at a different camp.
 
 ### `B.8 The Third Waystone` — The Last One Standing, Drakenhold Named in Full, Kelmordun
+
+**Weight:** HIGH
+
 *Player's Overview: The last stone is the best of the three and it is barely marked at all. It stands square, its crown intact, its faces clean under the moss, and by now some of you can read the top line before you read the bottom one. Four leagues, it says, to a place with a name none of you have ever heard — and underneath, in the tongue you were raised in, it gives the same distance to Drakenhold. Then it names three gates. You have been told about one.*
 
 **Referee Overview:** The third and last standing waystone, four leagues short of the hold, at a bend where the canopy first begins to thin. Undamaged, crown and mark intact. Full text in **THE WAYSTONE INSCRIPTIONS** below. The sprite hollow lies off the road east of here and rejoins the trail at the last rise.
@@ -170,6 +197,9 @@
 **Connections:** `B.7` the turning, south-east · `B.9` the last rise, north-west · `B.12` the sprite hollow, off the road east.
 
 ### `B.9 The Last Rise` — Canopy Thinning, Open Sky Ahead, Days Behind
+
+**Weight:** LOW
+
 *Player's Overview: The ground tilts up, and the trees thin, and the green half-light you stopped noticing days ago gives out all at once. There is sky. There is a great deal of sky. Ahead and below, the wood ends in a ragged edge and the country opens into broken ground and water and, beyond it, three grey peaks standing clear of everything around them with the light coming off the snow on them. You have been walking under a roof for three days. Nobody says anything for a while.*
 
 **Referee Overview:** The run-out, climbing gently north-west over a mile as the canopy thins to scrub. The wood ends at a definite edge — which matters, because the sprites cannot cross it and a party that has worked that out can end an evening's harassment by simply walking to the top of this rise. The overlook at `D.1` is a short descent beyond the treeline.
@@ -186,6 +216,9 @@
 **Off the road**
 
 ### `B.10 The Webbed Thickets` — Husks Wrapped and Stored, Announce Themselves, Something Above
+
+**Weight:** MEDIUM
+
 *Player's Overview: The undergrowth here has been furred over. Not covered — furred, as though the whole thicket had grown a grey nap, and where the light comes through it you can see that the nap is made of threads, and the threads go up. High up. And in among them, wrapped tight and hung at about head height, are shapes that are the size and roughly the shape of a man, and there are more of them than you want to count, and one of them still has a boot on.*
 
 **Referee Overview:** A belt of webbed thicket some two hundred paces across, west of the road between `B.5` and `B.7`, with the waystation's old spur running through it. It announces itself from thirty paces in good light and from five in bad — the region's one lethal hazard is also its most visible, and that is the whole design. `Giant Spider`, several, hunting from above, dropping on anything that stops moving underneath them. They do not pursue past the webbed ground.
@@ -201,6 +234,9 @@
 **Connections:** `B.5` the second waystone, back onto the trail south-east · `B.7` the turning, back onto the trail north-west · `B.11` the collapsed waystation, along the old spur.
 
 ### `B.11 The Collapsed Waystation` — Roof Gone, A Ledger Half Ruined, Gear Not Wealth
+
+**Weight:** MEDIUM
+
 *Player's Overview: Three walls of a building and the ghost of a fourth, standing in a clearing the spur ran to. The roof is in the room. Under the fallen slates there is a stable end with iron rings still set in the wall at the right height for horses, a hearth, a well, and a counter — and behind the counter, jammed under a beam that came down across it and kept the weather off, a book.*
 
 **Referee Overview:** A waystation of human build on dwarven foundations, a few hundred yards west of `B.5` along the old spur, roofless and three-walled. Stable end north, hearth and common room south, well in the yard. Nothing here is worth coin: rings, tackle, a cauldron, tools, the well. The ledger survives under the fallen beam, damp-swollen and part-legible.
@@ -215,6 +251,9 @@
 **Connections:** `B.5` the second waystone, by the old spur out to the trail · `B.10` the webbed thickets, further along the spur — the thickets have grown over the far end of it.
 
 ### `B.12 The Sprite Hollow` — Moved Markers, Borrowed Voices, Riddles and Petty Bargains
+
+**Weight:** MEDIUM
+
 *Player's Overview: A dip in the ground east of the road, mossed and quiet and pleasant, and the light in it does not behave. It slides. Someone calls your name from up the slope in a voice you know, and it is the wrong distance away, and when you turn back the cairn you built at the trailside is thirty paces further off than you left it and facing the wrong way. Something laughs, high up and small, and moves, and is not where it was.*
 
 **Referee Overview:** A shallow mossed hollow east of the trail between `B.8` and `B.9`, and a loop rather than a dead end: enter at either stop and it comes out at the other. `Wood Sprite`, several, light-bending, palm-sized, bound to the Ironwood and unable to cross its edge. They move cairns and trail markers, mimic voices they have heard, and lead people in circles. They do not fight and cannot meaningfully be fought.
@@ -230,6 +269,9 @@
 **Connections:** `B.8` the third waystone, out to the trail south-east · `B.9` the last rise, out to the trail north-west.
 
 ### `B.13 Fenn's Boundary` — Marked Plainly, A Negotiation Not a Barrier, Fresh Stumps Beyond
+
+**Weight:** MEDIUM
+
 *Player's Overview: For a stretch west of the first stone the trail runs alongside something. Saplings, cut and bent and bound at head height, one after another, spaced as far apart as a man can throw — following the road for the better part of a mile and then turning away north into the trees. There is no fence. There is no ditch. There is nothing at all stopping you stepping over it, and it has been made absolutely certain that you would know if you did.*
 
 **Referee Overview:** Wyla Fenn's line, running alongside the trail for roughly a mile west of `B.2` before turning north. Marked at intervals with cut and bound saplings at head height — a statement, not a barrier, and unmistakable in any light. This is the same boundary the cutting ground at `A.12` meets from the town side; her grove lies within it. **Nothing here penalises staying on the road.** The trail runs beside her line and never crosses it, and a party that simply keeps walking never has this conversation.

@@ -61,4 +61,4 @@ That restriction is the whole design. `HANDOFF.md` records what happened the las
 
 ---
 
-*New rows are added at the close of each region's pass, alongside the other closing updates listed in `PROCEDURES_AND_RULES.md` procedure 20. A row is added when an item acquires a far end and not before.*
+*New rows are added at the close of each region's pass, alongside the other closing updates listed in `PROCEDURES_AND_RULES.md` practice 10. A row is added when an item acquires a far end and not before.*

@@ -191,7 +191,11 @@ Edges carry a type where it matters — open passage, gated, hidden, secret, one
 
 Locations are numbered within their parent region code (`FA.1`, `FA.2`). A complex feature substantial enough to warrant its own full listing may take a sub-code (`FA.1a`), which should be rare.
 
-**Every location takes one of three forms.** The forms share their fields and differ in how much of each is written. **The form a location is written in declares its weight class** — there is no separate weight tag, and the checker reads weight off the structure rather than trusting a label.
+**Every location takes one of three forms**, and **declares which in a `**Weight:**` field.** The forms share their fields and differ in how much of each is written. **The declaration and the form must agree** — a location that says `LOW` and carries five features is the defect this field exists to catch.
+
+*The template previously said the form declares the weight and there is no tag, and that the checker should read weight off the structure rather than trust a label. **That is superseded.** It assumed the form was a reliable signal and measurement showed it is not: the only inference rule available was `LOW` = two features or fewer, and no written location in the module has fewer than three, so the rule identified nothing and everything above it was unreadable. A declaration can be checked against the form; a form alone can only be renamed. **The decision that patterns carry no tag is untouched** — that is a different question and the answer there is still no.*
+
+**The `Weight:` field is authoring scaffolding and is struck at step 12**, alongside the other labels. What reaches a reader is the form itself.
 
 *The three forms bind from the first-level block (`FA`, `GA`, `HA`) forward. `A` through `E` were written before the forms existed and are not read against them until the retrofit pass booked in `OPEN_QUESTIONS.md` runs.*
 
@@ -201,13 +205,13 @@ Locations are numbered within their parent region code (`FA.1`, `FA.2`). A compl
 
 Never use `->` for anything but a connection. Prose relationships between things — a name leading to a place, a clue leading to an answer — are written in words.
 
-*During the iterative passes a location may also carry a **Connections:** bullet list and a working note. Both are scaffolding. **Both are struck at the final write.*** The pointers are what survives.
+*During the iterative passes a location may also carry a **Connections:** bullet list and a working note. Both are scaffolding. **Both are struck at step 12, the strike.*** The pointers are what survives.
 
 ---
 
 ### THE `HIGH` FORM — the region's landmarks
 
-Five to seven features. All three tiers present, and the secret tier earns the weight rather than decorating it. **One per ten locations, capped at two in any region** — a twenty-stub region carries two, a ten-stub region carries one, and a third is evidence the region has no landmark rather than three of them. This cap is on the form, and it is a different measure from the negative-space thirds in `PROCEDURES_AND_RULES.md` rule 7, which govern how detail is distributed.
+Five to seven features. All three tiers present, and the secret tier earns the weight rather than decorating it. **One per ten locations, counted per region** — a twenty-stub region carries two, a forty-stub region carries four. *The former maximum of two per region is withdrawn: the rate governs.* This is the same measure as rule 7's distribution and not a second one — the budget is **`HIGH` one in ten, `LOW` three in ten, `MEDIUM` six in ten**, with `LOW` and `MEDIUM` counted per location group.
 
 ```
 ### `[Code] [Location Name]` — `[Three, Thematic, Tags]`
@@ -233,13 +237,13 @@ player questions not covered by a feature. Written plainly.
 
 ### THE `MEDIUM` FORM — the working body of the module
 
-Three to four features. Player's Overview and Referee Overview both present; the secret tier optional. Structurally identical to `HIGH` and distinguished by feature count and by whether any feature carries a secret.
+Three to four features. Player's Overview and Referee Overview both present; the secret tier optional. Structurally identical to `HIGH` and distinguished by feature count and by whether any feature carries a secret. **Six in ten locations, counted per location group** — this is the working body of the module and the budget says so.
 
 ---
 
 ### THE `LOW` FORM — passage, transition, and rest between demands
 
-**One or two features, and they are usually the exits.** Landmark tier only, or landmark plus one hidden. Purely additive: the same fields, each cut to a sentence.
+**One or two features, and they are usually the exits.** Landmark tier only, or landmark plus one hidden. Purely additive: the same fields, each cut to a sentence. **Three in ten locations, counted per location group**, so that thin ground is distributed rather than bunched. **A `LOW` location is written and unnamed fill is not** — fill is a room with no stub at all, and the two are not the same thing.
 
 - **Player's Overview** — one sentence. The one thing that is here.
 - **Referee Overview** — one sentence, **dimension-first**. Thin locations are where a party gets lost, and the dimensions are the only thing that prevents it.

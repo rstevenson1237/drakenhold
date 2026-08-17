@@ -12,7 +12,7 @@ A location's grouping is known before a word of it is written: the region declar
 
 The **pattern** is applied after writing, as classification, and **it is a reading discipline that reaches no page.** A location is written, then read against the list, and what the reading changes is the location — not a tag on it. If it does not fit a pattern, the pattern list is wrong before the location is. **There is no pattern field, no pattern tag and nothing for a script to read**: the template defines no slot for one, and the pattern-conditional checks in `RECONCILIATION.md` are judgement checks for that reason.
 
-**Weight is declared by the form the location is written in**, per the Playbook template. There is no separate weight tag.
+**Weight is declared in a `**Weight:**` field and the form must agree with it**, per the Playbook template. *This supersedes the earlier position that the form alone declares weight and no tag exists; the form proved not to be a readable signal.* The field is struck at step 12.
 
 ---
 
@@ -46,7 +46,7 @@ The Playbook template nests all three in one place. A Referee scanning at the ta
 
 **The cells are unequal on purpose and are not to be padded to match.**
 
-**`HIGH` is capped at one per ten locations, maximum two in any region.** A twenty-stub region carries two; a ten-stub region carries one; a third is evidence the region has no landmark rather than three of them. This is a cap on the *structural form* — five to seven features with a load-bearing secret tier — and it is not the same measure as rule 7's thirds, which govern how detail is distributed across a region. The two were once written as though they were one thing and they are not.
+**`HIGH` is budgeted at one per ten locations, counted per region.** A twenty-stub region carries two; a forty-stub region carries four. **The former maximum of two is withdrawn** — the rate governs. This is the same measure as rule 7's distribution and not a second one: **the weight budget is `HIGH` one in ten, `LOW` three in ten, `MEDIUM` six in ten**, with `LOW` and `MEDIUM` counted per location group. *The two were once written as though they were different things; they are one, and a module cannot hold two standards for the same quantity.*
 
 `SAFE LOW` is thin because an empty shop is a dead town, not a thin location. `WILD LOW` is thin because in a road region the low tier is not written as locations at all — it dissolves into procedure, into watches and Navigate and the Encounter table, and the ground between landmarks is conveyed rather than keyed. `DANGEROUS LOW` is the largest cell in the module by room count and the smallest by content, and it is carried almost entirely by format.
 

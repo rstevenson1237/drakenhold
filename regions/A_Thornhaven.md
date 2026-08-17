@@ -41,6 +41,8 @@
 
 ### `A.1 The Landing Gate` — Stolen Stone, Runes Upside Down, First Impression
 
+**Weight:** HIGH
+
 *Player's Overview: The palisade is young timber standing on old grey blocks, and the blocks were cut by someone who cared. Letters run across them, deep and square and unhurried, and they run in every direction the masons happened to lay them — a line of them upside down beside the gate, another marching into the ground and out of sight. Two men lean on the trestle and watch the road, and neither has ever looked up at the stone above their heads.*
 
 **Referee Overview:** The town's only landward gate, in the north-west face of the stockade. The gate lane is twelve feet wide and runs thirty paces north to the well square, hard-packed and rutted. The palisade is eight feet of split timber set on a footing course two blocks high — dressed grey stone, hauled up from the old landing below the town over three generations. The gate stands open from first light to full dark and is barred at night by two men who would rather not. The road out leaves west of the gate, dropping north-west toward the Ironwood.
@@ -60,6 +62,8 @@
 
 ### `A.2 The Well Square` — Swept and Too Large, Public Ground, Where Talk Starts
 
+**Weight:** MEDIUM
+
 *Player's Overview: The square was cut for a town three times this size and it is swept every morning regardless. A stone well stands at its centre with a roof over it and a chain worn bright. Around the edges: a hall with the shutters open, a temple with the doors open, an inn with a painted bird on its sign, and a whole row of houses running downslope with the shutters nailed shut and young trees growing out of the porch boards.*
 
 **Referee Overview:** Roughly sixty paces across, cobbled in the centre and packed earth at the margins. The well is dwarven-cut and older than the town; its chain and windlass are local work. The toll-house stands north, the reeve's hall east, the temple west, the Kingfisher east of the temple, and the shuttered trade houses run from the square's south-west corner downslope toward the wharf. The gate lane enters from the south. This is where the town's business is done in the open, and anything said here is repeated within the hour.
@@ -74,6 +78,8 @@
 **Connections:** `A.1` the gate lane, south · `A.3` the toll-house on the square's north side · `A.4` the reeve's hall, east · `A.5` the temple, west · `A.6` the Kingfisher, east · `A.7` the shuttered trade houses, the row running downslope.
 
 ### `A.3 The Old Toll-House` — The Notice Board, Ledgers Nobody Reads, Closed Road
+
+**Weight:** LOW
 
 *Player's Overview: A long low room with a counter across it and a board beside the door, and the board is the only thing in here anyone still uses. Behind the counter the shelves go back into the dark, and they are full — ledger after ledger, spine after spine, a wall of them, thirty years of somebody writing down every cart that came through this door. The dust on the last one is even.*
 
@@ -90,6 +96,8 @@
 
 ### `A.4 The Reeve's Hall` — Aldis Marrow, Outlying Families, A Problem He Cannot Solve
 
+**Weight:** MEDIUM
+
 *Player's Overview: A working room, warm, with a table too big for it and a map of the district pinned flat under four stones. A heavy man sits behind the table and does not stand up when you come in. He looks at your boots, and your gear, and the road-dirt on both, and something in his face settles — not relief exactly. Something he has been waiting to feel.*
 
 **Referee Overview:** Fifteen paces square, east of the square and adjoining the toll-house through the west door. Fire, table, district map, strongbox. Marrow holds the reeve's seat by consent rather than appointment, has held it eleven years, and has no armed force beyond the gate watch and whatever the town will turn out for.
@@ -104,6 +112,8 @@
 **Connections:** `A.2` the square · `A.3` the toll-house, through the connecting door.
 
 ### `A.5 The Riverside Temple` — Underattended, Rites for the Drowned, Quiet Charity
+
+**Weight:** MEDIUM
 
 *Player's Overview: Cold stone, plain benches, and more of both than there are people to fill them. Along the north wall the names of the drowned are cut in rows going back further than the town has records, each with a mark beside it — the same mark, over and over, made carefully every time. A woman sweeps between the benches. She does not ask what you want, and when you tell her, she says only that you should bring them in out of the weather first.*
 
@@ -120,6 +130,8 @@
 
 ### `A.6 The Kingfisher` — Upper-Town Inn, Respectable, Where the Charter Drinks
 
+**Weight:** MEDIUM
+
 *Player's Overview: Clean floor, banked fire, beds with blankets on them, and a bird painted on the sign that nobody has let fade. The common room is half full of people who are plainly an expedition — roped kit stacked by the wall in an order somebody enforces, mules heard through the back, a man at the corner table drawing a line on a chart and rubbing it out again.*
 
 **Referee Overview:** Two storeys, six rooms above, common room below, stable and mule yard behind. One door, on the square. Prices are upper-town and worth it. This is the only Rest in the module taken in a SAFE region: a day here, and everything recovers — Combat, Skill and Magic Dice alike. Nowhere else in Drakenhold does that.
@@ -133,6 +145,8 @@
 **Connections:** `A.2` the square. One door, on the square, and the Charter likes it that way.
 
 ### `A.7 The Shuttered Trade Houses` — Saplings Through the Boards, Locked Attics, Dwarven Partners
+
+**Weight:** MEDIUM
 
 *Player's Overview: Nine tall houses in a row down the slope, and seven of them are shut. Good houses — carved door-frames, painted lintels, the kind of frontage built by people expecting to be looked at. Ash saplings have come up through the porch boards of two, and one has come up through a window. The two houses still lived in are lived in by very old people.*
 
@@ -151,6 +165,8 @@
 
 ### `A.8 The Boat Landing` — The Way Downriver, Specialist Goods, A Clock
 
+**Weight:** MEDIUM
+
 *Player's Overview: Three jetties out into brown water, two of them sound. The stone under the boards is not the same stone as anything else here — long dressed courses running out into the river, square-cut, older than the timber by a very long way. A dozen men sit along the edge waiting to be hired for the day, and they are still there at noon.*
 
 **Referee Overview:** The town's working front, running north to south along the water below the wharf quarter. The drowned's stair comes down at the north end from the temple; Skeed's office stands at the landing head; the warehouse row runs north along the water and the Sunken Oar south. Boats come up from downriver roughly every ten days in season and less in winter.
@@ -165,6 +181,8 @@
 **Connections:** `A.5` the drowned's stair, up to the temple · `A.9` Skeed's office, at the landing head · `A.10` the warehouse row, north along the water · `A.11` the Sunken Oar, south along the water.
 
 ### `A.9 Skeed's Wharf Office` — Twenty Years of Manifests, Ganner Skeed, Who Came and Who Did Not
+
+**Weight:** MEDIUM
 
 *Player's Overview: A plank office the size of a stable, hot from a stove that is always lit, and papered floor to ceiling with paper. Manifests, mostly, hung on nails in bundles by year. The wharfmaster does not get up either, but he does put down his pen, and he asks your names before you have offered them, and he writes them down.*
 
@@ -181,6 +199,8 @@
 
 ### `A.10 The Idle Warehouses` — Doors Unopened Since the Road Closed, Rot and Rope, Squatters
 
+**Weight:** LOW
+
 *Player's Overview: A row of sheds along the water, seven of them, and only the first two have tracks in the mud outside. The rest have doors swollen shut in their frames. Through a gap in the boards of one there is a stack of crates still roped in place on a pallet, and the rope has gone green, and the stencil on the crates is a mark none of you can read.*
 
 **Referee Overview:** Seven sheds running north from the landing, backing onto the lanes that climb to the trade houses. Two in use, one squatted, four sealed since the road closed. Doors face west onto the boards. The sealed sheds are not locked so much as abandoned; the town would rather nobody made this its business.
@@ -195,6 +215,8 @@
 **Connections:** `A.7` the trade houses, up the back lanes · `A.8` the landing · `A.9` the manifest yard · `A.11` the Sunken Oar, along the boards.
 
 ### `A.11 The Sunken Oar` — Drinking Hall, Rough Custom, Ashen's Crew Are Known Here
+
+**Weight:** MEDIUM
 
 *Player's Overview: The floor is below the level of the boards outside and the whole room smells of it. Long benches, a plank bar, a fire that draws badly. It is loud, and it goes quiet in patches when strangers come in, and it comes back up again. A man at the end of the bar has been watching the door since before you opened it.*
 
@@ -213,6 +235,8 @@
 
 ### `A.12 The Cutting Ground` — Fresh Stumps, The Live Feud, Timber for the Palisade
 
+**Weight:** LOW
+
 *Player's Overview: The wood's edge has been pushed back a hundred paces along a front the width of a field, and the stumps are fresh and pale. They stop. Not at a fence, not at a ditch — they simply stop, in a line as straight as a drawn cord, and beyond that line the trees go on as though nobody had ever thought of touching them. A saw lies where it was dropped. Nobody has been back for it.*
 
 **Referee Overview:** An hour east of the gate along the treeline. Cut ground roughly two hundred paces across, stumps and brash, hauling ruts running back toward town. The cutting front stops dead on a line running north to south — Fenn's boundary, marked, and marked plainly enough that crossing it is a choice rather than an accident. The same line meets the Ironwood Trail further north-west at `B.13`. The field track to Ketter's holding leaves south.
@@ -227,6 +251,8 @@
 **Connections:** `A.1` the gate, an hour east · `A.13` Wyla Fenn's grove, a quarter hour further along the wood's edge — the stumps stop where her boundary starts · `A.14` the farmstead, by the field track south · `B.13` Fenn's boundary as the Ironwood Trail meets it, the same line approached from the other side.
 
 ### `A.13 Wyla Fenn's Grove` — Runemaster-Trained, A Boundary Marked Plainly, The Only Living Witness
+
+**Weight:** MEDIUM
 
 *Player's Overview: Old trees, spaced as though someone had planned them, and a low house among them with a stone step. The step is dwarven — square-cut, letter-cut, and the letters have been worn shallow by one person's feet over a very long time. She is at the door before you reach it. She is not old. She looks at what you are carrying, and at what you are wearing, and she says: you have come from the town, and I have nothing to sell you.*
 
@@ -246,6 +272,8 @@
 
 ### `A.14 The Farmyard` — Abandoned Mid-Season, Neighbours Watching From Afar, Nightly Visitors
 
+**Weight:** MEDIUM
+
 *Player's Overview: A yard, a house with its door standing open, a byre with the beasts gone out of it, and a crop in the field beyond that nobody has cut. It is the wrong time of year for that. Up on the rise half a mile off, three people are standing where they can see you and no closer, and they have been standing there since you came over the track.*
 
 **Referee Overview:** Half an hour inland from the gate by the field track, or south from the cutting ground by the same track. Yard forty paces across, house north, byre east, midden and well south. The house door stands open. In the yard's west corner, under a sagging cover, is a plank hatch set flush in the ground — the cold store's old loading way, barred from beneath. The neighbouring families will come no closer than the rise and will answer questions shouted across it.
@@ -260,6 +288,8 @@
 **Connections:** `A.1` the gate, half an hour by the field track · `A.12` the cutting ground, by the same track north · `A.15` the farmhouse door, standing open · `A.17` the cold store, by the outside hatch in the yard — the loading way, still barred from within.
 
 ### `A.15 The Farmhouse` — Interrupted Household, The Family That Dug, What Is Gone For Good
+
+**Weight:** MEDIUM
 
 *Player's Overview: Four rooms and a hearth with cold ash in it. The table is laid for a meal that was eaten. On the dresser, in a row, are three things that do not belong in a farmhouse: a cup of grey metal with letters around the rim, a stone disc the size of a palm, and a child's carving of an animal, worn smooth. Beside them is a folded paper, and the paper is a receipt.*
 
@@ -276,6 +306,8 @@
 
 ### `A.16 The Cellar Stair` — Cut Too Wide, Older Than the House, First Dwarven Cutting
 
+**Weight:** LOW
+
 *Player's Overview: The stair down is too good. Eleven steps of dressed stone, each one the same as the last to the width of a fingernail, running down into cold air — and the house above it is timber and clay and forty years old. Somebody built a farmhouse on top of a staircase and then built a kitchen floor over the top of that.*
 
 **Referee Overview:** Eleven steps, four feet wide, descending north-west from the kitchen to the cold store. Dressed grey stone, the same stone as the palisade footing and the landing courses. It predates the house by eight centuries and the Ketters simply used it. Cold air rises constantly, which is why the family put their store at the bottom and why the house never held its heat.
@@ -289,6 +321,8 @@
 **Connections:** `A.15` the kitchen above · `A.17` the cold store at the stair's foot.
 
 ### `A.17 The Cold Store` — Provisions Gone Over, The Breach in the Wall, Cold Air From Below
+
+**Weight:** LOW
 
 *Player's Overview: A stone room stacked with the ruin of a winter's food — barrels gone over, a cheese with its rind grey through, hams still hanging and long past. Above, a hatch to the yard, barred with a beam. And in the west wall, at the back, someone has knocked a hole through good masonry with a pick, and stacked the rubble tidily against the wall beside it, and the hole is dark, and the cold is coming out of it.*
 
@@ -305,6 +339,8 @@
 
 ### `A.18 The First Gallery` — Refugee Interment, Names in Two Scripts, Grave-Goods Disturbed
 
+**Weight:** MEDIUM
+
 *Player's Overview: The hole opens into a room that was never meant to be entered this way. Low, long, running west, with shelves cut into both walls at three heights, and a body laid in most of them wrapped and dressed. In front of each is a stone the size of a hand, and each stone is cut with a name — some in letters you can read, and some in the square deep letters you have been walking past since the gate. Six of the shelves nearest the breach have been rifled. The wrappings are pulled back. The stones in front of those six are face down.*
 
 **Referee Overview:** Forty paces east to west, seven feet high, shelved on both walls. Thirty-one interments, six of them disturbed. These are Drakenhold refugees who came down the road in the year after the descent and died within eighteen months, buried by their own survivors in ground the dwarves already owned. Four cut steps descend north at the western end to the lower niches. The west wall of the gallery is dressed stone and continues past where the shelving stops, which is where the walled processional way runs.
@@ -320,6 +356,8 @@
 
 ### `A.19 The Lower Niches` — Deeper Cutting, Undisturbed, What the Ketters Did Not Reach
 
+**Weight:** LOW
+
 *Player's Overview: Four steps down and the air changes. This run is older and better cut than the gallery above, and it is entirely undisturbed — every niche closed, every stone upright, the dust across the floor unbroken except by whatever small things live down here. There is nothing here to take. There is a great deal here to look at.*
 
 **Referee Overview:** Twenty-five paces, running west, ceiling six feet, niches at two heights, all sealed. Fourteen interments, none opened. The run ends at the grave chamber. The Ketters came down the four steps, looked, and went back up — the floor dust records exactly that, one set of prints in and the same set out.
@@ -333,6 +371,8 @@
 **Connections:** `A.18` the first gallery · `A.20` Brannek Kelmor's grave, at the end of the niche run.
 
 ### `A.20 The Grave of Brannek Kelmor` — The Name That Settles It, Laid With Care, The First Key
+
+**Weight:** HIGH
 
 *Player's Overview: A chamber at the end, and a single interment in it, and everything about it says that the people who did this were doing it for the last time and knew it. The stone is dressed. The name is cut deep and cut well by someone working with a bad tool and enough time. Around him they left what they had — not much, and all of it useful, and none of it hidden. The floor in front of the stone is worn in a way that no floor in a sealed room should be.*
 
