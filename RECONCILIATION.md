@@ -32,6 +32,12 @@ Two kinds of check. **Mechanical** checks are scripted, run every pass, and take
 
 **M12 · Pointer completeness.** Every code named in a written location's `Connections:` field also appears as an `->` pointer inside one of its features. **This is the precondition for step 12 dropping that field** — `HANDOFF.md` has required it since `A`'s pass and nothing verified it, so a missing pointer would have been an edge deleted silently, on a branch never merged back, in the one step that cannot be re-run. One-directional on purpose: it asks whether the pointers cover the field, not whether the field covers the pointers. Stubs are skipped — they carry the field and no features at all.
 
+**M13 · Location structure.** A written location parses into exactly one Player's Overview, one Referee Overview and a Features block. A location carrying two of the three is malformed rather than written, and `M8`'s test could not say so.
+
+**M14 · Pointer discipline.** `->` appears only in a feature's connection pointer. It matters more since the repoint: the pointer set is what `M3` reads, and after step 12 it is the only record a connection has.
+
+**M15 · Shared-node parity.** A location belonging to two regions carries identical edges at both ends. The sharing is legal by ratified decision; the asymmetry is the error.
+
 **M11 · Diagram tiering.** The five-tier diagram layer resolves end to end. Every stub is a member of exactly one tier-4 group frame in its own region; every location a tier-4 file draws outside its frame is a member of some other frame; a cross-group edge is drawn at both ends, unless it is one-way, which is drawn from the end it leaves; the tier-1 to tier-3 files match what `scripts/diagrams.py` derives from the tier-4 files; and every diagram file is spliced in by exactly one marker, with every marker naming a file that exists.
 
 ---
@@ -122,13 +128,18 @@ Predicates that duplicate an existing check are **not** listed: pointer-set-agai
 
 | Check | Severity |
 |---|---|
-| Location parses into exactly one Player's Overview, one Referee Overview and a Features block | error |
-| Every bolded noun in the Player's Overview appears as a feature below (**J10**, mechanised) | error |
-| Weight inferred from form: `LOW` = ≤2 features and one-sentence Overviews | — |
-| No more than two consecutive locations in a region share a weight class | warning |
-| Variety floors — a sentence under eight words; no three consecutive sentences within four words; feature lengths varying by ×2 — applied to `MEDIUM` and `HIGH` only | warning |
-| `->` appears only in connection pointers | error |
-| A location shared between two regions carries identical edges at both ends | error |
+| ~~Location parses into exactly one Player's Overview, one Referee Overview and a Features block~~ **built, `M13`** | error |
+| Every bolded noun in the Player's Overview appears as a feature below (**J10**, mechanised) — **blocked, see below** | error |
+| Weight inferred from form: `LOW` = ≤2 features and one-sentence Overviews — **blocked, see below** | — |
+| No more than two consecutive locations in a region share a weight class — *blocked on weight* | warning |
+| Variety floors — a sentence under eight words; no three consecutive sentences within four words; feature lengths varying by ×2 — applied to `MEDIUM` and `HIGH` only — *blocked on weight* | warning |
+| ~~`->` appears only in connection pointers~~ **built, `M14`** | error |
+| ~~A location shared between two regions carries identical edges at both ends~~ **built, `M15`** | error |
+
+**Two of the structural predicates cannot be built as specified, and the reason is the same in both: the backlog assumed a convention the corpus does not use.** Recorded here rather than worked around, because a predicate written to a convention that does not exist is worse than an absent one — it passes, and the pass means nothing.
+
+- **`J10` has nothing to mechanise. No Player's Overview in the corpus contains bold — none of the 66.** The judgement check reads *"every bolded noun in a Player's Overview appears below as a feature"* and calls it the module's most common real failure and the cheapest to check; the mechanised form would report zero findings on every run, for ever, because the input set is empty. **Either the bolding convention was intended and never adopted, or `J10` describes a different check than the one it states.** It stays a judgement check and it stays honest — a human reading a Player's Overview against the Features below is doing real work — but it is not mechanisable in this form.
+- **Weight cannot be inferred, so four predicates fall with it.** The backlog defines only `LOW` — *≤2 features and one-sentence Overviews* — and **no written location has fewer than three features**, so the rule identifies nothing. Above `LOW` there is no signal at all: the template puts `HIGH` at five to seven features, which would make 33 of the 66 written locations `HIGH` against a cap of one per ten and two per region, and that is a measurement artefact rather than 33 defects. **`HIGH` is a form an author chooses and there is no tag by ratified decision**, which is exactly the sequencing problem the catalogue recorded and then left in the backlog anyway.
 
 **Mode-conditional.**
 

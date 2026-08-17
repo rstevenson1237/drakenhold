@@ -1710,6 +1710,128 @@ def m12(ctx: dict) -> list[Finding]:
     return findings
 
 
+
+# ---------------------------------------------------------------------------
+# M13 — Location structure
+# ---------------------------------------------------------------------------
+def m13(ctx: dict) -> list[Finding]:
+    """
+    A written location parses into exactly one Player's Overview, one Referee
+    Overview and a Features block. From the structural group of
+    RECONCILIATION.md's predicate backlog.
+
+    A location carrying two of the three is malformed rather than written,
+    and until now nothing could say so: M8's test was `referee and features`,
+    which a location missing its Player's Overview passes silently.
+
+    Skipped once the labels are gone. After step 12 italic is the Player's
+    Overview and there is nothing left to count, which is a fact about the
+    corpus and not a clean bill of health.
+    """
+    findings: list[Finding] = []
+    for f in region_files():
+        locs = parse_locations(f)
+        if not any(l.players_overview or l.referee_overview for l in locs):
+            continue                      # step-7 region, or struck
+        for loc in locs:
+            if not (loc.players_overview or loc.referee_overview or loc.features):
+                continue                  # still a stub, correctly
+            missing = []
+            if not loc.players_overview:
+                missing.append("Player's Overview")
+            if not loc.referee_overview:
+                missing.append("Referee Overview")
+            if not loc.features:
+                missing.append("Features")
+            if missing:
+                findings.append(Finding(
+                    f, loc.lineno,
+                    f"{loc.code}: partially written — missing {', '.join(missing)}"
+                ))
+    return findings
+
+
+# ---------------------------------------------------------------------------
+# M14 — Pointer discipline
+# ---------------------------------------------------------------------------
+_DIAGRAM_MARKER_RE = re.compile(r'^<!--\s*DIAGRAM:')
+
+
+def m14(ctx: dict) -> list[Finding]:
+    """
+    `->` appears only in a feature's connection pointer. From the structural
+    group of the backlog.
+
+    It matters more after the repoint than before it: the pointer set is now
+    what M3 reads as the region's edges, and after step 12 it is the only
+    record a connection has. An arrow written anywhere else is either an edge
+    nothing will check or a piece of punctuation that reads as one.
+
+    Diagram splice markers are exempt — `<!-- DIAGRAM: T4_A_OUT.md -->`
+    contains no arrow, but the HTML comment syntax around it does.
+    """
+    findings: list[Finding] = []
+    for f in region_files():
+        for lineno, line in markup_lines(f):
+            s = line.rstrip()
+            if '->' not in s:
+                continue
+            if _DIAGRAM_MARKER_RE.match(s.lstrip()):
+                continue
+            if _FEATURE_BULLET_RE.match(s):
+                continue
+            findings.append(Finding(
+                f, lineno,
+                f"`->` outside a feature pointer: {s.strip()[:70]}"
+            ))
+    return findings
+
+
+# ---------------------------------------------------------------------------
+# M15 — Shared-node edge parity
+# ---------------------------------------------------------------------------
+def m15(ctx: dict) -> list[Finding]:
+    """
+    A location belonging to two regions carries identical edges at both ends.
+    From the structural group of the backlog.
+
+    DECISIONS.md permits the sharing — Fenn's boundary is one node on two
+    diagrams — and states the constraint: the edges must be identical at both
+    ends, and an asymmetry is the error rather than the sharing.
+    """
+    findings: list[Finding] = []
+    seen: dict[str, list] = {}
+    for f in region_files():
+        for loc in parse_locations(f):
+            seen.setdefault(loc.code, []).append((f, loc))
+
+    for code, instances in sorted(seen.items()):
+        if len(instances) < 2:
+            continue
+        edge_sets = []
+        for f, loc in instances:
+            edges = {p for feat in loc.features for p in feat.pointers}
+            if not edges and loc.connections:
+                edges = set(LOC_CODE_RE.findall(loc.connections[0])) - {code}
+            edge_sets.append((f, loc, edges))
+        base_f, base_loc, base = edge_sets[0]
+        for f, loc, edges in edge_sets[1:]:
+            if edges != base:
+                only_here = sorted(edges - base)
+                only_there = sorted(base - edges)
+                detail = []
+                if only_here:
+                    detail.append(f"only here: {', '.join(only_here)}")
+                if only_there:
+                    detail.append(f"only in {relpath(base_f)}: {', '.join(only_there)}")
+                findings.append(Finding(
+                    f, loc.lineno,
+                    f"{code} is shared with {relpath(base_f)} and the edges differ "
+                    f"— {'; '.join(detail)}"
+                ))
+    return findings
+
+
 # ---------------------------------------------------------------------------
 # Check registry
 # ---------------------------------------------------------------------------
@@ -1732,6 +1854,9 @@ CHECKS: dict[str, tuple[str, object, object]] = {
     "M10": ("Editorial notes",      m10, lambda ctx: ERROR if ctx.get("final") else REPORT),
     "M11": ("Diagram tiering",      m11, ERROR),
     "M12": ("Pointer completeness", m12, ERROR),
+    "M13": ("Location structure",    m13, ERROR),
+    "M14": ("Pointer discipline",    m14, ERROR),
+    "M15": ("Shared-node parity",    m15, ERROR),
 }
 
 
