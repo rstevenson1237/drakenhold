@@ -68,6 +68,68 @@ _PASS_HEADING = re.compile(
 # A Connections field runs until the next bold field or heading or blank-then-heading.
 _FIELD_OR_HEADING = re.compile(r'^(\*\*[A-Za-z][^*]*:\*\*|#{1,6} |\*Working note:)')
 
+# --- architect register in region files -------------------------------------
+#
+# Every region file carries italic process prose under its headings. CLAUDE.md
+# says the architect register "must not survive", and one of these sentences
+# describes the Connections: field that this same script removes.
+#
+# It cannot be struck by the line, because in several files the procedural
+# sentences share a line with genuinely referee-facing content — the fill
+# description in "40 rooms budgeted; 20 are stubbed and the balance is
+# unnamed fill — bunk rows, kit rooms, empty cells by the dozen" tells a
+# Referee what the unnamed rooms are, and that is play content. So this is
+# sentence-level, with each pattern written out rather than inferred.
+#
+# Still subtractive: every pattern deletes and none rewrites. The room budget
+# and stub counts are left alone deliberately — whether a count belongs in
+# front of a reader is a separate question and not this script's to answer.
+_ARCHITECT_SENTENCES = [
+    re.compile(r'Procedure step \d+ for the code, name and three thematic tags; '
+               r'\*\*procedure step \d+ for the outlines below them\.\*\*\s*'),
+    re.compile(r'Procedure step \d+\.\s*(?=Block-level material)'),
+    re.compile(r'Procedure step \d+ for [^.]*\.\s*'),
+    re.compile(r'Procedure step \d+\.\s*Drawn from the stubs, before the location outlines\.\s*'),
+    re.compile(r'Procedure step \d+\.\s*'),
+    re.compile(r"Each location carries a Player's Overview in the player register, "
+               r"a Referee Overview in the referee register, and the features the "
+               r"location contains\.\s*"),
+    re.compile(r'Feature detail is written at step \d+\.\s*'),
+    re.compile(r'The step-\d+ working notes have been absorbed into the two '
+               r'Overviews and struck\.\s*'),
+    re.compile(r'Working notes are scaffolding for step \d+\.\s*'),
+    re.compile(r'Code, name and three thematic tags per location\.\s*'),
+    re.compile(r'The working note under each is scaffolding for step \d+\.\s*'),
+    re.compile(r'Reconciled against the finished outlines before the region closes\.\s*'),
+    # "Block-level material — ... lives in `X_BLOCK.md`" and "Worked as one
+    # block with ..." are deliberately NOT here. They are cross-references,
+    # and the blocks are published parts, so they point a reader at something
+    # they can actually turn to.
+    re.compile(r'\*\*Reconciled against the finished outlines at step \d+; this is the '
+               r'reconciled diagram and it is the deliverable\.\*\*\s*'),
+    re.compile(r'The diagram is authoritative: the \*\*Connections:\*\* field under each '
+               r'stub is checked against it, never the reverse\.\s*'),
+]
+
+# An italic-only line, which is the shape all of this prose takes.
+_ITALIC_LINE = re.compile(r'^\*(?!\*)(?P<body>.*)\*\s*$')
+
+
+def _strip_architect(line: str):
+    """Remove procedural sentences from an italic note. Returns None if
+    nothing survives, meaning the whole line goes."""
+    m = _ITALIC_LINE.match(line)
+    if not m:
+        return line
+    body = m.group('body')
+    original = body
+    for pat in _ARCHITECT_SENTENCES:
+        body = pat.sub('', body)
+    if body == original:
+        return line
+    body = re.sub(r'\s{2,}', ' ', body).strip()
+    return None if not body else f"*{body}*"
+
 
 def strip_text(text: str) -> str:
     """Apply the strike to one file's contents."""
@@ -109,6 +171,15 @@ def strip_text(text: str) -> str:
         # Field labels: keep the prose, drop the name.
         line = _PLAYERS_LABEL.sub('*', line)
         line = _REFEREE_LABEL.sub('', line)
+
+        # Architect register in an italic note: sentence-level.
+        stripped = _strip_architect(line)
+        if stripped is None:
+            i += 1
+            if i < len(lines) and not lines[i].strip() and out and not out[-1].strip():
+                i += 1
+            continue
+        line = stripped
 
         # Pass-shaped block headings lose the prefix.
         pm = _PASS_HEADING.match(line)

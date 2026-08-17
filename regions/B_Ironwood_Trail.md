@@ -136,7 +136,7 @@
 * **The Cut Steps:** goblin work, on the approach side only, because they want people up on the trunk and slow. It is the first evidence in the campaign that something in this wood plans, and it is available before the ambush is.
 * **The Toll:** food, mostly. They want meat and will take it in trade, and they will not press a party that holds ranks. Paying is cheap and buys more than passage — they know the safe way past the far guard booth at the crossing and they will sell it, which is a fact worth real money at `D.8`.
 * **Talking Rather Than Fighting:** `Goblin`, six of them, and the module's introduction to them as a faction rather than as a fight. They do not know the Outer City is inhabited, they have lost scouts to something nesting west, and they will say both to anyone who feeds them. A party that kills all six has bought silence and lost the only cheap source on the crossing.
-* **The Way Around:** there is one, and it is not on the road — the old spur and the thickets run west of the deadfall and rejoin the trail at the turning. It is free of goblins and it costs the thickets -> `B.10`
+* **The Way Around:** there is one, and it is not on the road — the old spur and the thickets run west of the deadfall and rejoin the trail at the turning. It is free of goblins and it costs the thickets. It is not entered from here: the spur leaves the trail back at the second waystone.
 * **Exits:** the second waystone, south-east -> `B.5` · the turning, north-west -> `B.7`
 
 **Connections:** `B.5` the second waystone, south-east · `B.7` the turning, north-west. The trail is narrow here and there is no way past on the road.

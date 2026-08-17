@@ -141,6 +141,15 @@ def _severity_of(spec, ctx: dict) -> str:
     return spec(ctx) if callable(spec) else spec
 
 
+# A check returns None to say "not applicable to this corpus", which is not
+# the same as returning [] to say "applicable and clean". The distinction
+# only matters after the strike: M8 reads working notes and M12 reads the
+# Connections field, and step 12 removes both. Without it, step 12's
+# acceptance test would pass by having nothing left to check — the exact
+# failure mode a final gate must not have.
+NOT_APPLICABLE = None
+
+
 # ---------------------------------------------------------------------------
 # Shared patterns
 # ---------------------------------------------------------------------------
@@ -301,6 +310,47 @@ def parse_locations(path: Path) -> list:
             working, players, referee, features, conns,
         ))
     return entries
+
+
+def location_edges(path: Path) -> list:
+    """A region's location edges, as (src, dst, one_way, path, lineno).
+
+    **The `->` pointer inside a feature is the record of a connection**, and
+    the `Connections:` field is step-7 scaffolding that step 12 removes. So
+    a written location's edges are read from its pointers, and only a stub —
+    which has no features yet — falls back to the field.
+
+    That fallback is transitional and disappears on its own: step 12 may not
+    run until every region is closed, at which point nothing is a stub and
+    the field is gone everywhere. This is what lets M3 survive the strike
+    instead of being blinded by it.
+
+    `->` means an exit and nothing else. Ratified after B.6 was found using
+    it to name where a bypass runs rather than to offer one — the diagram
+    and the field both agreed B.6 does not connect to B.10, and a pointer
+    read as an edge would have invented one.
+
+    The test is whether the location *has feature bullets*, not whether it is
+    `written`. They agree before the strike and diverge after it: `written`
+    is defined by the field labels, and step 12 removes those — italic is the
+    Player's Overview, a bullet list is the Features. A feature bullet
+    survives the strike untouched, so keying on it is what lets this function
+    read a struck corpus at all. Keying on `written` made every location look
+    like a stub the moment the labels came off.
+    """
+    out: list[tuple[str, str, bool, Path, int]] = []
+    for loc in parse_locations(path):
+        if loc.features:
+            for feat in loc.features:
+                for dst in feat.pointers:
+                    if dst != loc.code:
+                        out.append((loc.code, dst, False, path, feat.lineno))
+        elif loc.connections:
+            text, lineno = loc.connections
+            for dst in LOC_CODE_RE.findall(text):
+                if dst != loc.code:
+                    out.append((loc.code, dst, 'one-way' in text, path, lineno))
+    return out
 
 
 def locations(ctx: dict) -> dict:
@@ -587,8 +637,8 @@ def m3(ctx: dict) -> list[Finding]:
             for a, b, directed, lineno in d['typed']:
                 diagram_edges.setdefault((a, b, directed), (d['path'], lineno))
 
-        # Extract location Connections fields
-        loc_conns = _parse_location_connections_in_region(lines, src)
+        # Location edges: feature pointers where written, the field where stub.
+        loc_conns = location_edges(f)
         has_conns = bool(loc_conns)
 
         # Both absent → deferred, not a failure
@@ -1245,9 +1295,14 @@ def m8(ctx: dict) -> list[Finding]:
     used it — and the two agree on the whole corpus, because all 66 written
     locations carry all three fields.
     """
+    parsed = {f: parse_locations(f) for f in region_files()}
+    if ctx.get("final") and not any(
+            loc.working_notes for locs in parsed.values() for loc in locs):
+        return NOT_APPLICABLE
+
     findings: list[Finding] = []
-    for f in region_files():
-        for loc in parse_locations(f):
+    for f, locs in parsed.items():
+        for loc in locs:
             if not (loc.written and loc.working_notes):
                 continue
             for wn_lineno in loc.working_notes:
@@ -1633,9 +1688,14 @@ def m12(ctx: dict) -> list[Finding]:
     Stubs are skipped. They carry a Connections field and no features at
     all, so the check would fire on all 327 of them.
     """
+    parsed = {f: parse_locations(f) for f in region_files()}
+    if ctx.get("final") and not any(
+            loc.connections for locs in parsed.values() for loc in locs):
+        return NOT_APPLICABLE
+
     findings: list[Finding] = []
-    for f in region_files():
-        for loc in parse_locations(f):
+    for f, locs in parsed.items():
+        for loc in locs:
             if not loc.written or not loc.connections:
                 continue
             text, lineno = loc.connections
@@ -1721,7 +1781,10 @@ def main() -> None:
 
     for key in requested:
         label, fn, sev_spec = CHECKS[key]
-        findings: list[Finding] = fn(ctx)
+        findings = fn(ctx)
+        if findings is NOT_APPLICABLE:
+            print(f"{key} · {label} … N/A (the data this reads is gone)")
+            continue
         if not findings:
             print(f"{key} · {label} … PASS")
             continue
